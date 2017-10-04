@@ -1,0 +1,305 @@
+$item__title-lineh: 1.125em;
+
+/*aligment ticket */
+.tg-content-grid{
+  .tg-list-item{
+    &:before{
+      content:"";
+      position:absolute;
+      width:100%;
+      height:0px;
+      bottom:-10px;
+      left:0px;
+      border-bottom: 1px solid #d8d8d8;
+    }
+  }
+  .l-gi:last-child{
+    .tg-list-item:before{border:0;}
+  }
+  // @include bp(medium){
+  //   .l-gi:nth-last-child(-n+4){
+  //     .tg-list-item:before{border:0;}
+  //   }
+  // }
+  @include bp(large){
+    .l-gi:nth-last-child(-n+3){
+      .tg-list-item:before{border:0;}
+    }
+  }
+}
+
+.dark-theme .tg-content-grid{
+  .tg-list-item{
+    &:before{
+      border-bottom: 1px solid #484848;
+    }
+  }
+}
+
+.tg-list-no-border .tg-list-item:before{
+  border:0;
+}
+
+.tg-content-grid[data-content-grid-type="2"] .l-gi .tg-list-item:before{
+  border:0;
+}
+
+.megaslider__item .tg-list-item{
+  .meta{
+    bottom:0.8em !important;
+  }
+  .item__title{
+    margin-bottom: 0;
+    overflow: hidden;
+    line-height: $item__title-lineh !important;
+    height: $item__title-lineh * 4 !important;
+    font-size: 1em;
+  }
+  &:last-child .meta{
+    bottom:0 !important;
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+      bottom:10px !important;
+    }
+  }
+}
+
+.l-2up--8-4 .tg-list-item{
+  .item__title {
+    margin-bottom: 0;
+    overflow: hidden;
+    line-height: $item__title-lineh;
+    height: $item__title-lineh * 3;
+    font-size: 1em;
+  }
+}
+/*end aligment ticket */
+
+.tg-list-item {
+  @include cf;
+  margin-bottom: rhythm(1);
+  position: relative;
+
+  > a {
+    position: relative;
+    display: block;
+    width: rhythm(7);
+
+    @include bp(medium) {
+      width: 52%;
+    }
+
+    float: left;
+
+    img {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .meta{
+    position: absolute;
+    bottom: 0;
+    margin:0;
+  }
+
+  .item__info {
+    margin-left: rhythm(7.5);
+
+    @include bp(medium) {
+      margin-left: 54%;
+    }
+  }
+
+  .item__title {
+    margin-bottom: 0;
+    overflow: hidden;
+    line-height: $item__title-lineh;
+    height: $item__title-lineh * 4;
+    font-size: 1em;
+     @include breakpoint(max-width map-get($breakpoints, medium)) {
+       height: $item__title-lineh * 3;
+     }
+    // @include breakpoint(map-get($breakpoints, m-large) map-get($breakpoints, large)) {
+    //   font-size: 15px;
+    // }
+  }
+
+  .item__type {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 18%;
+    height: 22%;
+    background: black;
+    opacity: 0.8;
+  }
+
+  .item__desc {
+    display: none;
+  }
+
+  .list-portrait {
+    @include bp(medium) {
+      margin-left: 6%;
+      margin-right: -6%;
+    }
+  }
+}
+
+// Icon for different labels
+.tg-list-item .item__tags {
+  @include cf;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 15%;
+  width: 100%;
+
+  .tag {
+    float: left;
+    // margin-left: 4px;
+    // margin-bottom: 4px;
+    // height: 100%;
+    // width: auto;
+
+    &:first-child {
+      // margin-left: 6px;
+    }
+    font-size: 10px;
+
+    @include bp(small) {
+      font-size: 12px;
+    }
+
+    &.vip {
+      font-size: 20px;
+    }
+  }
+
+  @include bp(medium) {
+    width: 60%;
+  }
+}
+
+.tg-list-item--featured {
+  margin-bottom: rhythm(1);
+  @extend %cf;
+
+  @include breakpoint(max-width map-get($breakpoints, small-2)) {
+    .l-gi:first-child {
+      width: rhythm(7);
+      float: left;
+      margin: 0;
+    }
+
+    .l-gi:nth-child(2) {
+      width: auto;
+      margin-left: rhythm(7.5);
+      margin-right: 0;
+    }
+
+    .desc {
+      display: none;
+    }
+  }
+}
+
+.tg-list-item--catchup {
+  @extend %cf;
+  margin-bottom: rhythm(1);
+
+  > a {
+    display: block;
+    width: rhythm(7);
+    float: left;
+  }
+
+  .item__info {
+    margin-left: rhythm(7.5);
+  }
+
+  .item__title {
+    margin-bottom: 0;
+  }
+
+  .item__desc {
+    display: none;
+  }
+}
+
+.tg-list-item.tg-list-item--search {
+  @extend %cf;
+
+  > a {
+    display: block;
+    width: 33%;
+    text-align: center;
+
+    img {
+      margin-left: 0;
+      //allows center align for portrait image
+   
+    }
+
+    img.portrait {
+      margin-left: 0%;
+      width: 60%;
+
+      //make portrait specified images center and not occupy too much heigh space
+      + .item__type {
+        margin-left: 0%;
+        height: 16%;
+      }
+    }
+
+    &.list-portrait {
+      img.portrait {
+        width: 100%;
+
+        @include bp(medium) {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .item__info {
+    margin-left: 33%;
+    //XJ changed from rhythm 7.5
+    padding-left: rhythm(1);
+
+    h4 {
+      margin-top: 0;
+    }
+  }
+
+  .item__desc {
+    @include bp(medium) {
+      display: block;
+    }
+  }
+
+  .item__labels-portrait {
+    left: 45px;
+    width: 135px;
+
+    img {
+      height: 70%;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+
+.img-holder{
+  background:#000;
+  height: 0;
+  padding-bottom: percentage(9 / 16);
+  overflow: hidden;
+  position:relative;
+  img{
+   margin: 0 auto !important;
+  }
+
+}

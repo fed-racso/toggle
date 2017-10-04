@@ -1,0 +1,4 @@
+//overrides for pickadate bower plugin
+.picker {
+	@include tgzi(datepicker);
+}

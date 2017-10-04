@@ -1,0 +1,12 @@
+$transitions: (
+  ease-out: all 0.2s ease-out,
+  );
+
+
+@function transition($transition, $map: $transitions) {
+  @return map-fetch($map, $transition);
+}
+
+@mixin transition($transition, $map:$transitions) {
+  transition: transition($transition, $map);
+}

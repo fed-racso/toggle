@@ -1,0 +1,62 @@
+.u-floatLeft {
+  float: left !important;
+}
+
+.u-floatRight {
+  float: right !important;
+}
+
+.u-hideMobile {
+  @include breakpoint(max-width map-get($breakpoints, small)) {
+    display: none !important;
+  }
+}
+
+.epg--channel__info .u-hideMobile {
+  display: block !important;
+}
+
+.u-hideTablet {
+  @include breakpoint(map-get($breakpoints, small) map-get($breakpoints, large)) {
+    display: none !important;
+  }
+}
+
+.u-hideDesktop {
+  @include breakpoint(map-get($breakpoints, large)) {
+    display: none !important;
+  }
+}
+
+.u-isInvisible {
+  @include is-invisible;
+}
+
+.u-isVisible {
+  @include is-visible;
+
+}
+
+.u-inlineBlock {
+  display: inline-block;
+}
+
+// Centerer
+.c-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.c-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.c-cell {
+  display: table-cell;
+  vertical-align: middle;
+}

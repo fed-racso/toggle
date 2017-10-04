@@ -1,0 +1,686 @@
+// ==========
+// FC General styles
+// ==========
+.fc {
+    
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+    &:before{
+      content: "";
+      float: left;
+      height: 0;
+      padding-bottom: 61.347%;
+      padding-top: 4.25rem;
+      
+      @include bp(medium) {
+        padding-bottom: 37.2%;
+        padding-top: inherit;
+      }
+
+      @include bp(m-large){
+        padding-bottom: 25.55%;
+        padding-top: inherit;
+      }
+
+    }
+
+    @include tui {
+        border-bottom: 1px solid $secondary-color;
+        border-top: 1px solid $secondary-color;
+    }
+    img {
+        margin-bottom: 0;
+        height: auto;
+         @include bp(medium) {
+          height: inherit;
+          width: 100%;
+         }
+    }
+    .sixteen-nine img{
+      width: auto;
+    }
+    
+    .slick-track{
+      position: absolute;
+      height: 100%;
+    }
+    .slick-dots {
+        display: none !important;
+        @include bp(m-large) {
+            display: block !important;
+        }
+    }
+    .slick-list {
+        height:100%;
+        overflow: hidden;
+    }
+    picture{
+      height: inherit;
+      line-height: 0;
+    }
+
+    .fc__main-image {
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+  }
+}
+
+// FC Maxheight hack
+// -----------------
+// .fc {
+    // background: url(../images/v3-ajax-loader-big.gif) no-repeat center center;
+    // height: 0;
+    // padding-bottom: 72%;
+    // @include bp(medium) {
+    //   padding-bottom: 37%;
+    // }
+    // @include bp(m-large) {
+    //   padding-bottom: 30%;
+    // }
+    // @include bp(large) {
+    //   padding-bottom: 25%;
+    // }
+    // img,
+    // .sixteen-nine__gradient,
+    // .sixteen-nine__gradient-alt {
+    //   height: 0;
+    // }
+    // .dark-theme & {
+    //   background: url(../images/preloader-black.gif) no-repeat center center;
+    // }
+
+    // below's been commented to add inSkin Ad
+    // .sixteen-nine img {
+    //     height: auto;
+    //     @include bp(m-large) {
+    //         height: 25.2vw;
+    //     }
+    //     .has-skin & {
+    //         @include bp(large) {
+    //             min-height: calc(25.2vw - 78px);
+    //             height: calc(25.2vw - 78px);
+    //         }
+    //         @include bp(xlarge) {
+    //             min-height: calc(25.2vw - 102px);
+    //             height: calc(25.2vw - 102px);
+    //         }
+    //     }
+    // }
+    // .main-image__item {
+        // min-height: 54.5vw;
+        // height: auto;
+            // position: relative;
+            // &:before{
+            //   content: "";
+            //   padding-bottom: 5.875%;
+            //   float: left;
+            //   height: 0;
+            // }
+        // @include bp(medium) {
+            // min-height: 25.2vw;
+            // height: 37.2vw;
+
+        // }
+        // @include bp(m-large) {
+            // min-height: 25.2vw;
+            // height: 25.2vw;
+        // }
+        // .has-skin & {
+        //     @include bp(large) {
+        //         min-height: calc(25.2vw - 78px);
+        //         height: calc(25.2vw - 78px);
+        //     }
+        //     @include bp(xlarge) {
+        //         min-height: calc(25.2vw - 102px);
+        //         height: calc(25.2vw - 102px);
+        //     }
+        // }
+    // }
+// }
+
+// .fc.has-loaded {
+//   background: none;
+//   height: auto;
+//   padding-bottom: 0;
+//   img,
+//   .sixteen-nine__gradient,
+//   .sixteen-nine__gradient-alt {
+//     height: auto;
+//   }
+// }
+.slick-slider {
+    margin: 0 auto;
+    max-width: inherit;
+}
+
+.slick-list {
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.slick-prev {
+    left: rhythm(1);
+}
+
+.slick-next {
+    right: rhythm(1);
+}
+
+// ==========
+// FC Main Image
+// ==========
+// Specific layouts for picture & show holder
+.main-image__item.right picture {
+    @include bp(medium) {
+        @include span(8 first);
+    }
+    @include bp(m-large) {
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+}
+
+.main-image__item.left picture {
+    @include bp(medium) {
+        @include span(8 last);
+    }
+    @include bp(m-large) {
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+}
+
+.main-image__show-holder {
+    height: 5rem;
+    @include bp(medium) {
+        position: absolute;
+        height: 100%;
+        width: span(4);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: none;
+    }
+    @include bp(m-large) {
+        width: span(5);
+    }
+}
+
+.left .main-image__show-holder {
+    // info position
+    @include bp(medium) {
+        right: auto;
+        // left: rhythm(1);
+        // padding-right: gutter();
+        .main-image__centerer--cell {
+            padding-left: span(2);
+            padding-right: rhythm(0.75);
+        }
+    }
+    @include bp(m-large) {
+        padding-right: 0;
+        padding-left: rhythm(3);
+        .main-image__centerer--cell {
+            //padding: 0;
+        }
+    }
+}
+
+.right .main-image__show-holder {
+    @include bp(medium) {
+        // right: rhythm(1);
+        left: auto;
+        // padding-left: gutter();
+        .main-image__centerer--cell {
+            padding-right: span(2);
+        }
+    }
+    @include bp(m-large) {
+        padding-left: 0;
+        padding-right: rhythm(3);
+        .main-image__centerer--cell {
+            padding: 0;
+            padding-right: rhythm(0.75);
+        }
+    }
+}
+
+.fc__main-image {
+    .slick-prev {
+        position: absolute;
+        left: 0;
+        @include bp(m-large) {
+            // left: rhythm(1);
+        }
+    }
+    .slick-next {
+        position: absolute;
+        right: 0;
+        @include bp(m-large) {
+            // right: rhythm(1);
+        }
+    }
+    .slick-slide {
+        position: relative;
+        height: inherit;
+    }
+}
+
+.main-image__show-holder {
+    h2 {
+        @include tgts(kilo);
+        line-height: 1;
+        margin-bottom: rhythm(0.5);
+        &:nth-child(2) {
+            @include tgts(normal);
+            line-height: 1;
+        }
+    }
+    p {
+        @include type-scale(base);
+    }
+}
+
+.main-image__item.white-text {
+    @include bp(m-large) {
+        h2,
+        p {
+            color: white;
+        }
+        a {
+            color: white;
+            &:hover,
+            &:active,
+            &:focus {
+                @include tdc {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.main-image__item.black-text {
+    @include bp(m-large) {
+        h2,
+        p {
+            color: map-fetch($tui, light-theme text-color);
+        }
+        a {
+            color: map-fetch($tui, light-theme text-color);
+            &:hover,
+            &:active,
+            &:focus {
+                @include tdc {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.main-image__centerer--table {
+    @include bp(medium) {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.main-image__centerer--cell {
+    @extend %cf;
+    position: static;
+    padding: rhythm(1) rhythm(1.5);
+    // opacity: 0;
+    //Hide links for mobile view, but the fist one
+    > *:not(:first-child) {
+        @include breakpoint(max-width map-get($breakpoints, medium)) {
+            display: none;
+        }
+    } //end hide
+    @include bp(medium) {
+        padding: 0;
+    }
+    .slick-active & {
+        opacity: 1;
+    }
+    @include bp(medium) {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    p {
+        display: none;
+        @include bp(medium) {
+            margin: rhythm(0.25) 0;
+            display: block;
+        }
+        @include bp(m-large) {
+            margin: rhythm(0.5) 0;
+        }
+    }
+    a {
+        &:hover,
+        &:active,
+        &:focus {
+            @include tdc {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+.main-image__links {
+    @extend .carousel__links;
+    margin-top: rhythm(0.25);
+    @include bp(medium) {
+        margin-top: 0;
+    }
+    a {
+        //text-transform: uppercase;
+    }
+    i {
+        &.ti-play-incircle {
+            @include tgts(centi);
+        }
+        font-size: rhythm(0.5);
+    }
+}
+
+.main-image__item.sixteen-nine.right {
+    picture {
+        @include bp(m-large) {
+            float: left;
+            margin: 0 0 0 6%;
+        }
+    }
+}
+
+.main-image__item.sixteen-nine.left {
+    picture {
+        @include bp(m-large) {
+            float: right;
+            margin: 0 6% 0 0;
+        }
+    }
+}
+
+// ==========
+// FC NAV
+// ==========
+.fc__nav {
+    display: none;
+    @include bp(m-large) {
+        display: block;
+        position: relative;
+    }
+    .slick-list {
+        position: relative;
+        padding-top: 10px;
+        margin-top: -10px;
+    }
+    .slick-track {
+        background: black;
+    }
+    // .slick-prev,
+    // .slick-next {
+    //   top: 10px;
+    //   bottom: 0;
+    //   width: 60px;
+    //   height: 100%;
+    // }
+    // .slick-prev {
+    //   left: 0;
+    //   @extend .i-fc-navleft;
+    //   &:before {
+    //     display: none;
+    //   }
+    // }
+    // .slick-next {
+    //   right: 0;
+    //   @extend .i-fc-navright;
+    //   &:before {
+    //     display: none;
+    //   }
+    // }
+    .slick-slide {
+        border-bottom: 2px solid black;
+        margin-bottom: -3px;
+        opacity: 0.6;
+        transition: transform 0.3s ease;
+        &:hover,
+        &.is-active {
+            position: relative;
+            z-index: 20;
+            opacity: 1;
+            transform: translate(0, -3px) scale(1.2, 1.2);
+        }
+    }
+}
+
+// =======
+// nav__item centering
+// -----
+// Uses position absolute to force full height and width,
+// then uses display table + display table-cell to perfectly center items
+// =======
+.nav__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    border-right: 1px solid black;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        // border-bottom: 5px solid black;
+    }
+    .nav__item:hover &,
+    .nav__item.is-active & {
+        opacity: 1;
+        border-right: 1px solid transparent;
+    }
+    @each $theme,
+    $map in $themes {
+        #{$theme} .nav__item:hover,
+        #{$theme} .nav__item.is-active {
+            .nav__wrapper:after {
+                // border-bottom: 5px solid map-get($map, color);
+            }
+        }
+    }
+}
+
+.nav__centerer--table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.nav__centerer--cell {
+    display: table-cell;
+    position: relative;
+    top: 3px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    @include type-scale(small);
+    span {
+        display: block;
+    }
+}
+
+// ==========
+// Sixteen Nine
+// ==========
+.sixteen-nine.left {
+    picture {
+        @extend %cf;
+    }
+    img {
+        float: right;
+    }
+}
+
+.sixteen-nine {
+    &.left {
+        .main-image__show-holder {
+            @include bp(m-large) {
+                width: span(5);
+                //width:50%;
+                box-shadow: 0 0 0 0 red inset;
+            }
+        }
+    }
+    &.right {
+        .main-image__show-holder {
+            @include bp(m-large) {
+                width: span(5);
+                //width:50%;
+                box-shadow: 0 0 0 0 red inset;
+            }
+        }
+    }
+}
+
+@mixin grad-left-white {
+    background: linear-gradient(to right, white, white 53%, rgba(255, 255, 255, 0.1) 80%, transparent 100%);
+}
+
+@mixin grad-left-white-alt {
+    background: linear-gradient(to right, white, white 6%, rgba(255, 255, 255, 0.1) 15%, transparent 100%);
+}
+
+@mixin grad-right-white {
+    background: linear-gradient(to left, white, white 50%, rgba(255, 255, 255, 0.1) 60%, transparent 100%);
+}
+
+@mixin grad-right-white-alt {
+    background: linear-gradient(to left, white, white 6%, rgba(255, 255, 255, 0.1) 15%, transparent 100%);
+}
+
+@mixin grad-left-black {
+    background: linear-gradient(to right, color(dark, darkerer), color(dark, darkerer) 53%, rgba(255, 255, 255, 0.1) 80%, transparent 100%);
+}
+
+@mixin grad-left-black-alt {
+    background: linear-gradient(to right, color(dark, darkerer), color(dark, darkerer) 6%, rgba(255, 255, 255, 0.1) 15%, transparent 100%);
+}
+
+@mixin grad-right-black {
+    background: linear-gradient(to left, color(dark, darkerer), color(dark, darkerer) 55.5%, rgba(255, 255, 255, 0.1) 80%, transparent 100%);
+}
+
+@mixin grad-right-black-alt {
+    background: linear-gradient(to left, color(dark, darkerer), color(dark, darkerer) 6%, rgba(255, 255, 255, 0.1) 15%, transparent 100%);
+}
+
+.sixteen-nine__gradient,
+.sixteen-nine__gradient-alt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dark-theme,
+.light-theme {
+    @include bp(m-large) {
+        .black-text.left.has-gradient .sixteen-nine__gradient {
+            @include grad-left-white;
+        }
+        .black-text.right.has-gradient .sixteen-nine__gradient {
+            @include grad-right-white;
+        }
+        .black-text.right.has-gradient .sixteen-nine__gradient-alt {
+            @include grad-left-white-alt;
+        }
+        .black-text.left.has-gradient .sixteen-nine__gradient-alt {
+            @include grad-right-white-alt;
+        }
+        .white-text.left.has-gradient .sixteen-nine__gradient {
+            @include grad-left-black;
+        }
+        .white-text.right.has-gradient .sixteen-nine__gradient {
+            @include grad-right-black;
+        }
+        .white-text.left.has-gradient .sixteen-nine__gradient-alt {
+            @include grad-right-black-alt;
+        }
+        .white-text.right.has-gradient .sixteen-nine__gradient-alt {
+            @include grad-left-black-alt;
+        }
+    }
+}
+
+.sixteen-nine {
+    @include tui {
+        &.black-text {
+            h2,
+            p,
+            a {
+                color: $text-color;
+            }
+        }
+        &.white-text {
+            h2,
+            p,
+            a {
+                color: $background-color;
+            }
+        }
+        &.has-gradient.black-text {
+            h2,
+            p,
+            a {
+                color: $text-color;
+                @include bp(m-large) {
+                    color: map-fetch($tui, light-theme text-color);
+                }
+            }
+        }
+        &.has-gradient.white-text {
+            h2,
+            p,
+            a {
+                color: $text-color;
+                @include bp(m-large) {
+                    color: map-fetch($tui, dark-theme text-color);
+                }
+            }
+        }
+    }
+    &.black-text,
+    &.white-text {
+        a {
+            @include tdc {
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}

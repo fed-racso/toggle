@@ -1,0 +1,65 @@
+// Color Maps
+
+$colors: (
+  white: (
+    base: white,
+    light:#f2f2f2,
+    lighter:#f7f7f7,
+    ),
+  dark: (
+    lighter: #404040,
+    light: #2B2B2B,
+    base: #1e1e1e,
+    darker: #1a1a1a,
+    darkerer: #0f0f0f,
+    black: #000,
+    ),
+  gray: (
+    lighter: #939393,
+    light:#f2f2f2,
+    l-base: #F0F1F1,
+    base: #e6e6e6,
+    comment-gray: #cbcbcb,
+    m-base: #999999,
+    dark: #b3b3b3,
+    m-dark: #646464,
+    darker: #484848
+    ),
+  pink: (
+    base: #d81182,
+    secondary: #e858da),
+  blue: (base: #1a91d3),
+  purple: (base: #8454A1),
+  violet: (base: #a846e8),
+  red: (base: #cc3b3b),
+  yellow: (base: #edae2f),
+  green: (base: #27aaad),
+  orange: (base: #ea7a2f),
+  channel-5: (base: #2A76D1),
+  channel-8: (base: #DD2A22),
+  channel-u: (base: #00A8AB),
+  okto: (base: #f36D20),
+  suria: (base: #F5b43B),
+  vasantham: (base:#41AEE2),
+  facebook: (base:#547BBC),
+  twitter: (base:#78CBEF)
+  );
+
+// get color function
+@function color($color, $tone: "base", $map: $colors) {
+  @return map-fetch($map, $color $tone);
+}
+
+// Outputs Background colors
+@each $color, $map in $colors {
+  .#{$color}-bg {
+    background: map-get($map, base);
+  }
+  .#{$color}--secondary-bg {
+    background: map-get($map, secondary);
+  }
+
+  // .#{$color} a {
+  //   color: map-get($map, base);
+  // }
+}

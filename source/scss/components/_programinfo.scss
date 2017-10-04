@@ -1,0 +1,187 @@
+.programinfo-item__banner {
+  margin-bottom: rhythm(0.5);
+  width: 100%;
+  display: inline-block;
+  @include bp(medium) {
+    width: 40%;
+    margin-right: rhythm(0.5);
+    float: left;
+  }
+}
+
+.programinfo-item__desc {
+  .less-details {
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.programinfo-item__header {
+  width: 100%;
+  display: inline-block;
+  span {
+    font-weight: 300;
+  }
+  @include bp(medium) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.programinfo-item__header__date {
+  text-transform: uppercase;
+  margin-bottom: tgrhythm(0.5);
+  @include tdc {
+    color: $theme-color;
+  }
+}
+
+.programinfo-item__header__meta {
+  @include tui {
+    color: $meta-color;
+  }
+}
+
+.programinfo-item__desc {
+  clear: both;
+}
+
+.programminfo p:last-child {
+  margin-bottom: 0;
+}
+
+/* Refactor Ufinity */
+.programinfo-item img.programinfo-item__banner {
+width: 100%;
+margin-bottom: 1.25rem;
+}
+.programinfo-item .programinfo-item__header {
+margin-bottom: 1.25rem;
+}
+@media (min-width: 760px) {
+.programinfo-item .programinfo-item__header {
+width: 100%;
+float: none;
+}
+}
+@media (min-width: 980px) and (max-width: 1120px) {
+.l-2up--8-4 .programinfo-item .programinfo-item__header {
+margin-bottom: 0;
+}
+}
+.programinfo-item .programinfo-item__header .toggle-first {
+float: left;
+margin-bottom: 1.25rem;
+margin-right: 0.625rem;
+font-size: 0;
+line-height: 0;
+color: transparent;
+}
+.programinfo-item .programinfo-item__header .toggle-first:before {
+content: "";
+display: block;
+width: 108px;
+height: 40px;
+// background-image: url("");
+background-size: contain;
+background-position: left top;
+background-repeat: no-repeat;
+}
+.programinfo-item .programinfo-item__header .show-date {
+float: left;
+margin-right: 0.625rem;
+font-size: 1rem;
+line-height: 40px;
+font-weight: bold;
+color: #1e1e1e;
+}
+.dark-theme .programinfo-item .programinfo-item__header .show-date {
+color: white;
+}
+.programinfo-item .programinfo-item__header .telecast-info {
+clear: both;
+margin-top: 1.25rem;
+font-size: 1rem;
+line-height: 1.2;
+color: #1e1e1e;
+}
+.dark-theme .programinfo-item .programinfo-item__header .telecast-info {
+color: white;
+}
+.programinfo-item .programinfo-item__header .show-meta {
+font-size: 0.9rem;
+line-height: 20px;
+}
+.programinfo-item .programinfo-item__header .show-meta .meta__item-type {
+display: block;
+float: left;
+margin-right: 0;
+}
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating {
+display: inline-block;
+vertical-align: top;
+padding-left: 0;
+margin-left: 0;
+border-left: none;
+}
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating i {
+display: inline-block;
+vertical-align: top;
+margin-right: 4px;
+}
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .g,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg13,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .nc16,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .m18,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .r21 {
+height: 20px;
+}
+@media (max-width: 759px) {
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .g,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg13,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .nc16,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .m18,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .r21 {
+height: 40px;
+}
+}
+@media (min-width: 980px) and (max-width: 1120px) {
+.l-2up--8-4 .programinfo-item .programinfo-item__header .show-meta .meta__item--rating .g,
+.l-2up--8-4 .programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg,
+.l-2up--8-4 .programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg13,
+.l-2up--8-4 .programinfo-item .programinfo-item__header .show-meta .meta__item--rating .nc16,
+.l-2up--8-4 .programinfo-item .programinfo-item__header .show-meta .meta__item--rating .m18,
+.l-2up--8-4 .programinfo-item .programinfo-item__header .show-meta .meta__item--rating .r21 {
+height: 20px;
+}
+}
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .g,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg,
+.programinfo-item .programinfo-item__header .show-meta .meta__item--rating .pg13 {
+width: 20px;
+}
+.programinfo-item .programinfo-item__header .show-meta .meta__item--audio {
+display: block;
+float: left;
+padding-right: 8px;
+margin-right: 8px;
+border-right: 1px solid #aaaaaa;
+}
+.programinfo-item .programinfo-item__header .show-meta .meta__item--audio span {
+display: inline-block;
+vertical-align: top;
+}
+.programinfo-item .programinfo-item__header .meta__item-genre {
+float: left;
+font-size: 0.9rem;
+line-height: 20px;
+color: #999999;
+}
+.programinfo-item .programinfo-item__header .meta__item-genre span {
+display: inline-block;
+vertical-align: top;
+}
+
+/* End - Refactor Ufinity */

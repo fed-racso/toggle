@@ -1,0 +1,47 @@
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Lifestyle", section-header__parent: "", section-header__has-logo:false, section-header__parent--none: true) }}
+  {{> molecules-aasel }}
+
+  {{> molecules-ad-companion-block }}
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> organisms-content-grid-with-tabs(rows: 3, component-title: Videos) }}
+        </div>
+        <aside class="l-gi">
+          {{> molecules-ad-300x250-block }}
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+
+  {{> molecules-ad-brand-display-block }}
+
+  <div class="megaslider-container-holder">
+    <section>
+      {{> molecules-megaslider-collapsible(slider-title: Asian Buzz, type: video, class:lifestyle) }}
+    </section>
+
+    <section>
+      {{> molecules-megaslider-collapsible(slider-title: Korean Buzz, type: video, class:lifestyle) }}
+    </section>
+
+    <section>
+      {{> molecules-megaslider-collapsible(slider-title: Holywood Buzz, type: video, class:lifestyle) }}
+    </section>
+
+      <section>
+      {{> molecules-megaslider-collapsible(slider-title: Celeb Galleries, type: video, class:lifestyle) }}
+    </section>
+  </div>
+
+  {{> organisms-footer }}
+</div>
+
+{{> organisms-login-modal(login:true) }}

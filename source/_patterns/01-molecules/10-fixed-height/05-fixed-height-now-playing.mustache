@@ -1,0 +1,25 @@
+<li class="fixed-height__item now-playing">
+  {{#img}}
+  <a href="#">
+    <img src="{{img.landscape-16x9.src}}" alt="">
+    <span class="now-playing c-wrapper">
+      <div class="c-table">
+        <div class="c-cell">
+          Now Playing
+        </div>
+      </div>  
+    </span>
+  </a>
+  <div class="item__details">
+    <h6 class="item__title" data-dotdot="2"><a href="#">H6 Content Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </a></h6>
+    {{> atoms-meta-item-with-icon }}
+  </div>
+  {{/img}}
+
+  {{^img}}
+  <div class="item__details">
+    <h6 class="item__title" data-dotdot="2"><a href="#">H6 Content Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </a></h6>
+    {{> atoms-meta-item-with-label }}
+  </div>
+  {{/img}}
+</li>

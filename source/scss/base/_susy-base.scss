@@ -1,0 +1,10 @@
+// Fluid Style.
+$susy: (
+  columns: 12,
+  gutters: 20/75,
+  output: isolate,
+  column-width: false,
+  global-box-sizing: border-box,
+  // debug:(image:show)
+  );
+

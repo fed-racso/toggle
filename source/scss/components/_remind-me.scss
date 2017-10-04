@@ -1,0 +1,64 @@
+// ==========
+// Remind Me
+// ==========
+
+.remind-me {
+  position: relative;
+  .reminder-popup {
+    display: none;
+    position: absolute;
+    padding-top: rhythm(0.5);
+    left: 0;
+    @include breakpoint(max-width map-get($breakpoints, small)) {
+      left: -1 * rhythm(7);
+    }
+
+    @include tgfw(semibold);
+    z-index: 50;
+    border-radius: 5px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: rhythm(1);
+      top: -8px;
+      // Magic number
+      @include triangle("up", 9px, map-fetch($tui, light-theme secondary-color));
+      @include breakpoint(max-width map-get($breakpoints, small)) {
+        left: rhythm(8);
+      }
+    }
+    a {
+      display: block;
+      text-align: left;
+      width: rhythm(14);
+      padding: rhythm(0.5) rhythm(1);
+      color: map-fetch($tui, light-theme text-color);
+      background: map-fetch($tui, light-theme secondary-color);
+      line-height: rhythm(1);
+      vertical-align: middle;
+      &:hover {
+        background: map-fetch($tui, light-theme meta-color);
+      }
+    }
+    a + a {
+      border-top: 1px solid map-fetch($tui, light-theme meta-color);
+    }
+    a:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+    a:last-child {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+  .reminder-popup.is-shown {
+    display: block;
+  }
+}
+
+.reminder-popup i {
+  width: rhythm(1);
+  height: rhythm(1);
+  display: inline-block;
+  margin-right: rhythm(0.5);
+  background-size: contain;
+}

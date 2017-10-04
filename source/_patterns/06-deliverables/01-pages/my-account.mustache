@@ -1,0 +1,57 @@
+<div class="page-wrap">
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "My Account", section-header__has-logo: false, section-header__parent--none: true }}
+  {{> molecules-secondary-nav }}
+  <section>
+    <div class="wrap">
+      <div class="card">
+        <div class="form__title">
+          <h5>My Devices <span class="u-hideMobile">(1 of 5 devices)</span></h5>
+          <a href="#" class="inline-link">Need Help?</a>  
+        </div>
+        {{> atoms-table}}
+        <a href="#" class="btn--pink" data-featherlight="#add-device">Add a Device</a>
+      </div>
+      <div class="card">
+        <div class="form__title">
+          <h5>My PINS</h5>
+          <a href="#" class="inline-link">Need Help?</a>  
+        </div>
+        <div class="pins-container">
+          {{> molecules-pins }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{> organisms-footer }}
+</div>
+
+<div id="add-device">
+  <h3 class="lightbox__title">Add a Device</h3>
+  <form action="#">
+    <div class="form-item">
+      <label for="">Device ID/Code</label>
+      <div class="input-group">
+        <input type="text">
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="">Device Name</label>
+      <div class="input-group">
+        <input type="text">
+      </div>
+    </div>
+    <div class="form-item">
+      <div class="input-group">
+        <input type="submit" value="Add Device" class="btn--pink">
+      </div>
+    </div>
+  </form>
+
+  <h4>How to Pair Your Smart TV</h4>
+  <ol>
+    <li>Use the up arrow to select the box "Please go to Toggle to key in the PIN"</li>
+    <li>Enter the code displayed into the Device ID above</li>
+  </ol>
+</div>

@@ -1,0 +1,70 @@
+{{> organisms-notification-bar(notification-warning:true, notification-system: true) }}
+
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> organisms-channel-home-carousel }}
+  <div class="wrap">
+    {{> molecules-quicklinks-nav }}
+  </div>
+  {{> molecules-ad-companion-block }}
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> molecules-highlights(type:video, highlights-title: "Highlights") }}
+        </div>
+        <aside class="l-gi split-grid">
+          {{> molecules-ad-300x250-block(split-index: 0) }}
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+      {{> organisms-content-grid-full(rows: 3, component-title: Sample Content Grid) }}
+
+  </section>
+
+  <section>
+    <div class="wrap">
+      {{> organisms-content-grid-full-with-tabs(rows: 3, component-title: Videos) }}
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      {{> organisms-content-grid-full-with-tabs(rows: 3, component-title: Stories You Love) }}
+    </div>
+  </section>
+
+  {{> molecules-ad-brand-display-block }}
+
+  <div class="megaslider-container-holder">
+    <section>
+      {{> molecules-megaslider-collapsible-with-tabs(slider-title: Entertainment with a super duper long title, type: video, class:entertainment) }}
+    </section>
+
+    <section>
+      {{> molecules-megaslider-collapsible(slider-title: Lifestyle, type: video, class:lifestyle ) }}
+    </section>
+
+    <section>
+      {{> molecules-megaslider-collapsible(slider-title: Offbeat, type: video, class:offbeat) }}
+    </section>
+
+    <section>
+      {{> molecules-megaslider-collapsible(slider-title: Videos, type: video, class:primary) }}
+    </section>
+
+    <section>
+      {{> molecules-megaslider-collapsible(slider-title: Celebs, type: video, class:primary) }}
+    </section>
+  </div>
+
+  {{> organisms-footer }}
+</div>
+
+{{> organisms-login-modal(login:true) }}

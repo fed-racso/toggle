@@ -1,0 +1,27 @@
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Video", section-header__parent: "", section-header__has-logo:false, section-header__parent--none:true) }}
+  {{> molecules-secondary-nav }}
+  {{> molecules-page-background }}
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          
+          {{> organisms-content-wrapper(loadDefaultBlock: false, galleryBlock: false, eventBlock: true, article__title: "Event Title Win tickets to '[Jiang Yu Heng 2014 Farewell Singapore] on 18 Oct 2014, Saturday and also a photo op!", article__subtitle: "Here's your chance to get a photo-op with Jiang Yu Heng at his last concert!") }}
+          {{> organisms-content-grid(rows: 3, component-title: Events You Make Also Like) }}
+          {{> organisms-content-grid(rows: 3, component-title: More Events from Entertainment) }}
+        </div>
+        <div class="l-gi split-grid">
+          {{> molecules-microsite-link(u: u-hideTablet u-hideMobile)}}
+          {{> molecules-ad-300x250-block(split-index:0)}}
+          {{> molecules-fluid-height(fluid-height-title: Most Popular) }}
+          {{> molecules-ad-300x250-block }}
+        </div>
+      </div>
+    </div>
+  </section>
+    {{> organisms-footer }}
+</div>

@@ -1,0 +1,10 @@
+.event-details {
+  font-weight: get-weight(body bold);
+  margin-bottom: rhythm(1);
+  address {
+    font-style: normal;
+  }
+  .addr {
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+.pins-container{
+	.section{
+		padding: rhythm(0.5) 0;
+		overflow:hidden;
+
+		@include tui{
+			border-bottom:1px solid $meta-color;
+		}
+		p:last-child{
+			margin:0;
+		}
+		.content{
+			width:100%;
+
+			a{
+				margin:0 rhythm(0.5) 0 0;
+				display:inline-block;*display:inline;zoom:1;
+				vertical-align:top;
+			}
+		}
+		.pin{
+			float:right;
+
+			label{
+				@include tgts(normal);
+			}
+
+			input{
+				height:auto;
+			}
+		}
+		@include breakpoint(max-width map-get($breakpoints, small-2)) {
+			.content{
+			}
+			.pin{
+				float:right;
+				text-align:right;
+
+				label{
+					@include tgts(centi);
+				}
+			}
+		}
+	}
+}
+
+.pin-lightbox{
+	text-align:center;
+
+	h3{
+		margin:0 0 rhythm(0.5);	
+	}
+	input{
+		width:100%;
+		float:none;
+		margin:0 0 rhythm(0.5);
+	}
+	a{
+		display:block;
+		text-align:center;
+		width:100%;
+	}
+	button{
+		margin:0 0 rhythm(0.5);
+		float:none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

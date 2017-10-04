@@ -1,0 +1,37 @@
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Channel U", section-header__parent: "", section-header__has-logo:true, section-header__parent--none: true) }}
+  {{> molecules-secondary-nav }}
+  {{> organisms-channel-home-carousel }}
+  {{> molecules-ad-companion-block }}
+
+
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> molecules-highlights-thumbless(type:video, highlights-title: "TV Schedule") }}
+          {{> organisms-content-grid(rows: 3, component-title: Catch-up) }} 
+          {{> molecules-related-3col-block(item-title: In the News, split-index:0) }}
+          {{> organisms-socialfeed }}
+        </div>
+        <div class="l-gi split-grid">
+          {{> molecules-ad-300x250-block(split-index: 0) }}
+          {{> molecules-fixed-height(fixed-height-title: Events) }}
+          {{> molecules-ad-300x250-block(u: u-hideMobile) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      {{> molecules-ad-banner-block }}
+    </div>
+  </section>
+  {{> organisms-footer }}
+</div>
+
+{{> organisms-login-modal(login:true) }}

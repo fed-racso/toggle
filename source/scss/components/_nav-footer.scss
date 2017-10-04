@@ -1,0 +1,307 @@
+.nav--footer {
+    $border: 1px #484848 solid;
+    h4 {
+        @extend .h5;
+        @include tui {
+            color: $meta-color;
+        }
+    }
+    li {
+        @extend %lsn;
+    }
+    a {
+        text-decoration: none;
+    }
+    .footer-links {
+        font-weight: get-weight(header semibold);
+        text-transform: uppercase;
+        overflow: hidden;
+        .collapsible__title {
+            line-height: rhythm(2);
+        }
+        @include bp(large) {
+            .collapsible__title {
+                line-height: rhythm(1);
+                margin-bottom: rhythm(0.5) !important;
+            }
+            .collapsible + .collapsible {
+                margin-top: rhythm(1);
+                margin-bottom: 0;
+            }
+        }
+        > li {
+            padding-bottom: rhythm(9999);
+            margin-bottom: rhythm(-9999);
+            font-weight: get-weight(body normal);
+            text-transform: none;
+            a {
+                color: white;
+                &:hover,
+                &:active,
+                &:focus {
+                    @include tui {
+                        color: $primary-color;
+                    }
+                }
+            }
+            h6 {
+                text-transform: uppercase;
+                @include tui {
+                    color: $meta-color;
+                }
+            }
+            //All footer links should have sufficient padding on mobile, and less on desktop
+            ul > li {
+                line-height: rhythm(2);
+                @include bp(large) {
+                    line-height: rhythm(1.25);
+                }
+            }
+        }
+        //reset collapsible section styling for this use-case
+        .collapsible {
+            border-top: 0;
+            border-bottom: $border;
+            @include bp(m-large) {
+                border: 0;
+            }
+        }
+        > li {
+            @include bp(medium) {
+                width: 33%;
+                float: left;
+                .collapsible {
+                    border: 0;
+                    margin: 0 0 rhythm(1);
+                    h6 {
+                        font-size: 0.875rem;
+                    }
+                    ul {
+                        li {
+                            line-height: rhythm(1.25);
+                            font-size: .75rem;
+                            a {
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+                }
+                .footer-links__utility {
+                    margin-top: 0;
+                    h6 {
+                        padding-right: 0;
+                        font-size: 0.875rem;
+                    }
+                    ul {
+                        display: inline-block;
+                        *display: inline;
+                        zoom: 1;
+                        vertical-align: top;
+                        width: auto;
+                        margin-right: rhythm(2.5);
+                        > li {
+                            line-height: 100%;
+                            font-size: .75rem;
+                            display: inline-block;
+                            *display: inline;
+                            zoom: 1;
+                            vertical-align: top;
+                            margin-right: rhythm(1);
+                            padding-right: rhythm(1);
+                            border-right: 1px solid #444;
+                            a {
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+                }
+                .footer-links__social {
+                    float: right;
+                    padding-right: rhythm(1);
+                }
+            }
+        }
+        //this is the section without children links
+        > li:nth-child(1) {
+            border-top: $border;
+            border-bottom: $border;
+            @include bp(medium) {
+                border: 0;
+            }
+            ul > li {
+                //border-bottom: $border;
+            }
+            @include bp(m-large) {
+                @include span(3 first of 15) {
+                    border: 0;
+                    border-right: $border;
+                    ul > li {
+                        border: 0;
+                        //font-size:rhythm(1);
+                        //line-height:rhythm(2);
+                    }
+                }
+            }
+        }
+        //this is the TV section
+        > li:nth-child(2) {
+            @include bp(m-large) {
+                @include span(3 at 4 of 15);
+                border: 0;
+                border-right: $border;
+            }
+        }
+        //this is the RADIO section
+        > li:nth-child(3) {
+            @include bp(m-large) {
+                @include span(3 at 7 of 15);
+                border: 0;
+                border-right: $border;
+                & ul {
+                    //width:49%;
+                    //display:inline-block;
+                    //vertical-align:top;
+                }
+            }
+        }
+        > li:nth-child(4) {
+            @include bp(m-large) {
+                @include span(3 at 10 of 15);
+                border: 0;
+                border-right: $border;
+            }
+        }
+        //this is the BRANDS section
+        > li:nth-child(5) {
+            @include bp(m-large) {
+                @include span(3 at 13 of 15);
+                border: 0;
+                //border-right: $border;
+            }
+        }
+        //this is the other utility links section
+        > li:nth-child(6) {
+            @include bp(m-large) {
+                clear: left;
+                @include span(full);
+            }
+            @include tui {
+                background: $inverse-background-color;
+            }
+            padding-top: rhythm(2.5);
+            width: 100%;
+            float: none;
+            overflow: hidden;
+        }
+        .footer-links__utility {
+            margin: rhythm(1) 0 rhythm(1) 0;
+            @include bp(m-large) {
+                margin-top: 0;
+                //so all content is symmetrically aligned to top
+            }
+            & ul {
+                width: auto;
+                display: inline-block;
+                vertical-align: top;
+                @include bp(m-large) {
+                    width: 100%;
+                }
+                > li {
+                    @include breakpoint(max-width map-get($breakpoints, large)) {
+                        line-height: rhythm(1.5);
+                        width: auto;
+                        margin-right: rhythm(1);
+                        display: inline-block;
+                        *display: inline;
+                        zoom: 1;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+        .footer-links__disclaimer {
+            & > p,
+            & > .logo {
+                //width: 49%;
+                margin-right: rhythm(1);
+                display: inline-block;
+                vertical-align: top;
+                color: white;
+                @include bp(m-large) {
+                    width: auto;
+                    margin-right: 00px;
+                    display: block;
+                }
+            }
+            p {
+                font-size: .75rem;
+                margin: 1rem 0 rhythm(1);
+            }
+        }
+        .footer-last {
+            @include tui {
+                background: $inverse-background-color;
+            }
+            padding-top: rhythm(2.5);
+            width: 100%;
+            float: none;
+            overflow: hidden;
+        }
+    }
+    .footer-links > li {}
+}
+
+.bottom.site-footer {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1em;
+    overflow: auto;
+    width: 100%;
+    border-top: none !important;
+    position: relative;
+    bottom: -1px;
+    .logo {
+        float: left;
+        margin-right: 1.25rem;
+    }
+    p {
+        font-size: inherit;
+        margin: 1em 0;
+        font-size: 0.75em;
+        float: left;
+        @include bp(m-large) {
+            clear: left;
+        }
+    }
+    .footer-links__utility {
+        float: left;
+        margin: 1.25rem 0;
+        clear: left;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+        //border-right: 1px solid #444;
+        border-right: 1px solid #fff;
+        margin-right: 1.25rem;
+        padding-right: 1.25rem;
+        margin-bottom: 0.7rem;
+        @include bp(medium) {
+            border-right: 1px solid #444;
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+    a {
+        color: inherit;
+        @include bp(medium) {
+            font-size: 0.75em;
+        }
+    }
+    .wrap:after {
+        display: none;
+    }
+}

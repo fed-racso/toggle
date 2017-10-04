@@ -1,0 +1,32 @@
+.mentioned {
+  background: color(white, light);
+  padding: rhythm(1);
+  &__item {
+    list-style: none;
+    clear: both;
+    @include cf;
+  }
+  &__show-image {
+    float: left;
+    width: rhythm(4);
+  }
+  &__show {
+    margin-left: rhythm(5);
+    @include type-scale(large);
+    font-weight: get-weight(header regular);
+  }
+  .show-more {
+    clear: both;
+    @include type-scale(excerpt);
+    font-weight: get-weight(header regular);
+    span {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+.related__title {
+  @include type-scale(xxlarge);
+  font-weight: get-weight(header semibold);
+  margin-bottom: rhythm(0.5);
+}

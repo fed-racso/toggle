@@ -1,0 +1,21 @@
+// Audio, Video, Images and other defaults styles here
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  width: auto;
+  //margin-bottom: rhythm(1);
+}
+
+figure {
+  margin-bottom: rhythm(1);
+  img {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,9 @@
+.show-list {
+  li {
+    @include cf;
+  }
+  figure {
+    max-width: rhythm(6.5);
+    margin-right: rhythm(1);
+  }
+}

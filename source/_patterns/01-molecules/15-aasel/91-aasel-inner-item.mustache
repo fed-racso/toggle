@@ -1,0 +1,25 @@
+<div class="aasel__inner-item-holder item--{{size}}">
+  <div class="aasel__inner-item">
+    <div class="item__image" aasel-background-image="{{img.landscape-16x9-big.src}}" aasel-mobile-background-image="{{img.landscape-16x9.src}}"></div>
+
+    <div class="c-wrapper">
+      <div class="item__info-holder c-table">
+        <div class="item__info c-cell">          
+          {{> atoms-meta-item-with-icon}}
+
+          {{#small}} 
+          <h6 class="item__title" data-dotdot="1"><a href="#">Item Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</a></h6>
+          {{/small}}
+
+          {{^small}} 
+          <h3 class="item__title" data-dotdot="2"><a href="#">Item Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</a></h3>
+          {{/small}}
+
+          <p class="item__desc" data-dotdot="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quasi unde ipsam vel, laboriosam aut! Culpa magnam debitis saepe, rem porro sapiente voluptates laboriosam, optio cumque libero inventore, sequi labore.</p>
+
+          <a class="item__more" href="#" >Read More <i class="ti-chevron-next"></i></a>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

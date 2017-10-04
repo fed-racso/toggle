@@ -1,0 +1,92 @@
+{{> molecules-ad-banner-block }}
+{{> organisms-header }}
+{{> organisms-primary-mega-menu }}
+
+{{> molecules-secondary-nav }}
+{{> organisms-channel-home-carousel }}
+
+<section>
+  <div class="wrap">
+    <div class="l-2up--8-4">
+      <div class="l-gi">
+        {{> atoms-wireblock(wire-text:"Recently watched", height: "height-300") }}
+      </div>
+      <aside class="l-gi">
+        {{> molecules-ad-300x250-block }}
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <div class="l-12">
+      <div class="l-gi">
+        <h2>Popular</h2>
+        {{> molecules-slider }}
+      </div>
+      <div class="l-gi">
+        <h2>Popular</h2>
+        {{> molecules-slider }}
+      </div>
+ 
+      <div class="l-gi">
+        <h2>Recommended</h2>
+        {{> molecules-slider }}
+      </div>
+   
+      <div class="l-gi">
+        <h2>Latest Catchup Episodes</h2>
+        {{> molecules-slider }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class = "wrap">
+    <div class = "l-2up--8-4">
+      <div class="l-gi">
+        <h2>Originals</h2>
+        {{> atoms-wireblock(wire-text:"Originals<br>content grid", height:"height-300") }}
+      </div>
+      <div class = "l-gi">
+        {{> molecules-ad-300x250-block }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="l-12">
+      <div class="l-gi">
+        <h2>Local Entertainment Buzz</h2>
+        {{> molecules-slider }}
+      </div>
+      <div class="l-gi">
+        <h2>Korean Buzz</h2>
+        {{> molecules-slider }}
+      </div>
+      <div class="l-gi">
+        <h2>Hollywood Buzz</h2>
+        {{> molecules-slider }}
+      </div>
+      <div class="l-gi">
+        <h2>Movie Trailers (Portrait)</h2>
+        {{> molecules-slider }}
+      </div>
+      <div class="l-gi">
+        <h2>Premium</h2>
+        {{> molecules-slider }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  {{> atoms-wireblock(wire-text: "Footer")}} 
+</section>
+
+{{> organisms-login-modal(login:true) }}

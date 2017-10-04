@@ -1,0 +1,40 @@
+<!-- collapsible fixed-height component -->
+<div class="collapsible collapsible--card fixed-height {{#episode}} fixed-height--episode{{/episode}} card" data-collapse-till="medium">
+  <h5 class="collapsible__title fixed-height__title">
+    <a href="#"> {{collapsible-title}} <i class="ti-chevron-next"></i></a>
+    <span class="collapsible__toggle">
+      <i></i>
+    </span>     
+  </h5>   
+  <div class="collapsible__body">
+    <ul class="fixed-height__list" data-items-shown-on-mobile="{{mobileItems}}">
+
+      {{#hasImage}}
+      {{> molecules-fixed-height-item(img: true, test: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{> molecules-fixed-height-item(img: true) }}    
+      {{/hasImage}}
+
+      {{^hasImage}}
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{> molecules-fixed-height-item }}    
+      {{/hasImage}}    
+    </ul>
+  </div>
+</div>
+<!-- /end collapsible fixed-height component -->

@@ -1,0 +1,159 @@
+<div class="wrap">
+  <div class="l-4up--video">
+    <!-- Video Player --> 
+    <div class="l-gi video__player" style="background:black;">
+      <a href="#" class="video__toggler">
+        <span class="toggler__icon"></span>
+      </a>
+      <div class="player__plugin-container">
+        <div id="SilverlightContainer" class="out-of-page embed-container"></div>
+        <a href="#" data-featherlight="#get-app">
+          <img class="video-detail-static-thumbnail" src="{{img.video-player.src}}" onerror="this.error=''; this.src='/image/1193144/1418024041000/large16x9/947/533/RB/series-detail-medium.jpg';">
+        </a>
+      </div>
+      <div class="video__controls">
+        <!--  08 Jan 2015 for Issue https://app.asana.com/0/16360230376744/22490906553555  
+        Add this new line of code -->
+        <div class="video__logo controls__item"><a href="#"><img src="../../images/icon-logos/chu.png"><span>Channel U</span></a></div>
+        <!-- / 08 Jan 2015 -->
+        <div class="video__favourite controls__item"><a href="#"><i class="ti-favourite"></i><span>Favourite</span></a></div>
+        <div class="video__rate controls__item"><a href="#" data-featherlight="#modal-rating"><i class="ti-star"></i><span>Rate</span></a></div>
+        <div class="video__share controls__item"><a href="#" data-featherlight="#share-video-container"><i class="ti-share"></i><span>Share</span></a></div>
+        <div class="video__share controls__item"><a href="#"><i class="ti-questionmark"></i><span>Having Problems</span></a></div>
+      </div>
+      <!-- 08 Jan 2015 for Issue https://app.asana.com/0/16360230376744/22490906553555  
+      Moved this section of code out from video__controls to here -->
+      
+      <div class="get-app lightbox-container" id="get-app">
+        <h3 class="lightbox__title">Download Toggle</h3>
+        <div class="lightbox__content">
+          <p class="h4">You're almost ready to watch American SuperNanny</p>
+          <p>Toggle is a FREE app required to watch the content on your device</p>
+          <div class="banners">
+            <img src="../../images/tmp/download-toggle-app-banner.jpg">
+          </div>
+        </div>
+        <div class="lightbox__actionbar--yesno">
+          <a href="#" class="btn btn--pink">Get Toggle App</a>
+          <a href="#" class="btn btn--sec">Back to Browsing</a>
+        </div>
+      </div>
+      
+      <div class="modal-rating lightbox-container center" id="modal-rating">
+        <h3 class="lightbox__title">Rate this video</h3>
+        <div class="lightbox__content">
+          <p class="stars">
+            <a href="#" class="star"></a>
+            <a href="#" class="star"></a>
+            <a href="#" class="star"></a>
+            <a href="#" class="star"></a>
+            <a href="#" class="star"></a>
+          </p>
+          <p class="feedback">Thank you for your rating.</p>
+        </div>
+      </div>
+      <div class="share-video lightbox-container" id="share-video-container">
+        <h3 class="lightbox__title">Share this video</h3>
+        <div class="share-video__share-option">
+          <label for="">Share to</label>
+          <div class="article__social-media-buttons">
+            <a href="#" class="favourite btn--round ">
+              <i class="i-favourite has-icon-only"></i>
+            </a> 
+            <a href="#" class="facebook btn--round ">
+              <i class="i-facebook has-icon-only"></i>
+            </a> 
+            <a href="#" class="twitter btn--round ">
+              <i class="i-twitter has-icon-only"></i>
+            </a> 
+            <a href="#" class="share btn--round ">
+              <i class="i-share has-icon-only"></i>
+            </a>
+          </div>
+        </div>
+        <div class="share-video__share-option">
+          <label for="link">Link</label>
+          <div class="lightbox-form-item">
+            <input type="text" name="link" value="http://beta.toggle.com/en/movies/zzc20140908rr1/283140" readonly />
+            <a href="#" class="btn">Copy</a>
+          </div>
+        </div>
+        <div class="share-video__share-option">
+          <label for="embed">Embed</label>
+          <div class="lightbox-form-item">
+            <input type="text" name="embed" value="<iframe frameborder='0' width='480' height='270' allowfullscreen src='http://beta.toggle.com/en/movies/zzc20140908rr1/283140'></iframe>"  readonly />
+            <a href="#" class="btn">Copy</a>
+          </div>
+          <div class="share-option__embed-options">
+            <label for="player-size">Player Size</label>
+            <div class="form__item">
+              <div class="input-group">
+                <input type="radio" name="player-size" id="small" value="small" checked />
+                <label for="small">Small (320 x 180px)</label>
+              </div>
+              <div class="input-group">
+                <input type="radio" name="player-size" id="medium" value="medium" />
+                <label for="medium">Medium (480 x 270px)</label>
+              </div>
+              <div class="input-group">
+                <input type="radio" name="player-size" id="large" value="large" />
+                <label for="large">Large (640 x 360px)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / 08 Jan 2015 -->
+    </div>
+    <!-- Video Details --> 
+    <div class="l-gi">
+      <div class="video__detail">
+        <h1 class="video__title">H2 Content Title: Lorem ipsum dor sit met</h1>
+<!--         <div class="video__meta">
+          {{> atoms-meta-item-video-1 }}
+        </div> -->
+        <div class="video__meta">
+          {{> atoms-meta-item-video-2 }}
+        </div>
+
+        <div class="video__desc">
+          <p>
+            <strong>By Channel 8 </strong><strong> 12 Nov 2014 </strong><strong> Available till: 17 Nov 2014 </strong><strong> Audio: Chinese, Korean </strong><strong> Subtitles: English, Chinese, Malay, Tamil</strong>
+          </p>
+        </div>
+
+        <div class="video__desc expander">
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat a aut facilis reiciendis, laudantium sunt nisi qui. Obcaecati, eos, tempora. Exercitationem animi atque nisi a impedit laudantium nobis nesciunt sequi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda eum eligendi nobis. Ducimus quaerat velit eveniet ullam vel quia nesciunt, maxime temporibus, sint porro accusamus, vero facilis animi repellendus! Modi.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <!-- Sidebar Stuff --> 
+    <div class="l-gi">
+      <div class="l-2up--6-6--video">
+        <div class="l-gi">
+          {{> molecules-microsite-link }}
+          {{> molecules-ad-300x100-block(u: u-hideMobile) }} 
+          {{> molecules-ad-300x100-block(u: u-hideTablet u-hideDesktop) }} 
+        </div>
+        <div class="l-gi">
+          <div class="list-slider-item--video" data-target="0">
+            {{> molecules-fixed-height-player-related-videos(fixed-height-title: Episode List, mobileItems: 6, episode: true, nowPlaying: true, hasImage: true)}} 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Full width slider for episode list -->
+    <div class="l-gi">
+      <div class="list-slider-target--video" data-index="0">
+       {{> molecules-megaslider-episode(slider-title: Episode List)}}     
+     </div>
+   </div>
+ </div>
+</div>

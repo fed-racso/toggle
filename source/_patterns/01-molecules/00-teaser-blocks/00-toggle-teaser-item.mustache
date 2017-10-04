@@ -1,0 +1,48 @@
+<div class="tg-teaser-item">
+  <a href="{{ url }}">
+    <div class="img-holder">
+      {{> atoms-landscape-16x9}}
+      <div class="item__type">
+        <i class="type-icon-{{type}}"></i>
+      </div>
+      {{#suggested}}
+      <div class="item__flags highlighted-itemz">
+        <div class="c-wrapper">
+          <div class="c-table">
+            <div class="c-cell">
+              Suggested
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/suggested}}
+      {{#nowplaying}}
+
+      <div class="now-playing">
+        <div class="c-wrapper">
+          <div class="c-table">
+            <div class="c-cell">
+              Now Playing
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{/nowplaying}}
+      <div class="item__tags">
+        {{#icon-labels}}
+        <!--<img class="label__img" src="{{label}}" alt=""/>-->
+        <div class="tag {{tag}}">{{{taghtml}}}</div>
+        {{/icon-labels}}
+      </div>
+    </div>
+  </a>
+  <div class="item__info">
+    <h6 class="item__title {{#featured}} h3 {{/featured}}">
+      <a href="#">Item Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit!</a>
+    </h6>
+    {{> atoms-meta-item-with-icon }}
+  </div>
+  <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+</div>

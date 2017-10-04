@@ -1,0 +1,8 @@
+{
+  "bodyClass" : "body primary dark-theme darkbg default",
+  "light-theme": false,
+  "dark-theme": true,
+  "section-header__has-logo": true,
+  "section-header__title": "Journey: The Turbulent Times",
+  "section-header__parent": "Channel U"
+}

@@ -1,0 +1,19 @@
+.page-background {
+  position: relative;
+  height: auto;
+  margin-top: rhythm(0);
+
+  @include bp(medium) {
+    padding-bottom: rhythm(8);
+    height: 0;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 0;
+    @include bp(medium) {
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}

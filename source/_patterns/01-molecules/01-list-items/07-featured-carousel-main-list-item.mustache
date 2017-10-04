@@ -1,0 +1,53 @@
+{{^16-9}}
+<div class="main-image__item {{textLocation}} {{textColor}}"> 
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{{img-fcmi}}" media="(min-width: 980px)">
+    <source srcset="{{img-fcmi-med}}" media="(min-width: 760px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img src="" alt="" srcset="{{img-fcmi-small}}">
+  </picture>
+  <div class="main-image__show-holder">
+    <div class="main-image__centerer--table">
+      <div class="main-image__centerer--cell">
+        <h2 data-dotdot="2"><a href="#">{{ eng-title }}</a></h2>
+        <h2 data-dotdot="2"><a href="#">{{ chi-title }}</a></h2>
+        <p data-dotdot="3">{{ excerpt-fcmi }} </p>
+        <div class="main-image__links">
+          <h4><a class="catchup" href="#"> Latest Catchup <i class="ti-play-incircle"></i> </a> </h4>
+          <h4><a href="#"> Learn More <i class="ti-chevron-next"></i> </a> </h4>
+          <h4><a href="#"> Watch It First <i class="ti-chevron-next"></i></a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/16-9}}
+
+{{#16-9}} 
+<div class="main-image__item sixteen-nine {{gradient}} {{textLocation}} {{textColor}}"> 
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{{img-fcmi-big}}" media="(min-width: 980px)">
+    <source srcset="{{img-fcmi-med}}" media="(min-width: 760px)">
+    <img src="" alt="" srcset="{{img-fcmi-small}}">
+    <!--[if IE 9]></video><![endif]-->
+  </picture>
+  <div class="sixteen-nine__gradient-alt"></div>
+  <div class="sixteen-nine__gradient"></div>
+  <div class="main-image__show-holder ">
+    <div class="main-image__centerer--table">
+      <div class="main-image__centerer--cell">
+        <h2 data-dotdot="2"><a href="#">{{ eng-title }}</a></h2>
+        <h2 data-dotdot="2"><a href="#">{{ chi-title }}</a></h2>
+        <p data-dotdot="3">{{ excerpt-fcmi }} </p>
+        <div class="main-image__links">
+          <h4><a class="catchup" href="#"> Latest Catchup <i class="ti-play-incircle"></i> </a> </h4>
+          <h4><a href="#"> Learn More <i class="ti-chevron-next"></i> </a> </h4>
+          <h4><a href="#"> Watch It First <i class="ti-chevron-next"></i></a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/16-9}}

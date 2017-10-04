@@ -1,0 +1,40 @@
+<div class="l-fc sf card">
+  <h5>Social Feed</h5>
+  <div id="grid" class="masonry-grid" data-columns>
+    {{# sf }}
+    <div class="socialfeed__item sf-card">    
+
+    {{# post-sf}}
+    <div class="socialfeed__item__message">
+      <p>{{post-sf}}</p>
+    </div>
+    {{/ post-sf}}
+
+    <picture>
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source srcset="{{img-sf-big}}" media="(min-width: 980px)">
+      <source srcset="{{img-sf-med}}" media="(min-width: 760px)">
+      <img src="" alt="" srcset="{{img-sf-small}}">
+      <!--[if IE 9]></video><![endif]-->
+    </picture>
+
+    <div class="socialfeed__item__publisher">
+      <img src="../../images/icons/profile-default.png" alt="">
+      <div class="socialfeed__item__publisher--name" data-dotdot="1">  
+        <a href="#" target="_blank">{{name-sf}}</a>
+      </div>
+      <div class="socialfeed__item__publisher--date"><a href="#" target="_blank">{{date-sf}}</a></div>
+    </div>
+  </div>
+  {{/ sf }}
+</div>
+
+<div class="socialfeed__loadmore">
+  <a href="#" class="btn--pink">
+    <span>Load More</span>
+  </a>
+</div>
+
+</div>
+
+

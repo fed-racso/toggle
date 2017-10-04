@@ -1,0 +1,15 @@
+<!-- start fluid-height component.  this re-uses molecules from fixed-height -->
+<div class="fluid-height {{#episode}} fluid-height--episode{{/episode}} {{#card}}{{card-class}}{{/card}}" data-split-index="{{split-index}}">
+  <h5 class="fluid-height__title"><a href="#">{{fluid-height-title}} <i class="ti-chevron-next"></i></a></h5>
+  <ul class="fluid-height__list">
+
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+
+</ul>
+</div>
+<!-- /end fixed-height component -->

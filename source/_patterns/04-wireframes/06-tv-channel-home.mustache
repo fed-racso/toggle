@@ -1,0 +1,61 @@
+<!-- Navigation -->
+
+{{> organisms-header }}
+{{> organisms-primary-mega-menu }}
+{{> molecules-ad-banner-block }}
+{{> molecules-secondary-nav }}
+
+
+<!-- full width -->
+<section class="wires">
+  <div class="wrap">
+    <div class="l-12">
+      <!-- Left -->    
+      <div class="l-gi">
+        <!-- Content Area Components--> 
+        {{> organisms-channel-home-carousel }}
+        {{! {{> atoms-wireblock(wire-text: "16:9 carousel <br>carousel", height: "height-300")}}
+        {{> molecules-on-now }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8-4 grid-->
+<section class="wires">
+  <div class = "wrap">
+    <div class="l-2up--8-4">
+      <!-- Content Area -->    
+      <div class="l-gi">
+        <!-- Content Area Components--> 
+        {{> atoms-wireblock(wire-text: "upcoming<br>content grid", height:"height-300")}}
+      </div>
+      <div class="l-gi">
+      	{{> atoms-ad-300x250}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3up grid-->
+<section class="wires">
+  <div class = "wrap">
+    <div class="l-3up">
+      <!-- Content Area -->    
+      <div class="l-gi">
+        <!-- Content Area Components--> 
+        {{> atoms-wireblock(wire-text: "top shows this week<br>load more list", height:"height-300")}}
+      </div>
+      <div class="l-gi">
+      	{{> atoms-wireblock(wire-text: "events<br>load more list", height:"height-300")}}
+      </div>
+
+      <div class="l-gi">
+      	{{> atoms-wireblock(wire-text: "articles<br>load more list", height:"height-300")}}
+      </div>    </div>
+  </div>
+</section>
+
+<section>
+  {{> atoms-wireblock(wire-text: "Footer")}} 
+</section>

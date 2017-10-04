@@ -1,0 +1,115 @@
+//Header inside component
+#channelListAndVideo {
+    h5 {
+        color: #d455bb;
+    }
+    .tg-content-grid {
+        float: left;
+        width: 30%;
+        &:first-child {
+            width: 70%;
+        }
+    }
+    iframe {
+        border: 0;
+        width: 100%;
+        background: #000;
+        height: 51.2vw;
+        @include bp(m-large) {
+            height: 33.2vw;
+        }
+        @include bp(xlarge) {
+            height: 21vw;
+        }
+    }
+    a.tg-load-more {
+        display: none;
+    }
+}
+
+.head--compt {
+    width: 100%;
+    margin: auto;
+    li {
+        display: none;
+    }
+    button {
+        background: transparent !important;
+    }
+    .slick-prev,
+    .slick-next {
+        padding: 0px;
+        margin-top: -2px;
+        &:hover {
+            background: transparent !important;
+            &:before {
+                color: #a5238c;
+            }
+        }
+    }
+    .slick-prev {
+        left: -17px;
+    }
+    .slick-next {
+        right: -17px;
+    }
+    .slick-disabled {
+        opacity: 0.5 !important;
+        cursor: initial;
+        &:hover {
+            background: transparent !important;
+            &:before {
+                color: #fff !important;
+            }
+        }
+    }
+    .selectChannel {
+        // height: 2.5em;
+        width: 95%;
+        padding: 0.3em 0.5rem;
+        -moz-box-shadow: 2px 2px 0px #181818, -2px -2px 0px #484849;
+        -webkit-box-shadow: 2px 2px 0px #181818, -2px -2px 0px #484849;
+        box-shadow: 2px 2px 0px #181818, -2px -2px 0px #484849;
+        border-radius: 5px;
+        margin: 3px 0 10px 3px;
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+// Class to Support support portrait and landscape. Use .img-squareWrap .img-portrait  for vertical alignment
+.img-squaredWrap {
+    background: #000;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    img {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+    }
+}
+
+.img-portrait {
+    img {
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        top: 0 !important;
+        -webkit-transform: translateX(-50%) !important;
+        -moz-transform: translateX(-50%) !important;
+        -ms-transform: translateX(-50%) !important;
+        -o-transform: translateX(-50%) !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+    }
+}
+
+p br + sup {
+    top: -1.3em;
+}

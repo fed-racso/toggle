@@ -1,0 +1,296 @@
+.megaslider-holder {
+  h2 {
+    margin-top: rhythm(1.5);
+    margin-bottom: rhythm(0.5);
+    img {
+      margin-bottom: 0;
+      vertical-align: middle;
+      margin-right: 0.125em;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.slider {
+  @include cf;
+  position: relative;
+  margin-bottom: rhythm(1);
+}
+
+.slider-wrap {
+  overflow: hidden;
+  // overflow-x: scroll;
+  // overflow-y: hidden;
+  // -webkit-overflow-scrolling: touch;
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
+  // white-space: nowrap;
+}
+
+.slider-row {
+  @include cf;
+  position: relative;
+  white-space: normal;
+  backface-visibility: hidden;
+}
+
+.slider-item {
+  list-style: none;
+  &:last-child {
+    margin-right: 0 !important;
+  }
+  img {
+    margin-bottom: 0;
+  }
+}
+
+// Slider Arrows
+.slider-prev, .slider-next {
+  // display: block;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // margin: 0;
+  width: rhythm(0.5);
+  font-size: rhythm(1);
+  // height: 100%;
+  opacity: 0.8;
+  @include tui {
+    color: #8f8f8f;
+  }
+
+  @include bp(medium) {
+    width: rhythm(1.5);
+  }
+
+  @include tui {
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  i {
+    //half of font-size;
+    margin-top: -10px;
+    margin-left: 0;
+    margin-right: 0;
+    top: 50%;
+    @include bp(m-large) {
+      margin-top: -14px;
+    }
+  }
+}
+
+.slider-prev {
+  left: rhythm(-0.55);
+  right: auto;
+  @include bp(small) {
+    left: rhythm(-1.5);
+  }
+
+  i {
+    // Magic number
+    left: 0.6rem;
+    @include bp(m-large) {
+      left: 0.45rem;
+    }
+  }
+}
+
+.slider-next {
+  right: rhythm(-0.5);
+  left: auto;
+  @include bp(small) {
+    right: rhythm(-1.5);
+  }
+
+  i {
+    // Magic number
+    right: -0.6rem;
+    @include bp(m-large) {
+      right: -0.45rem;
+    }
+  }
+}
+
+.slider-item .item__imageholder {
+  position: relative;
+  display: block;
+}
+
+// Item image
+.slider-item .item__image {
+  img {
+    display: block;
+  }
+}
+
+// Item labels
+.slider-item .item__labels {
+  position: absolute;
+  top: rhythm(0.5);
+  left: rhythm(0.5);
+  color: white;
+  font-weight: light;
+  text-transform: uppercase;
+  @include adjust-font-size-to(13px);
+  line-height: 1;
+  i {
+    float: left;
+  }
+  .label {
+    display: block;
+    float: left;
+    margin-top: -2px;
+    margin-left: 0.25em;
+    padding: 0.25em;
+    padding-top: 6px;
+    border-radius: 4px;
+  }
+  .label--vip {
+    @extend .label;
+    background: #B51A80;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+  .label--sglink {
+    @extend .label;
+    background: #BB2131;
+    strong {
+      font-weight: semibold;
+    }
+  }
+}
+
+// Item duration
+.slider-item .item__duration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: rhythm(0.5);
+  font-size: 8px;
+  line-height: 1;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  @include bp(small-2) {
+    font-size: 9px;
+  }
+
+  @include bp(medium) {
+    font-size: 10px;
+  }
+
+  @include bp(large) {
+    font-size: 12px;
+  }
+
+  span {
+    position: relative;
+    top: 1px;
+  }
+}
+
+// Item types
+.slider-item .item__type {
+  position: absolute;
+  // bottom: -1px;
+  bottom: 0px;
+  left: 0;
+  background: black;
+  opacity: 0.8;
+  width: 18%;
+  height: 22%;
+}
+
+.slider-item .item__imageholder {
+  &:hover,
+  &:active,
+  &:focus {
+    .item__type {
+      @include tdc {
+        background: $theme-color;
+      }
+    }
+  }
+}
+
+$slr-types: video;
+
+i[class^="i-slr"] {}
+
+@each $type in $slr-types {
+  .i-sl-#{$type} {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 55%;
+    width: 55%;
+    // background: url("../images/slr/#{$type}.png") center center no-repeat;
+    background-size: contain;
+  }
+}
+
+$slr-types: null;
+
+.slider-item .item__title {
+  font-weight: bold;
+  margin-top: rhythm(0.5);
+  margin-bottom: 0;
+}
+
+.slider-item .desc {
+  margin-top: rhythm(0.25);
+}
+
+.slider-item .meta {
+  margin-top: rhythm(0.25);
+  margin-bottom: rhythm(0.25);
+}
+
+.featured-item .item__title {
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+// Slider Row Channel Icons
+
+// $icons-channels: channel-5, vasantham;
+
+// @each $icon in $icons-channels {
+//   .i-slr-#{$icon} {
+//     height: 22px;
+//     background: url("../images/slr/#{$icon}.png") center center no-repeat;
+//     background-size: contain;
+//     margin-right: 2px;
+//     @include hidpi {
+//       background-image: url("../images/slr/#{$icon}@2x.png");
+//     }
+//   }
+// }
+
+// .i-slr-vasantham {
+//   width: 50px;
+// }
+
+// .i-slr-channel-5 {
+//   width: 16.210526316px;
+// }
+
+// ==========
+// SLIDER WITH TABS
+// ==========
+// .slider-with-tabs {
+//   .slider-prev, .slider-next {
+//     padding-top: rhythm(1);
+//   }
+// }
+
+// .slider-item--portrait {
+//   .item__type {
+//     height: 11%;
+//   }
+// }

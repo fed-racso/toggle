@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Tab Icons</title>
+    
+    <!-- Examples CSS -->                    
+    <link rel="stylesheet" type="text/css" href="assets/css/examples.css" />
+    <!-- Tabs Template -->
+    <link rel="stylesheet" type="text/css" href="../templates/contrast/template.css" />
+        
+    <!-- JavaScript -->
+	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../js/plugins/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../js/jquery.slidetabs.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-litelighter.js"></script> <!-- Syntax highlighting -->
+    <script type="text/javascript">  
+  	$(document).ready(function() {
+		$('pre').litelighter({clone:false, style:'light', language:'js'});
+						  		
+		// Tab Icons
+  		$('#tab-icons').slidetabs({
+			orientation : 'vertical'
+  		});
+  	});		
+    </script>
+
+</head>
+<body>	
+    
+    <header id="header">
+    	<div class="center">
+        	<h1>Tab Icons</h1>
+        	<p>Displaying icons inside the tabs is possible with a little extra CSS. See the <a href="http://www.slidetabs.com/docs/#jquery-adding-icons">docs</a> for alternative ways to add tab icons.</p>
+        </div>
+    </header>
+    
+    <div class="center">
+        
+        
+        <!-- Start HTML: Tab Icons -->
+        <div id="tab-icons" class="contrast-vertical">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li class="st_li_active"><a href="#tab-1" class="st_tab_first st_tab_active">Tab 1 <span class="st_icon"></span></a></li>
+                        <li><a href="#tab-2">Tab 2 <span class="st_icon"></span></a></li>
+                        <li><a href="#tab-3">Tab 3 <span class="st_icon"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views">
+                <div class="tab-1 st_view"><div class="st_view_inner">
+                    <h1>565 x 390</h1>
+                </div></div>
+                <div class="tab-2 st_view"><div class="st_view_inner">
+                    <h1>565 x 390</h1>
+                </div></div>
+                <div class="tab-3 st_view"><div class="st_view_inner">
+                    <h1>565 x 390</h1>
+                </div></div>
+            </div>
+        </div>
+        <!-- /End HTML: Tab Icons -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    $('#tab-icons').slidetabs();
+});
+</pre>
+        </div>
+        
+        <h3>CSS for the tab icons:</h3>
+        <div class="code">
+<pre data-lllanguage="css">
+div#tab-icons div.st_tabs a { 
+	position: relative; 
+	text-indent: 50px; 
+}
+div#tab-icons div.st_tabs span.st_icon { 
+	position: absolute; 
+	top: 14px; 
+	left: 15px; 
+	display: block; 
+	width: 20px; 
+	height: 20px;
+	background: url("../img/tab-icon.jpg") no-repeat 0 -20px transparent;
+}
+div#tab-icons div.st_tabs a.st_tab_active span.st_icon,
+div#tab-icons div.st_tabs a:hover span.st_icon {
+	background-position: 0 0;
+}
+</pre>
+        </div>
+        <p class="docs_link">Documentation: <a href="http://www.slidetabs.com/docs/#jquery-adding-icons">Adding Tab Icons</a></p>
+    
+    </div> <!-- /.center -->
+
+</body>
+</html>

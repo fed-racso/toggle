@@ -1,0 +1,48 @@
+.extras-tabs {
+  @include cf;
+  @include tdc {
+    border-bottom: 4px solid $theme-color;
+  }
+
+  > li {
+    @extend %lsn;
+    background: color(white, light);
+    float: left;
+  }
+  a {
+    display: block;
+    padding: rhythm(1) rhythm(2);
+    @include type-scale(medium);
+    color: color(dark);
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+      @include tdc {
+        background: $theme-color;
+        color: white;
+        font-weight: get-weight(header semibold);
+      }
+    }
+  }
+  li.is-active a {
+    @include tdc {
+      background: $theme-color;
+      font-weight: get-weight(header semibold);
+      color: white;
+    }
+  }
+}
+
+.extras-tab-content {
+  @extend %cf;
+  background: color(white, light);
+  padding: rhythm(1) gutter();
+  > li {
+    @extend %lsn;
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}

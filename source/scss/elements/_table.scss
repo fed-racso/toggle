@@ -1,0 +1,72 @@
+//Responsive Table from http://codepen.io/geoffyuen/pen/FCBEg
+
+// More practical CSS...
+// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
+
+.tg-table {
+  margin: tgrhythm(1) 0;
+  width: 100%;
+  @include tui {
+    border: 1px solid $secondary-color;
+  }
+
+  tr:nth-child(odd) {
+    @include tui {
+      background-color: $secondary-color;
+    }
+  }
+  
+  th {
+    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+    background-color: #1a1a1a; //applies to both light and dark theme
+    color: white;
+    border-right: 1px solid #484848;
+    &:last-child {
+      border:0;
+    }   
+  }
+  
+  td {
+    display: block; 
+    @include bp(small) {
+      border-right: 1px solid #999;
+    }
+    
+    &:first-child {
+      padding-top: tgrhythm(0.5);
+    }
+    &:last-child {
+      padding-bottom: tgrhythm(0.5);
+      border-right: 0;
+    }
+
+    &:before {
+      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+      font-weight: bold;
+      
+      // optional stuff to make it look nicer
+      // width: tgrhythm(6.5); // magic number :( adjust according to your own content
+      display: block;
+      // end options
+      
+      @include bp(small) {
+        display:none;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    @include tgfw(normal);
+    padding: 0 tgrhythm(0.5);
+    margin-bottom: rhythm(0.25);
+    @include bp(small) {
+      display: table-cell;
+      padding: tgrhythm(0.5) tgrhythm(0.5);
+      text-align: center;
+    }
+
+  }
+  
+  
+}

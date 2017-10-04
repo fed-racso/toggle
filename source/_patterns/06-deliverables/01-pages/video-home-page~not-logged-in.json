@@ -1,0 +1,7 @@
+{
+  "video": "true", 
+  "bodyClass" : "body primary dark-theme darkbg", 
+  "light-theme": false,
+  "dark-theme": true,
+  "loggedIn": false
+}

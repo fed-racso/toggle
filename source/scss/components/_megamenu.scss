@@ -1,0 +1,314 @@
+.mega-menu--primary-nav {
+    display: none;
+    max-height: 0;
+    padding: 0;
+    overflow-y: hidden;
+    transition: all 0.3s ease-out;
+    background: color(dark);
+    box-shadow: 0 -4px 0px 0 map-fetch($toggle-colors, primary color) inset;
+    .is-desktop & {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+        display: block;
+        margin-top: -1px;
+    }
+    @each $theme,
+    $map in $xin-colors {
+        &[data-background="#{$theme}"] {
+            box-shadow: 0 -4px 0px 0 map-get($map, color) inset;
+        }
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    ul {
+        @include cf;
+        position: relative;
+        width: 100%;
+        height: rhythm(13);
+        @include bp(xlarge) {
+            height: rhythm(15);
+        }
+        > li {
+            display: block;
+            float: left;
+            //padding-bottom: rhythm(2);
+            font-weight: get-weight(header normal);
+            // text-transform: uppercase;
+            > a {
+                display: block;
+                padding: rhythm(0.4) rhythm(0.5);
+            }
+            &:first-child {
+                padding-left: 0;
+            }
+            &.is-active {
+                .l-4up {
+                    display: block;
+                }
+            }
+            .l-4up {
+                display: none;
+                position: absolute;
+                top: rhythm(2);
+                left: 0;
+                right: 0;
+                padding-top: rhythm(1);
+                padding-bottom: rhythm(1);
+                border-top: 1px solid white;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                a {
+                    color: white;
+                    color: rgba(255, 255, 255, 0.5);
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .megamenu__item .more {
+        > a {
+            width: rhythm(7);
+        }
+        > a:after {
+            content: '';
+            @extend .i-megamenu-dropdown;
+            margin-left: 0.5em;
+        }
+        &.is-active {
+            > ul {
+                display: block;
+            }
+        }
+        > ul {
+            display: none;
+            position: absolute;
+            width: rhythm(7);
+            padding-bottom: rhythm(0.5);
+            height: auto;
+            > li {
+                padding: 0;
+                display: block;
+                float: none;
+                a {
+                    display: block;
+                    padding-top: rhythm(0.125);
+                    padding-bottom: rhythm(0.125);
+                    color: color(gray, dark);
+                    color: rgba(255, 255, 255, 0.5);
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .b__image--megamenu {
+        img {
+            margin-bottom: rhythm(0.5);
+        }
+        p {
+            font-weight: normal;
+            text-transform: none;
+        }
+    }
+    .radio {
+        ul {
+            height: auto;
+        }
+        .l-gi {
+            position: relative;
+            @include gallery(3);
+            padding: 0;
+            text-transform: none;
+            &.is-active {
+                a:first-child {
+                    background: none;
+                }
+            }
+        }
+        .l-gi a:first-child {
+            width: 85%;
+            //padding-right: rhythm(0.25);
+            &:hover,
+            &:active,
+            &:focus {
+                background: color(dark, lighter);
+            }
+        }
+        i {
+            float: left;
+        }
+        a {
+            display: inline-block;
+            color: color(white, light);
+            font-weight: get-weight(header normal);
+            @include type-scale(small);
+            margin: rhythm(0) 0;
+            padding-left: 0;
+            padding-right: 0;
+            height: 55px;
+            float: left;
+            .vertical1 {
+                display: table;
+                overflow: hidden;
+                height: 40px;
+                padding-left: 5px;
+                .vertical2 {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .play-now {
+            width: 15%;
+            background-position: left center !important;
+            height: 55px !important;
+            //position: absolute;
+            //left: 12.5rem;
+            //top: 0;
+            //bottom: 0;
+            display: block;
+            float: left;
+            padding-right: 0;
+            @extend .i-radio-play;
+            //margin: auto;
+            &:hover {
+                background-position: left center;
+            }
+        }
+    }
+    .tv {
+        > ul {
+            height: rhythm(14);
+            @include bp(xlarge) {
+                height: rhythm(16);
+            }
+            @include type-scale(small);
+            > li {
+                font-weight: get-weight(header normal);
+                > a {
+                    text-transform: none;
+                    padding: 8px 18px;
+                }
+            }
+        }
+        .l-4up {
+            top: rhythm(2.5);
+        }
+    }
+    .megamenu__excerpt {
+        @include type-scale(base);
+    }
+    .megamenu__item.more {
+        position: relative;
+        > ul {
+            display: block;
+            float: left;
+            height: auto;
+            padding-bottom: rhythm(1);
+        }
+        > ul > li {
+            width: 10em;
+            padding: 0;
+            &.is-active > a {
+                background: none;
+            }
+        }
+        > ul > li > ul {
+            height: auto;
+        }
+        > ul > li > ul > li {
+            display: block;
+            float: none;
+            padding: 0;
+            a {
+                color: color(gray, m-base);
+                color: rgba(255, 255, 255, 0.5);
+                padding-top: rhythm(0.125);
+                padding-bottom: rhythm(0.125);
+                &:hover,
+                &:active,
+                &:focus {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.mega-menu--primary-nav {
+    &.is-open {
+        max-height: 400px;
+    }
+    .wrap {
+        //padding-top: rhythm(0.5);
+        .radio {
+            margin-bottom: rhythm(0.5);
+        }
+    }
+}
+
+.megamenu__item {
+    display: none;
+    padding-top: 0.6em;
+    &.is-open {
+        display: block;
+    }
+}
+
+// Megamenu subnav background colors on hover
+// When hovered on more, items will switch to "all" and removes hovered background color
+.megamenu__item > ul > li.is-active,
+li.selected > a {
+    background: color(dark, lighter);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+// @each $theme, $map in $xin-colors-megamenu {
+//   .#{$theme}.megamenu__item > ul > li.is-active > a {
+//     background: map-get($map, color);
+//   }
+//   .#{$theme}.megamenu__item .more > ul {
+//     background: map-get($map, color);
+//   }
+// }
+.megamenu__item .hover-on-more > a {
+    background: none !important;
+}
+
+// Megamenu icons
+.megamenu__item {
+    .i-channel5 {}
+    .i-channel8 {
+        width: 18px;
+    }
+    .i-channelu {
+        width: 25px;
+    }
+    .i-okto {
+        width: 50px;
+    }
+    .i-suria {
+        width: 40px;
+    }
+    .i-vasantham {
+        width: 61px;
+    }
+    .i-cna {
+        width: 38px;
+    }
+}

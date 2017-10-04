@@ -1,0 +1,27 @@
+<div class="vertical-listing">
+
+  <header class="vertical-listing__header">
+    <h2 class="vertical-listing__title">{{list-title}}</h2>
+    {{> molecules-pagination(article:true)}}
+    <div class="sort">
+      <span>Sort:</span>
+      <select class="dropdown">
+        <option value="popular">Most Popular</option>
+        <option value="latest">Latest </option>
+      </select>
+    </div>
+  </header>
+
+  <ul class="vertical-list">
+    <li>
+      {{> molecules-vertical-list-item( "item-title": "Episode 12 - Lorem ipsum dolor sit" , "item-status": "Premiering on 9 August (Fri), 9pm") }}
+    </li>
+    <li>
+      {{> molecules-vertical-list-item( "item-title": "Episode 12 - Lorem ipsum dolor sit" , "item-status": "Premiering on 9 August (Fri), 9pm") }}
+    </li>
+  </ul>
+
+  <footer class="vertical-listing__footer">
+    {{> molecules-pagination(article:true)}}
+  </footer>
+</div>

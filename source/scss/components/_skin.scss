@@ -1,0 +1,94 @@
+// Left / right skin
+.skin {
+    display: none;
+    @include bp(large) {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        height: 100%;
+        @include tgzi(ad-skin);
+        height: 100%;
+        min-width: 150px;
+        background-attachment: fixed;
+        background-size: 150px;
+        background-repeat: no-repeat;
+    }
+    @include bp(xlarge) {
+        min-width: 200px;
+        background-size: 200px;
+    }
+}
+
+.skin--left {
+    @extend .skin;
+    left: 0;
+    background-position: left top;
+}
+
+.skin--right {
+    @extend .skin;
+    right: 0;
+    background-position: right top;
+}
+
+.skin__holder {
+    position: fixed;
+    top: 0;
+}
+
+// fixed-height plus skin
+.has-skin {
+    .is-fixed {
+        @include bp(large) {
+            left: 50% !important;
+            -webkit-transform: translate(-50%);
+            -moz-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+            -o-transform: translate(-50%);
+            transform: translate(-50%);
+            width: calc(100% - 300px);
+        }
+        @include bp(xlarge) {
+            left: 50% !important;
+            -webkit-transform: translate(-50%);
+            -moz-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+            -o-transform: translate(-50%);
+            transform: translate(-50%);
+            width: calc(100% - 400px);
+        }
+    }
+    .l-2up--8-4 .tg-content-grid .item__title {
+        font-size: 0.8em !important;
+        line-height: 1.2em !important;
+        height: 3.5em !important;
+    }
+    #scroll-top-button {
+        @include bp(large) {
+            margin-right: 150px;
+        }
+        @include bp(xlarge) {
+            margin-right: 200px;
+        }
+    }
+    #feedback-callout {
+        @include bp(large) {
+            left: 2%;
+            margin-left: 150px;
+        }
+        @include bp(xlarge) {
+            left: 2%;
+            margin-left: 200px;
+        }
+    }
+    .fixed-height__item {
+        &>a {
+            width: 5.75em !important;
+            &+.item__details {
+                margin-left: 6.375rem;
+            }
+        }
+    }
+}

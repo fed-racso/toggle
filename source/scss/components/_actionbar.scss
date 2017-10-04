@@ -1,0 +1,22 @@
+.tg-actionbar {
+  @extend .l-2up--4-4;
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: rhythm(0.5);
+    @include tui {
+      color: $meta-color;
+    }
+
+    a {
+      @include tdc {
+        color: $theme-color;
+      }
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .tg-list-item {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,96 @@
+.az {
+  text-align: justify; 
+  @include cf;
+  margin-bottom: tgrhythm(1);
+  margin-left: -0.5 * gutter(14);
+  margin-right: -0.5 * gutter(14);
+  li {
+    @include tgts(normal);
+    margin-bottom: rhythm(0.5);
+    line-height: rhythm(1);
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: rhythm(0.25);
+    @include tui {
+      //invert to follow design
+      background-color: $secondary-color;
+      a {
+        position: relative;
+        top: 1px;
+        color: white;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: darken($secondary-color, 5%);
+      }
+    }
+
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+      @include with-layout((columns: 12, output: float, gutter-position: split, gutters: 0.75)) {
+        @include span(2);
+        &:nth-last-child(2),
+        &:nth-last-child(1) {
+          @include span(4);
+        }
+      }
+    }
+
+    //widths are tuned to fit text in nice boxes
+    // width:14%;
+    @include bp(medium) {
+      @include with-layout(float 14 split) {
+        @include span(2);
+        //margin-bottom: 2 * gutter();
+      }
+    }
+
+    @include bp(large) {
+      @include with-layout(float 14 split) {
+        @include span(1);
+        //margin-bottom: 2 * gutter();
+      }
+    }
+
+    a {
+      line-height: rhythm(1.5);
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  li.is-selected {
+    @include tdc {
+      background: $theme-color;
+    }
+  }
+  // Others
+  li:last-child {
+    @include bp(m-large) {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.a-z-listing {
+  @include bp(small-2) {
+    // padding-right: rhythm(2);
+  }
+
+  h6 {
+    //reset h6 styles
+    list-style: none;
+    display: block;
+    padding: rhythm(0.5) 0;
+    margin-bottom: 0;
+  }
+  h6 + h6 {
+    @include tui {
+      border-top: 1px solid $secondary-color;
+    }
+  }
+}
+
+.a-z-listing:last-child {
+  margin-right: 0;
+}

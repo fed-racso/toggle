@@ -1,0 +1,10 @@
+<div class="carousel{{#small}} carousel--small {{/small}}">
+  {{#nci}} 
+    {{#small}}
+      {{> molecules-carousel-item-small}}
+    {{/small}}
+    {{^small}} 
+      {{> molecules-carousel-item}}
+    {{/small}}
+  {{/nci}}
+</div>

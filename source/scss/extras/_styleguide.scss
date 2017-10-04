@@ -1,0 +1,36 @@
+.styleguide {
+  section {
+    padding: rhythm(2);
+    +section {
+      border-top: 1px solid #ccc;
+    }
+  }
+
+  .palette {
+    margin-bottom: rhythm(1);
+    margin-top: 30px;
+  }
+  .color-palette {
+    width: rhythm(2);
+    height: rhythm(2);
+    margin: rhythm(0.5) 0;
+    border-radius: 100%;
+  }
+
+  .styleguide__sub-section {
+    color:color(gray);
+    padding:20px 0 5px 0;
+    margin:20px 0;
+    border-bottom:1px solid color(gray);
+  }
+
+  .darkbg .styleguide__sub-section {
+    color:color(gray, darker);
+    border-bottom:1px solid color(gray, darker);
+  }
+
+  .darkbg section {
+    border-top: 1px solid color(gray, darker);
+  }
+}
+

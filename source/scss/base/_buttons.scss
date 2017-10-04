@@ -1,0 +1,197 @@
+.btn, .btn--social {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-bottom: rhythm(1);
+  padding: rhythm(0.4) 1em;
+  border: 1px solid transparent;
+  font-weight: get-weight(body normal);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  // height: rhythm(2);
+  line-height: rhythm(1.2);
+  &:hover {
+    text-decoration: none;
+  }
+  &:active,
+  &:focus {
+    color: color(white);
+  }
+  @include type-scale(base);
+  @include tui {
+    color: white;
+  }
+
+  @include tdc {
+    background: $theme-color;
+    &:hover,
+    &:active,
+    &:focus {
+      background: darken($theme-color, 5%);
+    }
+  }
+  .primary-dark & {
+    background: map-get($toggle-colors, primary color);
+  }
+}
+
+// Button variations
+// full, round, pink
+.btn--full {
+  @extend .btn;
+  display: block;
+}
+
+.btn--round {
+  @extend .btn;
+  height: rhythm(2);
+  width: rhythm(2);
+  border-radius: 100%;
+  padding: 0;
+}
+
+.btn--pink {
+  @extend .btn;
+  background: map-fetch($toggle-colors, primary color) !important;
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken(map-fetch($toggle-colors, primary color), 5%) !important;
+  }
+}
+
+.btn--sec {
+  @extend .btn;
+  color: white;
+  @include tui {
+    background: $meta-color !important;
+    &:hover,
+    &:active,
+    &:focus {
+      background: darken($meta-color, 5%) !important;
+    }
+  }
+}
+
+// Load more buttons
+.tg-load-more.btn {
+  background: transparent;
+  @include tdc {
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      border: 1px solid $theme-color;
+    }
+  }
+
+  @include tui {
+    color: $meta-color;
+    border: 1px solid $meta-color;
+  }
+}
+
+// Icons for buttons
+.btn [class^="i-"] {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 21px;
+  margin-right: 0.5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.btn i.has-icon-only {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+// Social Media, Favourite and Shre buttons
+$social-media: (facebook: (color: #547BBC), twitter: (color: #78CBEF));
+
+@each $sm, $map in $social-media {
+  .#{$sm} {
+    @include tdc {
+      background: map-get($map, color);
+      &:hover,
+      &:active,
+      &:focus {
+        background: darken(map-get($map, color), 5%);
+      }
+    }
+  }
+  .i-#{$sm} {
+    // background-image: url("../images/icons-social-media/#{$sm}.png");
+  }
+}
+
+.favourite {
+  @include tui {
+    background: $secondary-color !important;
+    // &:hover,
+    // &:active,
+    // &:focus {
+    //   background: darken($secondary-color, 5%) !important;
+    // }
+  }
+
+  .i-favourite {
+    // background-image: url("../images/icons/favourite.png");
+    @include hidpi {
+      // background-image: url("../images/icons/favourite-2x.png");
+    }
+  }
+  &.selected {
+    .i-favourite {
+      // background-image: url("../images/icons/favourite-selected.png");
+      @include hidpi {
+        // background-image: url("../images/icons/favourite-selected-2x.png");
+      }
+    }
+  }
+}
+
+.rate {
+  @include tui {
+    // background: $secondary-color !important;
+    &:hover,
+    &:active,
+    &:focus {
+      // background: darken($secondary-color, 5%) !important;
+    }
+  }
+
+  .i-rate {
+    // background-image: url("../images/icons/rate.png");
+    @include hidpi {
+      // background-image: url("../images/icons/rate-2x.png");
+    }
+  }
+  &.selected {
+    .i-rate {
+      // background-image: url("../images/icons/rate-selected.png");
+      @include hidpi {
+        // background-image: url("../images/icons/rate-selected-2x.png");
+      }
+    }
+  }
+}
+
+.share {
+  @extend .btn--pink;
+  .i-share {
+    // background-image: url("../images/icons/share.png");
+    @include hidpi {
+      // background-image: url("../images/icons/share-2x.png");
+    }
+  }
+}

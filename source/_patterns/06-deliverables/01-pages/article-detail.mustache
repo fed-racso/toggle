@@ -1,0 +1,29 @@
+{{> organisms-notification-bar(notification-warning:false, notification-system: false) }}
+
+<div class="page-wrap">
+  {{> molecules-ad-skin }}
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Gonna Make It!", section-header__parent: "Channel U", section-header__has-logo: true) }}
+  {{> molecules-secondary-nav }}
+  {{> molecules-page-background }}
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> organisms-article }}
+          {{> organisms-content-grid(rows: 3, component-title: More From Gonna Make It) }}
+          {{> organisms-content-grid(rows: 3, component-title: More From Entertainment) }}
+        </div>
+        <div class="l-gi split-grid">
+          {{> molecules-microsite-link }}
+          {{> molecules-ad-300x250-block(split-index:0) }}
+          {{> molecules-fluid-height(fluid-height-title: Most Popular, card-class:card) }}
+          {{> molecules-ad-300x250-block }}
+        </div>
+      </div>
+    </div>
+  </section>
+    {{> organisms-footer }}
+</div>

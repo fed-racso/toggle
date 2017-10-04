@@ -1,0 +1,17 @@
+
+.more-details, .less-details {
+  @include type-scale(base);
+  font-weight: normal;
+  display: block;
+  margin-top: rhythm(0.5);
+  margin-bottom: rhythm(1);
+  text-transform: uppercase;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.less-details {
+  margin-top: rhythm(-0.5);
+}

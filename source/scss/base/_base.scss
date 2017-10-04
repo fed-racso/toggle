@@ -1,0 +1,73 @@
+html {
+  box-sizing: border-box;
+  min-width: 320px;
+}
+
+.in-skin{
+  max-width: 1000px !important;
+  margin: auto !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Establishes baseline with Compass Vertical.
+@include establish-baseline;
+
+// resets margins and paddings for headers, list and p
+h1, h2, h3, h4, h5, h6, ul, ol, li, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+@each $theme, $map in $tui {
+  body.#{$theme} {
+    background: map-get($map, "background-color");
+    color: map-get($map, "text-color");
+  }
+}
+
+.pink {
+  @include tui {
+    color: $primary-color;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// .light-theme, .dark-theme {
+//   .pink {
+//     color: map-fetch($toggle-colors, primary color);
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       color: map-fetch($toggle-colors, primary color);
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+h2, h5 {
+  img {
+    margin-bottom: 0;
+  }
+}
+
+h5{
+  a{
+    .ti-chevron-next{
+      font-size:12px;
+      line-height:0;
+      top:0;
+    }
+  }
+}
+
+ol {
+  list-style-position: inside;
+}

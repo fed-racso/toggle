@@ -1,0 +1,34 @@
+<form action="{{ url }}" method="post" class="search {{search-class}}">
+
+	<div class="search-field inline-container">
+		
+		<select class="dk-dropdown search-field__select" id="search-select">
+			<option>All</option>
+			<option>Entertainment</option>
+			<option>Lifetstyle</option>
+			<option>Option XXX</option>
+			<option>Option XXX</option>
+			<option>Option XXX</option>
+			<option>Option XXX</option>
+		</select>
+
+		<div class="search-field__holder">
+			<input type="search" placeholder="Search" id="search-field">
+
+			<div class="search-field__close">
+				<button class="search-field__close-icon" style="display: none;">X</button>
+			</div>
+
+			<div class="search-field__search">
+				<button class="search-field__search-icon">
+					<i class="i-search"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="search-field__alltoggle">
+		<p>Searching Video. <a href="#">Expand serach to all Toggle</a></p>
+	</div>
+
+</form>

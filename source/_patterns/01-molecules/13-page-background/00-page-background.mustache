@@ -1,0 +1,23 @@
+<!-- page-background -->
+<div class="page-background">
+  {{#dark-theme}}
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{{img.page-bg.large-dark-src}}" media="(min-width: 980px)">
+    <source srcset="{{img.page-bg.medium-dark-src}}" media="(min-width: 760px)">
+    <img src="" alt="" srcset="{{img.page-bg.small-dark-src}}">
+    <!--[if IE 9]></video><![endif]-->
+  </picture>
+  {{/dark-theme}}
+
+  {{#light-theme}}
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{{img.page-bg.large-light-src}}" media="(min-width: 980px)">
+    <source srcset="{{img.page-bg.medium-light-src}}" media="(min-width: 760px)">
+    <img src="" alt="" srcset="{{img.page-bg.small-light-src}}">
+    <!--[if IE 9]></video><![endif]-->
+  </picture>
+  {{/light-theme}}
+</div>
+<!-- /end page-background -->

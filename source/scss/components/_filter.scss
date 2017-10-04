@@ -1,0 +1,185 @@
+.reset-filter{
+  margin-top:20px;
+}
+
+.filter-menu {
+  display: none;
+  transition: all 0.3s ease-out;
+
+  @include tui {
+    background: $overlay-color;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  h2 {
+    padding-left: rhythm(0.5);
+    text-transform: capitalize;
+
+    @include bp(medium) {
+      font-size: 16px;
+      display: inline-block;
+      width: 20%;
+    }
+  }
+
+  .category__options {
+    width: 100%;
+    height: auto;
+    padding-left: rhythm(0.5);
+
+    @include bp(medium) {
+      //border-bottom: 2px solid #e6e6e6;
+      display: inline-block !important;
+      width: 78%;
+      vertical-align: top;
+    }
+  }
+
+  .options__container {
+    @include cf;
+    position: relative;
+
+    > label {
+      color: white;
+      margin: rhythm(0.5) rhythm(0.5) rhythm(0.5) 0;
+      display: inline-block;
+
+      [type="radio"] {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      [type="radio"] + span {
+        padding: rhythm(0.5) rhythm(1);
+        display: inline-block;
+        @include tgfw(semibold);
+
+        @include tui {
+          background: $secondary-color;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: map-fetch($toggle-colors, primary color);
+        }
+
+        .filtermenu__inner--customDate {
+          display: none;
+        }
+      }
+
+      [type="radio"]:checked + span {
+        background: map-fetch($toggle-colors, primary color);
+
+        .filtermenu__inner--customDate {
+          display: inline-block;
+        }
+      }
+    }
+
+    // > label {
+    //   display: inline-block;
+    //   float: left;
+    //   padding: rhythm(0.4);
+
+    //   > a {
+    //     display: inline-block;
+    //     padding: rhythm(0.4) rhythm(0.4);
+
+    //     @include tui {
+    //       background: $secondary-color;
+    //     }
+
+    //     &:hover,
+    //     &:active,
+    //     &:focus {
+    //       background: color(pink);
+    //       color: white;
+    //     }
+    //   }
+
+    //   &.is-active{
+    //     >a {
+    //       background: color(pink);
+    //       color: white;
+    //     }
+    //   }
+    // }
+ 
+  }
+
+  .filtermenu__inner--customDate {
+    display: none;
+
+    @include bp(small-2) {
+      margin-left: rhythm(1);
+    }
+
+    input {
+      color: #000;
+      height: inherit;
+    }
+  }
+
+  //this is the outer collapsible container
+  .collapsible {
+    border-top: none;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  .collapsible.is-collapsed {
+    margin-top: 0;
+  }
+
+  .filtermenu__inner-left {
+    float: left;
+    padding: rhythm(0.5);
+  }
+
+  .filtermenu__inner-right {
+    float: right;
+    width: 85%;
+  }
+}
+
+.filter-menu {
+  &.is-open {
+    display: block;
+  }
+}
+
+.filtermenu__apply {
+  text-align: right;
+  margin-top: rhythm(1);
+
+  .btn--pink {
+    margin-right: 0;
+  }
+}
+
+.filter-btn {
+  @extend .btn;
+  margin-bottom: 0;
+
+  @include tui {
+    background-color: $secondary-color;
+    color: $text-color;
+  }
+
+  &:hover, &.is-open {
+    @include tui {
+      color: white;
+    }
+  }
+}

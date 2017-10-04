@@ -1,0 +1,619 @@
+{
+  "title": "Pattern Lab",
+  "htmlClass": "pl",
+  "bodyClass": "body primary lightbg light-theme",
+  "light-theme": false,
+  "dark-theme": true,
+  "ajax-urls": {
+    "megaslider-single": "../../_patterns-ajax/megaslider-ajax.html"
+  },
+  "card-class":"card",
+  "card":true,
+  "img": {
+    "logo": {
+      "src": "../../images/icons/topnav-logo.png"
+    },
+    "epg-channel": {
+      "src": "../../images/sample/ch8.png",
+      "alt": "Channel Logo"
+    },
+    "channel-logo": {
+      "src": "../../images/icons/localnav-channel8.png",
+      "alt": "Channel Logo"
+    },
+    "landscape-4x3": {
+      "src": "../../images/fpo_4x3.png",
+      "alt": "4x3 Image"
+    },
+    "landscape-16x9": {
+      "src": "../../images/sample/article-16x9.jpg",
+      "alt": "16x9 Image"
+    },
+    "landscape-16x9-big": {
+      "src": "../../images/tmp/16x9sampleimg1-sm.jpg",
+      "alt": "16x9 Big image"
+    },
+    "portrait": {
+      "src": "../../images/tmp/9x16-image.png",
+      "alt": "Portrait Gif"
+    },
+    "video-player": {
+      "src": "../../images/tmp/16x9sampleimg1-big.jpg"
+    },
+    "square": {
+      "src": "../../images/fpo_square.png",
+      "alt": "Square Thumbnail"
+    },
+    "avatar": {
+      "src": "../../images/sample/avatar.jpg",
+      "alt": "Person Name"
+    },
+    "rectangle": {
+      "src": "http://placeimg.com/400/300/tech",
+      "alt": "Rectangle"
+    },
+    "microsite-hero": {
+      "src": "../../images/tmp/microsite-hero.gif",
+      "alt": "Microsite Hero Image"
+    },
+    "microsite-strip": {
+      "src": "../../images/tv-microsite/microsite-hero.jpg",
+      "alt": "Microsite Hero Image"
+    },
+    "ad-300x250": {
+      "src": "../../images/tmp/ad-300x250.jpg",
+      "alt": "Advertisement Item"
+    },
+    "ad-300x100": {
+      "src": "../../images/tmp/ad-300x100.gif",
+      "alt": "Advertisement Item"
+    },
+    "ad-banner": {
+      "src": "../../images/tmp/ad-banner.png",
+      "alt": "Advertisement Item"
+    },
+    "ad-companion": {
+      "src": "../../images/tmp/ad-companion.png",
+      "alt": "Advertisement Item"
+    },
+    "publisher": {
+      "src": "../../images/tmp/ElleLogo.png"
+    },
+    "presented": {
+      "src": "../../images/tmp/nikeplus.jpg"
+    },
+    "skin-left": {
+      "src": "../../images/tmp/AdSkinLeft.png"
+    },
+    "skin-right": {
+      "src": "../../images/tmp/AdSkinRight.png"
+    },
+    "page-bg": {
+      "small-dark-src": "../../images/tmp/Microsite/Bg-Template-Mobile-DARK.png",
+      "medium-dark-src": "../../images/tmp/Microsite/Bg-Template-Tablet-DARK.png",
+      "large-dark-src": "../../images/tmp/Microsite/Bg-Template-Desktop-DARK.png",
+      "small-light-src": "../../images/tmp/Microsite/Bg-Template-Mobile-LIGHT.png",
+      "medium-light-src": "../../images/tmp/Microsite/Bg-Template-Tablet-LIGHT.png",
+      "large-light-src": "../../images/tmp/Microsite/Bg-Template-Desktop-LIGHT.png"
+    }
+  },
+  "headline": {
+    "short": "Lorem ipsum dolor sit (37 characters)",
+    "medium": "Gonna make it special! 小小传奇 Episode 23"
+  },
+  "excerpt": {
+    "short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    "medium": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "description": "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
+  "url": "#",
+  "name": {
+    "first": "Lacy",
+    "firsti": "L",
+    "middle": "Tommie",
+    "middlei": "T",
+    "last": "Way",
+    "lasti": "W",
+    "cast": {
+      "eng": "Julie Tan",
+      "chi": "陈欣淇",
+      "showEng": "Su Xiao Xiao",
+      "showChi": "苏小小"
+    }
+  },
+  "microsite": {
+    "title": {
+      "chi": "小小传奇",
+      "eng": "Gonna Make It",
+      "excerpt": " Su Xiao Xiao was born in a single-parent family. After giving birth to her at 18 years old, her mother abandoned her in the care of her maternal grandparents."
+    }
+  },
+  "contest": {
+    "name": "Crew Cut Contest",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+  },
+  "year": {
+    "long": "2013",
+    "short": "13"
+  },
+  "month": {
+    "long": "February",
+    "short": "Feb",
+    "digit": "02"
+  },
+  "dayofweek": {
+    "long": "Monday",
+    "short": "Mon"
+  },
+  "day": {
+    "long": "10",
+    "short": "10",
+    "ordinal": "th"
+  },
+  "hour": {
+    "long": "01",
+    "short": "1",
+    "military": "13",
+    "ampm": "pm"
+  },
+  "minute": {
+    "long": "20",
+    "short": "20"
+  },
+  "seconds": "31",
+  "author": {
+    "first-name": "Author",
+    "last-name": "Name"
+  },
+  "twitter": {
+    "img": "../../images/tmp/twitter-image.gif",
+    "user": "MediaCorp Channel 8",
+    "handle": "@ch8sg"
+  },
+  "hero": true,
+  "emergency": false,
+  "touts": [{}, {}, {}],
+  "latest-posts": [{}, {}, {}, {}, {}],
+  "item-title": "Component Title",
+  "section-title": "Section Title",
+  "megamenu": [{
+    "img": {
+      "landscape-16x9": {
+        "src": "../../images/tmp/Menu-1.png"
+      }
+    }
+  }, {
+    "img": {
+      "landscape-16x9": {
+        "src": "../../images/tmp/Menu-2.png"
+      }
+    }
+  }, {
+    "img": {
+      "landscape-16x9": {
+        "src": "../../images/tmp/Menu-3.png"
+      }
+    }
+  }, {
+    "img": {
+      "landscape-16x9": {
+        "src": "../../images/tmp/Menu-4.png"
+      }
+    }
+  }],
+  "nci": [{
+    "class" : "cg_pack--up3",
+    "img-big": "../../images/tmp/gridCarousel/PC/856x400.jpg",
+    "img-med": "../../images/tmp/gridCarousel/Tablet/656x302.jpg",
+    "img-small": "../../images/tmp/gridCarousel/Mobile/320x244_1.jpg",
+    "eng-title": "Content Title: Lorem ipsum ",
+    "chi-title": "小小传奇",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!"
+  }, 
+  {
+    "class" : "cg_pack--up3",
+    "img-big": "../../images/tmp/gridCarousel/PC/424x200.jpg",
+    "img-med": "../../images/tmp/gridCarousel/Tablet/324x151.jpg",
+    "img-small": "../../images/tmp/gridCarousel/Mobile/320x244_2.jpg",
+    "eng-title": "Content Title: Lorem ipsum ",
+    "chi-title": "小小传奇",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!"
+  },
+  {
+    "class" : "cg_pack--up3",
+    "img-big": "../../images/tmp/gridCarousel/PC/424x200_2.jpg",
+    "img-med": "../../images/tmp/gridCarousel/Tablet/324x151_2.jpg",
+    "img-small": "../../images/tmp/gridCarousel/Mobile/320x244_3.jpg",
+    "eng-title": "Content Title: Lorem ipsum ",
+    "chi-title": "小小传奇",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!"
+  },
+  {
+    "class" : "cg_pack--up2",
+    "img-big": "../../images/tmp/gridCarousel/PC/640x400.jpg",
+    "img-med": "../../images/tmp/gridCarousel/Tablet/490x302.jpg",
+    "img-small": "../../images/tmp/gridCarousel/Mobile/320x244_4.jpg",
+    "eng-title": "Content Title: Lorem ipsum ",
+    "chi-title": "小小传奇",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!"
+  },
+  {
+    "class" : "cg_pack--up2",
+    "img-big": "../../images/tmp/gridCarousel/PC/640x400_2.jpg",
+    "img-med": "../../images/tmp/gridCarousel/Tablet/490x302_2.jpg",
+    "img-small": "../../images/tmp/gridCarousel/Mobile/320x244_5.jpg",
+    "eng-title": "Content Title: Lorem ipsum ",
+    "chi-title": "小小传奇",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!"
+  },
+  {
+    "class" : "cg_pack--up1",
+    "img-big": "../../images/tmp/gridCarousel/PC/1280x400.jpg",
+    "img-med": "../../images/tmp/gridCarousel/Tablet/960x302.jpg",
+    "img-small": "../../images/tmp/gridCarousel/Mobile/320x244_6.jpg",
+    "eng-title": "Content Title: Lorem ipsum ",
+    "chi-title": "小小传奇",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!"
+  }],
+  "fcmi": [{
+    "img-fcmi": "../../images/tmp/carouselBIG3.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "eng-title": "小小传奇 / Content Title: Lorem ipsum Super long content that should push over different lines",
+    "chi-title": "Love and Romance",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "right",
+    "textColor": "white-text",
+    "sixteen-nine": "false"
+  }, {
+    "img-fcmi-big": "../../images/tmp/16x9sampleimg1-big.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg2.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg2-sm.jpg",
+    "eng-title": "小小传奇 / Content Title: Lorem ipsum Super long content that should push over different lines",
+    "chi-title": "Thriller And Suspense",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "left",
+    "textColor": "black-text",
+    "16-9": "true"
+  }, {
+    "img-fcmi-big": "../../images/tmp/16x9sampleimg1-big.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg2.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg2-sm.jpg",
+    "eng-title": "小小传奇 / Content Title: Lorem ipsum Super long content that should push over different lines",
+    "chi-title": "Action and Gore",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "right",
+    "textColor": "black-text",
+    "16-9": "true"
+  }, {
+    "img-fcmi-big": "../../images/tmp/16x9sampleimg1-big.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg2.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg2-sm.jpg",
+    "eng-title": "Content Title: Lorem ipsum Super long content that should push over different lines",
+    "chi-title": "Love and Romance",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "right",
+    "textColor": "black-text",
+    "16-9": "true",
+    "gradient": "has-gradient"
+  }, {
+    "img-fcmi-big": "../../images/tmp/16x9sampleimg1-big.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg2.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg2-sm.jpg",
+    "eng-title": "Hot Guys and Girls",
+    "chi-title": "Variety",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "left",
+    "textColor": "white-text",
+    "16-9": "true",
+    "gradient": "has-gradient"
+  }, {
+    "img-fcmi": "../../images/tmp/carouselBIG4.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg2-sm.jpg",
+    "eng-title": "小小传奇 / Content Title: Lorem ipsum Super long content that should push over different lines",
+    "chi-title": "Love and Romance",
+    "excerpt-fcmi": "",
+    "textLocation": "right",
+    "textColor": "white-text"
+  }, {
+    "img-fcmi": "../../images/tmp/carouselBIG3.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "eng-title": "",
+    "chi-title": "",
+    "excerpt-fcmi": "",
+    "textLocation": "right",
+    "textColor": "white-text"
+
+  }, {
+    "img-fcmi": "../../images/tmp/carouselBIG2.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "eng-title": "Reign of Assasins",
+    "chi-title": "Action and Adventure",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "left",
+    "textColor": "black-text"
+
+  }, {
+    "img-fcmi": "../../images/tmp/carouselBIG5.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "eng-title": "Cook, eat China",
+    "chi-title": "Variety and food",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "right",
+    "textColor": "white-text"
+  }, {
+    "img-fcmi": "../../images/tmp/carouselBIG2.jpg",
+    "img-fcmi-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-fcmi-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "eng-title": "小小传奇 / Content Title: Lorem ipsum Super long content that should push over different lines",
+    "chi-title": "Love and Romance",
+    "excerpt-fcmi": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "textLocation": "left",
+    "textColor": "black-text"
+  }],
+  "fcni": [{
+    "img-fcni": "../../images/tmp/fc2.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc3.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc4.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc1.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc5.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc6.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc2.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc3.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc4.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }, {
+    "img-fcni": "../../images/tmp/fc1.jpg",
+    "eng-title": "Gonna Make it",
+    "chi-title": "小小传奇"
+  }],
+  "slider-title": "Channel 5",
+  "meta": [{
+    "icon-class": "ti-star",
+    "meta-item": "4.5"
+  }, {
+    "icon-class": "ti-clock",
+    "meta-item": "80mins"
+  }],
+  "video-meta": [{
+    "icon-class": "ti-star",
+    "meta-item": "4.5",
+    "background-color": "#272727"
+  }, {
+    "icon-class": "ti-clock",
+    "meta-item": "80mins",
+    "background-color": "#272727"
+  }, {
+    "icon-class": "",
+    "meta-class": "vip",
+    "meta-item": "",
+    "background-color": "#B51A80"
+  }],
+  "epg-meta": [{
+    "img": "../../images/videoplayer/classification/pg.png"
+  }, {
+    "img": "../../images/tags/catchup.png"
+  }, {
+    "img": "../../images/tags/nowplaying.png"
+  }, {
+    "img": "../../images/tags/toggleitfirst.png"
+  }],
+  "rating-meta": {
+    "rating-icon": "m18",
+    "meta-item": "Mature Themes | 成人题材"
+  },
+  "vid-meta": [{
+    "meta-item": "Ep1"
+  }, {
+    "meta-item": "Episode Title"
+  }],
+  "icon-labels": [{
+    "tag": "vip",
+    "taghtml": ""
+  }, {
+    "tag": "sponsored",
+    "taghtml": "<span>Sponsored</span>"
+  }],
+  "video-tags": [{
+    "tag": "star",
+    "icon": "ti-star",
+    "taghtml": "<span>4.5</span>"
+  }, {
+    "tag": "duration",
+    "icon": "ti-clock",
+    "taghtml": "<span>80 mins</span>"
+  },{
+    "tag": "vip"
+  },{
+    "tag": "sponsored",
+    "taghtml": "<span>Sponsored</span>"
+  }, {
+    "tag": "rating",
+    "icon": "r21",
+    "taghtml": "Mature Themes | 成人题材"
+  }],
+  "epg-tags": [{
+    "tag": "rating",
+    "icon": "nc16",
+    "taghtml": "SOME SEXUAL REFERENCES 些许性相关语"
+  }],
+  "programinfo": [{
+    "img-programinfo": "../../images/tmp/16x9sampleimg1-big.jpg",
+    "img-programinfo-med": "../../images/tmp/16x9sampleimg2.jpg",
+    "img-programinfo-small": "../../images/tmp/16x9sampleimg2-sm.jpg",
+    "eng-title": "Content Title: Lorem ipsum ",
+    "chi-title": "小小传奇",
+    "date-programinfo": "24 Nov 2014, 7:30pm",
+    "meta-programinfo": "Lorem ipsum dolor sit amet",
+    "excerpt-programinfo": "Programme or Show synopsis lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.<br><br>Programme or Show synopsis lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.",
+    "textLocation": "right",
+    "textColor": "white-text",
+    "sixteen-nine": "false"
+  }],
+  "sf": [{
+    "post-sf": "FB post message Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvdata",
+    "name-sf": "FB name",
+    "date-sf": "25/11/2014"
+  }, {
+    "img-sf": "../../images/tmp/carouselBIG3.jpg",
+    "img-sf-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-sf-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "post-sf": "FB post 2 message Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvdata",
+    "name-sf": "FB name2",
+    "date-sf": "25/11/2014"
+  }, {
+    "img-sf": "../../images/tmp/carouselBIG3.jpg",
+    "img-sf-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-sf-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "name-sf": "FB name3",
+    "date-sf": "25/11/2014"
+  }, {
+    "img-sf": "../../images/tmp/carouselBIG3.jpg",
+    "img-sf-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-sf-small": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "post-sf": "FB post 4 message Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvdata",
+    "name-sf": "FB name4",
+    "date-sf": "25/11/2014"
+  }],
+  "gcmi": [{
+    "img-gcmi": "../../images/tmp/carouselBIG3.jpg",
+    "img-gcmi-med": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-gcmi-small": "../../images/tmp/16x9sampleimg1.jpg",
+    "img-gcmi-thumb": "../../images/tmp/16x9sampleimg1-sm.jpg",
+    "caption-gcmi": "1. The cast of mid-year blockbuster drama, World at Your Feet",
+    "header-gcmi": "1. H1 Ladies in jerseys: Who’s the fairest among them all?",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Cupcake ipsum dolor sit amet. Fruitcake carrot cake biscuit soufflé I love soufflé pudding tiramisu pastry. Biscuit croissant halvah I love I love gingerbread I love cheesecake liquorice. I love ice cream ice cream cookie macaroon. Sesame snaps jujubes chupa chups ice cream marshmallow pastry. Fruitcake I love sugar plum jelly dragée croissant. Liquorice gummi bears bonbon jelly-o. Sesame snaps tootsie roll candy cotton candy cupcake.</p><p>Candy canes bonbon gummies caramels. Toffee dessert cupcake jelly chupa chups applicake dessert gummi bears. Dessert sweet croissant pudding I love jujubes dessert pudding. Marshmallow ice cream apple pie gummies carrot cake I love croissant tootsie roll dragée. Powder bear claw I love. Tiramisu brownie tiramisu wafer dessert I love I love. Brownie jelly sesame snaps chupa chups tart I love unerdwear.com.</p><p>I love chocolate powder I love I love ice cream tart. Gummi bears marzipan gingerbread. Soufflé sweet chocolate bar I love chocolate bar unerdwear.com wafer. Croissant sweet I love gingerbread sweet cheesecake I love. Powder unerdwear.com sweet roll halvah tootsie roll sesame snaps. Halvah I love gummies. Biscuit I love dragée tootsie roll tootsie roll chocolate bar.</p><p>Tootsie roll I love macaroon. Tootsie roll gummies cheesecake. Bear claw cupcake marshmallow I love. I love toffee oat cake oat cake pastry apple pie danish candy canes. Bear claw chupa chups I love. Jelly beans carrot cake I love. Toffee cheesecake macaroon. Chocolate dragée sugar plum marzipan marzipan pastry. Tart lemon drops croissant ice cream brownie dragée. I love muffin sweet roll pie cotton candy cake.</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/01-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/01-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/01-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/01-sm.jpg",
+    "caption-gcmi": "2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "2. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Brownie jelly beans lollipop danish donut pastry I love. Toffee unerdwear.com pastry pastry pudding. Chocolate bar macaroon tiramisu soufflé.</p><p>Lollipop caramels candy canes muffin jelly beans candy. I love cookie powder cotton candy bear claw donut. Croissant caramels I love bear claw liquorice lemon drops. Topping tootsie roll macaroon pastry danish chocolate.</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/03-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/03-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/03-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/03-sm.jpg",
+    "caption-gcmi": "3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "3. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Fap chia umami High Life. Fingerstache cray Portland asymmetrical YOLO, ugh jean shorts. Authentic aesthetic scenester hoodie. Vegan dreamcatcher kitsch tofu you probably haven't heard of them, four dollar toast mumblecore. Carles migas quinoa kale chips Helvetica slow-carb photo booth Pinterest stumptown deep v. Hashtag 8-bit pug fanny pack. Heirloom Blue Bottle skateboard, yr street art mumblecore next level vegan Wes Anderson umami freegan raw denim fap.</p><p>Vice tofu fixie health goth narwhal, pop-up organic meh before they sold out. Viral selvage Vice Blue Bottle, actually PBR kogi kale chips Wes Anderson. Gentrify selvage flannel, cornhole dreamcatcher tilde Marfa Schlitz. Pickled cronut mixtape, keytar Shoreditch skateboard XOXO banh mi single-origin coffee actually selvage fixie. Lomo keffiyeh banjo, Neutra slow-carb chambray +1. Lo-fi Marfa salvia mustache. Selvage +1 master cleanse asymmetrical lomo Blue Bottle health goth, chia iPhone 90's ugh.</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/04-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/04-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/04-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/04-sm.jpg",
+    "caption-gcmi": "4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "4. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/05-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/05-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/05-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/05-sm.jpg",
+    "caption-gcmi": "5. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "5. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Bacon ipsum dolor amet meatloaf turducken corned beef boudin. Boudin t-bone rump, ball tip tail hamburger prosciutto tri-tip bacon. Fatback cow picanha pork loin pastrami shankle. Cupim tenderloin beef sausage boudin pork chop brisket. Corned beef pig bresaola beef turducken kevin leberkas brisket meatball. Cupim spare ribs brisket sirloin tail pancetta turducken turkey boudin ham tri-tip doner.</p><p>Filet mignon tongue doner corned beef leberkas pork loin. Frankfurter t-bone landjaeger, meatloaf alcatra jowl pig short loin doner short ribs. Short loin sirloin pastrami turkey short ribs. Shank pork loin pork belly, swine frankfurter brisket chuck short ribs sirloin jowl kielbasa flank beef tenderloin. Swine ham pastrami ham hock. Tongue cow pork chop turkey jerky tri-tip. Bacon t-bone shankle ham hock chicken, ribeye chuck jerky rump turducken doner.</p><p>Cow jowl kielbasa, tail kevin shankle meatloaf pork belly prosciutto short ribs brisket pastrami hamburger porchetta. Swine kielbasa flank prosciutto, tongue bacon tenderloin porchetta leberkas jerky drumstick. Porchetta shoulder rump cupim ham short ribs short loin turkey tail alcatra bresaola jerky pork belly drumstick doner. Picanha rump flank, spare ribs sausage boudin fatback pig andouille frankfurter. Chuck t-bone hamburger sirloin, short ribs brisket pastrami pancetta strip steak picanha.</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/06-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/06-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/06-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/06-sm.jpg",
+    "caption-gcmi": "6. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "6. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.</p><p>At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/07-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/07-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/07-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/07-sm.jpg",
+    "caption-gcmi": "7. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "7. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</p><p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/08-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/08-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/08-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/08-sm.jpg",
+    "caption-gcmi": "8. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "8. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p><p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. Whats happened to me? he thought. It wasnt a dream.</p><p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/09-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/09-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/09-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/09-sm.jpg",
+    "caption-gcmi": "9. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "9. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p><p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>"
+  }, {
+    "img-gcmi": "../../images/tmp/gallery/10-big.jpg",
+    "img-gcmi-med": "../../images/tmp/gallery/10-big.jpg",
+    "img-gcmi-small": "../../images/tmp/gallery/10-big.jpg",
+    "img-gcmi-thumb": "../../images/tmp/gallery/10-sm.jpg",
+    "caption-gcmi": "10. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus numquam minus, unde adipisci, ex eaque aspernatur!",
+    "header-gcmi": "10. The cast of mid-year blockbuster drama, World at Your Feet",
+    "credit-gcmi": "By <a href='#'>Kevin Fallon</a>, Lin Wei Ling, Tammi Tan</br>11 Oct 2013",
+    "content-gcmi": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p><p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p><p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. </p>"
+  }],
+  "fixed-height-title": "Fixed Height Title",
+  "mobile-carousel-title": "Mobile Carousel Title",
+  "fluid-height-title": "Fluid Height Title",
+  "component-title": "Component Title",
+  "mobileItems": "3",
+  "collapsible-title": "Collapsible Title",
+  "login": false,
+  "signup": false,
+  "loggedIn": true,
+  "video": false,
+  "itemsWatched": true,
+  "suggestedOn": false,
+  "article__title": "Jeanette Aw shaves head for new role in sports drama",
+  "article__subtitle": "The MediaCorp actress breaks girl-next-door image in upcoming blockbuster drama, Word at Your Feet",
+  "FBtheme": "light",
+  "section-header__title": "Section Name",
+  "section-header__parent": "Parent Section",
+  "section-header__has-logo": false,
+  "section-header__bg--show": false,
+  "type": "video"
+}

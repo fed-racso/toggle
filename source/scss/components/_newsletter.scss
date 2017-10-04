@@ -1,0 +1,142 @@
+.newsletter{
+	h1{
+		text-align: center;
+		font-size:1.3em;
+	}
+	.is-close ~ .newsletter__section{
+		max-height: 0;
+	}
+}
+
+.newsletter__wrap{
+	border: 1px solid #666!important;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.newsletter__title{
+	font-size: 1.2em;
+	color: #fff;
+	font-weight: 500;
+	background: #6B6B6B;
+	padding: 0.8em 1em;
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.newsletter__head{
+	font-size: 1.2em;
+	color: #000;
+	font-weight: 500;
+	background: #ACACAC;
+	width: 100%;
+	padding: 0.8em 1em;
+	display: block;
+	position: relative;
+}
+
+.newsletter__section{
+	white-space: normal;
+	overflow: hidden;
+	max-height: 300px;
+	display: flex;
+	transition: 1s max-height;
+	flex-wrap: wrap;
+	@include bp(medium){
+		flex-wrap: nowrap;
+	}
+}
+
+
+.newsletter__img{
+	padding: 10px 0 10px 10px;
+	text-align: center;
+	// display:table-cell;
+	width: 10%;
+	flex: 20%;
+	@include bp(medium){
+		width: auto;
+		flex: 5%;
+	}
+}
+.newsletter__description{
+	// display: table-cell;
+	padding: 10px;
+	text-align: justify;
+	width: 90%;
+	flex: 80%;
+	@include bp(medium){
+		width: auto;
+		flex: 55%;
+	}
+}
+.newsletter__btn{
+	text-align: right;
+	padding: 0 10px 10px 0;
+	width: 100%;
+	@include bp(medium){
+		width: auto;
+		padding-top: 10px;
+		text-align: center;
+		flex: 20%;
+	}
+	button{
+		float: none;
+		border-radius: 4px;
+		text-transform: capitalize;
+		padding: 10px;
+    	width: 150px;
+
+		&.subs{
+			background: #ee008a;
+		}
+		&.unsubs{
+			background: #a1005e;
+		}
+	}
+}
+
+.alert_subs {
+    display: block;
+    width: 100%;
+    background: #EAE8E9;
+    text-transform: none;
+    padding: 12px 30px;
+    min-height: 45px;
+}
+.close_alert:before {content: "x";position: absolute;right: 13px; font-size: 0.7em;}
+
+
+h3.newsletter__head:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 13px;
+    background: #6B6B6B;
+    border-radius: 10px;
+    right: 29px;
+    transform: rotate(-135deg);
+    transform-origin: left;
+    top: 40%;
+}
+
+h3.newsletter__head:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 13px;
+    background: #6B6B6B;
+    border-radius: 10px;
+    right: 27px;
+    transform: rotate(135deg);
+    transform-origin: right;
+    top: 40%;
+}
+
+h3.newsletter__head.is-close:before{
+	transform: rotate(-45deg);
+	right: 33px;
+}
+h3.newsletter__head.is-close:after{
+	transform: rotate(45deg);
+}

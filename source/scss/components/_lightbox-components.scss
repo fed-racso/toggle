@@ -1,0 +1,42 @@
+/***  specific styles for lightbox content ***/
+//Get App
+.get-app {
+	.banners {
+		text-align: center;
+		margin-bottom: rhythm(1);
+		img {
+			vertical-align: middle;
+			//max-width:600px;
+			margin: 0;
+		}
+		@include bp(medium) {
+			// background: url("../images/lightbox/toggleapp.png") no-repeat right center;
+			background-size: 276px auto;
+			padding-right: 300px;
+		}
+		
+	}
+}
+
+
+/*** Rating Box ***/
+.modal-rating {
+	.stars {
+		display: inline-block;
+	}
+	.star {
+		display: inline-block;
+		height: 32px;
+		width: 33px;
+		margin-right: 10px;
+		// background: url("../images/icons/star-empty.png") no-repeat scroll left top transparent; 
+	}
+
+	.filled {
+		// background: url("../images/icons/star-filled.png") no-repeat scroll left top transparent; 
+	}
+
+	.feedback {
+		visibility:hidden;
+	}
+}

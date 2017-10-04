@@ -1,0 +1,30 @@
+.b a {
+  text-decoration: none;
+  color: color(dark);
+  &:hover,
+  &:active,
+  &:focus {
+    color: color(pink, secondary);
+  }
+}
+
+.tg-block {
+  position: relative;
+  img {
+    display: block;
+    margin-bottom: 0;
+  }
+  .item__type {
+    position: absolute;
+    bottom: -0px;
+    left: 0;
+    background: black;
+    opacity: 0.8;
+    width: 18%;
+    height: 22%;
+  }
+}
+
+.tg-block--video {
+  @extend .tg-block;
+}

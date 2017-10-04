@@ -1,0 +1,226 @@
+.search-field {
+  display: block;
+
+  @include bp(medium){
+    display:flex;
+  }
+
+  .search-field__select {
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+      //display: none;
+    }
+
+    line-height: 1.5;
+  }
+  .search-field__alltoggle {
+    @include bp(medium) {
+      display: none;
+    }
+  }
+  input[type='search'] {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    @include tui {
+      color: $primary-color;
+    }
+  }
+  input[type='search']:focus {
+    background: white;
+    @include tui {
+      border: 1px solid $primary-color;
+    }
+  }
+  select {
+    background: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+    height: 1.875rem;
+    padding: 0 tgrhythm(0.5);
+    @include tui {
+      color: $primary-color;
+    }
+  }
+  .search-field__alltoggle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .search-field__close, .search-field__search {
+    display: inline-block;
+    background: transparent;
+    vertical-align: top;
+  }
+  .search-field__close {
+    width: 0%;
+  }
+  .dk-select {
+    margin: 0 rhythm(0.5) rhythm(0.5) 0;
+    width: 100%;
+    height: 100%;
+
+    @include bp(medium){
+      width:20%;
+      margin: 0 rhythm(0.5) 0;
+    }
+  }
+  .search-field__search-icon {
+    background: transparent;
+    border: 0;
+  }
+  .search-field__holder {
+    width: 100%;
+    overflow:hidden;
+    background: transparent;
+    border-radius: 5px;
+    margin-bottom: rhythm(0.5);
+    @include tui {
+      border: 1px solid $secondary-color;
+    }
+
+    @include bp(medium){
+      width:80%;
+    }
+
+    position: relative;
+    input[type='search'] {
+      width: 100%;
+      border: 0;
+      height: 37px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #666;
+    }
+    .search-field__search {
+      width: 40px;
+      text-align: right;
+      position: absolute;
+      right: 0px;
+      button {
+        width: 100%;
+        padding: 7px 0;
+        border-radius: 0 5px 5px 0;
+      }
+    }
+    .search-field__close {
+      width: 15px;
+      padding: 10px 0;
+      right: 40px;
+      position: absolute;
+      button {
+        width: 100%;
+        padding: 0px 0;
+        text-align: center;
+        right: 0;
+        box-shadow: none;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.search {
+  margin-bottom: rhythm(0.5);
+}
+
+.search-field__close-icon {
+  border: 1px solid transparent;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 1;
+  right: 24px;
+  margin: auto;
+  border-radius: 50%;
+  color: white;
+  font-weight: normal;
+  font-size: 10px;
+  @include tui {
+    box-shadow: 0 0 2px $primary-color;
+    background-color: $primary-color;
+  }
+
+  cursor: pointer;
+  line-height: 1;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.search-field__search-icon {
+  background: #e6e6e6;
+  color: #b3b3b3;
+  border: 1px solid #e6e6e6;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  vertical-align: middle;
+  font-size: 16pt;
+  position: relative;
+  .i-search {
+    margin-top: 2px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .search-field__searchin {
+    display: none;
+  }
+  .search-field {
+    input[type='search'] {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .search-field__alltoggle p {
+    //visibility: hidden;
+    display: none;
+  }
+}
+
+//jQuery Autocomplete Plugin
+
+.autocomplete-suggestions {
+  border: 1px solid #d8d8d8;
+  background: #FFF;
+  overflow: auto;
+  .autocomplete-suggestion {
+    padding: tgrhythm(0.25) tgrhythm(0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    color: #1e1e1e;
+    &.autocomplete-selected {
+      background: #d8d8d8;
+    }
+  }
+  strong {
+    font-weight: normal;
+    @include tui {
+      color: $primary-color;
+    }
+  }
+  .autocomplete-group {
+    padding: tgrhythm(0.25) tgrhythm(0.5);
+    strong {
+      display: block;
+      border-bottom: 1px solid #262626;
+    }
+  }
+}
+
+.search-page {
+  .user-actions {
+    .search-button {
+      display: none;
+    }
+  }
+}
+
+.utilityBar .dk-select-options, .search-field .dk-select-options{
+  position:absolute;
+}
+.utilityBar .dk-select{
+  margin-bottom: 1px;
+}

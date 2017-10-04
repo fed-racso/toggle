@@ -1,0 +1,141 @@
+.featherlight .featherlight-content {
+    padding: 35px rhythm(1);
+    margin: 0 tgrhythm(1);
+    border-radius: rhythm(0.5);
+    border-bottom: 0;
+    @include bp(medium) {
+        width: auto;
+        max-width: span(8);
+    }
+    @include bp(large) {
+        max-width: span(6);
+    }
+    background-color: white;
+    // h1, h2, h3, h4, h5, h6, p {
+    color: map-fetch($tui, light-theme text-color);
+    // }
+    p {
+        margin: 0;
+    }
+}
+
+
+/* Used for alert boxes */
+
+.featherlight--alert {
+    .featherlight-content {
+        @include bp(medium) {
+            max-width: 400px;
+        }
+    }
+}
+
+.featherlight {
+    @include tgzi(lightbox__container);
+}
+
+.featherlight .featherlight-close-icon {
+    color: #CBCBCB;
+    font-size: 20px;
+    right: rhythm(0.5);
+    top: rhythm(0.5);
+    @include tgzi(lightbox_close);
+    background-color: transparent;
+}
+
+.lightbox-container {
+    display: none;
+    .lightbox__actionbar {
+        text-align: center;
+        .btn {
+            margin-bottom: 0;
+            @include breakpoint(max-width map-get($breakpoints, small)) {
+                width: 96%;
+                height: auto;
+            }
+            -left: rhythm(1);
+            //padding-right: rhythm(1);
+        }
+    }
+    .lightbox__actionbar--yesno {
+        @extend .lightbox__actionbar;
+        .btn {
+            font-size: 13px;
+            @include bp(medium) {
+                font-size: 16px;
+            }
+            @include breakpoint(max-width map-get($breakpoints, small)) {
+                width: 45%;
+            }
+        }
+    }
+    &.share-video {
+        .share-video__share-option {
+            div {
+                //margin: 0 0 rhythm(1);
+            }
+            input[type='text'] {
+                width: 80%;
+                padding: 0 rhythm(0.5);
+                height: 35px;
+                margin-bottom: 0;
+            }
+            a {
+                width: 20%;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: left;
+                margin: 0;
+                height: 35px;
+            }
+            .article__social-media-buttons {
+                float: none;
+                padding: rhythm(0.25) 0;
+                a {
+                    width: rhythm(2);
+                    height: rhythm(2);
+                    margin: 0 rhythm(0.25) 0 0;
+                }
+            }
+            .lightbox-form-item {
+                margin-bottom: rhythm(1);
+            }
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.lightbox-container.center {
+    .lightbox__title {
+        text-align: center;
+    }
+    .lightbox__content {
+        text-align: center;
+    }
+}
+
+.featherlight .featherlight-content {
+    overflow: auto;
+}
+
+.featherlight .featherlight-content .form__item .input-group {
+    margin: rhythm(0.25) 0;
+    input[type='radio'] {
+        margin-right: 0.5em;
+    }
+    input[type='radio'] + label {}
+}
+
+// Force dropdowns on lightbox to 120px
+.dk-dropdown--lightbox .dk-select-options {
+    //height: 90px;
+}
+
+.featherlight-iframe {
+    .featherlight-content {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}

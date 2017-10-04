@@ -1,0 +1,57 @@
+<div class="page-wrap">
+	{{> molecules-ad-banner-block }}
+	{{> organisms-header }}
+	{{> organisms-primary-mega-menu }}
+	{{> molecules-section-header(section-header__title: "TV Shows", section-header__parent: "Video", section-header__has-logo:false) }}
+	{{> molecules-secondary-nav }}
+	<section>
+		<div class="wrap">
+			<div class="vertical-listing">
+				<h4 class="vertical-listing__title">Listing Page Title</h4>
+			</div>
+			<div class="tgtabs">
+				<div class="tgtabs__wrap">
+					<div class="tgtabs__row">
+						<div class="tgtab">
+							<a href="#">Item 1</a>
+						</div>
+						<div class="tgtab">
+							<a href="#">Item 2</a>
+						</div>
+						<div class="tgtab">
+							<a href="#">Item 3</a>
+						</div>
+						<div class="tgtab">
+							<a href="#">Item 4</a>
+						</div>
+					</div>  
+				</div>
+
+				<div class="tgtab__targets">
+					<div class="tgtab__target">
+						<h4>7 Favourites</h4>
+						<!-- {{> organisms-4up-grid-listing(myfavourite:true) }} -->
+						{{> organisms-6up-grid-listing-portrait }}
+						{{> molecules-pagination(article:true)}}
+					</div>
+					<div class="tgtab__target">
+						<h4>3 Favourites</h4>
+						{{> organisms-4up-grid-listing(myfavourite:true) }}
+						{{> molecules-pagination(article:true)}}
+					</div>
+					<div class="tgtab__target">
+						<h4>8 Favourites</h4>
+						{{> organisms-4up-grid-listing(myfavourite:true) }}
+						{{> molecules-pagination(article:true)}}
+					</div>
+					<div class="tgtab__target">
+						<h4>12 Favourites</h4>
+						{{> organisms-4up-grid-listing(myfavourite:true) }}
+						{{> molecules-pagination(article:true)}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{{> organisms-footer }}
+</div>

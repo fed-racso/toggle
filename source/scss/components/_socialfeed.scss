@@ -1,0 +1,174 @@
+.sf.masonry {
+  @include tui {
+    border: 1px solid $secondary-color;
+  }
+
+  @include bp(small) {
+    padding-right: rhythm(1);
+  }
+
+  h2 {
+    margin-bottom: 0;
+    @include tdc {
+      color: $overlay-color;
+    }
+
+    @include bp(small) {
+      margin-left: rhythm(1);
+    }
+  }
+}
+
+.masonry-grid {
+  @include bp(small) {
+    margin-left: rhythm(-1);
+  }
+}
+
+.socialfeed__item {
+  padding: rhythm(1);
+  picture img {
+    width: 100%;
+    //margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  span {
+    font-size: 14px;
+    line-height: 1.375;
+  }
+  &.sf-card {
+    margin-top: 0;
+  }
+}
+
+.socialfeed__item__message {
+  //margin-top: 0.5em;
+  p {
+    margin-bottom: rhythm(0.75);
+  }
+}
+
+.socialfeed__item__publisher {
+  //margin-bottom: 1em;
+}
+
+.socialfeed__item__publisher img {
+  float: left;
+  width: 32px;
+  //mimic profile avatar
+  margin-bottom: 0;
+}
+
+.socialfeed__item__publisher--name {
+  width: 50%;
+  line-height: 32px;
+  //match img
+  display: inline-block;
+  margin-left: rhythm(0.2);
+}
+
+.socialfeed__item__publisher--date {
+  width: 30%;
+  float: right;
+  text-align: right;
+  line-height: 32px;
+}
+
+.socialfeed__loadmore {
+  @include bp(small) {
+    margin-right: rhythm(-0.2);
+  }
+
+  .btn--pink {
+    width: 100%;
+    margin: 0;
+    background: transparent !important;
+    @include tui {
+      border: 1px solid $meta-color;
+      span {
+        color: $meta-color;
+      }
+    }
+
+    @include tdc {
+      &:hover {
+        border: 1px solid $theme-color;
+        background: $theme-color !important;
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+//card background
+.sf-card {
+  margin-bottom: rhythm(1);
+  margin-top: rhythm(1);
+  @include tui {
+    background: $overlay-color;
+    border: 1px solid $secondary-color;
+  }
+
+  @include bp(small) {
+    margin-bottom: rhythm(1);
+    margin-left: rhythm(1);
+  }
+
+  @include bp(medium) {
+    margin-bottom: rhythm(1);
+  }
+}
+
+.sf-card--background {
+  @extend .card;
+  @include tui {
+    background: $background-color;
+  }
+}
+
+//masonary default settings
+#grid[data-columns]::before {
+  content: '2 .column.size-1of2';
+}
+
+// These are the classes that are going to be applied:
+.column {
+  float: left;
+}
+
+.size-1of2 {
+  width: 50%;
+}
+
+@media screen and (max-width: 580px) {
+  #grid[data-columns]::before {
+    content: '1 .column.size-1of1';
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 768px) {
+  #grid[data-columns]::before {
+    content: '2 .column.size-1of2';
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #grid[data-columns]::before {
+    content: '3 .column.size-1of2';
+  }
+}
+
+// Again, Free to use and define classes:
+.column {
+  float: left;
+}
+
+.size-1of1 {
+  width: 100%;
+}
+
+.size-1of2 {
+  width: 50%;
+}

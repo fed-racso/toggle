@@ -1,0 +1,19 @@
+<div class="widget show-list {{#video}} widget__video {{/video}}">
+  {{# video}}
+  {{> molecules-ad-companion-block }}
+  <a href="{{ url }}" class="view-more">View all</a>
+  <h4 class="widget__title video__title">Extras</h4>
+  {{/ video}}
+
+  {{# standard}}
+  <h4 class="widget__title">Top shows this week</h4>
+  {{/ standard}}
+  <ul>
+    <li class="widget__item">{{> molecules-shows-list-item }}</li>
+    <li class="widget__item">{{> molecules-shows-list-item }}</li>
+    <li class="widget__item">{{> molecules-shows-list-item }}</li>
+    <li class="widget__item">{{> molecules-shows-list-item }}</li>
+    <li class="widget__item">{{> molecules-shows-list-item }}</li>
+    <li class="widget__item">{{> molecules-shows-list-item }}</li>
+  </ul>
+</div>

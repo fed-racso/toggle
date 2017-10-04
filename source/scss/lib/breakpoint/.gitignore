@@ -1,0 +1,17 @@
+# Gem Files
+*.gem
+tests/**/*.map
+
+# Bundler Files
+.bundle
+/vendor
+Gemfile.lock
+
+# Testing Files
+test/test
+
+# Sass Files
+.sass-cache
+
+
+/tests/output/

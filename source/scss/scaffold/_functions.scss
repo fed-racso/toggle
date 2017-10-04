@@ -1,0 +1,32 @@
+// map-fetch($map, $keys)
+// https://gist.github.com/jlong/8760275
+//
+// An easy way to fetch a deep value in a multi-level map. Works much like
+// map-get() except that you pass multiple keys as the second parameter to
+// go down multiple levels in the nested map.
+//
+@function map-fetch($map, $keys) {
+  $key: nth($keys, 1);
+  $length: length($keys);
+  $value: map-get($map, $key);
+  @if ($length > 1) {
+    $rest: ();
+    @for $i from 2 through $length {
+      $rest: append($rest, nth($keys, $i))
+    }
+    @return map-fetch($value, $rest)
+  } @else {
+    @return $value;
+  }
+}
+
+// ==========
+// tgrhythm
+// -----
+// Rhythm function for Toggle to add a 
+// custom global multiplier. 
+// Top + Bottom Paddings and Margins between components will use this function 
+// ==========
+@function tgrhythm($x, $m: $multiplier) {
+  @return rhythm($x) * $m;
+}

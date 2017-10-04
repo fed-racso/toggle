@@ -1,0 +1,23 @@
+$layouts: (
+  );
+
+// Get layout Mixin
+// @include get-layout(content large);
+@mixin get-layout($args, $map: $layouts) {
+  @include span(map-fetch($map, $args))
+}
+
+// shorthand for get-layout mixin
+@mixin gl($args, $map: $layouts) {
+  @include get-layout($args, $layouts);
+}
+
+// Get layout function
+@function get-layout($args, $map: $layouts) {
+  @return span(map-fetch($map, $args));
+}
+
+// shorthand for get-layout function
+@function gl($args, $map: $layouts) {
+  @return get-layout($args, $map);
+}

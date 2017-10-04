@@ -1,0 +1,36 @@
+
+
+<div class="page-wrap">
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "TV Originals", section-header__parent: "Video", section-header__has-logo:true, section-header__parent--none: false) }}
+  {{> molecules-secondary-nav }}
+  <section>
+    {{> organisms-video-wrapper-v2}}
+  </section>
+
+
+  <section>
+    <div class="wrap">
+      {{> organisms-comments (FBtheme: dark) }}
+    </div>
+  </section>
+
+  <section>
+  {{> molecules-megaslider-collapsible-with-tabs (slider-title: Extras, class: primary)}}
+  </section>
+
+  <section>
+    {{> molecules-megaslider-collapsible-with-tabs(slider-title: You May Also Like, class: primary) }}
+  </section>
+
+  <section>
+    {{> molecules-megaslider-collapsible-portrait-with-tabs (slider-title: Cross Sell, class: primary) }}
+  </section>
+
+
+
+  {{> organisms-footer }}
+</div>
+
+{{> organisms-login-modal(login:true) }}

@@ -1,0 +1,10 @@
+<figure class="figure">
+  {{# landscape}}
+    {{> atoms-landscape-16x9 }}
+  {{/ landscape}}
+  {{^ landscape}}
+    <img src="{{img.portrait.src}}" alt="">
+  {{/ landscape}}
+  <figcaption class="meta">Photography by Xin</figcaption>
+</figure>
+

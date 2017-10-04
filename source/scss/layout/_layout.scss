@@ -1,0 +1,391 @@
+// Fluid Style.
+$susy: (columns: 12, gutters: 20 / 75, output: isolate, column-width: false, global-box-sizing: border-box);
+
+.has-skin {
+  .page-wrap {
+    //@include container(1440px);
+    position: relative;
+    margin: 0 auto;
+    // padding-top: 1px;
+    @include bp(large) {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
+    @include bp(xlarge) {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+  }
+}
+
+.wrap {
+  @include cf;
+  @include container(1440px);
+  padding-left: tgrhythm(0.5);
+  padding-right: tgrhythm(0.5);
+  @include bp(medium) {
+    padding-left: tgrhythm(1.5);
+    padding-right: tgrhythm(1.5);
+  }
+}
+
+// Grid Structures
+
+.l-12 {
+  @include cf;
+  .l-gi {
+    @include span(full first);
+  }
+}
+
+.l-2up--8-4 {
+  @include cf;
+  > .l-gi {
+    // Content
+    &:nth-child(2n+1) {
+      @include cf;
+      @include bp(m-large) {
+        @include span(8 first);
+      }
+    }
+    // Sidebar
+    &:nth-child(2n+2) {
+      @include bp(m-large) {
+        @include span(4 last);
+      }
+    }
+  }
+}
+
+.l-2up--8-4 {
+  .l-3up {
+    .tg-teaser-item {
+      @include bp(small) {
+        @include gallery(6);
+      }
+
+      @include bp(medium) {
+        @include gallery(3 of 9);
+      }
+    }
+  }
+}
+
+/*.l-2up--8-4--article {
+  // Extends content sidebar for inner items.
+  @extend .l-2up--8-4;
+  // Extra, Only shows on xlarge.
+    @include bp(xlarge) {
+      @include span(2 of 8);
+    }
+  }
+  // Article pushed 2 columns from left on xlarge screens
+  .article__body {
+    @include bp(xlarge) {
+      margin-left: span(2 wide of 8);
+    }
+  }
+}*/
+
+.l-video-player {
+  > .l-gi {
+    // Actual Video
+    &:first-child {
+      @include cf;
+      @include bp(m-large) {
+        @include span(8 first (gutters: 0));
+      }
+    }
+    // Video sidebar
+    &:last-child {
+      @include bp(m-large) {
+        @include span(4 last (gutters: 0));
+      }
+    }
+  }
+}
+
+.l-2up {
+  @include cf;
+  .l-gi {
+    @include gallery(6);
+  }
+}
+
+.l-2up--to-8-4 {
+  @include bp(medium) {
+    .l-gi:first-child {
+      @include cf;
+      @include span(8 first);
+    }
+    .l-gi:nth-child(2) {
+      @include span(4 last);
+    }
+  }
+}
+
+// All other 2up variations to satisfy mediacorp.
+$col-count: 1;
+
+@while $col-count < 12 {
+  .l-2up--#{$col-count}-#{12 - $col-count} {
+    @include cf;
+    @include bp(m-large) {
+      .l-gi:first-child {
+        @include span($col-count first);
+      }
+      .l-gi:nth-child(2) {
+        @include span(12 - $col-count last);
+      }
+    }
+  }
+  $col-count: $col-count + 1;
+}
+
+.l-2up--6-6--always {
+  @include cf;
+  .l-gi {
+    @include gallery(6);
+  }
+}
+
+.l-3up {
+  @include cf;
+  .l-gi {
+    @include gallery(4);
+  }
+}
+
+.l-3up--reflow {
+  @include cf;
+  // 2 on small,
+  // 3 on medium
+  // 4 on large
+  .l-gi {
+    @include gallery(6);
+    &:nth-last-child(2),
+    &:nth-last-child(1) {
+      .tg-teaser-item {
+        margin-bottom: 0;
+        .meta, .meta__item {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include bp(medium) {
+      @include gallery(4);
+      &:nth-last-child(3),
+      &:nth-last-child(2),
+      &:nth-last-child(1) {
+        .tg-teaser-item {
+          margin-bottom: 0;
+          .meta, .meta__item {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    @include bp(m-large) {
+      @include gallery(3);
+      &:nth-last-child(4),
+      &:nth-last-child(3),
+      &:nth-last-child(2),
+      &:nth-last-child(1) {
+        .tg-teaser-item {
+          margin-bottom: 0;
+          .meta, .meta__item {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-3up--feed {
+  @include cf;
+  // small = 1.
+  // med = 3
+  // large = 3
+  .l-gi {
+    margin-bottom: tgrhythm(1);
+    @include bp(medium) {
+      @include gallery(4);
+    }
+  }
+}
+
+.l-4up {
+  .l-gi {
+    @include gallery(3);
+    &:last-child {
+      @include last;
+    }
+  }
+}
+
+.l-4up--reflow {
+  @include cf;
+  .l-gi {
+    @include gallery(6);
+    &:nth-last-child(2),
+    &:nth-last-child(1) {
+      .tg-teaser-item {
+        margin-bottom: 0;
+        .meta, .meta__item {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include bp(medium) {
+      @include gallery(3);
+      &:nth-last-child(4),
+      &:nth-last-child(3),
+      &:nth-last-child(2),
+      &:nth-last-child(1) {
+        .tg-teaser-item {
+          margin-bottom: 0;
+          .meta, .meta__item {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    @include bp(xlarge) {
+      @include gallery(2);
+      &:nth-last-child(6),
+      &:nth-last-child(5),
+      &:nth-last-child(4),
+      &:nth-last-child(3),
+      &:nth-last-child(2),
+      &:nth-last-child(1) {
+        .tg-teaser-item {
+          margin-bottom: 0;
+          .meta, .meta__item {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-6up {
+  @include cf;
+  .l-gi {
+    @include gallery(2);
+  }
+}
+
+.l-6up--reflow {
+  @include cf;
+  .l-gi {
+    @include gallery(6);
+    &:nth-last-child(2),
+    &:nth-last-child(1) {
+      .tg-teaser-item {
+        margin-bottom: 0;
+        .meta, .meta__item {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include bp(medium) {
+      @include gallery(2);
+      &:nth-last-child(6),
+      &:nth-last-child(5),
+      &:nth-last-child(4),
+      &:nth-last-child(3),
+      &:nth-last-child(2),
+      &:nth-last-child(1) {
+        .tg-teaser-item {
+          margin-bottom: 0;
+          .meta, .meta__item {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-12up {
+  @include cf;
+  .l-gi {
+    @include gallery(1);
+  }
+}
+
+.l-1up-center {
+  @include bp(m-large) {
+    @include span(8);
+    margin-left: span(2);
+    min-height: 600px;
+  }
+}
+
+// ==========
+// Special Grids 
+// ==========
+
+// Inner items within 8 of 8-4
+.l-2up--4-4 {
+  @include cf;
+  clear: both;
+  @include bp(small-2) {
+    .l-gi:first-child {
+      @include span(6 first);
+    }
+    .l-gi:nth-child(2) {
+      @include span(6 last);
+    }
+  }
+
+  @include bp(m-large) {
+    .l-gi:first-child {
+      @include span(4 of 8 first);
+    }
+    .l-gi:nth-child(2) {
+      @include span(4 of 8 last);
+    }
+  }
+}
+
+.l-2up--66-to-84 {
+  @include cf;
+  > .l-gi {
+    //margin-bottom: rhythm(1); //margins will be applied at card levels
+    &:nth-child(1) {
+      @include bp(medium) {
+        @include span(6 first);
+      }
+
+      @include bp(m-large) {
+        @include span(8 first);
+      }
+    }
+    &:nth-child(2) {
+      @include bp(medium) {
+        @include span(6 last);
+      }
+
+      @include bp(m-large) {
+        @include span(4 last);
+      }
+    }
+  }
+  .card {
+    // margin: 0; //removed for margin fixes
+ 
+  }
+  .l-3up {
+    .tg-teaser-item {
+      @include bp(m-large) {
+        @include gallery(3 of 9);
+      }
+    }
+  }
+}

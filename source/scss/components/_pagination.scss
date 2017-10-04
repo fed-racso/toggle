@@ -1,0 +1,193 @@
+.pagination {
+  position: relative;
+  display: block;
+  clear: both;
+  margin: 0 0 rhythm(1);
+  text-align: right;
+  @include tui {
+    background: $secondary-color;
+    @include bp(small) {
+      background: none;
+    }
+  }
+
+  @include bp(small) {
+    float: right;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.pagination__title {
+  display: none;
+  @include bp(small) {
+    display: inline-block;
+  }
+}
+
+// Deliberately increase specificity to combat .free-text ul issue
+.pagination .pagination__list {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.pagination__list {
+  @include cf;
+  display: block;
+  position: relative;
+  @include bp(small) {
+    display: inline-block;
+  }
+}
+
+.pagination__item {
+  // Only shows active item on mobile
+  display: none;
+  text-align: center;
+  padding-top: rhythm(0.5);
+  padding-bottom: rhythm(0.5);
+  text-transform: uppercase;
+  color: color(gray, m-base);
+  @include bp(small) {
+    display: inline-block;
+    text-align: left;
+    &:before {
+      content: " | ";
+    }
+  }
+
+  a:before {
+    content: "Page ";
+    @include bp(small) {
+      content: "";
+    }
+  }
+  span {
+    @include bp(small) {
+      display: none;
+    }
+  }
+  a {
+    padding: 0 rhythm(0.25);
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+  }
+}
+
+// Pagination states
+.pagination__item.is-active {
+  display: block;
+  @include bp(small) {
+    display: inline-block;
+  }
+
+  a {
+    @include tui {
+      color: $text-color;
+      text-decoration: none;
+      cursor: text;
+    }
+  }
+}
+
+.pagination__ellipses {
+  display: none;
+  @include tui {
+    color: $meta-color;
+  }
+
+  @include bp(small) {
+    display: inline-block;
+  }
+
+  &:before {
+    content: " | ";
+  }
+}
+
+.pagination .is-disabled {
+  opacity: 0.3;
+  cursor: text;
+
+  a{
+    cursor:default;
+  }
+}
+
+// Removes " | " from first item of pagination
+.pagination__prev + .pagination__item {
+  &:before {
+    content: "";
+    position: absolute;
+  }
+}
+
+// Pagination Arrows
+.pagination__prev, .pagination__next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 0;
+  a {
+    line-height: rhythm(2);
+    &:hover,
+    &:active,
+    &:focus {
+      @include tdc {
+        text-decoration: none;
+        color: $theme-color;
+      }
+    }
+  }
+  a:before {
+    position: relative;
+    font-size: 14px;
+    line-height: inherit;
+    vertical-align: middle;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    @include tui {
+      color: $text-color;
+    }
+  }
+  @include bp(small) {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: rhythm(0);
+    padding-top: rhythm(0.5);
+    padding-bottom: rhythm(0.5);
+    a:before {
+      line-height: rhythm(1);
+    }
+  }
+
+  a {
+    // @include image-replacement;
+    @extend .i;
+    cursor: pointer;
+    @include breakpoint(max-width map-get($breakpoints, small)) {
+      height: 100%;
+    }
+  }
+}
+
+.pagination__prev {
+  left: 0;
+  a {
+    @extend .ti;
+    @extend .ti-chevron-prev;
+  }
+}
+
+.pagination__next {
+  right: 0;
+  a {
+    @extend .ti;
+    @extend .ti-chevron-next;
+  }
+}

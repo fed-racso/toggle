@@ -1,0 +1,167 @@
+// =================
+// LEGACY STUFF. LOOK BELOW FOR REAL ONES 
+// =================
+
+$themes: (
+  default: (color: #a5238c),
+  channel-5: (color: #2A76D1),
+  channel-8: (color: #DD2A22),
+  channel-u: (color: #00A8AB),
+  okto: (color: #f36D20),
+  suria: (color: #F5b43B),
+  vasantham: (color:#41AEE2)
+  );
+
+$xin-colors :(
+  entertainment: (color: #893d87),
+  lifestyle: (color: #1a90d2),
+  offbeat: (color: #27a9ac),
+  // celebrities: (color: #cf3654),
+  // chinese: (color: #db7835)
+  );
+
+$xin-colors-megamenu: (
+  entertainment: (color: #861E79),
+  lifestyle: (color: #007FC0),
+  offbeat: (color: #009D9C),
+  );
+
+$ie8-xin-colors :(
+  entertainment: (color: #442043),
+  lifestyle: (color: #114868),
+  celebrities: (color: #671C2B),
+  offbeat: (color: #185556),
+  );
+
+@mixin themify ($themes: $themes) {
+  @each $theme, $map in $themes {
+    .#{$theme} &  {
+      // Define theme color
+      $theme-color: map-fetch($themes, $theme "color") !global;
+      // ... other vars to use
+
+      @content;
+
+      // Reset theme color to null
+      $theme-color: null !global;
+    }
+  }
+}
+
+// Theming usage
+// .module-name {
+//   h1 {
+//     @each $theme, $map in $themes {
+//       .#{$theme} & {
+//         color: map-get($map, color);
+//       }
+//     }
+//   }
+// }
+
+// =================
+// USE THESE
+// =================
+
+$toggle-colors: (
+  primary-dark  : (color: #d455bb),
+  primary       : (color: #a5238c), 
+  entertainment : (color: #df49af), 
+  lifestyle     : (color: #3691cf), 
+  offbeat       : (color: #4daaac),
+  t-ch5         : (color: #2f78ce),
+  t-ch8         : (color: #db4334),
+  t-chu         : (color: #4ca9aB), 
+  t-okto        : (color: #ed6d3b), 
+  t-suria       : (color: #e6a33d), 
+  t-vasantha    : (color: #48afdf), 
+  r-938         : (color: #96b333), 
+  r-987         : (color: #db4b7f), 
+  r-958         : (color: #df4435),
+  r-950         : (color: #7c88b1),
+  r-xfm         : (color: #ee8b3d),
+  r-905         : (color: #c89749), 
+  r-972         : (color: #1961ab), 
+  r-995         : (color: #a260b3),
+  r-968         : (color: #2363ed), 
+  r-897         : (color: #eb483b), 
+  r-924         : (color: #5b5da8), 
+  r-942         : (color: #50a137),
+  r-933         : (color: #2252b7)
+  );
+
+$tui: (
+  dark-theme: (
+    background-color: #1a1a1a,
+    inverse-background-color: black,
+    overlay-color: rgba(#272727,0.85),
+    overlay-color-solid: #252525,  
+    text-color: white,
+    secondary-color: #484848,
+    reverse-secondary-color: #d8d8d8,
+    meta-color: #999,
+    lightbox-color: #262626,
+    scrollbar-color: #606060,
+    primary-color: map-fetch($toggle-colors, primary-dark color)
+    ),
+  light-theme: (
+    background-color: white,
+    inverse-background-color: #262626,
+    overlay-color: rgba(#f2f2f2,0.85), 
+    overlay-color-solid: #f4f4f4,  
+    text-color: #1e1e1e,
+    secondary-color: #d8d8d8,
+    reverse-secondary-color: #484848,
+    meta-color: #999,
+    lightbox-color: #fff,
+    scrollbar-color: #c5c5c5,
+    primary-color: map-fetch($toggle-colors, primary color)
+    ),
+  );
+
+// Toggle Dominant Colors  
+@mixin tdc ($themes: $toggle-colors) {
+
+  @each $theme, $map in $themes {
+    .#{$theme} &  {
+      // Define theme color
+      $theme-color: map-fetch($themes, $theme "color") !global;
+      $theme-name: $theme !global;
+      @content;
+
+      // Reset theme color to null
+      $theme-color: null !global;
+    }
+  }
+}
+
+// Toggle UI Colors 
+@mixin tui($themes:$tui) {
+  @each $theme, $map in $themes {
+    .#{$theme} & {
+      $primary-color: map-fetch($themes, $theme "primary-color") !global;
+      $text-color: map-fetch($themes, $theme "text-color") !global;
+      $overlay-color: map-fetch($themes, $theme "overlay-color") !global;
+      $overlay-color-solid: map-fetch($themes, $theme "overlay-color-solid") !global;
+      $background-color: map-fetch($themes, $theme "background-color") !global;
+      $inverse-background-color: map-fetch($themes, $theme "inverse-background-color") !global;
+      $secondary-color: map-fetch($themes, $theme "secondary-color") !global;
+      $reverse-secondary-color: map-fetch($themes, $theme "reverse-secondary-color") !global;
+      $meta-color: map-fetch($themes, $theme "meta-color") !global;
+      $lightbox-color: map-fetch($themes, $theme "lightbox-color") !global;
+      $scrollbar-color: map-fetch($themes, $theme "scrollbar-color") !global;
+      @content; 
+
+      $text-color: null !global;
+      $primary-color: null !global;
+      $overlay-color: null !global;
+      $overlay-color-solid: null !global;
+      $background-color: null !global;
+      $inverse-background-color: null !global;
+      $secondary-color: null !global;
+      $meta-color: null !global;
+      $lightbox-color: null !global;
+      $scrollbar-color: null !global;
+    }
+  }
+}

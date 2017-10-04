@@ -1,0 +1,52 @@
+# Changelog:
+
+## v? 
+- Add EPG interactions 
+- Tweak collapsible elements to be able to break at any point. MUST use new method. Old method now breaks. 
+
+## v2.0.0 - For Ufinity Production
+- Fix truncation issues on tabs 
+- Add lightbox 
+- change .dropdown to .dk-dropdown for select elements 
+- cleared w3c errors for microsite and video pages 
+- tweaked recently watched component 
+- tweaked episode list 
+- tweak arrows, dots and image height functions for featured carousel
+- tweak toggle-teaser-item suggested html + css
+- Add fluid list component where desktop no longer has fixed height (used in Article Page)
+- Add total pages to pagination on mobile
+- Add Aasel Carousel
+- Added gallery slideshow, gallery full screen page.  See Deliverables Gallery Detail & Gallery Fullscreen
+- Added generic lightbox pattern + styling.  See Deliverables> Lightbox
+- Added Pages - Home, TV Channel
+- Added breadcrumbs component
+
+## v1.0.0 - For Ufinity Production
+- Global Nav
+- Local Nav
+
+## v0.1.1 - Anh QA’d
+- List to Mega Slider
+
+
+## v0.1.0 - For UAT
+- Video Home
+- Video Detail
+- Microsite Basic
+- Microsite Full
+- Article
+- Search
+
+## v0.0.2 - Anh QA’d
+- Video Home
+- Video Detail
+- Microsite Basic
+- Microsite Full
+- Article
+- Search
+
+
+
+## REL20141210
+- slider-holder renamed as component-holder 
+- Added mega-slider component

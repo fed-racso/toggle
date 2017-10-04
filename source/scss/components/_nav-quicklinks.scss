@@ -1,0 +1,550 @@
+$quicklinks-nav-height: rhythm(2);
+
+.nav-quicklinks-holder {
+  position: relative;
+  margin-bottom: rhythm(1);
+  height: $quicklinks-nav-height;
+}
+
+.nav--quicklinks {
+  .collapsible {
+    margin-top: -1px;
+  }
+  position: absolute;
+  // preparation for pos-fixed when scrolled down
+  left: 0;
+  right: 0;
+  @include trans-prep;
+  height: $quicklinks-nav-height;
+  //color: color(white);
+
+  @include tui {
+    color: $meta-color;
+    background-color: $inverse-background-color;
+  }
+
+  @include tgzi(quicklinks-navigation);
+  @include tgts(deci);
+  @include tgfw(semibold);
+  //text-transform: uppercase;
+
+  html:not(.in-skin) &{
+    @include bp(large) {
+      position: absolute;
+    }
+  }
+
+  .wrap, .page-wrap {
+    @include tui {
+      background-color: $inverse-background-color;
+    }
+  }
+
+  ul {
+    position: relative;
+    @include cf;
+
+    a {
+      position: relative;
+      //display: block;
+      color: white;
+      //follows footer color scheme
+      text-decoration: none;
+
+      &:after {
+        content: "";
+        position: absolute;
+      
+        html:not(.in-skin) &{
+          @include bp(large) {
+            bottom: rhythm(0.4);
+          }
+        }
+
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: none;
+        transition: 0.3s background ease-out;
+      }
+
+      &:hover,
+      &:active,
+      &:focus,
+      &.is-active {
+        @include tui {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .collapsible {
+    html:not(.in-skin) &{
+      @include bp(large) {
+        .collapsible__toggle {
+          display: none;
+        }
+
+        .collapsible__body {
+          // display: none !important;    
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  .collapsible__title {
+    &:before {
+      @extend .ti;
+      @extend .ti-chevron-next;
+      display: none;
+      html:not(.in-skin) &{
+        @include bp(large) {
+          display: block;
+          position: absolute;
+          right: 0px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .collapsible__toggle {
+    position: absolute;
+    right: 5px;
+
+    @include bp(medium) {
+      right: -14px;
+    }
+    
+    html:not(.in-skin) &{
+      @include bp(large) {
+        display: none !important;
+      }
+    }
+
+    i {
+      margin: 0;
+    }
+  }
+
+  .nav--quicklinks__page-info {
+    height: $quicklinks-nav-height;
+    font-size: 17px;
+
+    > li {
+      @extend %lsn;
+      display: inline-block;
+      line-height: $quicklinks-nav-height;
+      vertical-align: middle;
+      padding: 0 36px;
+    }
+    
+    html:not(.in-skin) &{
+      @include bp(large) {
+        float: left;
+      }
+    }
+  }
+
+  // Styles to hide / show ul on clicking quicklinks nav toggle
+  .nav {
+    display: none;
+  
+    html:not(.in-skin) &{
+      @include bp(large) {
+        display: block;
+      }
+    }
+  }
+
+  .nav__list {
+    @include cf;
+    float: left;
+    width: 100%;
+
+    // reset mobile nav positioning
+    html:not(.in-skin) &{
+      @include bp(large) {
+        width: auto;
+        opacity: 1;
+        visibility: visible;
+        max-height: auto;
+      }
+    }
+
+    > li {
+      float: left;
+      display: inline-block;
+      @include tgfw(normal);
+      @include span(12 split (gutters: 0));
+      //margin-bottom: gutter(22) * 0.5;
+      //background: color(dark, darker);
+      text-align: left;
+      text-transform: none;
+      list-style: none;
+
+      // @include bp(medium) {
+      //   @include span(12 split (gutters: 0));
+      //   //margin-bottom: gutter(22) * 0.5;
+      // }
+
+      html:not(.in-skin) &{
+        @include bp(large) {
+          @include span(12 split (gutters: 0));
+          width: auto;
+          margin: 0;
+          padding: 0 rhythm(1.5) 0 0;
+          background: none;
+          text-align: center;
+
+          &:last-child {
+            padding: 0;
+          }
+        }
+      }
+
+      a {
+        height: $quicklinks-nav-height;
+        line-height: $quicklinks-nav-height;
+        @include tgts(deci);
+
+        i {
+          @include tgts(centi);
+          margin-left: 0;
+        }
+      }
+
+      &.drop-left {
+        > ul {
+          @include bp(m-large) {
+            right: -28px;
+          }
+        }
+      }
+    }
+
+    .dropdown {
+      html:not(.in-skin) &{
+        @include bp(large) {
+          @include tui {
+            background-color: $inverse-background-color !important;
+          }
+        }
+      }
+
+      position: relative;
+
+      &.is-desktop {
+        display: block;
+      }
+
+      > a {
+        &:after {
+          content: '';
+          top: -2px;
+          bottom: auto;
+          position: relative;
+          margin-left: 0.5em;
+          @extend .i-megamenu-dropdown;
+
+          &:hover,
+          &:active,
+          &:focus {
+            @extend .i-megamenu-dropdown;
+
+            @include tui {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        ul {
+          html:not(.in-skin) &{
+            @include bp(large) {
+              // display: block !important;
+              visibility: visible !important;
+              //required to override collapsible rule
+            }
+          }
+        }
+      }
+
+      ul {
+        display: none;
+        position: relative;
+        width: 100%;
+        z-index: 30;
+        /*background: #292929;
+
+        @include bp(large) {
+          @include tui {
+            background: $overlay-color;
+          }
+        }*/
+
+        @include tui {
+          background-color: $inverse-background-color;
+        }
+
+        padding-bottom: rhythm(0.25);
+        
+        html:not(.in-skin) &{
+          @include bp(large) {
+            //allows dropdown-menu like expansion
+            position: absolute;
+            z-index: 1;
+            width: rhythm(14);
+          }
+        }
+
+        //margin-left: 2.5em;
+
+        > li {
+          width: 100%;
+          position: relative;
+          text-align: left;
+          @extend %lsn;
+          @include adjust-leading-to(1);
+          float: left;
+          display: inline-block;
+          @include span(12 split (gutters: 0));
+          padding: rhythm(0.2) rhythm(1);
+
+          @include breakpoint(map-get($breakpoints, medium) map-get($breakpoints, large)) {
+            width: 50%;
+
+            &:nth-child(odd) {
+              border-right: 1px solid #363636;
+            }
+          }
+          
+          html:not(.in-skin) &{
+            @include bp(large) {
+              width: 100%;
+              margin: 0;
+            }
+          }
+
+          span {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+
+        a {
+          padding: 0 1em 0 0;
+
+          @include tui {
+            color: white;
+          }
+
+          &:hover,
+          &:active,
+          &:focus {
+            @include tui {
+              color: $primary-color;
+            }
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      ul.col-2 {
+        html:not(.in-skin) &{
+          @include bp(large) {
+            width: rhythm(28);
+
+            li {
+              width: 50% !important;
+
+              &:nth-child(odd) {
+                border-right: 1px solid #363636;
+              }
+            }
+          }
+        }
+      }
+
+      ul.col-3 {
+        html:not(.in-skin) &{
+          @include bp(large) {
+            width: rhythm(32);
+
+            li {
+              width: 33% !important;
+
+              &:nth-child(3n+1), &:nth-child(3n+2) {
+                border-right: 1px solid #363636;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Channel logo item should not have the theme colored underline.
+// Page should not have theme colored underline on mobile
+.nav--quicklinks__page-info {
+  > li:first-child {
+    padding-left: 0;
+  }
+
+  > li:last-child {
+    a:after {
+      html:not(.in-skin) &{
+        @include bp(large) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// quicklinks Nav Toggle.
+// Appears only only mobile / tablets
+// Controls whether quicklinks nav appears on mobile / tablets
+// When checked, quicklinks nav appears
+.quicklinks-nav-toggle {
+  @include is-invisible;
+}
+
+.quicklinks-nav-label {
+  display: block;
+  position: absolute;
+  right: rhythm(1);
+  top: 0;
+  //z-index: 99; //doesnt seem to have visual bugs after commenting
+  @extend .i-localnav-arrow;
+  height: $quicklinks-nav-height;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  width: 16px;
+  
+  html:not(.in-skin) &{
+    @include bp(large) {
+      display: none;
+    }
+  }
+
+  @include trans-prep;
+
+  &.is-open {
+    transform: rotate(180deg);
+  }
+}
+
+.nav--quicklinks .nav__list .dropdown > a:after,
+.nav--quicklinks .nav__list .dropdown > a:hover:after,
+.nav--quicklinks .nav__list .dropdown > a:active:after,
+.nav--quicklinks .nav__list .dropdown > a:focus:after {
+  background: none;
+
+  body:not(.in-skin) &{
+    @include bp(large) {
+      //background: url("../images/icons/topnav-dropdownarrow.png");
+      width: 9px;
+      height: 6px;
+    }
+  }
+}
+
+.nav--quicklinks {
+  .nav__list {
+    .collapsible__title {
+      &:before {
+        font-size: 12px;
+        margin-top: 2px;
+
+        @include bp(m-large) {
+          margin-top: 15px;
+        }
+      }
+
+      a {
+        i {
+          position: relative;
+          top: -2px;
+        }
+      }
+
+      h6 {
+        a {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .collapsible__toggle {
+      line-height: 200%;
+    }
+
+    .dropdown {
+      ul {
+        a {
+          i {
+            border: 1px solid #999;
+            border-radius: 5px;
+            background-size: 80%;
+            background-position: center center;
+            margin-right: 10px;
+          }
+        }
+
+        span {
+          a {
+            i {
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.quicklinks .dropdown {
+  padding-right: rhythm(1.5);
+}
+
+.quicklinks .collapsible__title {
+  padding-left: rhythm(1.5);
+}
+
+.quicklinks__tv > ul > li {
+  > a > i {
+    width: 65px;
+    height: 2.25rem;
+    // background-size: 27% !important;
+    background-size: auto 80% !important;
+
+    &.i-okto {
+      background-size: 55% !important;
+    }
+
+    &.i-suria {
+      background-size: 50% !important;
+    }
+
+    &.i-vasantham {
+      background-size: 70% !important;
+    }
+
+    &.i-cna {
+      background-size: 50% !important;
+    }
+  }
+}

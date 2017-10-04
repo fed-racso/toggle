@@ -1,0 +1,337 @@
+.top {
+    position: relative;
+    width: 100%;
+    margin-bottom: 70px;
+    .container {
+        position: relative;
+    }
+    &.thankyou {
+        margin-bottom: 25px;
+    }
+}
+
+.logo-mediacorp {
+    background: url(http://www.toggle.sg/blob/5005226/26ff0397660b64b0c70834f51d4c6bb7/toggle-en---global-navigation-menu-thumbnail.png) no-repeat center;
+    width: 105px;
+    height: 55px;
+    background-size: contain;
+    margin: auto;
+}
+
+.steps {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.steps--list {
+    width: 75%;
+    max-width: 500px;
+    margin: auto;
+    height: 0;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    font-size: 0;
+}
+
+.steps--list li:first-child {
+    width: 0;
+}
+
+.steps--list li {
+    display: inline-block;
+    width: 33.3333%;
+    position: relative;
+    text-align: right;
+    border-bottom: 4px #A82990 solid;
+}
+
+.steps--list li span {
+    width: 16px;
+    height: 16px;
+    background: #A82990;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    border: 4px solid #A82990;
+    right: -8px;
+    z-index: 1;
+    line-height: 0.9rem;
+}
+
+.step-on ~ li span {
+    background: #fff;
+}
+
+.steps--list li span:before {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    text-align: center;
+    width: 5.3rem;
+    line-height: inherit;
+    color: #999;
+    @include bp(small-2) {
+        width: 10rem;
+    }
+}
+
+.steps--list li:nth-child(1) span:before {
+    content: "Select Package";
+}
+
+.steps--list li:nth-child(2) span:before {
+    content: "Create Account / Log In";
+    min-width: 5.6rem;
+}
+
+.steps--list li:nth-child(3) span:before {
+    content: "Confirm Package";
+}
+
+.steps--list li:nth-child(4) span:before {
+    content: "Payment";
+}
+
+li.step-on span:before {
+    color: #A5138F;
+    font-weight: 600;
+}
+
+.payment {
+    h1 {
+        font-weight: bold;
+        font-family: Arial;
+        font-size: 1.2rem !important;
+    }
+    .package-details {
+        margin-top: 85px;
+    }
+    // Package Detail
+    section.checkout {
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+    }
+    .description,
+    .to-verify {
+        display: none;
+    }
+    .section.coupon {
+        border: 1px solid #5a5a5a;
+        padding: 10px 10%;
+    }
+    .personal-particulars-section {
+        border: 1px solid #5a5a5a;
+        padding: 10px 10%;
+        margin-bottom: 10px;
+        @include bp(small-2) {
+            margin-bottom: 30px;
+        }
+    }
+    .personal-particulars-section .form-item input[type="text"] {
+        width: 100%;
+        border-color: #5a5a5a;
+        border-radius: 4px;
+    }
+    .form-item.jump-to-error label {
+        width: 100%;
+        font-weight: bold;
+    }
+    .checkout-section .content {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    .changePackage {
+        max-width: 480px;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+    .section.price--details {
+        border-bottom: dotted 2px;
+        padding-bottom: 10px;
+    }
+    #gst {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .terms-and-conditions {
+        text-align: left;
+        width: 100%;
+        display: block;
+        padding-bottom: 1em;
+    }
+    .form.card {
+        display: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        & + #proceed-for-payment {
+            display: none;
+        }
+    }
+    .input-group.input-list.pin input {
+        float: none;
+        padding: inherit;
+    }
+    .purchase-pin,
+    .coupon {
+        position: relative;
+        .error {
+            text-align: center;
+        }
+    }
+    .disclaimer {
+        text-align: left;
+        font-size: 0.8em;
+        border-top: 2px dotted;
+        padding-top: 5px;
+    }
+    .disclaimer ~ .disclaimer {
+        border-top: 0;
+    }
+    #enter-personal-details {
+        margin-bottom: 50px;
+    }
+    [name="payment-method"] {
+        margin-bottom: 0 !important;
+        margin-left: 30px !important;
+        height: 1em !important;
+    }
+    [for="cardselect"] {
+        margin-top: -10px;
+        & + .input-group {
+            text-indent: -40px;
+        }
+    }
+    .purchase-pin {
+        margin: 0 !important;
+    }
+    .dropdown-list-alt {
+        padding: 10px 10%;
+    }
+}
+
+body.payment {
+    background: #262626;
+
+    input[disabled] {
+        opacity: 1 !important;
+    }
+}
+
+.payment .page-wrap {
+    background: #fff;
+}
+
+.payment h2 {
+    font-size: 1rem;
+}
+
+#payment-status {
+    text-align: center;
+    padding: 0 10%;
+    img {
+        display: block !important;
+        margin-bottom: 15px;
+        margin: 0 auto 15px;
+    }
+}
+
+::-webkit-input-placeholder {
+    font-size: 0.8em;
+    @include bp(small) {
+        font-size: 1em;
+    }
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 0.8em;
+    @include bp(small) {
+        font-size: 1em;
+    }
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 0.8em;
+    @include bp(small) {
+        font-size: 1em;
+    }
+}
+
+:-ms-input-placeholder {
+    font-size: 0.8em;
+    @include bp(small) {
+        font-size: 1em;
+    }
+}
+
+
+select.dk-dropdown-new {
+    width: 99.5%;
+    font-size: 0.8rem;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #5a5a5a;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 10px;
+    background: #fff;
+    @include bp(small) {
+        font-size: 1rem;
+    }
+}
+
+.dob .wrap-dropdown-new {
+    display: inline-block;
+    width: 33.33333%;
+    padding-left: 5px;
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+.wrap-dropdown-new {
+    position: relative;
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 14px;
+        right: 15px;
+        width: 0;
+        height: 0;
+        border: 4px dashed;
+        border-color: #999 transparent;
+        pointer-events: none;
+    }
+    &:before {
+        border-bottom-style: solid;
+        border-top: none
+    }
+    &:after {
+        margin-top: 7px;
+        border-top-style: solid;
+        border-bottom: none
+    }
+}
+
+.payment .form-item .dob {
+    margin-left: 0;
+    font-size: 0;
+}
+
+.payment .dropdown-list .input-group {
+    margin-left: 0;
+}

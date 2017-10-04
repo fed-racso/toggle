@@ -1,0 +1,24 @@
+.featured-image {
+  // Hack slight border fix
+  margin-top: -2px;
+  margin-top: rhythm(-1);
+  margin-bottom: rhythm(2);
+  img {
+    height: rhythm(10);
+    overflow: hidden;
+    @include bp(small) {
+      height: rhythm(15);
+    }
+
+    @include bp(large) {
+      height: rhythm(20);
+    }
+
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}

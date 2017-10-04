@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){"use strict";$(".collapsible").each(function(l,e){$(e).on("click",".collapsible__toggle",function(l){$(this).closest(".collapsible").toggleClass("is-collapsed"),$(this).find(".collapsible__body").slideToggle()})})});

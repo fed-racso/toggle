@@ -1,0 +1,52 @@
+/* Refactor Ufinity */
+/* Cast Info */
+.l-gi .cast-info {
+clear: both;
+margin-top: 1.25rem;
+font-size: 1rem;
+line-height: 1.2;
+}
+.l-gi .cast-info ul {
+list-style-type: none;
+margin-bottom: 1.25rem;
+}
+.l-gi .cast-info ul:after {
+content: '';
+display: table;
+clear: both;
+}
+.l-gi .cast-info ul strong {
+display: inline-block;
+vertical-align: top;
+margin-right: 2px;
+line-height: 24px;
+color: #1e1e1e;
+}
+.l-gi .cast-info ul strong:after {
+content: ":";
+}
+.dark-theme .l-gi .cast-info ul strong {
+color: white;
+}
+.l-gi .cast-info ul li {
+display: inline-block;
+vertical-align: top;
+margin-bottom: 4px;
+margin-right: 2px;
+}
+.l-gi .cast-info ul li a {
+display: block;
+padding: 2px 6px;
+font-size: 0.85em;
+line-height: 20px;
+color: white;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-ms-border-radius: 2px;
+-o-border-radius: 2px;
+border-radius: 2px;
+background-color: rgba(0, 0, 0, 0.4);
+}
+.dark-theme .l-gi .cast-info ul li a {
+background-color: rgba(255, 255, 255, 0.15);
+}

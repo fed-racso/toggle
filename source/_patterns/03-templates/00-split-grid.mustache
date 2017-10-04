@@ -1,0 +1,38 @@
+{{> molecules-ad-skin }}
+{{> templates-tv-header }}
+{{> atoms-microsite-strip }}
+<div class="page-wrap">
+  <section>
+   <div class="wrap">
+    <div class="l-2up--8-4--article">
+      <main class="l-gi">
+        {{> atoms-wireblock(wire-text:"Item 1", height: "height-300") }}
+        <div class="split-insert" data-split-index="0"></div>
+        {{> atoms-wireblock(wire-text:"Item 2", height: "height-300") }}
+        <div class="split-insert" data-split-index="1"></div>
+        {{> atoms-wireblock(wire-text:"Item 3", height: "height-300") }}
+        <div class="split-insert" data-split-index="2"></div>
+        {{> atoms-wireblock(wire-text:"Item 4", height: "height-300") }}
+        <div class="split-insert" data-split-index="3"></div>
+        {{> atoms-wireblock(wire-text:"Item 5", height: "height-300") }}
+      </main>
+      <aside class="l-gi split-grid">
+        {{> atoms-wireblock(wire-text:"Split 1", height: "height-150", s: "0")}}
+        {{> atoms-wireblock(wire-text:"Split 2", height: "height-150", s: "1")) }}
+        {{> atoms-wireblock(wire-text:"Split 3", height: "height-150", s: "2")) }}
+        {{> atoms-wireblock(wire-text:"Split 4", height: "height-150", s: "2")) }}
+        {{> atoms-wireblock(wire-text:"Split 5", height: "height-150", s: "3")) }}
+        
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section--divider">
+  <div class="wrap">
+    {{> molecules-related-grid }}
+  </div>
+</section>
+</div>
+
+

@@ -1,0 +1,127 @@
+.l-content-grid {
+  @include cf;
+}
+
+.tg-content-grid[data-content-grid-type="2"] {
+  .l-content-grid {
+    .l-gi {
+
+      &:nth-child(1) {
+        .tg-list-item {
+          margin-top: 0;
+        }
+      }
+
+      @include bp(medium) {
+        &:nth-child(2) {
+          .tg-list-item {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .tg-list-item {
+        margin-top: rhythm(1);
+        margin-bottom: 0;
+      }
+
+      @include breakpoint(map-get($breakpoints, medium) + 1px) {
+        @include gallery(4 of 8);
+      }
+    }
+  }
+}
+
+.tg-content-grid[data-content-grid-type="3"] {
+  .l-content-grid {
+    .l-gi {
+      &:nth-child(1) {
+        .tg-list-item {
+          margin-top: 0;
+        }
+      }
+
+      @include bp(medium) {
+        &:nth-child(2) {
+          .tg-list-item {
+            margin-top: 0;
+          }
+        }
+
+        @include bp(large) {
+          &:nth-child(3) {
+            .tg-list-item {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .tg-list-item {
+        margin-top: rhythm(1);
+        margin-bottom: 0;
+      }
+
+      @include breakpoint(map-get($breakpoints, medium) + 1px) {
+        @include gallery(6);
+      }
+
+      @include bp(large) {
+        @include gallery(4);
+      }
+    }
+  }
+}
+
+.tg-content-grid[data-content-grid-type="4"] {
+  .l-content-grid {
+    .l-gi {
+      &:nth-child(1) {
+        .tg-list-item {
+          margin-top: 0;
+        }
+      }
+
+      @include bp(medium) {
+        &:nth-child(2) {
+          .tg-list-item {
+            margin-top: 0;
+          }
+        }
+
+        @include bp(m-large) {
+          &:nth-child(3) {
+            .tg-list-item {
+              margin-top: 0;
+            }
+          }
+
+          &:nth-child(4) {
+            .tg-list-item {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .tg-list-item {
+        margin-top: rhythm(1);
+        margin-bottom: 0;
+      }
+      @include gallery(6);
+
+      @include bp(large) {
+        @include gallery(4);
+      }
+    }
+  }
+}
+
+.tg-load-more, .tg-see-all {
+  display: block;
+  margin: rhythm(1) 0 0;
+
+  @include breakpoint(map-get($breakpoints, medium) + 1px) {
+    display: none;
+  }
+}

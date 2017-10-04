@@ -1,0 +1,13 @@
+.channel-logo {
+  display: table;
+  vertical-align: middle;
+  float: left;
+  a {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  img {
+    margin: 0;
+    vertical-align: middle;
+  }
+}

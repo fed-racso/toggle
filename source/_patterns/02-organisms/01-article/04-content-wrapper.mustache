@@ -1,0 +1,27 @@
+<article class="article has-pagination {{#card}}{{card-class}}{{/card}}">
+<div class="article__presenter"><span>Presented By</span><img src="{{img.presented.src}}" alt=""></div>
+  <h1 class="article__title">{{article__title}}</h1>
+  <h4>{{article__subtitle}}</h4>
+  <div class="article__meta">
+    {{> molecules-article-meta}}
+  </div>
+  
+  <div class="article__body"> 
+  {{^loadDefaultBlock}}
+    {{#galleryBlock}}
+      {{> organisms-gallery(card:false) }}
+    {{/galleryBlock}}
+    {{#eventBlock}}
+      {{> organisms-event (card:false) }}
+    {{/eventBlock}}
+
+  {{/loadDefaultBlock}}
+  {{#loadDefaultBlock}}
+  {{> atoms-wireblock(height:500, wire-text: Content Block Goes Here)}}}
+  {{/loadDefaultBlock}}
+  </div>
+  {{> molecules-ad-300x100-block(u: u-hideTablet u-hideDesktop)}}
+  
+    {{> organisms-comments }}
+
+</article>

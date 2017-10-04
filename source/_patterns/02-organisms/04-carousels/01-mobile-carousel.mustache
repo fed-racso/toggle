@@ -1,0 +1,24 @@
+<!-- mobile-carousel -->
+<div class="l-fc sc {{#card}} card {{/card}}">
+	<h5 class="mobile-carousel__title" data-dotdot="1"><a href="#">{{mobile-carousel-title}} <i class="ti-chevron-next"></i></a></h5>
+	<div class="sc__main-image">
+		{{# fcmi }}
+		<div class="main-image__item"> 	
+			<a href="#">	
+				<picture>
+					<!--[if IE 9]><video style="display: none;"><![endif]-->
+					<source srcset="{{img-fcmi-big}}" media="(min-width: 980px)">
+					<source srcset="{{img-fcmi-med}}" media="(min-width: 760px)">
+					<img src="" alt="" srcset="{{img-fcmi-small}}">
+					<!--[if IE 9]></video><![endif]-->
+				</picture>
+			</a>
+			<div class="main-image__desc">
+				<h4 data-dotdot="1"><a href="#">Image Title</a></h4>
+				<p data-dotdot="auto">{{excerpt-fcmi}}</p>
+			</div>
+		</div>
+		{{/ fcmi }}
+	</div>
+</div>
+<!-- /end mobile-carousel component -->

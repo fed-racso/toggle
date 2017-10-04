@@ -1,0 +1,106 @@
+<!-- start primary nav desktop --> 
+<!-- Note: This requires the primary mega menu to go along with it.  -->
+<!-- Note2: The 'user-actions' part is visible both on desktop and mobile. -->
+<div class="nav--primary__desktop">
+  <ul class="nav">
+    <li> <a class="entertainment" href="http://www.google.com"> Entertainment </a> </li>
+    <li> <a class="lifestyle" href="http://www.google.com"> Lifestyle </a> </li>
+    <li> <a class="offbeat" href="http://www.google.com"> Offbeat </a> </li>
+    <li> <a class="video" href="http://www.google.com"> Video </a> </li>
+    <li> <a class="tv" href="http://www.google.com"> Tv </a> </li>
+    <li> <a class="radio" href="http://www.google.com"> Radio </a> </li>
+    <li> <a class="celebrities" href="http://www.google.com"> Celebs </a> </li>
+    <li> <a class="more" href="http://www.google.com"> more</a> </li>
+  </ul>
+  <ul class="user-actions">
+    <li id="account" class="account pnav__has-dropdown user-li">
+      <a href="#">
+        {{# loggedIn }}
+        <span class="username">Jonathan Tan</span>
+        <img class="account__image" src="../../images/icons/profile-default@2x.png" alt="" style="width: 19px; height: 19px">
+        <div class="badge-count">
+          <i class="i-notification"></i>
+        </div>
+        <!-- <img class="account__image" src="../../images/icons/profile-random.png" alt=""> -->
+        {{# newNotifications}}
+        <i class="i-profile-notifications">New notifications</i>
+        {{/ newNotifications}}
+
+        {{/ loggedIn }}
+        {{^ loggedIn }}
+        <a href="#" class="signz">Sign In</a>
+        <!--
+        <img class="account__image" src="../../images/icons/topnav-login.png" alt="">-->
+        <!-- <img class="account__image" src="../../images/icons/profile-default.png" alt=""> -->
+        {{/ loggedIn }}
+      </a>
+      {{# loggedIn }}
+      <ul class="pnav__dropdown--account">
+        <li class="dropdown__header">
+          <span class="dropdown__username">Welcome, Jonathan Tan</span>
+          <span class="dropdown__title">Notifications</span>
+        </li>
+        <li class="dropdown__section">
+          <ul class="pnav__notifications">
+            <li class="notification__item ">
+              <a href="#">
+                <span class="notification">Lorem ipsum dor sit met Lorem ipsum dolor sit amet, consectetur </span>
+                <time datetime="2014-12-20">12 Oct 2014</time>
+              </a>
+            </li>
+            <li class="notification__item is-unread">
+              <a href="#">
+                <span class="notification">Lorem ipsum dor sit met Lorem ipsum dolor sit amet, consectetur </span>
+                <time datetime="2014-12-20">12 Oct 2014</time>
+              </a>
+            </li>
+            <li class="notification__item is-unread">
+              <a href="#">
+                <span class="notification">Lorem ipsum dor sit met Lorem ipsum dolor sit amet, consectetur </span>
+                <time datetime="2014-12-20">12 Oct 2014</time>
+              </a>
+            </li>
+            <li class="notifications__view-more">
+              <a href="#">
+                View all notifcations
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown__section">
+          <span class="dropdown__title">Settings</span>
+          <ul>
+            <li><a href="#">My Favourites</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Set As Homepage</a></li>
+            <li><a href="#">Sign Out</a></li>
+          </ul>
+        </li>
+      </ul>
+      {{/ loggedIn }}
+    </li>
+    <li id="language-toggle" class="language-toggle pnav__has-dropdown user-li">
+      <a href="#">
+        {{!-- <i class="i-language-toggle">Language</i> --}}
+        <span class="language-toggle__selected-language">EN</span>
+      </a>
+      <ul class="pnav__dropdown--language">
+        <li class="dropdown__header">
+          <span class="dropdown__title">Language Selector</span>
+        </li>
+        <li><a class="is-selected" href="#">English - EN</a></li>
+        <li><a href="#">简体中文 - ZH</a></li>
+      </ul>
+    </li>
+    <li class="search-button user-li"><a href="#"><i class="i-search"></i></a></li>
+    <li class="search-form-holder">
+      <div class="search-close"><i class="i-search-close"></i></div>
+      <form class="search-form" action="#">
+        <input id="search-primary" type="text" placeholder="Search Toggle">
+        <i class="i-search-onclick">Search</i>
+        <label for="search-primary">Search</label>
+      </form>
+    </li>
+  </ul>
+</div>

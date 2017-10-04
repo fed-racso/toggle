@@ -1,0 +1,21 @@
+$zindex: (
+  overlay   : 80,
+  local-navigation: 70,
+  quicklinks-navigation: 70,
+  primary-navigation-mobile-ul: 9999,
+  primary-navigation-desktop-dropdown: 120,
+  dk-select-options: 100,
+  slick-slide: 20,
+  megamenu: 99,
+  modal: 12000,
+  ad-skin: 9999,
+  lightbox__container: 99999,
+  lightbox__close: 9999,
+  datepicker: 99999,
+  epg: 10,
+  scrolltop: 99998
+  );
+
+@mixin tgzi ($key, $map: $zindex) {
+  z-index: map-get($map, $key);
+}

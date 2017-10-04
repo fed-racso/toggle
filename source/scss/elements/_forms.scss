@@ -1,0 +1,24 @@
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+textarea {
+  background: color(gray);
+  color: color(gray, dark);
+  border: 1px solid color(gray);
+  border-radius: 5px;
+  @include transition(ease-out);
+  &:focus {
+    background: color(white);
+    border: 1px solid map-fetch($toggle-colors, primary color) ;
+  }
+}
+
+input {
+  height: rhythm(1.5);
+  padding: 0 rhythm(0.5);
+}
+
+textarea {
+  padding: rhythm(0.5) rhythm(0.5);
+}

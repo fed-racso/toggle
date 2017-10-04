@@ -1,0 +1,475 @@
+/* 
+	Template Name: Dotted
+	Template URI: www.slidetabs.com
+	Description: Tabs with dotted border
+	Author: SlideTabs
+	Author URI:
+*/
+
+/* NOTE: Prefix the template styles with <TEMPLATE FOLDER NAME>-horizontal/vertical */
+
+
+/* 
+ * Horizontal Tabs
+ *
+------------------------------------------------------------------------------------- */
+div.dotted-horizontal { /* The main container */	
+	position:relative;
+	clear:both;
+	width:100%; /* Set the full width */
+}
+
+/* Directional Buttons (horizontal)
+------------------------------------------------------------------------------------- */
+div.dotted-horizontal > div.st_tabs a.st_prev, 
+div.dotted-horizontal > div.st_tabs a.st_next { /* Directional buttons (previous/next) */
+	display:none;
+	position:absolute;
+	top:0px;
+	z-index:110;
+	height:45px;
+	width:47px;
+	text-indent:-999em;
+	border:1px solid #ccc;
+	outline:none;
+	background:#fff url("images/arrows_h.gif") no-repeat;	
+}
+div.dotted-horizontal > div.st_tabs a.st_prev { /* Previous button */
+	left:0px;
+	background-position:center 16px;
+	border-top-left-radius:5px;
+}
+div.dotted-horizontal > div.st_tabs a.st_prev:hover { /* Previous button hover */	
+	background-position:center -44px;
+	background-color:#f8f8f8;
+}
+div.dotted-horizontal > div.st_tabs a.st_next { /* Next button */
+	right:0px;
+	background-position:center -14px;
+	border-top-right-radius:5px;
+}
+div.dotted-horizontal > div.st_tabs a.st_next:hover { /* Next button hover */	
+	background-position:center -74px;
+	background-color:#f8f8f8;
+}
+div.dotted-horizontal > div.st_tabs a.st_prev.st_btn_disabled, 
+div.dotted-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f8f8f8;
+}
+div.dotted-horizontal > div.st_tabs a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:center -104px;
+}
+div.dotted-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:center -134px;
+}
+
+/* Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.dotted-horizontal > div.st_tabs { /* Tabs main container */		
+	position:relative;
+	z-index:100;		
+	width:100% !important;	
+	height:46px;
+}
+div.dotted-horizontal.st_sliding_active > div.st_tabs { /* Tabs main container - sliding active (the '.st_sliding_active' class is added to the tabs main container when the tabs are 'slidable') */
+}
+div.dotted-horizontal > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	position:relative !important; /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+	height:52px;
+	border:1px solid #ccc;
+	border-bottom:0 none;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	overflow:hidden;
+}
+div.dotted-horizontal.st_sliding_active > div.st_tabs div.st_tabs_wrap { /* The '.st_sliding_active' class is added to the main container when tab sliding is activated */
+	width:auto !important;
+	margin:0px 49px; /* Adds side margins to make space for the arrow buttons */
+	border-right:0 none;
+	border-left:0 none;
+	/* Reset top border radius */
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+}
+div.dotted-horizontal > div.st_tabs ul { /* Tabs unordered list */
+	width:10000px; /* Set to an arbitrary high value */
+	height:45px;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	background-color:#f9f9f9;
+}
+div.dotted-horizontal > div.st_tabs ul li { /* Tab list elements */
+	float:left;
+	height:45px;
+	margin:0px;
+}
+div.dotted-horizontal > div.st_tabs ul li:hover, /* Tab list elements hover state */
+div.dotted-horizontal > div.st_tabs ul li.st_li_active { /* The active tab's parent <li> element */
+	background:#f1f1f1 /* Active tab -parent- background color */
+}
+div.dotted-horizontal > div.st_tabs ul li a { /* Tab links */
+	display:block;
+	height:18px;
+	margin:0px;
+	padding:13px 30px 20px; /* Aligns the tabs to the bottom of the content container */
+	font-size:12px;
+	line-height:18px;
+	font-weight:bold;
+	color:#6a6a6a;
+	text-decoration:none;
+	outline:none;
+	background:transparent url("images/dot.png") no-repeat center bottom;
+}
+div.dotted-horizontal > div.st_tabs ul li a:hover { /* Tabs hover state */
+	color:#333;
+	background:transparent url("images/dot_active.png") no-repeat center bottom;
+}
+div.dotted-horizontal > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	background:transparent url("images/dot_active.png") no-repeat center bottom;
+	color:#000;
+}
+
+/* Content (horizontal)
+------------------------------------------------------------------------------------- */
+div.dotted-horizontal > div.st_views { /* Main content container */
+	position:relative;
+	z-index:5;
+	height:390px;
+	padding:0px !important; /* No padding on this container */
+	line-height:19px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	overflow:hidden;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+div.dotted-horizontal > div.st_views div.st_view { /* Content containers - NOTE: background images will be set on these containers */
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-image:none;
+	-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; /* Set 'border-box' box-sizing when using 100% width/height combined with margin or padding */
+	/* Background-image attributes */
+	background-repeat:no-repeat !important;
+	background-position:0px 0px !important;
+	background-color:transparent !important;
+}
+div.dotted-horizontal > div.st_views div.st_view_inner { /* Inner content containers */
+	padding:30px; /* Padding for the content */
+}
+div.dotted-horizontal > div.st_views div.st_view_first { /* First content container */
+	display:block; /* Show the first content container */
+}
+
+/* Bottom-aligned Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.dotted-horizontal.align_bottom { /* The main container */
+	margin-bottom:46px; /* Set to the total height of div.st_tabs */
+}
+div.dotted-horizontal.align_bottom > div.st_tabs a.st_prev,
+div.dotted-horizontal.align_bottom > div.st_tabs a.st_next { /* Directional buttons (previous/next) */
+	top:5px;
+}
+div.dotted-horizontal.align_bottom > div.st_tabs a.st_prev { /* Previous button */
+	border-bottom-left-radius:5px;
+	border-top-left-radius:0px; /* Reset top border radius */
+}
+div.dotted-horizontal.align_bottom > div.st_tabs a.st_next { /* Next button */
+	border-bottom-right-radius:5px;
+	border-top-right-radius:0px; /* Reset top border radius */
+}
+div.dotted-horizontal.align_bottom > div.st_tabs { /* Tabs main container */
+	position:absolute; /* Absolute position the tabs container at the bottom of the main container */
+	bottom:-40px;
+	left:0px;
+}
+div.dotted-horizontal.align_bottom > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	height:45px;
+	padding-top:6px;
+	border-top:0 none;
+	border-bottom:1px solid #ccc;	
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	/* Reset top border radius */
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+}
+div.dotted-horizontal.align_bottom.st_sliding_active > div.st_tabs div.st_tabs_wrap { /* The '.st_sliding_active' class is added to the main container when tab sliding is activated */
+	/* Reset bottom border radius */
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+}
+div.dotted-horizontal.align_bottom > div.st_tabs ul li a { /* Tab links */
+	position:relative;
+	top:-6px;
+	padding:20px 30px 13px;
+	background-position:center 0px;
+}
+div.dotted-horizontal.align_bottom > div.st_views { /* Main content container */
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	/* Reset bottom border radius */
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+}
+
+
+/* 
+ * Vertical Tabs
+ *
+------------------------------------------------------------------------------------- */
+div.dotted-vertical { /* The main container */
+	position:relative;
+	clear:both;
+	width:100%; /* Set the full width */
+	background:#f9f9f9;
+}
+
+/* Control Buttons (vertical)
+------------------------------------------------------------------------------------- */
+div.dotted-vertical > div.st_tabs a.st_prev, 
+div.dotted-vertical > div.st_tabs a.st_next { /* Directional buttons (previous/next) */	
+	display:none;
+	float:left;
+	position:relative;
+	z-index:100;	
+	height:32px;
+	width:93px;
+	text-indent:-999em;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	outline:none;	
+	background:#fff url("images/arrows_v.gif") no-repeat;	
+}
+div.dotted-vertical > div.st_tabs a.st_prev { /* Previous button */
+	background-position:center 12px;
+	border-top-left-radius:5px;
+}
+div.dotted-vertical > div.st_tabs a.st_prev:hover { /* Previous button hover */
+	background-position:center -52px;
+	background-color:#f5f5f5;
+}
+div.dotted-vertical > div.st_tabs a.st_next { /* Next button */
+	background-position:center -20px;
+}
+div.dotted-vertical > div.st_tabs a.st_next:hover { /* Next button hover */
+	background-position:center -84px;
+	background-color:#f5f5f5;
+}
+div.dotted-vertical > div.st_tabs a.st_prev.st_btn_disabled,
+div.dotted-vertical > div.st_tabs a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f7f7f7;
+}
+div.dotted-vertical > div.st_tabs a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:center -116px;
+}
+div.dotted-vertical > div.st_tabs a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:center -148px;
+}
+
+/* Tabs (vertical)
+------------------------------------------------------------------------------------- */
+div.dotted-vertical > div.st_tabs { /* Tabs main container */
+	position:relative;
+	z-index:100;
+	float:left;
+	width:193px;
+	height:401px;
+	margin-right:-6px;
+	border:1px solid #ccc;
+	border-right:0 none;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	overflow:hidden;
+}
+div.dotted-vertical > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	position:relative !important; /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+	float:left;
+	clear:both;
+	width:100%;
+	overflow:hidden;
+}
+div.dotted-vertical > div.st_tabs ul { /* Tabs unordered list */
+	float:left;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	border-right:1px solid #ccc;
+}
+div.dotted-vertical > div.st_tabs ul li { /* Tab list elements */
+	position:relative;
+	float:left;
+	clear:both;
+	width:187px;
+	margin:0px;
+	padding:0;
+}
+div.dotted-vertical > div.st_tabs ul li:hover, /* Tab list elements hover state */
+div.dotted-vertical > div.st_tabs ul li.st_li_active { /* The active tab's parent <li> element */
+	background:#f1f1f1;
+}
+div.dotted-vertical > div.st_tabs ul li a { /* Tab links */
+	display:block;
+	width:173px;
+	margin:0px;
+	padding:14px 0 14px 20px;
+	font-size:12px;
+	line-height:18px;
+	font-weight:bold;
+	color:#5c5c5c;
+	text-decoration:none;
+	outline:none;
+	background:transparent url("images/dot.png") no-repeat right center;
+}
+div.dotted-vertical > div.st_tabs ul li a:hover { /* Tabs hover state */
+	color:#333;
+	background:transparent url("images/dot_active.png") no-repeat right center;
+}
+div.dotted-vertical > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	color:#000;
+	background:transparent url("images/dot_active.png") no-repeat right center;
+}
+div.dotted-vertical > div.st_tabs ul li a span {
+	display:block;
+	clear:both;
+	font:italic normal 11px/11px Georgia, "Times New Roman", Times, serif;
+	color:#838383;
+	padding-top:3px;	
+}
+
+/* Content (vertical)
+------------------------------------------------------------------------------------- */
+div.dotted-vertical > div.st_views { /* Main content container */
+	position:relative;
+	z-index:5;
+	height:401px;
+	line-height:18px;
+	border:1px solid #ccc;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	background-color:#fff;
+	overflow:hidden;
+}
+div.dotted-vertical > div.st_views div.st_view { /* Content containers - NOTE: background images will be set on these containers */
+	width:100%;	
+	height:100%;
+	overflow:hidden;
+	background-image:none;
+	/* Background-image attributes */
+	background-repeat:no-repeat !important;
+	background-position:0px 0px !important;
+	background-color:transparent !important;
+}
+div.dotted-vertical > div.st_views div.st_view_inner { /* Inner content containers - NOTE: the 'Auto Height' option uses the full height of this container to set the height */
+	overflow:hidden !important; /* Makes the element wrap around the content */
+	padding:30px; /* Padding for the content */
+}
+div.dotted-vertical > div.st_views div.st_view_first { /* First content container */
+	display:block; /* Show the first content container */
+}
+
+/* Right-aligned Tabs (vertical)
+------------------------------------------------------------------------------------- */
+div.dotted-vertical.align_right > div.st_tabs a.st_prev, 
+div.dotted-vertical.align_right > div.st_tabs a.st_next { /* Directional buttons (previous/next) */
+	border-left:1px solid #ccc;
+	border-right:0 none;
+}
+div.dotted-vertical.align_right > div.st_tabs a.st_prev { /* Previous button */
+	margin-left:5px;
+	border-top-left-radius:0;
+}
+div.dotted-vertical.align_right > div.st_tabs { /* Tabs main container */  	
+	float:right;
+	margin-right:0px;
+	margin-left:-6px;
+	border-right:1px solid #ccc;	
+	border-left:0 none;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+div.dotted-vertical.align_right > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	padding-left:5px;
+}
+div.dotted-vertical.align_right > div.st_tabs ul { /* Tabs unordered list */
+	border-left:1px solid #ccc;
+	border-right:0 none;
+}
+div.dotted-vertical.align_right > div.st_tabs ul li a { /* Tab links */
+	width:170px;
+	margin-left:-6px;
+	padding:14px 0 14px 23px;
+	background-position:0px center;
+}
+div.dotted-vertical.align_right > div.st_views { /* Main content container */
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	/* Reset right border radius */
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+
+
+/* 
+ * Media Queries
+ *
+------------------------------------------------------------------------------------- */
+@media screen and (max-width: 760px) {
+	/* Vertical Tabs
+	------------------------------------------------------------------------------------- */
+	
+	/* Arrow Buttons (vertical) */
+	div.dotted-vertical > div.st_tabs a.st_prev,
+	div.dotted-vertical > div.st_tabs a.st_next {
+		width:51px;
+		margin:0 !important;
+		border-right:0 none;
+	}
+	
+	/* Tabs (vertical) */
+	div.dotted-vertical > div.st_tabs { /* Tabs main container */
+		width:51px;
+		height:346px;
+		margin:0 !important;
+	}
+	div.dotted-vertical > div.st_tabs ul { /* Tabs unordered list */
+		height:auto;
+		border:0 none !important;
+		background:none;
+	}
+	div.dotted-vertical > div.st_tabs ul li { /* Tab list elements */
+		width:auto;
+	}
+	div.dotted-vertical > div.st_tabs ul li a, /* Tab links */
+	div.dotted-vertical.align_right > div.st_tabs ul li a { /* Tab links (right aligned) */
+		width:51px;
+		height:40px;
+		margin:0;
+		padding:0;
+		text-indent:-1000em;
+		background-position:center center;
+	}
+	div.dotted-vertical > div.st_tabs ul li a:hover, /* Tabs hover state */		
+	div.dotted-vertical > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+		background-position:center center;
+	}
+	
+	/* Content (vertical) */
+	div.dotted-vertical > div.st_views { /* Main content container */
+		height:346px;
+	}
+	
+	/* Right-aligned Tabs (vertical) */
+	div.dotted-vertical.align_right > div.st_tabs a.st_prev, 
+	div.dotted-vertical.align_right > div.st_tabs a.st_next {
+    	border-left:0 none;
+	}
+	div.dotted-vertical.align_right > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container (right aligned) */
+		padding-left:0;
+	}
+}

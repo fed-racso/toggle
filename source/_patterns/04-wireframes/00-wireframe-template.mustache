@@ -1,0 +1,51 @@
+{{!-- Usage of real components --}}
+{{!-- format: baseFolder-componentName --}}
+{{> organisms-header }}
+{{> organisms-primary-mega-menu }}
+{{> molecules-ad-banner-block }}
+
+{{> molecules-secondary-nav }}
+
+{{!-- For example, the featured carousel is found under organisms folder, and its name is "channel-home-carousel" --}}
+<section>
+  {{> organisms-channel-home-carousel }}
+</section>  
+
+
+{{!-- Usage of Wire Components --}}
+{{!-- 1. Always begin with a section element with class="wires" --}}
+<section class="wires">
+  {{!-- 2. Always follow with div class="wrap" --}}
+  <div class="wrap">
+    {{!-- 3. Insert the Grid structures here --}}
+    <div class="l-2up--8-4">
+      {{!-- div class="l-gi" will always be found within structures. Check the grid structure documentation for the number of "l-gi" to insert --}}
+      <div class="l-gi">
+        {{!-- atoms-wireblocks is the wire component. 
+        - Name of wireblock is set with the "wire-text" variable
+        - height of wireblock is set with "height" variable
+         --}}
+        {{> atoms-wireblock(wire-text: "NAME OF WIRE", height:"height-300")}}
+        {{> atoms-wireblock(wire-text: "NAME OF WIRE", height:"height-300")}}
+      </div>
+      <div class="l-gi">
+        {{!-- atoms-wireblocks is the wire component. 
+        - Name of wireblock is set with the "wire-text" variable
+        - height of wireblock is set with "height" variable
+         --}}
+        {{> atoms-wireblock(wire-text: "NAME OF WIRE", height:"height-150")}}
+        {{> atoms-wireblock(wire-text: "NAME OF WIRE", height:"height-450")}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wires">
+  <div class="wrap">
+    <div class="l-3up">
+      <div class="l-gi">{{> atoms-wireblock(wire-text: "NAME OF WIRE", height:"height-150")}}</div>
+      <div class="l-gi">{{> atoms-wireblock(wire-text: "NAME OF WIRE", height:"height-150")}}</div>
+      <div class="l-gi">{{> atoms-wireblock(wire-text: "NAME OF WIRE", height:"height-150")}}</div>
+    </div>
+  </div>
+</section>

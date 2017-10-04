@@ -1,0 +1,37 @@
+<div class="epg--channel__item {{#active}} is-active {{/active}}">
+  <div class="epg--channel__time">
+    {{#active }}
+    <span>On Now</span>
+    <div class="epg__play">
+      <i class="ti-play-incircle"></i>
+    </div>
+    {{/active }}
+    {{^active }}
+    <span>00:00am</span>
+    {{/active}}
+  </div>
+  <div class="epg--channel__info">
+    <h4 class="epg__title" data-dotdot="2">
+      <a href="#">
+        <i class="ti-play-incircle"></i>
+        Program Title Lorem ipsum dolor sit amet
+      </a>
+    </h4>
+
+    <div class="epg__meta">
+      <div class="item__tags">
+        {{#epg-tags}}
+        <div class="tag {{tag}}"><i class="{{icon}}"></i>{{{taghtml}}}</div>
+        {{/epg-tags}}
+      </div>
+    </div>
+
+    <p class="epg__desc u-hideMobile" data-dotdot="2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptatem quae, itaque, eius accusantium facilis laborum velit quia fugiat dolorum blanditiis porro incidunt iusto ratione cumque, dicta nihil magnam ex.
+    </p>
+  </div>
+  <div class="epg__remind remind-me">
+    <a href="#"><i class="ti-reminder"></i><span>Remind Me</span></a>
+    {{> molecules-reminder-pop-up }}
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.is-invisible {
+  @include is-invisible;
+}
+
+.is-visible {
+  @include is-visible;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.cf {
+  @include cf;
+}
+
+.aligncenter--text {
+  text-align: center;
+}
+
+.appearance-none {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.mobile-only {
+  display: block !important;
+  @include bp(small) {
+    display: none !important;
+  }
+}
+
+.desktop-only {
+  display: none !important;
+  @include bp(large) {
+    display: block !important;
+  }
+}

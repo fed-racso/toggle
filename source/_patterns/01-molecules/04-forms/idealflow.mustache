@@ -1,0 +1,171 @@
+<div class="ideal">
+    <form id="form">
+        <fieldset class="pay-wrapper">
+            <legend>Profile Picture</legend>
+            <div class="image_wrapper">
+                <img id="avatar" src="{path}" alt="" />
+                <input type="file" class="validateImage not-mandatory" onchange="mc.utils.validateField(this)" name="file" id="fileUpload" style="opacity: 0; width: 0; height: 0;" accept="image/jpeg, image/png" />
+                <label name="edit" for="fileUpload" class="link on-left">Update Picture</label>
+                <span class="link on-right">Remove</span>
+                <span class="error" data-errors='{"invalid": "The image size must be less than"}'></span>
+            </div>
+        </fieldset>
+        <fieldset class="pay-wrapper">
+            <legend>Personal Particulars</legend>
+            <div class="form-item animate grid-2">
+                <input class="validateText" name="userName" type="text" value="" />
+                <label>First Name</label>
+                <span class="error" data-errors='{"empty":"Please enter your First name", "invalid": "First name can have alphabets only"}'></span>
+            </div>
+            <div class="form-item animate grid-2">
+                <input class="validateText" name="userLastName" type="text" value="" />
+                <label>Last Name</label>
+                <span class="error" data-errors='{"empty":"Please enter your Last name", "invalid": "Last name can have alphabets only"}'></span>
+            </div>
+            <div class="form-item animate">
+                <input class="validateEmail" name="email" type="email" value="" />
+                <label>Email</label>
+                <span class="error" data-errors='{"empty":"Please enter a email address", "invalid": "Please enter a valid email address"}'></span>
+            </div>
+            <div class="form-item animate">
+                <div class="wrap-dropdown-new">
+                    <select class="validateDropdown" name="gender">
+                        <option value=""></option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                    </select>
+                    <label>Gender</label>
+                    <span class="error" data-errors='{"empty":"Please select your gender"}'></span>
+                </div>
+            </div>
+            <div class="form-item animate">
+                <input class="validateDate" type="tel" name="dob" value="" onkeyup="mc.utils.dobFormat(event,this)"/>
+                <label>Date Of Birth (DD/MM/YYYY)</label>
+                <span class="error" data-errors='{"empty":"Please insert Date of birth", "invalid":"Please insert a valid Date of birth"}'></span>
+            </div>
+            <div class="form-item animate grid-2">
+                <div class="wrap-dropdown-new">
+                    <select name="maritalStatus">
+                        <option value=""></option>
+                    </select>
+                    <label>Marital Status</label>
+                </div>
+            </div>
+            <div class="form-item animate grid-2">
+                <div class="wrap-dropdown-new">
+                    <select name="annualIncome">
+                        <option value=""></option>
+                    </select>
+                    <label>Annual Income</label>
+                </div>
+            </div>
+            <div class="form-item animate grid-2">
+                <div class="wrap-dropdown-new">
+                    <select name="ocupation">
+                        <option value=""></option>
+                    </select>
+                    <label>Ocupation</label>
+                </div>
+            </div>
+            <div class="form-item animate grid-2__res">
+                <div class="wrap-dropdown-new">
+                    <select name="ethnicity">
+                        <option value=""></option>
+                    </select>
+                    <label>Ethnicity</label>
+                </div>
+            </div>
+            <div class="form-item">
+                <input class="checkbox" checked="checked" id="iSG" type="checkbox" value="true" name="iSG" />
+                <label for="iSG">I am a Singapore Citizen or PR</label>
+            </div>
+            <div class="form-item animate grid-2">
+                <div class="wrap-dropdown-new">
+                    <select class="validateDropdown" name="nationality" disabled="disabled">
+                        <option value=""></option>
+                    </select>
+                    <label>Nationality</label>
+                </div>
+            </div>
+            <div class="form-item animate grid-2">
+                <input type="text" class="validateNRIC on-blur not-mandatory" value="" name="identification_number" />
+                <label data-label-passport="Passport No." data-label-NRIC="NRIC"></label>
+                <span class="error" data-errors='{"invalid":"Please enter a valid NRIC"}'></span>
+            </div>
+        </fieldset>
+        <fieldset class="pay-wrapper title-out">
+            <legend>Change Password</legend>
+            <div class="form-item animate">
+                <input class="validatePassword invalid" name="currentpassword" type="password" value="">
+                <label>Current Password</label>
+                <span class="error" data-errors="{&quot;empty&quot;:&quot;Please enter your current password&quot;, &quot;invalid&quot;: &quot;Current password you have entered is incorrect. Please try again&quot;}"></span>
+            </div>
+            <div class="form-item animate">
+                <input class="validateNpassword on-blur" name="newpassword" type="password" value="">
+                <label>New Password</label>
+                <span class="error" data-errors="{&quot;empty&quot;:&quot;Please enter your new password&quot;}"></span>
+            </div>
+            <div class="form-item animate">
+                <input class="validateNpassword on-blur" name="confirmpassword" type="password" value="">
+                <label>Confirm New Password</label>
+                <span class="error" data-errors="{&quot;empty&quot;:&quot;Passwords do not match, please enter again&quot;, &quot;invalid&quot;:&quot;Please use at least 6 characters&quot;}"></span>
+            </div>
+        </fieldset>
+        <fieldset class="pay-wrapper">
+            <legend>Contact Information</legend>
+            <div class="form-item animate grid-2">
+                <input type="tel" class="validateTel on-blur not-mandatory" value="" name="mobilePhone" />
+                <label>Mobile Phone</label>
+                <span class="error" data-errors='{"invalid":"Please enter a valid Mobile phone number"}'></span>
+            </div>
+            <div class="form-item animate grid-2">
+                <input class="validateTel on-blur not-mandatory" type="tel" value="" name="homePhone" />
+                <label>Home Phone</label>
+                <span class="error" data-errors='{"invalid":"Please enter a valid Home phone number"}'></span>
+            </div>
+        </fieldset>
+        <fieldset class="pay-wrapper">
+            <legend class="on-left"><span class="tab main">I have an account</span><span class="tab sec"><a href="#">I am a New user</a></span></legend>
+            <div class="form-item animate">
+                <input class="" type="text" value="" name="countryResidence" />
+                <label>Country Of Residence</label>
+            </div>
+            <div class="form-item animate grid-2">
+                <input class="validatePostal on-blur" type="tel" value="" name="postal" />
+                <label>Postal/Zip Code</label>
+                <span class="error" data-errors='{"invalid":"Please enter a valid postal code"}'></span>
+            </div>
+            <div class="form-item animate grid-2">
+                <button onclick="mc.utils.validatePostal(this.form.postal.value, this.form); return false;" class="button-full">Get Address</button>
+            </div>
+            <div class="form-item animate grid-2">
+                <input type="text" value="" name="block" />
+                <label>Block/House No.</label>
+            </div>
+            <div class="form-item animate grid-2">
+                <input class="validateText" type="text" name="street" value="" />
+                <label>Street</label>
+            </div>
+            <div class="form-item animate grid-2">
+                <input type="text" value="" name="building" />
+                <label>Building</label>
+            </div>
+            <div class="form-item animate grid-2">
+                <input type="text" value="" name="unitNumber" />
+                <label>Unit No.</label>
+            </div>
+            <div class="form-item animate grid-2">
+                <input type="text" value="" name="city" />
+                <label>City</label>
+            </div>
+        </fieldset>
+        <div class="toc">
+            <input class="validateCheckbox checkbox" id="agreeTOSPP" name="agreeTOSPP" type="checkbox" value="false" />
+            <label for="agreeTOSPP">I have read and agreed to the <a href="" target="_blank">Terms of Service</a> &amp; <a href="" target="_blank">Privacy Policy</a>.</label>
+            <span class="error" data-errors='{"empty":"Please agree to the Terms of Service &amp; Privacy policy"}'></span>
+        </div>
+    </form>
+    <div class="pay-btn">
+        <button onclick="mc.utils.validateField('#form', alert, event)" class="button-full">Save</button>
+    </div>
+</div>

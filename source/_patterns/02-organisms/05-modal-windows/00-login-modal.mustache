@@ -1,0 +1,111 @@
+<div class="lightbox-container login" id="login">
+  {{# login}}
+    <h2 class="lightbox__title">Sign in</h2>
+    <div class="l-2up--6-6">
+      <div class="l-gi">
+        <div class="lightbox__social-media">
+          {{> atoms-social-media-button(social-media:facebook, btnText: Sign in with Facebook) }}
+        </div>
+        <div class="divider"><span class="ico"></span></div>
+      </div>
+      <div class="l-gi">
+        <form class="lightbox__form" action="#">
+          <div class="input-group">
+            <label for="username">username</label>
+            <input class="input" type="text" name="username" id="username" placeholder="Name/Email">
+          </div>
+          <div class="input-group">
+            <label for="user-password">Password</label>
+            <input class="nput" type="password" name="user-password" id="user-password" placeholder="Password">
+          </div>
+          <div class="input-group">
+            <a href="#">Forget your password?</a>
+          </div>
+          <div class="input-group">
+            <input class="checkbox" type="checkbox" name="remember-user" id="remember-user">
+            <label class="label--checkbox" for="remember-user">Remember Me</label>
+          </div>
+          <div class="input-group">
+            <input class="input btn--pink" type="submit" value="Sign In">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="cta">
+      <span class="cta">Don't have an account? <a href="{{ link.deliverables-primary-navigation~signup }}">Sign Up for free?</a></span>
+    </div>
+  {{/ login}}
+
+  {{# signUp}}
+  <div class="lightbox__signup">
+    <h2 class="lightbox__title">Sign Up</h2>
+    <div class="l-2up--6-6">
+      <div class="l-gi">
+        <div class="lightbox__social-media">
+         {{> atoms-social-media-button(social-media:facebook, btnText: Sign up with Facebook) }}
+         {{> atoms-social-media-button(social-media:twitter, btnText: Sign up with Twitter) }}
+         {{> atoms-social-media-button(social-media:gplus, btnText: Sign up with Google +) }}
+         <a href="#" class="btn--pink">Mediacorp Single Sign on</a>
+        </div>
+      </div>
+      <div class="l-gi">
+        <form class="form" action="#">
+          <div class="modal__input-group">
+            <label for="f-name">First Name</label>
+            <input class="modal__input" type="text" name="f-name" id="f-name" placeholder="First Name">
+          </div>
+          <div class="modal__input-group">
+            <label for="l-name">Last Name</label>
+            <input class="modal__input" type="text" name="l-name" id="l-name" placeholder="Last Name">
+          </div>
+          <div class="modal__input-group">
+            <label for="email">Email Address</label>
+            <input class="modal__input" type="password" name="email" id="email" placeholder="Email Address">
+          </div>
+          <div class="modal__input-group">
+            <label for="user-password">Password</label>
+            <input class="modal__input" type="password" name="user-password" id="user-password" placeholder="Password">
+          </div>
+          <div class="modal__input-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input class="modal__input" type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+          </div>
+          <div class="modal__input-group">
+            <input class="modal__checkbox" type="checkbox" name="get-newsletter" id="get-newsletter" checked>
+            <label class="modal__label--checkbox" for="get-newsletter">Receive Newsletter</label>
+          </div>
+          <p class="small">I consent to the use of my personal data by MediaCorp and the MediaCorp group of companies (collectively “MediaCorp”) to send me marketing and advertising materials in relation to goods and services of MediaCorp and its business partners and for research and analysis.</p>
+          <div class="modal__input-group">
+            <input class="modal__input" type="submit" value="Sign Up">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal__cta">
+      <span> By clicking on the 'Create Account' and the 'Sign up with Facebook buttons you are agreeing to Toggle's <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</span>
+    </div>
+  </div>
+  {{/ signUp}}
+
+  {{# forgotPw }}
+  <div class="modal modal__forget-pw">
+    <a href="#" class="modal__close">Close Modal</a>
+    <h2 class="modal__title">Forgot Your Password?</h2>
+    <div class="l-12">
+      <form class="modal__form" action="#">
+        <p>Please enter your registered email address</p>
+        <div class="modal__input-group--inline-button">
+          <label for="email">Email Address</label>
+          <input class="modal__input" type="text" name="email" id="email" placeholder="Email Address">
+          <input class="modal__input" type="submit" value="submit">
+        </div>
+        <p>We'll send you a reset password confirmation email to this address</p>
+      </form>
+    </div>
+  </div>
+</div>
+{{/ forgotPw }}
+</div>
+

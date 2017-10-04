@@ -1,0 +1,32 @@
+<!-- Main Carousel -->
+<div class="l-fc mc">
+	<div class="mc__main-image">
+		{{# fcmi }}
+		<div class="main-image__item"> 
+			<div class="main-image__image">
+				<a href="#">			
+					<picture>
+						<!--[if IE 9]><video style="display: none;"><![endif]-->
+						<source srcset="{{img-fcmi-big}}" media="(min-width: 980px)">
+						<source srcset="{{img-fcmi-med}}" media="(min-width: 760px)">
+						<img src="" alt="" srcset="{{img-fcmi-small}}">
+						<!--[if IE 9]></video><![endif]-->
+					</picture>
+				</a>
+			</div>
+			<div class="main-image__desc">
+				
+        		<h2 data-dotdot="2"><a href="#">{{ eng-title }}</a></h2>
+       			<h2 data-dotdot="1"><a href="#">{{ chi-title }}</a></h2>
+				
+				<p class="main-image__desc__excerpt" data-dotdot="2">{{ excerpt-fcmi }} </p>
+				<div class="main-image__links">
+					<h4><a class="catchup" href="#"> Latest Catchup <i class="glyphicons glyphicons-play"></i> </a> </h4>
+					<h4><a href="#"> Learn More <i class="glyphicons glyphicons-chevron-right"></i> </a> </h4>
+					<h4><a href="#"> Watch It First <i class="glyphicons glyphicons-chevron-right"></i></a></h4>
+				</div>
+			</div>
+		</div>
+		{{/ fcmi }}
+	</div>
+</div>

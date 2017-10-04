@@ -1,0 +1,52 @@
+{{> organisms-notification-bar(notification-warning:false, notification-system: false) }}
+
+<div class="page-wrap">
+  {{> molecules-ad-skin }}
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Gonna Make It!", section-header__parent: "Channel U", section-header__has-logo: true) }}
+  {{> molecules-secondary-nav }}
+  <section>
+    <div class="wrap">
+      <div class="l-1up-center">
+        <div class="free-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt recusandae officia, molestias tempora molestiae voluptatibus obcaecati repudiandae quidem cumque tempore voluptatem quis nam fugit doloribus magnam doloremque ullam beatae. Voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt recusandae officia, molestias tempora molestiae voluptatibus obcaecati repudiandae quidem cumque tempore voluptatem quis nam fugit doloribus magnam doloremque ullam beatae. Voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt recusandae officia, molestias tempora molestiae voluptatibus obcaecati repudiandae quidem cumque tempore voluptatem quis nam fugit doloribus magnam doloremque ullam beatae. Voluptas.</p>
+      </div>
+      <form autocomplete="off" id="reset-pin-form" data-validate="parsley" class="form card" action="">
+        <div class="form-item">
+        <label for="newPw">New PIN</label>
+        <div class="input-group">
+          <input type="password" class="parsley-validated parsley-error" data-error-message="Invalid PIN" data-type="digits" data-rangelength="[6,6]" data-validation-minlength="0" maxlength="6" data-trigger="focusout change" data-required="true" size="7" id="newPw" name="newPw">
+          <ul id="parsley-002954067513989078" class="parsley-error-list" style="display: block;">
+          <li class="custom-error-message" style="display: list-item;">Invalid PIN</li>
+          </ul>
+          <div class="success-img"></div>
+        </div>
+        </div>
+        <div class="form-item">
+        <label for="confirmPw">Confirm PIN</label>
+        <div class="input-group">
+          <input type="password" data-error-message="The value did not match value in PIN field" class="parsley-validated not-parsed-pw parsley-error" data-validation-minlength="0" maxlength="6" data-equalto="#newPw" data-trigger="focusout change" data-required="true" size="7" id="confirmPw" name="confirmPw">
+          <ul id="parsley-13456320503239338" class="parsley-error-list" style="display: block;">
+          <li class="custom-error-message" style="display: list-item;">The value did not match value in PIN field</li>
+          </ul>
+          <div class="success-img"></div>
+        </div>
+        </div>
+        <input type="hidden" value="resetpin" name="methodname">
+        <input type="hidden" value="282200" name="domainID">
+        <input type="hidden" value="613306" name="siteGuid">
+        <input type="hidden" value="0" name="ruleId">
+        <input type="hidden" value="0" name="isActive">
+        <input type="hidden" value="Purchase" name="rule">
+        <input type="hidden" value="fragrantpearls+31@gmail.com" name="username">
+        <button class="reset-pin-submit-button" type="submit">Save</button>
+      </form>
+    </div>
+  </section>
+    {{> organisms-footer }}
+</div>
+

@@ -1,0 +1,28 @@
+.demo h2 {
+  text-align: center;
+  margin: rhythm(2);
+}
+
+.demo {
+  @extend %cf;
+}
+
+.demo__item {
+  background: #E74C3C;
+  border: 1px solid gray;
+  // height: 3em;
+  margin-bottom: gutter();
+  text-align: center;
+  line-height: 3em;
+  &:nth-child(2n) {
+    background: #3FD47E;
+  }
+}
+
+.demo__child-item {
+  background: yellow;
+  margin-bottom: gutter();
+  &:nth-child(2n) {
+    background: orange;
+  }
+}

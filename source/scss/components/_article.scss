@@ -1,0 +1,114 @@
+// Refactoring Ufinity
+.article {
+	.article__social-media-buttons {
+		display: block;
+		
+		@include bp(small) {
+			float: right;
+		}
+	}
+}
+
+.article__meta{
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+.article__meta__info {
+	@include bp(small) {
+		float: left;
+	}
+}
+
+.article__dates {
+	font-size: 0.8em;
+	@include bp(medium) {
+		margin-top: 4px;
+		margin-bottom: 1.25rem;
+	}
+}
+
+.article__date {
+	margin-top: 0;
+	&:not(:first-child):before{
+		content: "| ";
+	}
+
+	@include bp(medium) {
+		margin-bottom: 0;
+	}
+}
+
+.article__publisher{
+	&:only-child {
+		span:after {
+			display: none;
+		}
+	}
+}
+
+.article__byline{
+	&:after {
+		display: none;
+	}
+
+	.author{
+		&:after{
+			color: #999999;
+		}
+
+		a[href]{
+			cursor: pointer;
+		}
+	}
+}
+
+/* Filed Under = tags */
+
+.filed-under {
+	list-style-type: none;
+	margin-bottom: 1.25rem;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	strong{
+		display: inline-block;
+		vertical-align: top;
+		line-height: 24px;
+		margin-right: 2px;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 4px;
+		margin-right: 2px;
+
+		a{
+			display: block;
+			padding: 2px 6px;
+			font-size: 0.85em;
+			color: white;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			-ms-border-radius: 2px;
+			-o-border-radius: 2px;
+			border-radius: 2px;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+	}
+
+	.gfc__right &{
+	 	li{
+			a{
+				background-color: black;
+			}
+		}   
+	}
+}

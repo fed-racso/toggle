@@ -1,0 +1,156 @@
+.notification-holder {
+  @include tui {
+    //background-color: $primary-color;
+    //Jira:https://track.ufinity.com/browse/MEDIACORPXIN-1387
+    background-color: #262626;
+  }
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.notification-bar {
+  position: relative;
+}
+
+.notification-bar__controls {
+  display: none;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 35px;
+  z-index: 2;
+  @include bp(medium) {
+    display: block;
+    //height: 100%;
+    display: inline-block;
+    position: absolute;
+  }
+
+  &:empty {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+  .slick-prev, .slick-next {
+    width: 24px;
+    height: 32px;
+    top: 10%;
+    margin: -12px 0 0 0;
+    background: none !important;
+    //override because the base slick controls are also using !important
+    color: white !important;
+    @include tgts(deca);
+    line-height: rhythm(1);
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken(white, 5%) !important;
+      background: transparent !important;
+    }
+    @include bp(medium) {
+      top: 25%;
+      margin-top: -10px;
+    }
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: rhythm(1);
+  }
+}
+
+.notification-bar__contents {
+  // display: inline-block;
+  // margin-top: rhythm(1);
+  width: 88%;
+  padding: rhythm(0.5) 0;
+  @include bp(medium) {
+    margin-top: rhythm(1);
+    padding: 0 rhythm(2) rhythm(0) rhythm(4);
+    margin: 0;
+    width: 100%;
+  }
+
+  img {
+    display: none;
+    @include bp(medium) {
+      display: block;
+      float: left;
+      margin: 0 rhythm(0.5) rhythm(0.5) 0;
+    }
+  }
+  p {
+    margin-bottom: rhythm(0);
+    @include tgts(centi);
+    color: white;
+  }
+  .notification-bar__content {
+    /*padding-top:rhythm(0.5);*/
+    @include bp(medium) {
+      // padding-left: rhythm(4);
+      padding-top: rhythm(0.5);
+    }
+  }
+  .notification-bar__content:first-child:last-child {
+    //if only 1 message
+    padding-left: 0;
+  }
+  .meta {
+    @include tgts(centi);
+    color: white;
+    margin: 0;
+    .meta__item {
+      margin-bottom: rhythm(0);
+    }
+  }
+  &:first-child:last-child {
+    padding-left: 0;
+  }
+}
+
+.notification-bar__close {
+  right: 0;
+  top: 0;
+  position: absolute;
+  padding: rhythm(0.5) 0 rhythm(0.5) rhythm(0.5);
+  color: white !important;
+  font-size: 12px;
+  //overrides the theme colors
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken(white, 5%) !important;
+  }
+  top: 50%;
+  margin-top: rhythm(-1);
+}
+
+// Variations
+
+.notification-holder.system-alert {
+  background-color: #8552a1;
+}
+
+.notification-holder.warning {
+  background-color: #000;
+  .notification-bar__contents {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.notification-holder {
+  &.system-alert,
+  &.warning {
+    .notification-bar__contents {
+      padding: rhythm(0.5) 0;
+    }
+    .notification-bar__content {
+      padding-top: 0;
+    }
+  }
+}

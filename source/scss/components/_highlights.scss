@@ -1,0 +1,209 @@
+.tg-highlights-holder {
+  @include cf;
+}
+
+.tg-highlights {
+  h2{
+    @include bp(medium) {
+      font-size:1.5em !important;
+    }
+  }
+  @include breakpoint(max-width map-get($breakpoints, medium)) {
+    .tg-teaser-item {
+      display: block !important;
+      float: none !important;
+      width: auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: rhythm(1);
+
+      > a {
+        position: relative;
+        display: block;
+        width: rhythm(7);
+        float: left;
+
+        img {
+          display: block;
+          margin: 0;
+        }
+      }
+
+      .item__info {
+        margin-left: tgrhythm(7.5);
+      }
+
+      .item__info.thumbless {
+        margin-left: tgrhythm(0);
+      }
+
+      .item__title {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .item__type {
+        position: absolute;
+      }
+
+      .desc {
+        display: none;
+      }
+    }
+  }
+
+  .tg-teaser-item {
+    @include bp(large) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tg-highlights-2 {
+  @extend .tg-highlights;
+
+  @include breakpoint(map-get($breakpoints, medium) map-get($breakpoints, m-large)) {
+    @include span(6 first);
+  }
+
+  @include breakpoint(max-width map-get($breakpoints, m-large)) {
+    .tg-teaser-item {
+      @include cf;
+      display: block !important;
+      float: none !important;
+      width: auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: rhythm(1);
+
+      > a {
+        position: relative;
+        display: block;
+        width: rhythm(7);
+        float: left;
+
+        img {
+          display: block;
+          margin: 0;
+        }
+      }
+
+      .item__info {
+        margin-left: tgrhythm(7.5);
+      }
+
+      .item__info.thumbless {
+        margin-left: tgrhythm(0);
+      }
+
+      .item__title {
+        margin-bottom: 0;
+      }
+
+      .item__type {
+        position: absolute;
+      }
+
+      .desc {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint(map-get($breakpoints, m-large)) {
+    .tg-teaser-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tg-highlights + .split-insert {
+  @include breakpoint(map-get($breakpoints, medium) map-get($breakpoints, m-large)) {
+    @include span(6 last);
+  }
+}
+
+// Legacy recently watched items
+
+.tg-highlights {
+  p {
+    margin-bottom: 0;
+  }
+
+  h5 {
+    margin-bottom: tgrhythm(0.5);
+  }
+}
+
+.tg-highlights__subitems {
+  display: none;
+
+  @include bp(medium) {
+    display: block;
+  }
+}
+
+// Recently watch adjustments to tg-list-item
+.tg-highlights .tg-list-item {
+  margin-bottom: 0;
+
+  @include breakpoint(max-width map-get($breakpoints, large)) {
+    .tg-block {
+      width: tgrhythm(5);
+    }
+
+    .item__details {
+      margin-left: tgrhythm(5.5);
+    }
+  }
+}
+
+// Not logged in state
+.tg-highlights--not-logged-in {
+  @extend %cf;
+  text-align: center;
+
+  @include tui {
+    background: $overlay-color;
+  }
+
+  @include bp(large) {
+    text-align: left;
+  }
+
+  h3 {
+    font-weight: normal;
+  }
+
+  .btn {
+    margin: 0;
+
+    @include bp(large) {
+      float: right;
+    }
+  }
+}
+
+.tg-highlights--no-items {
+  @extend .tg-highlights;
+
+  .desc {
+    @include tui {
+      color: $meta-color;
+    }
+
+    @include adjust-font-size-to(20px);
+
+    @include bp(medium) {
+      @include adjust-font-size-to(24px);
+    }
+  }
+}
+
+.tg-highlights--thumbless-2 {
+  @extend .tg-highlights-2;
+
+  h5 {
+    margin-bottom: 0;
+  }
+}

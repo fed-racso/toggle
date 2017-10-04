@@ -1,0 +1,37 @@
+<!-- start fixed-height component -->
+<div class="fixed-height {{#episode}} fixed-height--episode{{/episode}} card--fixed" data-split-index="{{split-index}}">
+  <h5 class="fixed-height__title" data-dotdot="1"><a href="#">{{fixed-height-title}}</a><a href="#"><i class="ti-chevron-next"></i></a></h5>
+  <ul class="fixed-height__list" data-items-shown-on-mobile="{{mobileItems}}">
+
+    {{#nowPlaying}}
+    {{> molecules-fixed-height-now-playing(img: true)}}
+    {{/nowPlaying}}
+
+    {{#hasImage}}
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{> molecules-fixed-height-item(img: true) }}    
+    {{/hasImage}}
+
+    {{^hasImage}}
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{> molecules-fixed-height-item }}    
+    {{/hasImage}}    
+</ul>
+</div>
+<!-- /end fixed-height component -->

@@ -1,0 +1,52 @@
+<!-- highlights -->
+<div class="tg-highlights-holder">
+  {{#loggedIn}}
+  
+
+  {{#itemsWatched}}
+
+  <div class="tg-highlights card">
+    <h5>{{highlights-title}}</h5>
+    <div class="l-3up">
+      {{> molecules-toggle-teaser-item(type: video)}}
+      {{> molecules-toggle-teaser-item(type: video)}}
+      {{> molecules-toggle-teaser-item(type: video, suggested: true)}}
+    </div>
+  </div>
+
+  {{/itemsWatched}}
+  {{^itemsWatched}}
+
+  <div class="tg-highlights card">
+    <h5>New Here? Watch This First!</h5>
+    <div class="l-3up">
+      {{> molecules-toggle-teaser-item(type: video)}}
+      {{> molecules-toggle-teaser-item(type: video)}}
+      {{> molecules-toggle-teaser-item(type: video, suggested: true)}}
+    </div>
+  </div>
+
+  {{/itemsWatched}}
+
+
+  {{/loggedIn}}
+  {{^loggedIn}}
+  
+  
+  <div class="tg-highlights--not-logged-in card">
+    <h3>
+      You’re not signed in. Sign in now to get personalised content! Not registered? <a href="#" class="pink">Register Here</a>
+    </h3>
+      <a href="#" class="btn--pink">
+      Sign in
+      </a>
+  </div>
+
+
+
+  {{/loggedIn}}
+
+  <div class="split-insert" data-split-index="0"></div>
+</div>
+
+<!--/end highlights -->

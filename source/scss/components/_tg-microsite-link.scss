@@ -1,0 +1,55 @@
+.tg-microsite-link {
+  @include cf;
+  display: block;
+  &:not(.card) {
+    margin-bottom: rhythm(0.5);
+  }
+  img {
+    width: rhythm(7);
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+.tg-microsite-link__details {
+  margin-left: rhythm(7.5);
+  @include tui {
+    color: $text-color;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    @include tui{
+      color:$text-color;
+    }
+    //color: white;
+    &:hover,
+    &:active,
+    &:focus {
+      @include tui {
+        color: $primary-color;
+      }
+      text-decoration: none;
+    }
+  }
+}
+
+.tg-microsite-link {
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    .tg-microsite-link__details {
+      @include tdc {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.tg-microsite-link__title {
+  font-weight: 600;
+  margin-bottom: rhythm(0.25);
+}

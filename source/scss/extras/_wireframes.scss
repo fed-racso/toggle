@@ -1,0 +1,46 @@
+.wireblock {
+  background: gray;
+  display: table;
+  width: 100%;
+  // height: 100%;
+  // background: gray;
+  h2 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.wires {
+  .l-gi {
+    margin-bottom: gutter();
+  }
+}
+
+$heights: 600;
+
+@while $heights > 0 {
+  .height-#{$heights} {
+    height: #{$heights}px !important;
+  }
+  $heights: $heights - 10;
+}
+
+.hidden-small {
+  @include breakpoint(max-width map-get($breakpoints, small)) {
+    display: none !important;
+  }
+}
+
+.hidden-med {
+  @include breakpoint(map-get($breakpoints, small) map-get($breakpoints, large)) {
+    display: none !important;
+  }
+}
+
+.hidden-large {
+  @include breakpoint(map-get($breakpoints, large)) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,275 @@
+/* 
+  Template Name: Clean
+  Template URI: www.slidetabs.com
+  Description: Clean style tabs
+  Author: SlideTabs
+  Author URI:
+*/
+
+/* NOTE: Prefix the template styles with <TEMPLATE FOLDER NAME>-horizontal/vertical */
+
+/* 
+ * Horizontal Tabs
+ *
+------------------------------------------------------------------------------------- */
+div.clean-horizontal {
+  /* The main container */
+  position: relative;
+  clear: both;
+  width: 100%;
+  /* Set the full width */
+}
+
+/* Directional Buttons (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean-horizontal > div.st_tabs a.st_prev,
+div.clean-horizontal > div.st_tabs a.st_next {
+  /* Directional buttons (previous/next) */
+  display: none;
+  position: absolute;
+  top: 0px;
+  z-index: 110;
+  height: 43px;
+  width: 43px;
+  //text-indent:-999em;
+  border: 0;
+  outline: none;
+  font-family: "Toggle Font Icon";
+  font-size: rhythm(0.7);
+  line-height: 43px;
+  text-align: center;
+  font-weight: normal;
+  color: gray;
+  opacity: 0.8;
+}
+
+div.clean-horizontal > div.st_tabs a.st_prev {
+  /* Previous button */
+  left: 0px;
+  @extend .ti-chevron-prev;
+}
+
+div.clean-horizontal > div.st_tabs a.st_prev:hover {
+  /* Previous button hover */
+  //background-position:center -45px;
+  text-decoration: none;
+  opacity: 1;
+}
+
+div.clean-horizontal > div.st_tabs a.st_next {
+  /* Next button */
+  right: 0px;
+  @extend .ti-chevron-next;
+}
+
+div.clean-horizontal > div.st_tabs a.st_next:hover {
+  /* Next button hover */
+  //background-position:center -75px;
+  text-decoration: none;
+  opacity: 1;
+}
+
+div.clean-horizontal > div.st_tabs a.st_prev.st_btn_disabled,
+div.clean-horizontal > div.st_tabs a.st_next.st_btn_disabled {
+  /* Previous and next buttons disabled state */
+  cursor: default;
+  opacity: 0.5;
+}
+
+div.clean-horizontal > div.st_tabs a.st_prev.st_btn_disabled {
+  /* Previous button disabled state */
+  //background-position:center -105px;
+}
+
+div.clean-horizontal > div.st_tabs a.st_next.st_btn_disabled {
+  /* Next button disabled state */
+  //background-position:center -135px;
+}
+
+/* Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean-horizontal > div.st_tabs {
+  /* Tabs main container */
+  position: relative;
+  z-index: 100;
+  width: 100% !important;
+  height: 45px;
+  margin-bottom: -1px;
+  overflow: visible;
+}
+
+div.clean-horizontal.st_sliding_active > div.st_tabs {
+  /* Tabs main container - sliding active (the '.st_sliding_active' class is added to the tabs main container when the tabs are 'slidable') */
+  height: 45px;
+}
+
+div.clean-horizontal > div.st_tabs div.st_tabs_wrap {
+  /* Tabs slide-container */
+  position: relative !important;
+  /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+  width: 100%;
+}
+
+div.clean-horizontal.st_sliding_active > div.st_tabs div.st_tabs_wrap {
+  /* The '.st_sliding_active' class is added to the main container when tab sliding is activated */
+  width: auto !important;
+  margin: 0px 44px;
+  /* Adds side margins to make space for the arrow buttons */
+}
+
+div.clean-horizontal > div.st_tabs ul {
+  /* Tabs unordered list */
+  width: 10000px;
+  /* Set to an arbitrary high value */
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+div.clean-horizontal > div.st_tabs ul li {
+  /* Tab list elements */
+  display: block;
+  float: left;
+  margin: 0px;
+}
+
+div.clean-horizontal > div.st_tabs ul li a {
+  /* Tab links */
+  display: block;
+  height: 43px;
+  margin: 0px;
+  padding: 0 28px;
+  font-size: 14px;
+  line-height: 43px;
+  font-weight: get-weight(header semibold);
+  @include tdc {
+    color: $theme-color;
+  }
+
+  opacity: 0.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+}
+
+div.clean-horizontal > div.st_tabs ul li a:hover {
+  /* Tabs hover state */
+  /*@include tdc {
+    color: lighten($theme-color, 10%);
+  }*/
+  opacity: 0.8;
+}
+
+div.clean-horizontal > div.st_tabs ul li a.st_tab_first {
+  /* First tab element */
+  /*border-left: 0 none;*/ // we need the padding to center align text
+}
+
+div.clean-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_first {
+  /* First tab element (with tab sliding activated) */
+  /*border-left: 0 none;*/ // we need the padding to center align text
+}
+
+div.clean-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_last {
+  /* Last tab element (with tab sliding activated) */
+  /*border-right: 0 none;*/ // we need the padding to center align text
+}
+
+div.clean-horizontal > div.st_tabs ul li a.st_tab_active {
+  /* Tab active/highlighted state */
+  opacity: 1;
+  @include tui {
+    background: $overlay-color;
+  }
+}
+
+/* Content (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean-horizontal > div.st_views {
+  /* Main content container */
+  position: relative;
+  z-index: 5;
+  // height: 250px;
+  padding: 0 !important;
+  /* Container will not have padding */
+  //border:1px solid #ccc;
+
+  overflow: visible;
+}
+
+div.clean-horizontal > div.st_views div.st_view {
+  /* Content containers - NOTE: background images will be set on these containers */
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background-image: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Set 'border-box' box-sizing when using 100% width/height combined with margin or padding */
+  /* Background-image attributes */
+  background-repeat: no-repeat !important;
+  background-position: 0px 0px !important;
+  background-color: transparent !important;
+  /* inner container will have padding */
+  // padding: rhythm(1) 0 !important;
+}
+
+div.clean-horizontal > div.st_views div.st_view_inner {
+  /* Inner content containers */
+  padding: rhythm(0.75) rhythm(1);
+  /* Padding for the content */
+}
+
+div.clean-horizontal > div.st_views div.st_view_first {
+  /* First content container */
+  display: block;
+  /* Show the first content container */
+}
+
+/* 
+ * Media Queries
+ *
+------------------------------------------------------------------------------------- */
+@media screen and (max-width: 760px) {
+  /* Horizontal Tabs
+  ------------------------------------------------------------------------------------- */
+  /* Tabs (horizontal) */
+  div.clean-horizontal > div.st_tabs ul li a {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Tabs (horizontal) */
+  div.clean-horizontal > div.st_tabs ul li a {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+// Other Customizations by Zell
+.st_view {
+  display: none !important;
+  &.st_view_active {
+    display: block !important;
+  }
+}
+
+div.clean-horizontal.st_sliding_active > div.st_tabs div.st_tabs_wrap {
+  margin: 0 rhythm(1.5);
+}
+
+// change arrow sizes
+div.clean-horizontal > div.st_tabs a.st_prev, div.clean-horizontal > div.st_tabs a.st_next {
+  width: 20px;
+}
+
+div.clean-horizontal > div.st_tabs ul li a {
+  padding: 0 rhythm(0.75);
+}
+
+div.clean-horizontal > div.st_tabs ul li a.st_tab_first {
+  /*padding-left: 0;*/ //need to center align text
+}

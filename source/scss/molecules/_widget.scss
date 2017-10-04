@@ -1,0 +1,56 @@
+.widget {
+  @include tui {
+    border: 1px solid $secondary-color;
+  }
+
+  padding: rhythm(1) rhythm(1);
+  max-height: rhythm(25);
+  overflow-y: scroll;
+  margin-top: rhythm(1);
+  margin-bottom: rhythm(1);
+  &__title {
+    text-transform: uppercase;
+    @each $color, $map in $colors {
+      .#{$color} & {
+        color: map-get($map, base);
+      }
+    }
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  figure {
+    float: left;
+    margin-right: 0.5em;
+    margin-bottom: 0;
+  }
+  &__item {
+    padding-top: rhythm(1);
+    margin-top: rhythm(1);
+    list-style: none;
+    @include tui {
+      border-top: 1px solid $secondary-color;
+    }
+
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+  p {
+    @include type-scale(base-widget);
+    margin-bottom: 0;
+  }
+  // For events
+  .item--left {
+    float: left;
+  }
+  .item--right {
+    margin-left: rhythm(4);
+  }
+  .view-more {
+    margin-top: 0;
+    float: right;
+  }
+}

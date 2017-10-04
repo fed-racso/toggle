@@ -1,0 +1,20 @@
+<li class="fixed-height__item">
+  {{#img}}
+  <a href="#">
+    <img src="{{img.avatar.src}}" alt="">
+  </a>
+  <div class="item__details">
+    
+    <h6 class="item__title"><a href="#">h6 Content Title: Lorem ipsum dolor sit amet...</a></h6>
+    {{> atoms-meta-item }}
+  </div>
+  {{/img}}
+
+  {{^img}}
+  <div class="item__details">
+    
+    <h6 class="item__title h6 small"><a href="#">h6 Content Title: Lorem ipsum dolor sit amet...</a></h6>
+    {{> atoms-meta-item }}
+  </div>
+  {{/img}}
+</li>

@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Quick Start Guide</title>
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" type="text/css" href="examples/assets/css/examples.css" />
+    
+    <!-- Templates -->
+    <link rel="stylesheet" type="text/css" href="templates/clean_rounded/template.css" />
+    <link rel="stylesheet" type="text/css" href="templates/contrast/template.css" />
+    <link rel="stylesheet" type="text/css" href="templates/separated_2/template.css" />
+    <link rel="stylesheet" type="text/css" href="templates/spaced/template.css" />
+    
+    <!-- JavaScript -->
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.slidetabs.min.js"></script>
+    <script type="text/javascript" src="examples/assets/js/jquery-litelighter.js"></script> <!-- Syntax highlighting -->
+    <script type="text/javascript">  
+  	$(document).ready(function() {
+		$('pre').litelighter({clone:false, style:'light', language:'js'});
+				
+  		// Horizontal Tabs
+  		$('#horizontal-tabs').slidetabs();
+		
+		
+		// Vertical Tabs
+  		$('#vertical-tabs').slidetabs({
+			orientation : 'vertical'
+  		});
+		
+		
+		// Ajax Tabs
+  		$('#ajax-tabs').slidetabs();
+		
+				
+		// Auto Height
+		$('#auto-height').slidetabs({
+			autoHeight      : true,
+			autoHeightSpeed : 300
+		});
+		
+		
+		// External Linking
+  		$('#external-linking').slidetabs({
+			externalLinking : true
+  		});
+		
+		
+		// Nested Tabs 2
+		$('#nested-tabs-2').slidetabs();		
+		// Nested Tabs
+		$('#nested-tabs').slidetabs();
+		// Parent Tabs
+		$('#parent-tabs').slidetabs({
+			contentAnim: ''
+		});
+		
+		
+		// Tab Icons
+  		$('#tab-icons').slidetabs({
+			orientation : 'vertical'
+  		});
+  	});		
+    </script>
+
+</head>
+<body>	
+    
+    <header id="header">
+    	<div class="center">
+        	<h1>Quick Start Guide</h1>
+        	<p>Full documentation is available online: <a href="http://www.slidetabs.com/docs/#jquery-install">slidetabs.com/docs</a></p>
+        </div>
+    </header>
+    
+    <div class="center">
+            
+        <p>In the quick start guide you will find useful examples and related links to the online documentation. The tabs can contain virtually any content and can be customized through the plugin settings and CSS templates.</p>
+        
+        <ul id="top_nav" class="clearfix">
+            <li>Jump to: </li>
+            <li><a href="#ajax-tabs-h">Ajax Tabs</a></li>
+            <li>|</li>
+            <li><a href="#auto-height-h">Auto Height</a></li>
+            <li>|</li>
+            <li><a href="#external-linking-h">External Linking</a></li>
+            <li>|</li>
+            <li><a href="#horizontal-tabs-h">Horizontal Tabs</a></li>
+            <li>|</li>
+            <li><a href="#nested-tabs-h">Nested Tabs</a></li>
+            <li>|</li>
+            <li><a href="#tab-icons-h">Tab Icons</a></li>
+            <li>|</li>
+            <li><a href="#vertical-tabs-h">Vertical Tabs</a></li>
+        </ul>                        
+        
+        
+        <h2 id="horizontal-tabs-h">Horizontal Tabs</h2>
+        <p>Default setup. The prev/next directional buttons will automatically show if the tabs exceed their container's width.</p>
+        
+        
+        <!-- Start HTML: Horizontal Tabs -->
+        <div id="horizontal-tabs" class="clean_rounded-horizontal">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li><a href="#tab-1" class="st_tab_first st_tab_active">Tab 1</a></li>
+                        <li><a href="#tab-2">Tab 2</a></li>
+                        <li><a href="#tab-3">Tab 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views">
+                <div class="tab-1 st_view"><div class="st_view_inner">
+                    <h1>775 x 360</h1>
+                </div></div>
+                <div class="tab-2 st_view"><div class="st_view_inner">
+                    <h1>775 x 360</h1>
+                </div></div>
+                <div class="tab-3 st_view"><div class="st_view_inner">
+                    <h1>775 x 360</h1>
+                </div></div>
+            </div>
+        </div>
+        <!-- /End HTML: Horizontal Tabs -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    $('#horizontal-tabs').slidetabs();
+});
+</pre>
+        </div>
+        <p class="docs_link">Documentation: <a href="http://www.slidetabs.com/docs/#jquery-install">Installing the Plugin</a></p>
+        
+        
+        <div class="spacer">&nbsp;</div>
+        
+        
+        <h2 id="vertical-tabs-h">Vertical Tabs</h2>
+        <p>Vertically aligned tabs. The tabs can be placed to the left or right of the content.</p>
+        
+        
+        <!-- Start HTML: Vertical Tabs -->
+        <div id="vertical-tabs" class="clean_rounded-vertical">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li><a href="#tab-1" class="st_tab_first st_tab_active">Tab 1 <span>Lorem ipsum dolor sit amet</span></a></li>
+                        <li><a href="#tab-2">Tab 2 <span>Lorem ipsum dolor sit amet</span></a></li>
+                        <li><a href="#tab-3">Tab 3 <span>Lorem ipsum dolor sit amet</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views">
+                <div class="tab-1 st_view"><div class="st_view_inner">
+                    <h1>580 x 390</h1>
+                </div></div>
+                <div class="tab-2 st_view"><div class="st_view_inner">
+                    <h1>580 x 390</h1>
+                </div></div>
+                <div class="tab-3 st_view"><div class="st_view_inner">
+                    <h1>580 x 390</h1>
+                </div></div>
+            </div>
+        </div>
+        <!-- /End HTML: Vertical Tabs -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    $('#vertical-tabs').slidetabs({
+        orientation : 'vertical'   
+    });
+});
+</pre>
+        </div>
+        <p class="docs_link">Documentation: <a href="http://www.slidetabs.com/docs/#jquery-tabs-position">Changing the Tabs Position</a></p>
+        
+        
+        <div class="spacer">&nbsp;</div>
+        
+        
+        <h2 id="ajax-tabs-h">Ajax Tabs</h2>
+        <p>Tabs linking to external HTML files. The content being loaded in the example below is located in the <strong>../examples/assets</strong> folder.</p>
+        
+        
+        <!-- Start HTML: Ajax Tabs -->
+        <div id="ajax-tabs" class="spaced-horizontal">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li><a href="examples/assets/ajax-1.html" data-target="#ajax-1" class="st_tab_first st_tab_active">Ajax 1</span></a></li>
+                        <li><a href="examples/assets/ajax-2.html" data-target="#ajax-2">Ajax 2</a></li>
+                        <li><a href="examples/assets/ajax-3.html" data-target="#ajax-3">Ajax 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views"></div>
+        </div>
+        <!-- /End HTML: Ajax Tabs -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    $('#ajax-tabs').slidetabs();
+});
+</pre>
+        </div>
+        <p class="docs_link">Documentation: <a href="http://www.slidetabs.com/docs/#jquery-ajax-tabs">AJAX Tabs</a></p>
+        
+        
+        <div class="spacer">&nbsp;</div>
+        
+        
+        <h2 id="auto-height-h">Auto Height</h2>
+        <p>For content with different height, you can enable the <strong>autoHeight</strong> setting. The container automatically adjusts to the content when a tab is clicked.</p>
+        
+        
+        <!-- Start HTML: Auto Height Tabs -->
+        <div id="auto-height" class="clean_rounded-horizontal">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li><a href="#tab-1" class="st_tab_first st_tab_active">Tab 1</a></li>
+                        <li><a href="#tab-2">Tab 2</a></li>
+                        <li><a href="#tab-3">Tab 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views">
+                <div class="tab-1 st_view"><div class="st_view_inner">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                    <p class="last">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar.</p>
+                </div></div>
+                <div class="tab-2 st_view"><div class="st_view_inner">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget.</p>
+                    <p class="last">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+                </div></div>                	
+                <div class="tab-3 st_view"><div class="st_view_inner">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+                    <p class="last">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar.</p>
+                </div></div>            	
+            </div>
+        </div>
+        <!-- /End HTML: Auto Height Tabs -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    $('#auto-height').slidetabs({
+        autoHeight      : true,
+        autoHeightSpeed : 300
+    });
+});
+</pre>
+        </div>
+        <p class="docs_link">Documentation: <a href="http://www.slidetabs.com/docs/#jquery-settings">Plugin Settings</a></p>
+        
+        
+        <div class="spacer">&nbsp;</div>
+        
+        
+        <h2 id="external-linking-h">External Linking</h2>
+        <p>You can link to the tabs from anywhere on the page by adding simple anchor elements.</p>
+        
+        
+        <!-- Start HTML: External Linking -->
+        <div id="external-linking" class="separated_2-horizontal">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li><a href="#tab-1" class="st_tab_first st_tab_active" rel="tab-1">Tab 1</a></li>
+                        <li><a href="#tab-2" rel="tab-2">Tab 2</a></li>
+                        <li><a href="#tab-3" rel="tab-3">Tab 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views">
+                <div class="tab-1 st_view"><div class="st_view_inner">
+                    <p>Go to: <a href="#tab-2" class="st_ext" rel="external-linking">Tab 2</a></p>
+                </div></div>
+                <div class="tab-2 st_view"><div class="st_view_inner">
+                    <p>Go to: 
+                        <a href="#tab-1" class="st_ext" rel="external-linking">Tab 1</a>
+                        <a href="#tab-3" class="st_ext" rel="external-linking">Tab 3</a>
+                    </p>
+                </div></div>
+                <div class="tab-3 st_view"><div class="st_view_inner">
+                    <p>Go to: <a href="#tab-2" class="st_ext" rel="external-linking">Tab 2</a></p>
+                </div></div>
+            </div>
+        </div>
+        <!-- /End HTML: External Linking -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    $('#external-linking').slidetabs({
+        externalLinking : true
+    });
+});
+</pre>
+        </div>
+        <p class="docs_link">Documentation: <a href="http://www.slidetabs.com/docs/#external-linking">External Linking</a></p>
+        
+        
+        <div class="spacer">&nbsp;</div>
+        
+        
+        <h2 id="nested-tabs-h">Nested Tabs</h2>
+        <p>Create nested tab instances. The tabs in the example below uses a few additional lines of CSS to create a seamless look.</p>
+        
+        <style type="text/css">
+        	/* Parent Tabs */
+			div#parent-tabs > div.st_tabs ul li a {
+				padding: 0 30px;
+				color: #676767;
+				background: #fcfcfc;
+				background: -moz-linear-gradient(center top , #ffffff, #fcfcfc);
+			}
+			div#parent-tabs > div.st_tabs ul li a.st_tab_active {
+				padding-bottom: 2px;
+				color: #000;
+				background: #f3f3f3;
+			}
+			div#parent-tabs > div.st_views {
+				height: auto;
+			}
+			div#parent-tabs > div.st_views div.st_view_inner {
+				padding: 0px;
+			}
+			
+			/* Nested Tabs */
+			div#parent-tabs div.separated_2-horizontal {
+				width: 100%;
+			}
+			div#parent-tabs div.separated_2-horizontal > div.st_tabs {
+				width: auto !important;
+				height: 38px;
+				margin-bottom: 0;
+				padding: 14px 14px 13px;
+				border-radius: 0;
+				background: #f3f3f3;
+				background: -moz-linear-gradient(center top , #f3f3f3, #f1f1f1);
+			}
+			div#parent-tabs div.separated_2-horizontal > div.st_tabs ul li a {
+				font: bold 12px/36px Arial, Helvetica, sans-serif;
+				height: 36px;
+				margin: 0 3px 0 0;
+				padding: 0 15px;
+				border-radius: 4px;
+			}
+			div#parent-tabs div.separated_2-horizontal > div.st_views {
+				height: 360px;
+				border-right: 0 none;
+				border-bottom: 0 none;
+				border-left: 0 none;
+				border-radius: 0;
+			}
+			div#parent-tabs div.separated_2-horizontal > div.st_views div.st_view_inner {
+				padding: 27px;
+			}
+        </style>
+        
+        
+        <!-- Start HTML: Parent Tabs -->
+        <div id="parent-tabs" class="clean_rounded-horizontal">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li class="st_li_active"><a href="#tab-1" class="st_tab_first st_tab_active">Tab 1</a></li>
+                        <li><a href="#tab-2">Tab 2</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views">
+                <div class="tab-1 st_view"><div class="st_view_inner">
+                    	
+                	<!-- Start HTML: Nested Tabs -->
+                    <div id="nested-tabs" class="separated_2-horizontal">
+                        <div class="st_tabs">
+                            <div class="st_tabs_wrap">
+                                <ul class="st_tabs_ul">
+                                    <li class="st_li_active"><a href="#tab-1" class="st_tab_first st_tab_active">1.1</a></li>
+                                    <li><a href="#tab-2">1.2</a></li>
+                                    <li><a href="#tab-3">1.3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="st_views">
+                            <div class="tab-1 st_view"><div class="st_view_inner">
+                                <h1>775 x 360</h1>
+                            </div></div>
+                            <div class="tab-2 st_view"><div class="st_view_inner">
+                                <h1>775 x 360</h1>
+                            </div></div>
+                            <div class="tab-3 st_view"><div class="st_view_inner">
+                                <h1>775 x 360</h1>
+                            </div></div>
+                        </div>
+                    </div>
+                    <!-- /End HTML: Nested Tabs -->
+                        
+                </div></div>
+                <div class="tab-2 st_view"><div class="st_view_inner">
+                    
+                    <!-- Start HTML: Nested Tabs 2 -->
+                    <div id="nested-tabs-2" class="separated_2-horizontal">
+                        <div class="st_tabs">
+                            <div class="st_tabs_wrap">
+                                <ul class="st_tabs_ul">
+                                    <li class="st_li_active"><a href="#tab-1" class="st_tab_first st_tab_active">2.1</a></li>
+                                    <li><a href="#tab-2">2.2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="st_views">
+                            <div class="tab-1 st_view"><div class="st_view_inner">
+                                <h1>775 x 360</h1>
+                            </div></div>
+                            <div class="tab-2 st_view"><div class="st_view_inner">
+                                <h1>775 x 360</h1>
+                            </div></div>
+                        </div>
+                    </div>
+                    <!-- /End HTML: Nested Tabs 2 -->
+                    
+                </div></div>
+            </div>
+        </div>
+        <!-- /End HTML: Parent Tabs -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    // Nested Tabs 2
+    $('#nested-tabs-2').slidetabs();
+    
+    // Nested Tabs
+    $('#nested-tabs').slidetabs();
+    
+    // Parent Tabs
+    $('#parent-tabs').slidetabs({
+        contentAnim: ''
+    });
+});
+</pre>
+        </div>
+        
+        <h3>Additional styling for the tabs:</h3>
+        <div class="code">
+<pre data-lllanguage="css">
+/* Parent Tabs */
+div#parent-tabs > div.st_tabs ul li a {
+    padding: 0 30px;
+    color: #676767;
+    background: #fcfcfc;
+    background: -moz-linear-gradient(center top , #ffffff, #fcfcfc);
+}
+div#parent-tabs > div.st_tabs ul li a.st_tab_active {
+    padding-bottom: 2px;
+    color: #000;
+    background: #f3f3f3;
+}
+div#parent-tabs > div.st_views {
+    height: auto;
+}
+div#parent-tabs > div.st_views div.st_view_inner {
+    padding: 0px;
+}
+
+/* Nested Tabs */
+div#parent-tabs div.separated_2-horizontal {
+    width: 100%;
+}
+div#parent-tabs div.separated_2-horizontal > div.st_tabs {
+    width: auto !important;
+    height: 38px;
+    margin-bottom: 0;
+    padding: 14px 14px 13px;
+    border-radius: 0;
+    background: #f3f3f3;
+    background: -moz-linear-gradient(center top , #f3f3f3, #f1f1f1);
+}
+div#parent-tabs div.separated_2-horizontal > div.st_tabs ul li a {
+    font: bold 12px/36px Arial, Helvetica, sans-serif;
+    height: 36px;
+    margin: 0 3px 0 0;
+    padding: 0 15px;
+    border-radius: 4px;
+}
+div#parent-tabs div.separated_2-horizontal > div.st_views {
+    height: 360px;
+    border-right: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-radius: 0;
+}
+div#parent-tabs div.separated_2-horizontal > div.st_views div.st_view_inner {
+    padding: 27px;
+}
+</pre>
+        </div>
+        
+        
+        <div class="spacer">&nbsp;</div>
+        
+        
+        <h2 id="tab-icons-h">Tab Icons</h2>
+        <p>Displaying icons inside the tabs is possible with a little extra CSS. See the <a href="http://www.slidetabs.com/docs/#jquery-adding-icons">docs</a> for alternative ways to add tab icons.</p>
+        
+        
+        <!-- Start HTML: Tab Icons -->
+        <div id="tab-icons" class="contrast-vertical">
+            <div class="st_tabs">
+                <div class="st_tabs_wrap">
+                    <ul class="st_tabs_ul">
+                        <li class="st_li_active"><a href="#tab-1" class="st_tab_first st_tab_active">Tab 1 <span class="st_icon"></span></a></li>
+                        <li><a href="#tab-2">Tab 2 <span class="st_icon"></span></a></li>
+                        <li><a href="#tab-3">Tab 3 <span class="st_icon"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="st_views">
+                <div class="tab-1 st_view"><div class="st_view_inner">
+                    <h1>565 x 390</h1>
+                </div></div>
+                <div class="tab-2 st_view"><div class="st_view_inner">
+                    <h1>565 x 390</h1>
+                </div></div>
+                <div class="tab-3 st_view"><div class="st_view_inner">
+                    <h1>565 x 390</h1>
+                </div></div>
+            </div>
+        </div>
+        <!-- /End HTML: Tab Icons -->
+        
+        
+        <h3>Initialization:</h3>
+        <div class="code">
+<pre>
+$(document).ready(function() {
+    $('#tab-icons').slidetabs();
+});
+</pre>
+        </div>
+        
+        <h3>CSS for the tab icons:</h3>
+        <div class="code">
+<pre data-lllanguage="css">
+div#tab-icons div.st_tabs a { 
+	position: relative; 
+	text-indent: 50px; 
+}
+div#tab-icons div.st_tabs span.st_icon { 
+	position: absolute; 
+	top: 14px; 
+	left: 15px; 
+	display: block; 
+	width: 20px; 
+	height: 20px;
+	background: url("../img/tab-icon.jpg") no-repeat 0 -20px transparent;
+}
+div#tab-icons div.st_tabs a.st_tab_active span.st_icon,
+div#tab-icons div.st_tabs a:hover span.st_icon {
+	background-position: 0 0;
+}
+</pre>
+        </div>
+        <p class="docs_link">Documentation: <a href="http://www.slidetabs.com/docs/#jquery-adding-icons">Adding Tab Icons</a></p>
+        
+        
+        <footer id="footer">
+            <p>SlideTabs jQuery Plugin</p>
+            <p class="right"><a href="http://www.slidetabs.com/docs/#jquery-install">Documentation</a> &nbsp;/&nbsp; <a href="mailto:info@slidetabs.com">Report a Bug</a> &nbsp;/&nbsp; <a href="http://www.slidetabs.com/customer/#ticket">Support Ticket</a></p>
+        </footer>
+    
+    </div> <!-- /.center -->
+
+</body>
+</html>

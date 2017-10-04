@@ -1,0 +1,147 @@
+<h1 id="introduction">Introduction</h1>
+
+<p>Phoenix is a frontend framework for Mediacorp. This is a documentation of the grid that is created for the project. Before we begin the implementation, let&#8217;s first discuss some common terminologies that all parties have agreed to use.</p>
+
+<h2 id="structureblocks">Structure Blocks</h2>
+
+<p>Structure blocks determine the structure of the a section. Multiple structure blocks would make up a page. </p>
+
+<p>Examples of structure blocks are the full width (<code>.l-12</code>) block and the content-sidebar (.<code>l-2up--8-4</code>) block, or even the 4-column block (<code>.l-4up</code>). </p>
+<div class="demo l-12">
+ <div class="l-gi demo__item">Full Width</div>
+</div>
+<div class="demo l-2up--8-4">
+ <div class="l-gi demo__item"> Content </div>
+ <div class="l-gi demo__item"> Sidebar </div>
+</div>
+<div class="demo l-4up">
+ <div class="l-gi demo__item"> 4 up </div>
+ <div class="l-gi demo__item"> 4 up </div>
+ <div class="l-gi demo__item"> 4 up </div>
+ <div class="l-gi demo__item"> 4 up </div>
+</div>
+
+<p>We will talk about the code for the structure blocks at a later section. </p>
+
+<h2 id="gridblocks">Grid Blocks</h2>
+
+<p>Grid blocks are generic components that can be fit into different areas. An example of a grid block is a vertical listing block, which is able to show a list of either articles, episodes, videos or any other list that has a similar structure. </p>
+
+<p>These grid blocks will be inserted into the structure blocks and they will automatically fill up 100% of the parent element. </p>
+
+<p>In addition to filling the parent container, each grid block will be specially crafted so that the contents within are responsive to the best way that it can be. </p>
+
+<p>Just to illustrate this, here&#8217;s how the Vertical listing grid block would look like on a mobile and a desktop. </p>
+
+<figure>
+<img src="../../images/docs/image1.png" alt="" />
+</figure>
+
+<p>We will talk about the code for the grid blocks at a later section. </p>
+<!-- # Understanding how to use Structure Blocks and Grid Blocks (Theory) -->
+
+<h1 id="gettingstarted">Getting Started</h1>
+
+<h2 id="html">HTML</h2>
+
+<p>Phoenix makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects. </p>
+<pre><code class="(null)">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+... 
+&lt;/html&gt;</code></pre>
+
+<h2 id="body">Body</h2>
+
+<p>A class in the <code>&lt;body&gt;</code> also controls the color themes of the page. Be sure to include the class as well. </p>
+
+<p>The list of theme classes used are:</p>
+
+<ul>
+<li><code>channel-5</code></li>
+<li><code>channel-8</code></li>
+<li><code>channel-u</code></li>
+<li><code>okto</code></li>
+<li><code>suria</code></li>
+<li><code>vasantham</code></li>
+</ul>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body class=&quot;themeClass&quot;&gt;&lt;/body&gt;    
+&lt;/html&gt;</code></pre>
+
+<h2 id="pagestructure">Page Structure</h2>
+
+<p>Phoenix requires you to use a containing element, <code>.page-wrap</code>, to wrap the site contents and its grid system. This page-wrap ensures that ad-skins can be used within the website. </p>
+
+<p>Ad skins are already premade into templates that can be included into the html. </p>
+
+<p>Please view the grid-ads documentation on how to turn on and off the skin. Also, please view the molecules-ad-skin file for actual code of the skin. </p>
+
+<p>Note: templates will be commented out and written in the format ` in this docs:</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body class=&quot;themeClass&quot;&gt;
+  &lt;div class=&quot;page-wrap&quot;&gt;
+    &lt;!-- [[&gt; molecules-ad-skin]] --&gt;
+  &lt;/div&gt;
+&lt;/body&gt;    
+&lt;/html&gt;</code></pre>
+
+<h2 id="navigation">Navigation</h2>
+
+<p>The navigation is a complex component that doesn&#8217;t fall nicely within any of the fixed structures that we will be presenting. As such, we will be implementing the navigation separately first. </p>
+
+<p>The source code for the navigation are split into </p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body class=&quot;themeClass&quot;&gt;
+  &lt;div class=&quot;page-wrap&quot;&gt;
+    &lt;!-- [[&gt; molecules-ad-skin]] --&gt;
+
+    &lt;!-- start primary nav --&gt;
+    &lt;!-- [[&gt; organisms-header ]]--&gt;
+    &lt;!-- [[&gt; organisms-primary-mega-menu ]]--&gt;
+    &lt;!-- [[&gt; organisms-login-modal ]]--&gt;
+    &lt;!-- end primary nav --&gt;
+
+    &lt;!-- start secondary nav --&gt;
+    &lt;!-- [[&gt; molecules-secondary-nav]] --&gt;
+    &lt;!-- end secondary nav --&gt;
+  &lt;/div&gt;
+&lt;/body&gt;    
+&lt;/html&gt;</code></pre>
+
+<h2 id="structureforeachgridblock">Structure for each grid block</h2>
+
+<p>Each grid block will begin with either a <code>&lt;section&gt;</code> element and it would not be given any class name. This <code>&lt;section&gt;</code> element will contain a <code>.wrap</code> element which then contains the grid structures. </p>
+
+<p>Here&#8217;s an example</p>
+<pre><code class="html">&lt;body&gt;
+  &lt;!-- ... --&gt;
+  &lt;section&gt;
+    &lt;div class=&quot;wrap&quot;&gt;
+      &lt;div class=&quot;l-2up--8-4&quot;&gt;
+        &lt;div class=&quot;l-gi&quot;&gt; &lt;/div&gt;
+        &lt;div class=&quot;l-gi&quot;&gt; &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/body&gt;</code></pre>
+
+<h1 id="howtocodestructureblocksandgridblocks">How to code Structure Blocks and Grid Blocks</h1>
+
+<h2 id="structureblocks">Structure Blocks</h2>
+
+<p>All structure blocks have the following format: </p>
+
+<ol>
+<li>A <code>.l-</code> class that signifies that this is a structure block</li>
+<li>Several <code>.l-gi</code> classes that are supposed to contain grid blocks.</li>
+</ol>
+<pre><code class="html">&lt;div class=&quot;l-structure-block-name&quot;&gt;
+  &lt;div class=&quot;l-gi&quot;&gt;
+    &lt;!-- [[&gt; grid-block-name ]]--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Some structure blocks deviate a little from this format, and will be covered in the Grid structure block page.</p>

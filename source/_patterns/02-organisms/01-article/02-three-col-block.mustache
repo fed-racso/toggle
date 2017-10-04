@@ -1,0 +1,42 @@
+{{# section}}
+<section class="section">
+  <div class="wrap">
+    <h1>{{ section-title }}</h1>
+    <a href="{{ url }}"class="view-more">View all</a>
+    <div class="l-3up {{# microsite}} l-3up--feed {{/ microsite}}">
+      {{# image }}
+      <div class="l-gi">{{> molecules-image-block }}</div>
+      <div class="l-gi">{{> molecules-image-block }}</div>
+      <div class="l-gi">{{> molecules-ad-300x250-block }}</div>
+      {{/ image }}
+
+      {{# video }}
+      <div class="l-gi">{{> molecules-image-video-block }}</div>
+      <div class="l-gi">{{> molecules-image-video-block }}</div>
+      <div class="l-gi">{{> molecules-ad-300x250-block }}</div>
+      {{/ video }}
+    </div>
+  </div>
+</section>
+{{/ section}}
+
+{{# related}}
+<section class="related">
+  <h2>{{ item-title }}</h2>
+
+  <div class="l-content__3up ">
+    {{# image }}
+    <div class="l-gi">{{> molecules-image-block }}</div>
+    <div class="l-gi">{{> molecules-image-block }}</div>
+    <div class="l-gi">{{> molecules-image-block }}</div>
+    {{/ image }}
+
+    {{# video }}
+    <div class="l-gi">{{> molecules-image-video-block }}</div>
+    <div class="l-gi">{{> molecules-image-video-block }}</div>
+    <div class="l-gi">{{> molecules-image-video-block }}</div>
+    {{/ video }}
+
+  </div>
+</section>
+{{/ related}}

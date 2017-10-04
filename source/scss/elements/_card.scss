@@ -1,0 +1,43 @@
+.card {
+  @include cf;
+  margin: 0 0 tgrhythm(1);
+  padding: tgrhythm(0.5) tgrhythm(0.5);
+  @include bp(small) {
+    padding: tgrhythm(0.5) tgrhythm(0.5);
+  }
+
+  @include bp(medium) {
+    padding: tgrhythm(1) tgrhythm(1.5);
+  }
+
+  @include tui {
+    background: $overlay-color;
+  }
+}
+
+.card--fixed {
+  height: rhythm(16);
+}
+
+.card--background {
+  @extend .card;
+  @include tui {
+    background: $background-color;
+  }
+}
+
+.card--background-no-padding {
+  margin: 0 0 tgrhythm(1);
+}
+
+.card {
+  // @each $theme, $map in $toggle-colors {
+  //   &.#{$theme} {
+  //     border-top: 4px solid map-fetch($toggle-colors, $theme "color") !important;
+  //   }
+  // }
+  > h2, h5:not(.collapsible__title) {
+    line-height: 1;
+    margin-bottom: rhythm(0.5);
+  }
+}

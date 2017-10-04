@@ -1,0 +1,43 @@
+.fav-rate {
+  text-align: left;
+
+  li {
+    margin: 0 0 rhythm(0.25);
+    text-transform: capitalize;
+    @extend %lsn;
+    display: inline-block;
+    @include bp(medium) {
+      display: inline-block;
+      margin-right: rhythm(1);
+      @include bp(large) {
+        display: block;
+        margin-bottom: rhythm(0.5);
+      }
+    }
+
+    p {
+      display: none;
+      @include bp(medium) {
+        display: inline;
+      }
+    }
+    .btn--round {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+    .vertical1{
+      display: table;
+      overflow: hidden;
+      height:40px;
+      margin-left:55px;
+
+      .vertical2{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    a{
+      position: absolute;
+    }
+  }
+}

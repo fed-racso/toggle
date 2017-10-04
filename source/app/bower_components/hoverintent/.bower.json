@@ -1,0 +1,34 @@
+{
+  "name": "hoverintent",
+  "authors": [
+    "Brian Cherne <brian@cherne.net>"
+  ],
+  "description": "hoverIntent is a plug-in that attempts to determine the user's intent... like a crystal ball, only with mouse movement! It is similar to jQuery's hover method. However, instead of calling the handlerIn function immediately, hoverIntent waits until the user's mouse slows down enough before making the call.",
+  "main": "jquery.hoverIntent.js",
+  "keywords": [
+    "hover",
+    "intent",
+    "hoverintent",
+    "jquery",
+    "mouse"
+  ],
+  "license": "MIT",
+  "homepage": "http://cherne.net/brian/resources/jquery.hoverIntent.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "22357cfc78",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "22357cfc78c125dd49675146a0a641ec428dee1f"
+  },
+  "_source": "git://github.com/usefulthink/hoverintent.git",
+  "_target": "*",
+  "_originalSource": "hoverintent",
+  "_direct": true
+}

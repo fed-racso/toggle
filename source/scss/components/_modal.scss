@@ -1,0 +1,257 @@
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 12000;
+  top: rhythm(3.5);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  @include bp(large) {
+    top: 0;
+  }
+
+  &.is-open {
+    display: block;
+  }
+  &:before {
+    @include bp(large) {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      font-size: 0;
+    }
+  }
+}
+
+.modal {
+  position: relative;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: rhythm(2) rhythm(1);
+  @include bp(medium) {
+    padding: rhythm(2);
+  }
+
+  background: white;
+  vertical-align: middle;
+  text-align: left;
+  font-weight: get-weight(header light);
+  @include bp(large) {
+    @include container(1140px);
+    width: span(8);
+    height: auto;
+    max-height: 100%;
+    padding-left: rhythm(4);
+    padding-right: rhythm(4);
+    border-radius: 1.5em;
+  }
+
+  &.is-open {
+    display: inline-block;
+  }
+  h2 {
+    font-weight: get-weight(header light);
+    text-align: center;
+  }
+}
+
+// Modal Form
+.modal__form {
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      @include tui {
+        color: $primary-color;
+      }
+      text-decoration: none;
+    }
+  }
+}
+
+.modal__input-group {
+  margin-bottom: rhythm(0.5);
+  label {
+    @include is-invisible;
+  }
+  .modal__label--checkbox {
+    @include is-visible;
+    vertical-align: middle;
+  }
+  // Forget Password Link
+  a {
+    display: block;
+    @include adjust-leading-to(1);
+  }
+}
+
+.modal__input-group--inline-button {
+  @extend .modal__input-group;
+  position: relative;
+  input {
+    margin-bottom: rhythm(1);
+  }
+  @include bp(large) {
+    input[type='text'],
+    input[type='password'],
+    input[type='email'] {
+      padding-right: rhythm(5);
+    }
+    input[type='submit'] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+.modal__input {
+  height: auto;
+  &[type='text'],
+  &[type='password'],
+  &[type='email'] {
+    width: 100%;
+    padding: rhythm(0.5);
+    @include type-scale(base);
+    text-align: left;
+    background: white;
+    border-radius: 0;
+  }
+  &[type='submit'] {
+    float: right;
+    height: auto;
+    width: 100%;
+    padding: rhythm(0.5) rhythm(3);
+    background: map-fetch($toggle-colors, primary color) ;
+    color: color(white);
+    @include adjust-leading-to(1);
+    border: 1px solid map-fetch($toggle-colors, primary color) ;
+    outline: 0;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:hover,
+    &:active,
+    &:focus {
+      background: lighten(color(pink), 0.2);
+    }
+    @include bp(large) {
+      width: auto;
+    }
+  }
+}
+
+.modal__checkbox {
+  height: auto;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+.modal__cta {
+  margin-top: rhythm(1);
+  @include type-scale(medium);
+  font-weight: get-weight(header semibold);
+  text-align: center;
+  @include bp(medium) {
+    @include type-scale(large);
+  }
+
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      @include tui {
+        color: $primary-color;
+      }
+      text-decoration: none;
+    }
+  }
+}
+
+.modal__close {
+  @extend .i-modal-close;
+  @include image-replacement;
+  position: absolute;
+  right: 1.5em;
+  top: 1.5em;
+}
+
+.modal__social-media {
+  a {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: rhythm(0.5);
+    @include bp(large) {
+      text-align: left;
+      padding-left: rhythm(2);
+    }
+  }
+  a:last-child {
+    margin-bottom: rhythm(1);
+  }
+}
+
+.modal {
+  .l-2up--6-6 {
+    .l-gi {
+      @include bp(large) {
+        padding: rhythm(0.25) rhythm(1);
+      }
+    }
+    // the --OR--
+    .l-gi:nth-child(2) {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: rhythm(1);
+        background: color(gray);
+        @include bp(large) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -0.5 * gutter(6);
+          height: 100%;
+          width: 1px;
+          margin-bottom: 0;
+        }
+      }
+      &:after {
+        content: "OR";
+        position: absolute;
+        top: rhythm(-0.25);
+        left: 0;
+        right: 0;
+        display: block;
+        width: 4em;
+        margin: auto;
+        padding: 0 rhythm(0.5);
+        text-align: center;
+        background: white;
+        color: color(gray);
+        @include bp(large) {
+          top: 0;
+          bottom: 0;
+          left: -#{gutter(5)};
+          right: auto;
+          height: rhythm(1.5);
+          width: auto;
+          padding: rhythm(0.25) 0;
+        }
+      }
+    }
+  }
+}
+
+.video-rating-stars {
+  margin-bottom: 0;
+}

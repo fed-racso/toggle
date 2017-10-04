@@ -1,0 +1,995 @@
+$primary-nav-height: 2;
+
+.nav--primary {
+  @extend %cf;
+  position: relative;
+  font-weight: get-weight(header semibold);
+  text-transform: uppercase;
+}
+
+.nav--primary__logo {
+  float: left;
+  @include adjust-leading-to($primary-nav-height);
+  position: relative;
+  top: 1px;
+  //z-index: 50; //doesn't seem to have visual bugs
+}
+
+.nav--primary__desktop {
+  .user-actions {
+    font-family: $body-font;
+
+    .signz {
+      @include tdc {
+        color: $theme-color;
+      }
+    }
+
+    .search-button {
+      height: 39px;
+    }
+  }
+
+  .nav {
+    @extend %cf;
+    display: none;
+
+    .is-desktop & {
+      float: left;
+      display: block;
+      margin-left: rhythm(0.5);
+    }
+  }
+
+  ul > li {
+    float: left;
+    list-style: none;
+    @include type-scale(small);
+    @include adjust-leading-to($primary-nav-height);
+  }
+
+  a {
+    display: block;
+    position: relative;
+    //top: 1px;
+    padding-top: 1px;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    color: color(dark);
+    text-decoration: none;
+    font-weight: normal;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.is-active {
+      color: white;
+      background: color(dark);
+    }
+
+    @each $theme, $map in $xin-colors {
+      &.#{$theme} {
+
+        &:hover,
+        &:active,
+        &:focus,
+        &.is-active {
+          //background: map-get($map, color);
+          background: color(dark);
+        }
+      }
+    }
+  }
+
+// Refactor Ufinity
+  .social-media-icon {
+    margin-left: 10px;
+    display: none;
+
+    @include bp(large) {
+      display: block;
+    }
+
+    ul {
+      position: relative;
+      padding-top: 10px;
+      padding-left: 2px; 
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        display: block;
+        width: 1px;
+        height: 24px;
+        background-color: #c2c2c2;
+      }
+    }
+
+    li {
+      margin-left: 9px;
+
+      a {
+        width: 24px;
+        height: 24px;
+        background-size: 24px 120px;
+
+        &:hover {
+          background-color: black !important;
+        }
+      }
+
+      &.facebook a {
+        background-position: 0 0;
+      }
+      &.instagram a {
+        background-position: 0 -48px;
+      }
+      &.twitter a {
+        background-position: 0 -24px;
+      }
+      &.youtube a {
+        background-position: 0 -72px;
+      }
+
+    }
+
+  }
+
+}
+
+// Language, Accounts, Search.
+// Floated to the extreme right.
+// Text replaced by icon
+// Has different treatment on hover & click.
+.nav--primary__desktop {
+  .user-actions {
+    float: right;
+    margin-right: rhythm(2);
+
+    .is-desktop & {
+      margin-right: 0;
+    }
+
+    .account {
+      @include bp(large) {
+        margin-right: rhythm(0.5);
+      }
+    }
+
+    .username {
+      display: none;
+
+      @include bp(medium) {
+        display: inline-block;
+        position: relative;
+        top: 1px;
+        margin-right: 0.25em;
+        @include type-scale(small);
+        line-height: $primary-nav-height;
+
+        @include tui {
+          color: $primary-color;
+        }
+
+        text-transform: none;
+      }
+    }
+
+    .badge-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+    }
+
+    .account__image {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .i-profile-notifications {
+      position: absolute;
+      right: -3px;
+      top: -3px;
+    }
+
+    > li {
+      margin-left: rhythm(0.75);
+
+      @include bp(large) {
+        //margin-left: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      > a {
+        padding: 1px 0 0;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: color(dark);
+          background: none;
+        }
+      }
+    }
+
+    .user-li {
+      @include bp(large) {
+        margin-left: rhythm(0.5);
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    i {
+      @include image-replacement;
+      height: rhythm($primary-nav-height);
+      background-position: center center;
+    }
+  }
+
+  .language-toggle {
+    .language-toggle__selected-language {
+      position: relative;
+      top: 1px;
+      @include type-scale(base);
+      font-weight: get-weight(header semibold);
+
+      @include tui {
+        color: $primary-color;
+      }
+    }
+  }
+
+  li.search-form-holder {
+    margin: 0;
+
+    > .search-close {
+      display: none;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &.is-open {
+      .search-close {
+        z-index: 2;
+        //set to 2 instead of 20 to be local to z-index
+        opacity: 1;
+        display: block;
+      }
+
+      .search-form {
+        z-index: 0;
+        transition-delay: 0;
+        display: block;
+        @include fadeInRight($duration: 0.3s, $delay: 0);
+      }
+    }
+
+    // // input[type="checkbox"] {
+    // //   @include is-invisible;
+    // // }
+
+    .search-form {
+      display: none;
+      position: absolute;
+      background: color(white);
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      transition: z-index 0 0.3s ease;
+      height:100%;
+      @include fadeOutRight($duration: 0.3s, $delay: 0);
+
+      @include breakpoint(max-width map-get($breakpoints, small-2)) {
+        height: rhythm(2);
+      }
+    }
+
+    // input[type="checkbox"]:checked + .search-form {
+    input[type="text"] {
+      float: right;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: rhythm(0.25);
+      margin-left: rhythm(0.5);
+      margin-right: rhythm(1.5);
+      padding-left: 1em;
+      padding-right: rhythm(2);
+      height: rhythm(1.5);
+      line-height: rhythm(1.5);
+      border-radius: 4em;
+      width: 90%;
+
+      @include bp(small-2) {
+        width: 18em;
+      }
+
+      & + .i-search-onclick {
+        background-color: transparent;
+      }
+
+      &:focus,
+      &:active {
+        + .i-search-onclick {
+          // background: url("../images/icons/topnav-searchOnfocus.png") no-repeat;
+          background-position: center center;
+          background-size: contain;
+
+          @include hidpi {
+            // background-image: url("../images/icons/topnav-searchOnfocus@2x.png");
+          }
+        }
+      }
+    }
+
+    .i-search-onclick {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      right: rhythm(2.2);
+      transition: all 0.3s ease-out;
+    }
+
+    label {
+      position: relative;
+      top: 2px;
+      visibility: hidden;
+      float: right;
+
+      @include tui {
+        color: $primary-color;
+      }
+
+      @include type-scale(small);
+      font-weight: get-weight(header normal);
+      line-height: rhythm($primary-nav-height);
+
+      @include bp(medium) {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+$nav-primary-mobile-width: 260px;
+$nav-primary-left-right-margin: rhythm(1.5);
+
+// Mobile menu is hidden on large screens.
+.nav--primary__mobile {
+  .is-desktop & {
+    display: none;
+  }
+
+  // Primary Nav Toggle. Uses Javascript to help with off canvas layout
+  .primary-nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  > ul {
+    // removing the top padding in menu so it lines up
+    //padding-top: 14px;
+
+    > h4 {
+      padding-top: 0;
+    }
+  }
+
+  h4 {
+    display: block;
+    margin-left: $nav-primary-left-right-margin;
+    margin-right: $nav-primary-left-right-margin;
+    padding-top: rhythm(0.75);
+    padding-bottom: rhythm(0.25);
+    color: color(gray, m-dark);
+    border-bottom: 1px solid #4d4d4d;
+    @include type-scale(small);
+    font-weight: get-weight(header normal);
+  }
+
+  li {
+    display: block;
+    float: none;
+    line-height: 1;
+    margin-left: $nav-primary-left-right-margin;
+    margin-right: $nav-primary-left-right-margin;
+    border-top: 1px solid #4d4d4d;
+
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+
+  li.separator {
+    margin: 0;
+    border: 0;
+
+    h4 {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  .subnav__header + li {
+    border-top: 0;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding: rhythm(0.5) $nav-primary-left-right-margin;
+    margin-left: -$nav-primary-left-right-margin;
+    margin-right: -$nav-primary-left-right-margin;
+    color: color(white);
+    @include type-scale(small);
+    line-height: 1.35rem;
+    font-weight: get-weight(header semibold);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background: color(dark, light);
+      border-color: color(dark, light);
+
+      @each $theme, $map in $xin-colors {
+        &[data-menu-item='#{$theme}'] {
+          background: rgba(map-get($map, color), 0.5);
+          border-color: map-get($map, color);
+        }
+      }
+    }
+  }
+
+  .has-children > a {
+    position: relative;
+
+    &:after {
+      content: "";
+      @extend .i-mobilenav-arrow-forward;
+      position: absolute;
+      right: rhythm(1.5);
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  // Navigation items on primary nav.
+  // Is off canvas on mobile & tablet
+  // Is floated normally on desktop
+  // First level nav
+  > ul {
+    position: fixed;
+    @include tgzi(primary-navigation-mobile-ul);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    left: auto;
+    right: -$nav-primary-mobile-width;
+    top: 0;
+    bottom: 0;
+    width: $nav-primary-mobile-width;
+    background: color(dark, darkerer);
+    transition: right 0.3s ease-out;
+
+    // search & accounts, without borders
+    // li:first-child, li:nth-child(2) {
+    // border: 0;
+    // }
+
+    // > li:first-child {
+    //   margin-top: rhythm(1);
+    //   margin-bottom: rhythm(1);
+    // }
+ 
+  }
+
+  // icons in primary mobile
+  & i {
+    vertical-align: middle;
+    margin-right: rhythm(0.5);
+    width: rhythm(1.5);
+    font-size: rhythm(1);
+  }
+
+  // Secondary Level nav
+  > ul > li > ul {
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 1;
+    width: $nav-primary-mobile-width;
+    right: -$nav-primary-mobile-width;
+    top: 0;
+    bottom: 0;
+    background: color(dark, darkerer);
+    transition: all 0.3s ease;
+
+    &.is-open {
+      @include trans-prep;
+      transform: translate3d(-$nav-primary-mobile-width, 0, 0);
+    }
+  }
+
+  .subnav__header {
+    margin: 0;
+  }
+
+  .mobile__subnav-title {
+    @include type-scale(xlarge);
+    line-height: 1.35rem;
+    font-weight: get-weight(header light);
+    margin: rhythm(0.5) $nav-primary-left-right-margin;
+    color: color(gray, m-dark);
+  }
+
+  .mobile__subnav-back {
+    position: relative;
+    margin: 0;
+    padding-top: rhythm(0.5);
+    padding-bottom: rhythm(0.5);
+    background: color(gray, darker);
+    text-align: right;
+    font-family: $header-font;
+
+    &:before {
+      content: '';
+      @extend .i-mobilenav-arrow-back;
+      position: absolute;
+      left: rhythm(1);
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .mobile__subnav--more {
+    li a {
+      padding-left: rhythm(3);
+    }
+  }
+}
+
+.mobile__search {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 0;
+    left: rhythm(0.5);
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  input {
+    width: 100%;
+    padding-left: rhythm(2.25);
+    font-family: $body-font;
+    height: rhythm(2);
+    @include adjust-leading-to(2);
+    background: color(gray, darker);
+    border-color: color(gray, darker);
+    border-radius: 6px;
+  }
+}
+
+// Transitions to open primary nav
+body {
+  transition: margin 0.3s ease-out;
+}
+
+  body.primary-menu-open {
+    margin-left: -$nav-primary-mobile-width;
+    width: 100%;
+
+    .primary-nav-toggle + ul {
+      right: 0;
+    }
+  }
+
+
+// dropdown for primary nav
+
+.pnav__has-dropdown {
+  position: relative;
+
+  &:hover,
+  &:active,
+  &:focus {
+    ul {
+      display: block;
+    }
+  }
+
+  &.is-open {
+    @include breakpoint(max-width map-get($breakpoints, large)) {
+      ul {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    display: list-item;
+  }
+}
+
+.pnav__dropdown {
+  display: none;
+  position: absolute;
+  @include tgzi(primary-navigation-desktop-dropdown);
+  right: rhythm(-5);
+  width: rhythm(14);
+  background: white;
+  border-radius: 10px;
+  padding-bottom: rhythm(0.5);
+  border: 1px solid color(gray);
+  text-transform: none;
+  top: 100%;
+
+  @include bp(medium) {
+    right: rhythm(-3);
+  }
+
+  @extend .ti;
+  @extend .ti-chevron-next;
+  font-family: $header-font;
+
+  &:before {
+    font-family: 'Toggle Font Icon';
+    content: '';
+    position: absolute;
+    @include tgzi(primary-navigation-desktop-dropdown);
+    transform: rotate(90deg);
+    top: -10px;
+    right: rhythm(2.1);
+  }
+
+  li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+
+  a {
+    display: block;
+    @include type-scale(base);
+    padding: rhythm(0.375) rhythm(0.75);
+    line-height: 1;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: none;
+
+      @include tui {
+        color: $primary-color;
+      }
+    }
+  }
+
+  li.dropdown__header {
+    float: none;
+  }
+
+  .dropdown__title {
+    position: relative;
+    top: 2px;
+    display: block;
+    padding: rhythm(0.5) rhythm(0.75);
+    margin-bottom: rhythm(-0.25);
+    color: color(gray, m-base);
+    @include type-scale(small);
+    font-weight: get-weight(header light);
+    text-transform: uppercase;
+
+    &:nth-child(2) {
+      margin: 0;
+    }
+  }
+}
+
+.pnav__dropdown--account {
+  font-family: $body-font;
+  // margin-top: 43px;
+  @extend .pnav__dropdown;
+
+  .dropdown__username {
+    display: none;
+
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+      display: block;
+      padding: rhythm(0.5) rhythm(0.75);
+      font-weight: get-weight(header light);
+      line-height: 1;
+      border-bottom: 1px solid color(gray);
+
+      @include tui {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.pnav__dropdown--language {
+  // margin-top: 43px;
+  right: rhythm(-3.5);
+
+  @include bp(medium) {
+    right: rhythm(-2);
+  }
+
+  @extend .pnav__dropdown;
+
+  a {
+    color: color(dark, base);
+
+    &:active,
+    &:focus,
+    &.is-selected {
+      @include tui {
+        color: $primary-color !important;
+      }
+    }
+
+    &:hover {
+      background: color(gray);
+    }
+  }
+}
+
+// ----------
+// Notifications
+// ----------
+
+.pnav__notifications {
+  // Notification icon
+  .notification__item {
+    position: relative;
+    float: none;
+    line-height: 1.2;
+  }
+
+  .notification {
+    font-family: $body-font;
+    @include type-scale(small);
+  }
+
+  time {
+    display: block;
+    @include adjust-font-size-to(11px);
+    line-height: 1.2;
+  }
+
+  a {
+    border-top: 1px solid color(gray);
+    margin: 0;
+    padding-top: rhythm(0.5);
+    padding-bottom: rhythm(0.5);
+    padding-left: rhythm(2);
+
+    time {
+      color: color(gray, m-base);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: color(white, lighter);
+      color: black;
+    }
+  }
+
+  .is-unread {
+    a {
+      background: color(gray, l-base);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: color(white, lighter);
+        color: black;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: rhythm(0.75);
+      left: rhythm(0.75);
+      margin: auto;
+      display: inline-block;
+      @extend .i-notification;
+    }
+  }
+
+  .notifications__view-more a {
+    text-align: center;
+    border-bottom: 1px solid color(gray);
+    padding-left: rhythm(0.5);
+    margin-bottom: rhythm(0.5);
+    @include adjust-font-size-to(14px);
+    text-transform: uppercase;
+    font-weight: 300;
+    background: map-fetch($toggle-colors, primary color);
+    color: color(white);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: lighten(color(pink), 20%);
+      color: color(white);
+    }
+  }
+}
+
+.mega-menu--primary-nav {
+  .fragment {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+
+    ul {
+      height: auto;
+      padding: rhythm(0.5) rhythm(1);
+    }
+
+    li {
+      padding-bottom: 0;
+    }
+
+    a {
+      padding: 0;
+    }
+
+    li + li {
+      margin-top: rhythm(0.5);
+    }
+
+    img {
+      margin-bottom: 0;
+      margin-right: rhythm(0.5);
+      vertical-align: middle;
+    }
+  }
+}
+
+.dark-theme .nav--primary__desktop .language-toggle .language-toggle__selected-language {
+  color: map-fetch($toggle-colors, primary color);
+}
+
+
+/* Refactoring Ufinity */
+/* Header Social Network */
+.social-network{
+  ul {
+    list-style-type: none;
+
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    
+    //nav--primary__mobile
+    .nav--primary__mobile &{
+      padding-top: 12px;
+    }
+
+    li {
+      display: block;
+      float: left;
+      margin-right: 0;
+      font-size: 24px;
+      line-height: 1;
+      background: none !important;
+      border: none;
+
+      &:hover {
+        background: none;
+      }
+
+      //nav--primary__mobile
+      .nav--primary__mobile &{
+        margin-left: 12px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+
+      a {
+        padding: 0;
+        margin: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        // background-image: url("");// **** Replace Image
+        background-position: left top;
+        background-repeat: no-repeat;
+
+        span {
+          display: none;
+        }
+
+        //nav--primary__mobile
+        .nav--primary__mobile &{
+          width: 32px;
+          height: 32px;
+          background-size: 32px 160px;          
+        }
+      }
+
+      &.facebook a {
+        background-color: #3b5998;
+        
+        //nav--primary__mobile
+        .nav--primary__mobile &{
+          background-position: 0 0;
+        }
+      }
+
+      &.instagram a {
+        background-color: #3f729b;
+
+        //nav--primary__mobile
+        .nav--primary__mobile &{
+          background-position: 0 -64px;
+        }
+      }
+
+      &.twitter a {
+        background-color: #00aced;
+
+        //nav--primary__mobile
+        .nav--primary__mobile &{
+          background-position: 0 -32px;
+        }
+      }
+
+      &.youtube a {
+        background-color: #bb0000;
+
+        //nav--primary__mobile
+        .nav--primary__mobile &{
+          background-position: 0 -96px;
+        }
+      }
+    }
+  }
+
+}
+
+// "Follow us on" text on social media icons
+.nav--primary__mobile ul li:last-of-type > p:first-of-type {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav--primary__desktop .search-form-holder:not(.is-open) {
+display: none;
+}

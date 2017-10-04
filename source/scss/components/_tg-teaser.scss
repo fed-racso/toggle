@@ -1,0 +1,156 @@
+.tg-teaser-item {
+    //margin-bottom: rhythm(1);
+    overflow: hidden;
+    > a {
+        display: block;
+        position: relative;
+    }
+    .img-holder {
+        // height: 0;
+        // padding-bottom: percentage(9 / 16);
+        // overflow: hidden;
+        .now-playing {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 20;
+        }
+    }
+    img {
+        //position: absolute;
+        display: block;
+        margin: 0;
+    }
+}
+
+.tg-teaser-item .item__title {
+    //margin-top: rhythm(0.5);
+    margin-top: 0.4em;
+    margin-bottom: 0;
+    //height: 1.125rem * 2;
+    height: auto;
+    overflow: hidden;
+}
+
+.tg-teaser-item .desc {
+    margin-top: rhythm(0.25);
+}
+
+.tg-teaser-item .meta {
+    margin-top: rhythm(0.25);
+    //margin-bottom: rhythm(0.25);
+}
+
+.tg-teaser-item .desc {
+    display: none;
+}
+
+.tg-teaser-item .btn {
+    display: block;
+    margin-top: rhythm(0.25);
+    margin-right: 0;
+}
+
+// Icon for different types of content
+.tg-teaser-item .item__type {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 18%;
+    height: 22%;
+    background: black;
+    opacity: 0.8;
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+        width: 20%;
+        height: 30%;
+    }
+}
+
+[class^="type-icon-"] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    width: 55%;
+    margin: auto;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.tg-teaser-item .item__flags {
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    right: 0;
+    height: 22%;
+    text-align: center;
+    background: transparentize(map-fetch($toggle-colors, primary color), 0.25);
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+        left: 20%;
+        height: 30%;
+    }
+    .c-cell {
+        color: white;
+    }
+    font-size: 20px;
+    line-height: 1;
+    @include bp(m-large) {
+        font-size: 11px;
+    }
+    &.highlighted-itemz {
+        font-size: 11px;
+        @include bp(m-large) {
+            font-size: 16px;
+        }
+    }
+}
+
+// Icon for different labels
+.tg-teaser-item .item__tags {
+    @include cf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15%;
+    width: 100%;
+    .tag {
+        float: left;
+        // margin-left: 4px;
+        // margin-bottom: 4px;
+        // height: 100%;
+        // width: 20%;
+        &:first-child {
+            // margin-left: 4px;
+        }
+    }
+}
+
+$labels: null;
+.tg-teaser-item--portrait {
+    @extend .tg-teaser-item;
+    .item__type {
+        height: 12%;
+        width: 21%;
+    }
+    .item__labels {
+        height: 10%;
+    }
+    .img-holder {
+        padding-bottom: percentage(4 / 3) !important;
+    }
+}
+
+.tg-price-item {
+    @extend .tg-teaser-item;
+    .item__desc {
+        display: none;
+        @include bp(medium) {
+            display: block;
+        }
+    }
+}

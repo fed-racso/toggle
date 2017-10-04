@@ -1,0 +1,217 @@
+.fixed-height {
+    .fixed-height__title {
+        //margin-bottom: rhythm(1);
+        a {
+            i {
+                font-size: 12px;
+                line-height: 100%;
+                top: 0;
+            }
+        }
+    }
+}
+
+.fixed-height__list {
+    margin-bottom: rhythm(1) !important;
+    @include bp(medium) {
+        margin-bottom: 0 !important;
+        height: rhythm(13);
+        max-height: rhythm(13);
+        overflow-y: scroll;
+    }
+    @include bp(m-large) {
+        // max-height: rhythm(16);
+    }
+}
+
+// start - MEDIACORPXIN-1488
+[id*="cx-"] {
+    .fixed-height__item {
+        h6 {
+            @include breakpoint(map-get($breakpoints, m-large) map-get($breakpoints, large)) {
+                overflow: hidden;
+                line-height: 1;
+                height: 2em;
+            }
+        }
+        .meta {
+            position: absolute;
+            bottom: 8px !important;
+        }
+    }
+}
+
+// end - MEDIACORPXIN-1488
+.fixed-height__item {
+    @include cf;
+    position: relative;
+    padding: rhythm(0.5) 0;
+    list-style: none;
+    &:first-child {
+        padding-top: 0;
+    }
+    img {
+        margin-bottom: 0;
+    }
+    .item__title {
+        margin: 0;
+    }
+    @include tui {
+        border-bottom: 1px solid $secondary-color;
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    .item__details {
+        .meta {
+            &:last-child {
+                margin-bottom: 0;
+                .meta__item {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .item__type {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 18%;
+        height: 22%;
+        background: black;
+        opacity: 0.8;
+    }
+}
+
+.fixed-height__item > a {
+    position: relative;
+    display: block;
+    float: left;
+    width: rhythm(5);
+    line-height: 0;
+    @include bp(large) {
+        width: rhythm(7);
+    }
+    + .item__details {
+        margin-left: rhythm(5.5);
+        @include bp(large) {
+            margin-left: rhythm(7.5);
+        }
+    }
+}
+
+.fixed-height__item .item__tags {
+    @include cf;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 15%;
+    width: 100%;
+    .tag {
+        float: left;
+        // margin-left: 4px;
+        // margin-bottom: 4px;
+        // height: 100%;
+        // width: auto;
+        //Removed because of MEDIACORPXIN-1406
+        /*&:first-child {
+      margin-left: 6px;
+    }*/
+        font-size: 10px;
+        @include bp(small) {
+            font-size: 12px;
+        }
+        &.vip {
+            font-size: 20px;
+        }
+    }
+    @include bp(medium) {
+        width: 60%;
+    }
+}
+
+// Display none according to items of items shown in data-items-shown-on-mobile
+$maxItems: 10;
+@include breakpoint(max-width map-get($breakpoints, medium)) {
+    @for $i from 1 through $maxItems {
+        .fixed-height:not(.fixed-height--episode) {
+            .fixed-height__list[data-items-shown-on-mobile="#{$i}"] {
+                // Removes border bottom
+                .fixed-height__item:nth-child(n + #{$i}) {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+                // Hides all other items
+                .fixed-height__item:nth-child(n + #{$i + 1}) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.fixed-height--square .fixed-height__item {
+    > a {
+        display: block;
+        width: rhythm(4);
+        float: left;
+    }
+    > a + .item__details {
+        margin-left: rhythm(4.5);
+    }
+}
+
+.fixed-height--episode {
+    .fixed-height__item {
+        @include bp(medium) {
+            display: block;
+        }
+    }
+    .fixed-height__list {
+        @include bp(medium) {
+            height: rhythm(18);
+            overflow-y: scroll;
+        }
+    }
+    // Have some hilight options for now playing
+    ul {
+        .now-playing {
+            background: transparent;
+            padding: rhythm(0.5) 0;
+            text-align: left;
+            a {
+                img {
+                    width: 100%;
+                }
+                span.now-playing {
+                    background-color: rgba(216, 17, 130, 0.5);
+                    .c-cell {
+                        text-align: center;
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//special styling for episode card
+.fixed-height--episode.card {
+    @include tui {
+        background: none;
+        border: 1px solid $secondary-color;
+    }
+}
+
+.now-playing {
+    padding: 0 20%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: get-weight(header semibold);
+    @include tdc {
+        background: rgba($theme-color, 0.8);
+        color: white;
+    }
+}

@@ -1,0 +1,329 @@
+// @font-face {
+//   font-family: 'Toggle Font Icon';
+//   src: url("../fonts/icomoon.eot");
+//   src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+// Toggle custom made icons by Baolun
+
+.ti, [class^="ti-"], [class*="ti-"] {
+  font-family: 'Toggle Font Icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  // line-height: 1;
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.25em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:before {
+    font-family: 'Toggle Font Icon';
+  }
+}
+
+.ti-less:before {
+  content: "\e600";
+}
+
+.ti-more:before {
+  content: "\e601";
+}
+
+.ti-comments:before {
+  content: "\e602";
+}
+
+.ti-favourite:before {
+  content: "\e603";
+}
+
+.ti-questionmark:before {
+  content: "\e604";
+}
+
+.ti-share:before {
+  content: "\e605";
+}
+
+.ti-star:before {
+  content: "\e606";
+}
+
+.ti-chevron-prev:before {
+  content: "\e607";
+}
+
+.ti-chevron-next:before {
+  content: "\e608";
+}
+
+.ti-clock:before {
+  content: "\e609";
+}
+
+.ti-event:before {
+  content: "\e60a";
+}
+
+.ti-gallery:before {
+  content: "\e60b";
+}
+
+.ti-article:before {
+  content: "\e60c";
+}
+
+.ti-play:before {
+  content: "\e60d";
+}
+
+.ti-arrow-back:before {
+  content: "\e60e";
+}
+
+.ti-arrow-next:before {
+  content: "\e60f";
+}
+
+.ti-more-light:before {
+  content: "\e610";
+}
+
+.ti-less-light:before {
+  content: "\e611";
+}
+
+.ti-alarmclock:before {
+  content: "\e612";
+}
+
+.ti-tv:before {
+  content: "\e613";
+}
+
+.ti-cross:before {
+  content: "\e614";
+}
+
+.ti-play-incircle:before {
+  content: "\e615";
+}
+
+.ti-alarmclock-incircle:before {
+  content: "\e616";
+}
+
+.ti-alarmclock-incircle-mobile2:before {
+  content: "\e617";
+}
+
+.ti-ellipsis:before {
+  content: "\e618";
+}
+
+.ti-chevronwide-next:before {
+  content: "\e619";
+}
+
+.ti-chevronwide-prev:before {
+  content: "\e61a";
+}
+
+.ti-entertainment:before {
+  content: "\e61b";
+}
+
+.ti-lifestyle:before {
+  content: "\e61c";
+}
+
+.ti-offbeat:before {
+  content: "\e61d";
+}
+
+.ti-video:before {
+  content: "\e61e";
+}
+
+.ti-tv2:before {
+  content: "\e61f";
+}
+
+.ti-radio:before {
+  content: "\e620";
+}
+
+.ti-celebrities:before {
+  content: "\e621";
+}
+
+.ti-slideshow:before {
+  content: "\e622";
+}
+
+.ti-play-longform:before {
+  content: "\e623";
+}
+
+.ti-play-shortform:before {
+  content: "\e624";
+}
+
+.ti-livestream-video:before {
+  content: "\e625";
+}
+
+.ti-livestream-audio:before {
+  content: "\e626";
+}
+
+.ti-addtoplaylist:before {
+  content: "\e627";
+}
+
+.ti-playlist:before {
+  content: "\e628";
+}
+
+.ti-vip:before {
+  content: "\e629";
+}
+
+.ti-down:before {
+  content: "\e62a";
+}
+
+.ti-first:before {
+  content: "\e62b";
+}
+
+.ti-forward:before {
+  content: "\e62c";
+}
+
+.ti-last:before {
+  content: "\e62d";
+}
+
+.ti-mute:before {
+  content: "\e62e";
+}
+
+.ti-next:before {
+  content: "\e62f";
+}
+
+.ti-pause:before {
+  content: "\e630";
+}
+
+.ti-play2:before {
+  content: "\e631";
+}
+
+.ti-previous:before {
+  content: "\e632";
+}
+
+.ti-refresh:before {
+  content: "\e633";
+}
+
+.ti-rewind:before {
+  content: "\e634";
+}
+
+.ti-setting:before {
+  content: "\e635";
+}
+
+.ti-shuffle:before {
+  content: "\e636";
+}
+
+.ti-sound-soft:before {
+  content: "\e637";
+}
+
+.ti-sound:before {
+  content: "\e638";
+}
+
+.ti-stop:before {
+  content: "\e639";
+}
+
+.ti-time:before {
+  content: "\e63a";
+}
+
+.ti-up:before {
+  content: "\e63b";
+}
+
+.ti-chevronwide-small-next:before {
+  content: "\e63c";
+}
+
+.ti-chevronwide-small-prev:before {
+  content: "\e63d";
+}
+
+.ti-expand:before {
+  content: "\e63e";
+}
+
+.ti-search:before {
+  content: "\e63f";
+}
+
+.ti-cross-small:before {
+  content: "\e640";
+}
+
+.ti-star-outline:before {
+  content: "\e641";
+}
+
+.ti-plus:before {
+  content: "\e642";
+}
+
+.ti-mail:before {
+  content: "\e643";
+}
+
+.ti-twitter:before {
+  content: "\e644";
+}
+
+.ti-facebook:before {
+  content: "\e645";
+}
+
+.ti-chevron-up:before {
+  content: "\e646";
+}
+
+.ti-chevron-down:before {
+  content: "\e647";
+}
+
+.ti-reminder:before {
+  content: "\e648";
+}
+
+//Hide Icons for clock and rate
+.ti-clock, .ti-star{display:none}
+.duration{padding-left:0 !important; margin-left: 0 !important;}
+.tg-rating{display:none !important;}
+

@@ -1,0 +1,40 @@
+// breakpoints
+$breakpoints: (
+  small: 480px,
+  small-2: 560px,
+  medium: 760px,
+  m-large-1: 979px,
+  m-large: 980px,
+  large: 1140px,
+  xlarge: 1440px
+  );
+
+
+// standard breakpoint
+@mixin bp($name, $map: $breakpoints) {
+ @if map-has-key($map, $name) {
+   @media #{inspect(map-get($map, $name))} {
+     @content;
+   }
+ }
+ @else {
+   @warn "Couldn't find a breakpoint named `#{$name}`.";
+ }
+}
+
+@mixin bp($breakpoint, $map:$breakpoints) {
+  @include breakpoint(map-fetch($map, $breakpoint)) {
+    @content;
+  }
+}
+
+.show-only-desktop {
+  display:none;
+  @include bp(m-large) {
+    display: block;
+  }
+}
+
+@include breakpoint(max-width map-get($breakpoints, medium)) {
+  
+}

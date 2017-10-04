@@ -1,0 +1,11 @@
+.nav-local-holder + section {
+  margin-top: rhythm(3);
+}
+
+section {
+  @include cf;
+  &:first-of-type {
+  	margin-top:rhythm(1); //since margins are placed in cards, first section of the body needs to create dividers
+  }
+  //margin: rhythm(1) 0; //margin top and bottom will be controlled on .card level
+}

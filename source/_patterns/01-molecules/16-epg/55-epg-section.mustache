@@ -1,0 +1,57 @@
+<div class="epg__section collapsible" data-collapse-till="">
+<h2 class="collapsible__title">{{title}}
+    <span class="collapsible__toggle">
+      <i></i>
+    </span> 
+  </h2>
+  <div class="collapsible__body">
+    <div class="epg__table">
+      <div class="epg__table-head">
+        <div class="epg__now-header epg__table-col">
+          <span>On Now</span>
+        </div>
+        <div class="epg__next-header epg__table-col">
+          <span>On Next</span>
+        </div>
+      </div>
+      <div class="epg__table-row">
+        <div class="epg__now epg__table-col">
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}}
+        </div>
+        <div class="epg__next epg__table-col">
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}} 
+        </div>  
+      </div>
+    </div>
+
+    {{> molecules-ad-banner-block(u: u-hideMobile) }}
+    {{> molecules-ad-300x100-block(u: u-hideTablet u-hideDesktop) }}
+
+    <div class="epg__table">
+      <div class="epg__table-head">
+        <div class="epg__now-header epg__table-col">
+          <span>On Now</span>
+        </div>
+        <div class="epg__next-header epg__table-col">
+          <span>On Next</span>
+        </div>
+      </div>
+      <div class="epg__table-row">
+        <div class="epg__now epg__table-col">
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}}
+        </div>
+        <div class="epg__next epg__table-col">
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}}
+          {{> molecules-epg-item}} 
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>

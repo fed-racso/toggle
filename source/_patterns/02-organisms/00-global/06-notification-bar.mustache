@@ -1,0 +1,58 @@
+{{#notification-warning}}
+<div class="notification-holder live-notification warning">
+	<div class="wrap">
+		<div class="notification-bar">
+			<div class="notification-bar__contents">
+				<div class="notification-bar__content">
+					<p>You are accessing Toggle from overseas XXXXXXX.</p>
+				</div>
+			</div>
+			<a class="notification-bar__close" href="#"><i class="ti-cross"></i></a>
+		</div>
+	</div>
+</div>
+{{/notification-warning}}
+
+<!-- start of notificaton component -->
+{{#notification-system}}
+<div class="notification-holder live-notification system-alert">
+	<div class="wrap">
+		<div class="notification-bar">
+			<div class="notification-bar__controls"></div>
+			<div class="notification-bar__contents">
+				<div class="notification-bar__content">
+					<p>System will be done during time XXX lorem ipsum dolor sit amet</p>
+				</div>
+			</div>
+			<a class="notification-bar__close" href="#"><i class="ti-cross"></i></a>
+		</div>
+	</div>
+</div>
+{{/notification-system}}
+
+{{^notification-system}}
+<div class="notification-holder live-notification">
+	<div class="wrap">
+		<div class="notification-bar">
+			<div class="notification-bar__controls"></div>
+			<div class="notification-bar__contents">
+				<div class="notification-bar__content">
+					<img src="../../images/tmp/75x40.gif">
+					<p>Movie opens up in a long text lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					{{> atoms-meta-item }}
+				</div>
+				<div class="notification-bar__content">
+					<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					{{> atoms-meta-item }}
+				</div>
+				<div class="notification-bar__content">
+					<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut.</p>
+					{{> atoms-meta-item }}
+				</div>
+			</div>
+			<a class="notification-bar__close" href="#"><i class="ti-cross"></i></a>
+		</div>
+	</div>
+</div>
+{{/notification-system}}
+<!-- end of notificaton component -->

@@ -1,0 +1,37 @@
+<div class="page-wrap">
+	{{> molecules-ad-banner-block }}
+	{{> organisms-header }}
+	{{> organisms-primary-mega-menu }}
+	{{> molecules-section-header(section-header__title: "TV Shows", section-header__parent: "Video", section-header__has-logo:false) }}
+	<section class="l-2up--8-4">
+		<div class="wrap">
+			<div class="l-gi">
+				<div class="vertical-listing">
+					<header class="vertical-listing__header">
+						<h4 class="vertical-listing__title">Listing Page Title</h4>
+						<!--{{> atoms-wireblock(wire-text: "Utility Bar (sort,filter, pagination", height:"height-50", card: true)}}-->
+						{{> organisms-utility-bar}}
+						<span class="result-txt">Filters Applied <a>Reset Filter</a></span>
+
+					</header>
+							<ul class="vertical-list">
+								<li>{{> molecules-toggle-vertical-list-item(type: article)}}</li>
+								<li>{{> molecules-toggle-vertical-list-item(type: gallery)}}</li>
+								<li>{{> molecules-toggle-vertical-list-item(type: video)}}</li>
+								<li>{{> molecules-toggle-vertical-list-item(type: event)}}</li>
+
+							</ul>
+							<footer class="vertical-listing__footer">
+								{{> molecules-pagination(article:true)}}
+							</footer>
+						</div>
+			</div>
+			<aside class="l-gi show-only-desktop">
+				<!-- start of Ad-300x100-block component -->
+				{{> molecules-ad-300x250-block }}
+				<!-- end of Ad-300x100-block component -->
+			</aside>
+		</div>
+	</section>
+	  {{> organisms-footer }}
+</div>

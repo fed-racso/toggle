@@ -1,0 +1,73 @@
+<nav class="nav nav--channel">
+  <div class="wrap">
+    {{> atoms-channel-logo}}
+    <ul class="nav__list">
+      <li><a class="active" data-menu-item="menu" href="{{url}}"><span>视剧</span><span>Shows</span></a> </li>
+      <li><a href="{{url}}"><span>竞赛</span><span>TV</span></a></li>
+      <li><a href="{{url}}"><span>新鲜事</span><span>Contest</span></a></li>
+      <li><a href="{{url}}"><span>电视简介</span><span>Events</span></a></li>
+    </ul>
+    <ul class="nav__list nav__list--right">
+      <li><a class="facebook btn--round" href="{{url}}"><span>Facebook</span></a></li>
+      <li><a class="twitter btn--round" href="{{url}}"><span>Twitter</span></a></li>
+      <li> {{> molecules-search(search-class:search--channel search--dark) }} </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="mega-menu mega-menu--channel" data-active-menu="show">
+  <div class="wrap">
+    <ul>
+      <!-- First mega-menu__item -->
+      <li class="mega-menu__item">
+        <h5 class="mega-menu__title"><span>播映中</span><span>Current Shows</span></h5>
+        <ul>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>精忠岳飞</span><span>The Patriot Yue Fei</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>最爱是你</span><span>In The Name of Love</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>球在你脚下</span><span>World at Your Feet</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>护花危情</span><span>Witness Insecurity</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>日落洞</span><span>Entangled</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>夜市人生</span><span>Life</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>精忠岳飞</span><span>The Patriot Yue Fei</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>美食厨师男</span><span>Romantic Delicacies</span></a></li>
+        </ul>
+        <a class="show-more {{themeClass}}" href="{{url}}">view more current shows > </a>
+      </li>
+      <!-- /.mega-menu__item -->
+
+      <!-- Second mega-menu__item -->
+      <li class="mega-menu__item">
+        <h5 class="mega-menu__title"><span>即将播映</span><span>Coming soon</span></h5>
+        <ul>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>精忠岳飞</span><span>The Patriot Yue Fei</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>最爱是你</span><span>In The Name of Love</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>球在你脚下</span><span>World at Your Feet</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>护花危情</span><span>Witness Insecurity</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>日落洞</span><span>Entangled</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>夜市人生</span><span>Life</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>精忠岳飞</span><span>The Patriot Yue Fei</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>美食厨师男</span><span>Romantic Delicacies</span></a></li>
+        </ul>
+        <a class="show-more {{themeClass}}" href="{{url}}">view more upcoming shows > </a>
+      </li>
+      <!-- /.mega-menu__item -->
+
+      <!-- final mega-menu__item -->
+      <li class="mega-menu__item">
+        <h5 class="mega-menu__title"><span>经典重温</span><span>Popular Classics</span></h5>
+        <ul>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>精忠岳飞</span><span>The Patriot Yue Fei</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>最爱是你</span><span>In The Name of Love</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>球在你脚下</span><span>World at Your Feet</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>护花危情</span><span>Witness Insecurity</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>日落洞</span><span>Entangled</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>夜市人生</span><span>Life</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>精忠岳飞</span><span>The Patriot Yue Fei</span></a></li>
+          <li class="mega-menu__child-item"><a href="{{url}}"><span>美食厨师男</span><span>Romantic Delicacies</span></a></li>
+        </ul>
+        <a class="show-more {{themeClass}}" href="{{url}}">view more popular classics > </a>
+      </li>
+      <!-- /.mega-menu__item -->
+    </ul>
+  </div>
+</div>

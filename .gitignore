@@ -1,0 +1,15 @@
+.DS_Store
+latest-change.txt
+*-ck.js
+*.sass-cache/
+node_modules/*
+codekit.config
+config.codekit
+.tmp
+
+!public/
+
+public/*
+!public/styleguide/
+!public/patterns/**pages
+public/styleguide/html/styleguide.html

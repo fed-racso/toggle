@@ -1,0 +1,395 @@
+/* 
+	Template Name: Separated
+	Template URI: www.slidetabs.com
+	Description: Tabs positioned separate from the content
+	Author: SlideTabs
+	Author URI:
+*/
+
+/* NOTE: Prefix the template styles with <TEMPLATE FOLDER NAME>-horizontal/vertical */
+
+
+/* 
+ * Horizontal Tabs
+ *
+------------------------------------------------------------------------------------- */
+div.separated-horizontal { /* The main container */	
+	position:relative;
+	clear:both;
+	width:100%; /* Set the full width */
+}
+
+/* Directional Buttons (horizontal)
+------------------------------------------------------------------------------------- */
+div.separated-horizontal > div.st_tabs a.st_prev, 
+div.separated-horizontal > div.st_tabs a.st_next { /* Directional buttons (previous/next) */
+	display:none;
+	position:absolute;
+	top:0px;
+	z-index:110;
+	height:41px;
+	width:43px;
+	text-indent:-999em;
+	border:1px solid #ccc;
+	outline:none;
+	background:#fff url("images/arrows_h.gif") no-repeat;
+}
+div.separated-horizontal > div.st_tabs a.st_prev { /* Previous button */
+	left:0px;
+	background-position:center 14px;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+div.separated-horizontal > div.st_tabs a.st_prev:hover { /* Previous button hover */	
+	background-position:center -46px;
+	background-color:#f8f8f8;
+}
+div.separated-horizontal > div.st_tabs a.st_next { /* Next button */
+	right:0px;
+	background-position:center -16px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+div.separated-horizontal > div.st_tabs a.st_next:hover { /* Next button hover */	
+	background-position:center -76px;
+	background-color:#f8f8f8;
+}
+div.separated-horizontal > div.st_tabs a.st_prev.st_btn_disabled, 
+div.separated-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f8f8f8;
+}
+div.separated-horizontal > div.st_tabs a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:center -106px;
+}
+div.separated-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:center -136px;
+}
+
+/* Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.separated-horizontal > div.st_tabs { /* Tabs main container */		
+	position:relative;
+	z-index:100;		
+	width:100% !important;	
+	height:43px;
+	margin-bottom:12px;
+	overflow:hidden;
+}
+div.separated-horizontal.st_sliding_active > div.st_tabs { /* Tabs main container - sliding active (the '.st_sliding_active' class is added to the tabs main container when the tabs are 'slidable') */
+}
+div.separated-horizontal > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	position:relative !important; /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+	width:100%;
+}
+div.separated-horizontal.st_sliding_active > div.st_tabs div.st_tabs_wrap { /* The '.st_sliding_active' class is added to the main container when tab sliding is activated */
+	width:auto !important;
+	margin:0 44px; /* Adds side margins to make space for the arrow buttons */
+}
+div.separated-horizontal > div.st_tabs ul { /* Tabs unordered list */
+	width:10000px; /* Set to an arbitrary high value */
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+div.separated-horizontal > div.st_tabs ul li { /* Tab list elements */
+	display:block;
+	float:left;
+	margin:0px;
+}
+div.separated-horizontal > div.st_tabs ul li a { /* Tab links */
+	display:block;
+	height:41px;
+	margin:0px;
+	padding:0 30px;
+	font-size:12px;
+	line-height:41px;
+	font-weight:bold;
+	color:#6a6a6a;
+	text-decoration:none;
+	outline:none;
+	border:1px solid #ccc;
+	border-left:0 none;
+	background:#f8f8f8;
+}
+div.separated-horizontal > div.st_tabs ul li a:hover { /* Tabs hover state */
+	color:#333;
+	background:#fbfbfb;
+}
+div.separated-horizontal > div.st_tabs ul li a.st_tab_first { /* First tab element */
+	border-left:1px solid #ccc;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+div.separated-horizontal > div.st_tabs ul li a.st_tab_last { /* Last tab element */
+	margin-right:0px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+div.separated-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_first, /* First tab element (with tab sliding activated) */
+div.separated-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_last { /* Last tab element (with tab sliding activated) */
+	border-radius:0; /* Reset border radius */
+}
+div.separated-horizontal > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	background:#fff;
+	color:#1ca5ec;
+}
+
+/* Content (horizontal)
+------------------------------------------------------------------------------------- */
+div.separated-horizontal > div.st_views { /* Main content container */
+	position:relative;
+	z-index:5;
+	height:388px;
+	padding:0px !important; /* No padding on this container */
+	line-height:19px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	overflow:hidden;
+	border-radius:5px;
+}
+div.separated-horizontal > div.st_views div.st_view { /* Content containers - NOTE: background images will be set on these containers */
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-image:none;
+	-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; /* Set 'border-box' box-sizing when using 100% width/height combined with margin or padding */
+	/* Background-image attributes */
+	background-repeat:no-repeat !important;
+	background-position:0px 0px !important;
+	background-color:transparent !important;
+}
+div.separated-horizontal > div.st_views div.st_view_inner { /* Inner content containers */
+	padding:30px; /* Padding for the content */
+}
+div.separated-horizontal > div.st_views div.st_view_first { /* First content container */
+	display:block; /* Show the first content container */
+}
+
+/* Bottom-aligned Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.separated-horizontal.align_bottom { /* The main container */
+	margin-bottom:56px; /* Set to the total height of div.st_tabs */
+}
+div.separated-horizontal.align_bottom > div.st_tabs { /* Tabs main container */
+	position:absolute; /* Absolute position the tabs container at the bottom of the main container */
+	bottom:-55px;
+	left:0px;
+	margin-bottom:0;
+}
+
+
+/* 
+ * Vertical Tabs
+ *
+------------------------------------------------------------------------------------- */
+div.separated-vertical { /* The main container */
+	position:relative;
+	clear:both;
+	width:100%; /* Set the full width */
+}
+
+/* Control Buttons (vertical)
+------------------------------------------------------------------------------------- */
+div.separated-vertical > div.st_tabs a.st_prev, 
+div.separated-vertical > div.st_tabs a.st_next { /* Directional buttons (previous/next) */	
+	display:none;
+	float:left;
+	position:relative;
+	z-index:100;	
+	height:34px;
+	width:93px;
+	text-indent:-999em;
+	border:1px solid #ccc;
+	outline:none;	
+	background:#fff url("images/arrows_v.gif") no-repeat;	
+}
+div.separated-vertical > div.st_tabs a.st_prev { /* Previous button */
+	border-right:0 none;
+	background-position:center 13px;
+	border-top-left-radius:5px;
+}
+div.separated-vertical > div.st_tabs a.st_prev:hover { /* Previous button hover */
+	background-position:center -51px;
+	background-color:#f5f5f5;
+}
+div.separated-vertical > div.st_tabs a.st_next { /* Next button */
+	background-position:center -19px;
+	border-top-right-radius:5px;
+}
+div.separated-vertical > div.st_tabs a.st_next:hover { /* Next button hover */
+	background-position:center -83px;
+	background-color:#f5f5f5;
+}
+div.separated-vertical > div.st_tabs a.st_prev.st_btn_disabled,
+div.separated-vertical > div.st_tabs a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f7f7f7;
+}
+div.separated-vertical > div.st_tabs a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:center -115px;
+}
+div.separated-vertical > div.st_tabs a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:center -147px;
+}
+
+/* Tabs (vertical)
+------------------------------------------------------------------------------------- */
+div.separated-vertical > div.st_tabs { /* Tabs main container */  	
+	position:relative;
+	z-index:100;
+	float:left;
+	width:189px; /* +1px for the negative right margin */
+	height:412px;
+	margin-right:12px;
+	border-radius:5px;	
+	overflow:hidden;
+}
+div.separated-vertical.st_sliding_active > div.st_tabs { /* Tabs main container - sliding active (the '.st_sliding_active' class is added to the main container when the tabs are 'slidable') */
+}
+div.separated-vertical > div.st_tabs div.st_tabs_wrap { /* Tabs slide-container */
+	position:relative !important; /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+	float:left;
+	clear:both;
+}
+div.separated-vertical > div.st_tabs ul { /* Tabs unordered list */
+	float:left;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+div.separated-vertical > div.st_tabs ul li { /* Tab list elements */
+	position:relative;
+	float:left;
+	clear:both;
+	margin:0px;
+}
+div.separated-vertical > div.st_tabs ul li a { /* Tab links */
+	display:block;
+	width:167px;
+	margin:0;
+	padding:14px 0 14px 20px;
+	font-size:12px;
+	line-height:18px;
+	font-weight:bold;
+	color:#5c5c5c;
+	text-decoration:none;
+	outline:none;
+	border:1px solid #ccc;
+	border-top:0 none;
+	background-color:#f8f8f8;
+}
+div.separated-vertical > div.st_tabs ul li a:hover { /* Tabs hover state */
+	color:#333;
+	background:#fbfbfb;
+}
+div.separated-vertical > div.st_tabs ul li a.st_tab_first { /* First tab element */
+	border-top:1px solid #ccc;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+div.separated-vertical.st_sliding_active > div.st_tabs ul li a.st_tab_first { /* First tab element (with tab sliding activated) */
+	border-top:0 none;
+	border-radius:0; /* Reset border radius */
+}
+div.separated-vertical > div.st_tabs ul li a.st_tab_last { /* Last tab element */
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+div.separated-vertical > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	color:#1ca5ec;
+	background:#fff;
+}
+div.separated-vertical > div.st_tabs ul li a span {
+	display:block;
+	clear:both;
+	font:italic normal 11px/11px Georgia, "Times New Roman", Times, serif;
+	color:#838383;
+	padding-top:3px;	
+}
+
+/* Content (vertical)
+------------------------------------------------------------------------------------- */
+div.separated-vertical > div.st_views { /* Main content container */
+	position:relative;
+	z-index:5;
+	height:411px;
+	line-height:18px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	border-radius:5px;
+	overflow:hidden;
+}
+div.separated-vertical > div.st_views div.st_view { /* Content containers - NOTE: background images will be set on these containers */
+	width:100%;	
+	height:100%;
+	overflow:hidden;
+	background-image:none;
+	/* Background-image attributes */
+	background-repeat:no-repeat !important;
+	background-position:0px 0px !important;
+	background-color:transparent !important;
+}
+div.separated-vertical > div.st_views div.st_view_inner { /* Inner content containers - NOTE: the 'Auto Height' option uses the full height of this container to set the height */
+	overflow:hidden !important; /* Makes the element wrap around the content */
+	padding:30px; /* Padding for the content */
+}
+div.separated-vertical > div.st_views div.st_view_first { /* First content container */
+	display:block; /* Show the first content container */
+}
+
+/* Right-aligned Tabs (vertical)
+------------------------------------------------------------------------------------- */
+div.separated-vertical.align_right > div.st_tabs { /* Tabs main container */  	
+	float:right;
+	margin-right:0px;
+	margin-left:15px;
+}
+
+
+/* 
+ * Media Queries
+ *
+------------------------------------------------------------------------------------- */
+@media screen and (max-width: 760px) {
+	/* Vertical Tabs
+	------------------------------------------------------------------------------------- */
+	
+	/* Arrow Buttons (vertical) */
+	div.separated-vertical > div.st_tabs a.st_prev,
+	div.separated-vertical > div.st_tabs a.st_next {
+		width:46px;
+		border-radius:0;
+	}
+	div.separated-vertical > div.st_tabs a.st_prev { /* Previous button */		
+		margin-bottom:0;
+		border-right:1px solid #ccc;
+		border-bottom:0 none;
+		border-top-right-radius:5px;
+		border-top-left-radius:5px;
+	}
+	
+	/* Tabs (vertical) */
+	div.separated-vertical > div.st_tabs {
+		width:48px;
+		height:341px;
+	}
+	div.separated-vertical > div.st_tabs ul li a {
+		width:46px;
+		height:38px;
+		padding:0;
+		text-indent:-1000em;		
+		background:url("images/tab_dots.gif") no-repeat center 16px #f8f8f8;
+	}
+	div.separated-vertical > div.st_tabs ul li a:hover { /* Tabs hover state */	
+		background-color:#fbfbfb;
+	}
+	div.separated-vertical > div.st_tabs ul li a.st_tab_active {
+		background:url("images/tab_dots.gif") no-repeat center -66px #ffffff;
+	}
+	
+	/* Content (vertical) */
+	div.separated-vertical > div.st_views {
+		height:339px;
+	}
+}

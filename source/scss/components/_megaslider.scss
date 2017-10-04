@@ -1,0 +1,342 @@
+.megaslider-holder.card,
+.megaslider-holder.card--background {
+    @include bp(medium) {
+        padding-left: tgrhythm(1.5);
+        padding-right: tgrhythm(1.5);
+    }
+}
+
+.slider-wrap {
+    width: inherit;
+}
+
+.slider-row {
+    // transition: transform 0.5s ease-out;
+}
+
+.megaslider {
+    position: relative;
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+        height: auto !important;
+    }
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+        .slider-wrap {
+            overflow: visible;
+        }
+        .slider-row {
+            position: relative;
+            width: auto !important;
+            height: auto !important;
+        }
+        .slider-prev,
+        .slider-next {
+            @include tui {
+                color: $text-color;
+            }
+            &:hover {
+                @include tui {
+                    background-color: $secondary-color;
+                    border: 1px solid red;
+                }
+            }
+        }
+        .slider-prev {
+            // left: 0;
+        }
+        .slider-next {
+            // right: 0;
+        }
+    }
+}
+
+.megaslider-holder.elsewhere {
+    display: none;
+    @include bp(medium) {
+        display: block;
+    }
+    h7 {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .slider-wrap {
+        overflow: inherit;
+        margin-top: 35px;
+    }
+    .megaslider__item--3 {
+        width: 33.33333%;
+        display: inline-block;
+        border-right: 1px solid #d8d8d8;
+        padding-right: 10px;
+        padding-left: 10px;
+        float: left;
+    }
+    .megaslider__item--3:last-child {
+        border: 0 !important;
+    }
+    .megaslider__item--3:first-child {
+        padding-left: 0;
+        .tg-list-item>a {
+            width: 50.6%;
+        }
+    }
+    .tg-list-item {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+    .item__title {
+        white-space: normal;
+    }
+}
+
+.megaslider-elsewhere {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+// Border right for megaslider items
+.megaslider:not(.megaslider__single):not(.megaslider__portrait):not(.megaslider__8):not(.megaslider__8--3up):not(.megaslider__4) {
+    .megaslider__item {
+        @include bp(medium) {
+            @include tui {
+                border-right: 1px solid $secondary-color;
+            }
+        }
+    }
+}
+
+.megaslider__item {
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+        display: block;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        > * {
+            border-bottom: 1px solid #d8d8d8;
+            margin-bottom: 10px !important;
+            padding-bottom: 10px !important;
+        }
+        &:last-child {
+            > *:last-child {
+                border: 0;
+            }
+        }
+        .tg-teaser-item {
+            @include cf;
+            margin-bottom: rhythm(1);
+            position: relative !important;
+            > a {
+                position: relative;
+                display: block;
+                width: rhythm(7);
+                float: left;
+                img {
+                    display: block;
+                    margin: 0;
+                }
+            }
+            .item__info {
+                margin-left: rhythm(7.5);
+            }
+            .item__title {
+                @include tgts(centi);
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 1.25;
+            }
+            .item__type {
+                position: absolute;
+            }
+            .desc {
+                display: none;
+            }
+        }
+        .meta {
+            position: absolute !important;
+            bottom: 0 !important;
+            margin: 0 !important;
+            @include breakpoint(max-width map-get($breakpoints, medium)) {
+                bottom: 10px !important;
+            }
+        }
+    }
+    // To prevent megaslider item from collapsing if there is lesser than 1 line of title
+    @include breakpoint(map-get($breakpoints, medium) + 1px) {
+        .item__title:not(.h3) {
+            //height: 2.33rem;
+            height: 2.1em;
+            line-height: 1.1em;
+            font-size: 0.9em;
+        }
+        .item__title.h3 {
+            height: auto;
+        }
+    }
+}
+
+.dark-theme .megaslider__item {
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+        > * {
+            border-bottom: 1px solid #484848;
+        }
+    }
+}
+
+.megaslider__single,
+.megaslider__portrait,
+.megaslider__8--4up-portrait {
+    @extend .megaslider;
+}
+
+.megaslider__item--1 {
+    .tg-teaser-item {
+        @include breakpoint(map-get($breakpoints, medium) + 1px) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.megaslider__item--featured {
+    .tg-teaser-item {
+        @include breakpoint(map-get($breakpoints, medium) + 1px) {
+            margin-bottom: 0;
+        }
+    }
+    .desc {
+        display: block;
+        line-height: 1.2;
+        @include bp(medium) {
+            font-size: 0.9em;
+        }
+        // @include bp(m-large) {
+        //     font-size: 1em;
+        // }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.megaslider__item--3 {
+    @include breakpoint(max-width map-get($breakpoints, medium)) {
+        .tg-list-item {
+            // margin-bottom: rhythm(1) !important;
+            > a {
+                width: rhythm(7) !important;
+                height: auto !important;
+            }
+            .item__info {
+                margin-left: rhythm(7.5) !important;
+            }
+            .item__type {
+                width: 20%;
+                height: 30%;
+            }
+        }
+    }
+    @include breakpoint(map-get($breakpoints, medium) + 1px) {
+        .tg-list-item {
+            @include tui {
+                border-bottom: 1px solid $secondary-color;
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.megaslider__item--4 {
+    .tg-teaser-item {
+        // @include breakpoint(max-width map-get($breakpoints, medium)) {
+        //   margin-bottom: rhythm(1) !important;
+        // }
+        @include breakpoint(map-get($breakpoints, medium) + 1px) {
+            @include cf;
+            float: left;
+            margin-bottom: 24px;
+            // Magic number
+            // Removes margin bottom of last two items
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
+                margin-bottom: 0;
+            }
+            .meta {
+                position: absolute;
+                bottom: 5px;
+            }
+            &:nth-child(n+3) {
+                .meta {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.megaslider__item--4 .tg-teaser-item:nth-child(-n+2) {
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.dark-theme .megaslider__item--4 .tg-teaser-item:nth-child(-n+2) {
+    border-bottom: 1px solid #484848;
+}
+
+// Loading More Logic Megasliders
+.megaslider {
+    .megaslider__load-more {
+        display: block;
+        @include breakpoint(map-get($breakpoints, medium) + 1px) {
+            display: none;
+        }
+    }
+}
+
+.megaslider-holder {
+    .collapsible__title {
+        margin: 0 0 rhythm(0.5) !important;
+    }
+    &.is-collapsed {
+        .collapsible__title {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.megaslider-container-holder {
+    margin: 0 0 rhythm(1);
+    @include bp(medium) {
+        margin-bottom: 0;
+    }
+}
+
+.relataed,
+.megaslider__8-3up,
+.megaslider__8-4up--portrait {
+    .tg-teaser-item,
+    .tg-list-item {
+        .meta,
+        .meta__item {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Enhance Loading Performance
+// ---------------------------
+.megaslider {
+    max-height: rhythm(6);
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.4s ease-out;
+    &.has-loaded {
+        max-height: none;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,46 @@
+<div class="tg-highlights-holder">
+  <!-- highlights -->
+  {{#loggedIn}}
+  {{#itemsWatched}}
+  <div class="tg-highlights--thumbless card">
+    <h5><a href="#"> {{highlights-title}} <i class="ti-chevron-next"></i></a></h5>
+    <div class="l-3up">
+      {{> molecules-toggle-teaser-item-thumbless(type: video)}}
+      {{> molecules-toggle-teaser-item-thumbless(type: video)}}
+      {{> molecules-toggle-teaser-item-thumbless(type: video)}}
+    </div>
+  </div>
+
+  {{/itemsWatched}}
+  {{^itemsWatched}}
+
+  <div class="tg-highlights card">
+    <h5>New Here? Watch This First!</h5>
+    <div class="l-3up">
+      {{> molecules-toggle-teaser-item-thumbless(type: video)}}
+      {{> molecules-toggle-teaser-item-thumbless(type: video)}}
+      {{> molecules-toggle-teaser-item-thumbless(type: video)}}
+    </div>
+  </div>
+
+  {{/itemsWatched}}
+
+
+  {{/loggedIn}}
+  {{^loggedIn}}
+
+  <div class="tg-highlights--not-logged-in card">
+    <h3>
+      You’re not signed in. Sign in now to get personalised content! Not registered? <a href="#" class="pink">Register Here</a>
+    </h3>
+    <a href="#" class="btn--pink">
+      Sign in
+    </a>
+  </div>
+
+  {{/loggedIn}}
+
+  <div class="split-insert" data-split-index="0"></div>
+
+</div>
+<!--/end highlights -->

@@ -1,0 +1,29 @@
+.comments {
+	clear:both;
+	padding: rhythm(0.25) 0;
+	@include tui {
+		border-top: 1px solid $secondary-color;
+		border-bottom: 1px solid $secondary-color;
+		margin-bottom: rhythm(1);
+	}
+	
+	h5 {
+		line-height:1;
+
+		@include tui {
+			color: $reverse-secondary-color;
+		}
+	}
+	.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style] {
+		width: 100% !important;
+	}
+	.fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {
+		width: 100% !important;
+	}
+	.comments-container{
+		padding:0 10px;
+	}
+	.collapsible__toggle{
+		display: block !important;
+	}
+}

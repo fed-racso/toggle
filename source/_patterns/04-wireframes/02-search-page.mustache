@@ -1,0 +1,25 @@
+{{> organisms-header }}
+{{> organisms-primary-mega-menu }}
+{{> molecules-ad-banner-block }}
+
+{{> molecules-secondary-nav }}
+
+<section>
+  <div class="wrap">
+    <div class="l-2up--8-4">
+      <div class="l-gi">
+         {{> atoms-wireblock(wire-text: "Search Bar")}} 
+        {{> atoms-wireblock(wire-text: "Search Tabs")}} 
+         {{> organisms-vertical-list(list-title:Results) }}
+      </div>
+      <aside class="l-gi">
+          {{> molecules-ad-vertical }}
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  {{> atoms-wireblock(wire-text: "Footer")}} 
+</section>

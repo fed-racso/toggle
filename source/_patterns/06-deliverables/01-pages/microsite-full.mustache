@@ -1,0 +1,63 @@
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Journey: The Turbulent Times", section-header__parent: "Channel U", section-header__has-logo:true) }}
+  {{> molecules-secondary-nav }}
+  {{> molecules-page-background }}
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> organisms-main-carousel}}
+          <div class="split-insert" data-split-index="5"></div>
+          <div class="split-insert" data-split-index="0"></div>
+          {{> atoms-wireblock(wire-text: "Toggle Now", height:"height-150", card: true)}}
+          {{> molecules-actionbar }}
+          <div class="tg-content-grid" data-content-grid-type="2">
+            <div class="l-content-grid">
+              <div class="l-gi">
+                {{> atoms-wireblock(wire-text: "Poll Block", height:"300", card: true)}}
+              </div>
+              <div class="l-gi">
+                {{> organisms-mobile-carousel(card: true) }}
+              </div>
+              <div class="l-gi">
+                <div class="split-insert" data-split-index="1"></div>
+              </div>
+              <div class="l-gi">
+                <div class="split-insert" data-split-index="2"></div>
+              </div>
+              <div class="l-gi">
+                {{> organisms-mobile-carousel(card: true) }}
+              </div>
+              <div class="l-gi">
+                {{> molecules-fixed-height-square-image }} 
+              </div>
+              <div class="l-gi">
+                <div class="split-insert" data-split-index="3"></div>
+              </div>
+              <div class="l-gi">
+                <div class="split-insert" data-split-index="4"></div>
+              </div>
+            </div>
+          </div>
+          {{> organisms-socialfeed }}
+          {{> molecules-related-3col-block }}
+          {{> molecules-megaslider-in-8-3up }}
+          {{> atoms-wireblock(wire-text: "Sponsor block", height:"height-300", card: true)}}
+        </div>
+        <div class="l-gi split-grid">
+         {{> molecules-fav-rate(split-index:5) }}
+         {{> molecules-ad-300x250-block(split-index:1) }}
+         {{> molecules-fixed-height(split-index:2) }}
+         {{> molecules-ad-300x250-block(split-index:3) }}
+         {{> molecules-fixed-height(split-index:4) }}
+       </div>
+     </div>
+   </div>
+ </section>
+ {{> organisms-footer }}
+</div>
+
+{{> organisms-login-modal(login:true) }}

@@ -1,0 +1,46 @@
+{
+  "name": "adaptive-placeholders",
+  "version": "1.0.2",
+  "homepage": "https://github.com/zellwk/adaptivePlaceholders",
+  "authors": [
+    "Zell Liew <zellwk@gmail.com>"
+  ],
+  "description": "daptive placeholders is a Sass mixin for an interactive form placeholder. This Sass mixin comes with additional settings to help you easily configure the placeholder to match your design.",
+  "main": "_adaptive-placeholders.scss",
+  "keywords": [
+    "JV",
+    "Float",
+    "Label",
+    "Adaptive",
+    "Placeholders",
+    "Form",
+    "SCSS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests",
+    "codekit.config",
+    "css",
+    "demo",
+    "screenshots",
+    "scss"
+  ],
+  "dependencies": {
+    "normalize-scss": "~3.0.1"
+  },
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.2",
+    "commit": "38e7a3ed1d142452ef8c6a9439a48537b86d44ee"
+  },
+  "_source": "git://github.com/zellwk/adaptivePlaceholders.git",
+  "_target": "~1.0.2",
+  "_originalSource": "adaptive-placeholders",
+  "_direct": true
+}

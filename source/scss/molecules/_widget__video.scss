@@ -1,0 +1,20 @@
+.widget__video {
+  background: color(dark);
+  margin-top: 0;
+  border: 0;
+
+  .widget__title {
+    color: color(white);
+  }
+  a {
+    color: color(white);
+  }
+
+  img {
+    margin-bottom: 0;
+  }
+
+  .ad--companion {
+    margin-bottom: rhythm(0.5);
+  }
+}

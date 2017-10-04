@@ -1,0 +1,27 @@
+.wrap--breadcrumbs {
+
+}
+
+ul.breadcrumbs {
+	position: relative;
+	display: inline-block;
+	float: left;
+	display:none;
+	@include bp(medium) {
+		display:block;
+	}
+	li {
+		list-style:none;
+		float:left;
+		height: 30px;
+		line-height:30px;
+		margin-right:15px;
+	}
+	li:first-child{
+		margin-left:0px;
+	}
+	li:last-child {
+		font-weight:bold;
+
+	}
+}

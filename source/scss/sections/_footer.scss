@@ -1,0 +1,14 @@
+.site-footer {
+  padding: rhythm(1.5) 0;
+  @include tui {
+    border-top: 1px solid $secondary-color;
+    background: $inverse-background-color;
+  }
+  .nav--footer{
+  	.footer-links{
+  		.collapsible__toggle{
+  			line-height: 200%;
+  		}
+  	}
+  }
+}

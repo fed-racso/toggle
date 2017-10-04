@@ -1,0 +1,87 @@
+<p>Open this page out of Pattern Lab for this lightbox to show</p>
+
+<p><a href="#" data-featherlight="#lightbox-popup-1" data-featherlight-variant="featherlight--alert">Open Lightbox (alert box varient)</a></p>
+<p><a href="#" data-featherlight="#lightbox-popup-2">Open Lightbox (generic)</a></p>
+
+<h4>How to use</h4>
+<p>Check it out at <a href="https://github.com/noelboss/featherlight/#installation" target="_blank">Featherlight Github</a></p>
+<!-- Recommend to replace sign-in as ajax loaded lightbox content -->
+
+<div id="lightbox-popup-1" class="lightbox-container">
+	<h3 class="lightbox__title">Lightbox Title</h3>
+	<p>Confirm delete?</p>
+	<div class="lightbox__actionbar--yesno">
+		<a href="#" class="btn btn--pink">Yes</a>
+		<a href="#" class="btn btn--sec">No</a>
+	</div>
+</div>
+
+<div id="lightbox-popup-2" class="lightbox-container">
+	<h3 class="lightbox__title">Lightbox Title</h3>
+	<p>Your content goes here Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<div class="lightbox__actionbar">
+		<a href="#" class="btn btn--pink">Optional Button</a>
+	</div>
+</div>
+
+
+<p><a href="#" data-custom-featherlight="#enter-nric-popup">NRIC</a></p>
+
+<div class="share-video lightbox-container enter-nric-popup-box" id="enter-nric-popup">
+  <div class="content inline">
+    <h2 class="title-section popUp">Restricted Content</h2>
+    <p class="popUp">This content is only available to Singaporeans outside Singapore. Please enter your NRIC and Date of Birth for verification.</p>
+
+    <div class="form-item">
+      <label for="nric">NRIC / FIN</label>
+      <div class="input-group">
+        <input class="nric nric-input" type="text" placeholder="NRIC">
+        <strong class="error invalid-nric" style="display: none;">Invalid NRIC / FIN</strong>
+      </div>
+    </div>
+
+    <div class="select-white long">
+      <div class="day dob form-item">
+        <label for="dob">Date of Birth</label>
+        <div class="input-group dob">
+          <select name="" id="day" class="dk-dropdown--lightbox">
+            <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+          <select name="" id="month" class="dk-dropdown--lightbox">
+            <option value="">Month</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <select name="" id="year" class="dk-dropdown--lightbox">
+            <option value="">Year</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit">
+      <input type="submit" class="btn button-pink clr" value="Submit">
+    </div>
+  </div>
+</div>

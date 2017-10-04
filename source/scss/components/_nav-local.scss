@@ -1,0 +1,402 @@
+$local-nav-height: rhythm(2);
+
+.nav-local-holder {
+  position: relative;
+  //margin-bottom: $local-nav-height;
+  // @include cf;
+  height: 40px;
+  width: 100%;
+  // @include bp(m-large) {
+  //   overflow: hidden;
+  // }
+
+  .ideal &{
+    margin-bottom: 20px;
+  }
+
+  &.has-more{
+    overflow:visible;
+    .dropdown{
+      display:inline-block !important;
+    }
+  }
+}
+
+.nav--local {
+  position: absolute;
+  // preparation for pos-fixed when scrolled down
+  left: 0;
+  right: 0;
+  // @include trans-prep;
+  // height: $local-nav-height;
+  // color: color(white);
+  @include tgzi(quicklinks-navigation);
+  @include type-scale(small);
+  font-weight: get-weight(header semibold);
+  text-transform: uppercase;
+  // @include bp(large) {
+  //   position: absolute;
+  // }
+
+  background: color(dark, black);
+  // .wrap, .page-wrap {
+  //   background: color(dark, black);
+  // }
+  ul {
+    position: relative;
+    // @include cf;
+    a {
+      position: relative;
+      display: block;
+      color: color(white);
+      text-decoration: none;
+      &:after {
+        content: "";
+        position: absolute;
+        @include bp(m-large) {
+          bottom: rhythm(0.4);
+        }
+
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: none;
+        transition: 0.3s background ease-out;
+      }
+      @include bp(m-large) {
+        &:hover,
+        &:active,
+        &:focus,
+        &.is-active {
+          &:after {
+            @include tdc {
+              background: $theme-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav--local__page-info {
+    // height: $local-nav-height;
+    > li {
+      list-style: none;
+      display: inline-block;
+      line-height: $local-nav-height;
+      vertical-align: middle;
+      padding: 0 1em;
+      a {
+        color: #999;
+      }
+    }
+    @include bp(m-large) {
+      display: none;
+      //for now, this menu item does not appear in desktop
+      float: left;
+      padding-right: 1em;
+      > li:last-child {
+        display: none;
+      }
+    }
+  }
+  // Styles to hide / show ul on clicking local nav toggle
+  .nav {
+    display: none;
+    @include bp(m-large) {
+      display: block !important;
+    }
+  }
+  .nav__list {
+    // @include cf;
+    position: relative;
+    float: left;
+    width: 100%;
+    // reset mobile nav positioning
+    border-top: 1px solid #484848;
+    padding: rhythm(0.5) 0;
+    @include bp(m-large) {
+      opacity: 1;
+      visibility: visible;
+      max-height: auto;
+      border-top: 0;
+      padding: 0;
+      // MEDIACORPXIN-1531 
+      // width: 100%;
+      width: auto;
+      // overflow: hidden;
+      white-space: nowrap;
+      // Ends - MEDIACORPXIN-1531
+    }
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #484848;
+      height: 100%;
+      @include bp(m-large) {
+        display: none;
+      }
+    }
+    &:before {
+      left: 47%;
+      @include bp(small) {
+        left: 33%;
+      }
+    }
+    &:after {
+      display: none;
+      @include bp(small) {
+        display: block;
+        right: 34.5%;
+      }
+      @include bp(m-large) {
+        display: none;
+      }
+    }
+    li {
+      // @include cf;
+      display: inline-block;
+      @include span(6 split);
+      @include bp(small) {
+        @include span(4 split);
+      }
+
+      text-align: left;
+      text-transform: none;
+      padding-bottom: rhythm(0.5);
+      @include breakpoint(max map-get($breakpoints, small)) {
+        &:nth-child(even) {
+          padding-left: rhythm(0.5);
+        }
+      }
+
+      @include bp(m-large) {
+        border: 0 !important;
+        padding: 0 rhythm(1) 0 0 !important;
+        // MEDIACORPXIN-1531
+        float:none;
+        display: inline-block;
+        // ends - MEDIACORPXIN-1531
+        a {
+          height: $local-nav-height;
+          line-height: $local-nav-height;
+        }
+      }
+
+      // @include bp(m-large) {
+      //   @include span(3 split (gutters: 1 / 22));
+      //   margin-bottom: gutter(22) * 0.5;
+      // }
+      @include bp(m-large) {
+        width: auto;
+        margin: 0;
+        padding: 0 1em;
+        background: none;
+        text-transform: uppercase;
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+
+      a {
+        //height: $local-nav-height;
+        //line-height: $local-nav-height;
+        &:hover,
+        &:focus,
+        &:active {
+          @include tdc {
+            color: $theme-color;
+          }
+
+          @include bp(m-large) {
+            color: white !important;
+            //override theme color
+          }
+        }
+      }
+    }
+    .dropdown {
+      display: none;
+      position: relative;
+      &.is-desktop {
+        display: inline-block;
+      }
+      > a {
+        &:after {
+          content: '';
+          top: -2px;
+          bottom: auto;
+          position: relative;
+          margin-left: 0.5em;
+          @extend .i-megamenu-dropdown;
+          &:hover,
+          &:active,
+          &:focus {
+            @extend .i-megamenu-dropdown;
+          }
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        ul {
+          display: block;
+        }
+      }
+      ul {
+        display: none;
+        position: absolute;
+        width: rhythm(7);
+        background: color(dark, black);
+        padding-bottom: tgrhythm(0.25);
+        margin-left: -1em;
+        white-space: normal;
+        li {
+          display:block !important;
+          @extend %lsn;
+          @include adjust-leading-to(1);
+          @include bp(m-large) {
+            padding: 5px 15px !important;
+          }
+
+          width: 100%;
+          &:hover, &.selected {
+            a {
+              @include tdc {
+                color: $theme-color !important;
+              }
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+          a {
+            color: #999;
+            padding: 0;
+            display: inline-block;
+            &.is-active{
+              @include tdc{
+                color:$theme-color;
+              }
+              &:after{
+                display:none;
+              }
+            }
+          }
+        }
+        a {
+          height: auto;
+          @include adjust-leading-to(1);
+          padding: tgrhythm(0.25) 1em;
+          color: white;
+          &:hover,
+          &:active,
+          &:focus {
+            @include tdc {
+              color: $theme-color;
+            }
+          }
+          &:after {
+            //display: none;
+         
+          }
+        }
+      }
+    }
+  }
+}
+
+// Channel logo item should not have the theme colored underline.
+// Page should not have theme colored underline on mobile
+.nav--local__page-info {
+  > li:first-child {
+    padding-left: 0;
+    a:after {
+      display: none;
+    }
+  }
+  > li:last-child {
+    a:after {
+      display: none;
+      @include bp(m-large) {
+        display: block;
+      }
+    }
+  }
+}
+
+.nav__video-extras {
+  clear: both;
+  @include bp(m-large) {
+    float: right;
+    clear: none;
+  }
+
+  li {
+    @extend %lsn;
+    text-align: center;
+    @include bp(m-large) {
+      float: right;
+      padding-left: 1em;
+      margin-left: 1em;
+      &:first-child {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          display: block;
+          margin: auto;
+          background: color(gray, darker);
+          height: 50%;
+          width: 1px;
+        }
+      }
+    }
+  }
+  a {
+    line-height: $local-nav-height;
+  }
+  span {
+    // display: inline;
+    @include bp(m-large) {
+      display: none;
+    }
+  }
+}
+
+// local Nav Toggle.
+// Appears only only mobile / tablets
+// Controls whether local nav appears on mobile / tablets
+// When checked, local nav appears
+.local-nav-toggle {
+  @include is-invisible;
+}
+
+.local-nav-label {
+  display: block;
+  position: absolute;
+  right: tgrhythm(1);
+  top: 0;
+  //z-index: 99; // don't seen to have visual bugs after commenting out
+  @extend .i-localnav-arrow;
+  height: $local-nav-height;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  @include breakpoint(map-get($breakpoints, m-large)) {
+    display: none;
+  }
+
+  @include trans-prep;
+  &.is-open {
+    transform: rotate(180deg);
+  }
+}

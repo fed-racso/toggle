@@ -1,0 +1,105 @@
+.section-header {
+  color: white;
+  @include tdc {
+    background: $theme-color;
+  }
+
+  a,
+  a:hover {
+    color: white !important;
+    text-decoration: none;
+  }
+  &.neutral {
+    background: black;
+  }
+  .section-header__outer {
+    // height: rhythm(3.5);
+    padding: rhythm(0.5) 0;
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  .section-header__title {
+    width: 100%;
+  }
+  // bgimg not in use
+  .section-header__bgimg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 9999px;
+    text-align: right;
+    img {
+      height: 100%;
+      margin: 0;
+    }
+  }
+  span {
+    text-transform: uppercase;
+    font-weight: 200;
+    margin: 0;
+    display: block;
+    
+    @include bp(medium) {
+      display: inline-block;
+    }
+
+    img {
+      display: inline-block;
+      height: rhythm(1);
+      width: auto;
+      margin-right: rhythm(0.5);
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+  // With two lines
+  span:first-child {
+    // @include tgts(deci);
+    // font-size:0.8em;
+    line-height: rhythm(1);
+    // position:relative;
+    // bottom: 0.05em;
+  }
+  span + span{
+    font-weight:bold;
+    &:before {
+      @include bp(medium) {
+        // content:"\27EB";
+        content:">";
+        // font-size:0.9em;
+        // position:relative;
+        // bottom:0.15em;
+        font-weight:normal;
+        // vertical-align: text-bottom;
+        // font-size:0.9em;
+      }
+    }   
+  }
+  // With only one line
+  span:only-child {
+    // @include tgts(kilo);
+    // line-height: rhythm(2.5);
+    font-size:1em;
+  }
+  // current section
+  // span:first-child:last-child {
+  //   font-size: rhythm(1.75);
+  //   margin-top: rhythm(1);
+  // }
+  // span:nth-child(2) {
+  //   font-size: rhythm(1);
+  //   @include bp(medium) {
+  //     font-size: rhythm(1.5);
+  //   }
+  // }
+  // // parent section
+  // span:nth-child(1) {
+  //   font-size: rhythm(0.75);
+  //   margin-bottom: rhythm(0.25);
+  // }
+}
+
+.primary-dark .section-header {
+  background: #a5238c;
+}

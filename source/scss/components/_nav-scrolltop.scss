@@ -1,0 +1,20 @@
+#scroll-top-button {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  height: 40px;
+  width: 40px;
+  background-size: contain !important;
+  // background: url("../images/icons/scroll-top-off.png") no-repeat scroll center center transparent;
+  
+  @include tgzi(scrolltop);
+  display: none; //don't show by default
+
+  @include breakpoint(max-width map-get($breakpoints, medium)) { //only show scroll-top on tablets portrait and above
+    display:none;
+  }
+
+  &:hover {
+    // background-image: url("../images/icons/scroll-top-on.png"); 
+  }
+}

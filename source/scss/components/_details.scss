@@ -1,0 +1,259 @@
+.article {
+  @include cf;
+  position: relative;
+}
+
+.article__title {
+  margin-bottom: rhythm(0.75);
+  padding-bottom: rhythm(0.75);
+
+  @include tui {
+    border-bottom: 1px solid $secondary-color;
+  }
+
+  @include bp(xlarge) {
+    margin-bottom: rhythm(1);
+    padding-bottom: rhythm(1);
+  }
+}
+
+// Body subheaders and paragraphs
+.article {
+  h4 {
+    margin-bottom: rhythm(0.5);
+
+    @include bp(small) {
+      margin-bottom: rhythm(1);
+    }
+  }
+
+  blockquote {
+    margin-top: rhythm(1.25);
+    margin-bottom: rhythm(1.25);
+
+    @include tdc {
+      color: $theme-color;
+    }
+  }
+}
+
+.article {
+  .figure img {
+    width: 100%;
+  }
+
+  .portrait {
+    width: 100%;
+
+    @include bp(small) {
+      float: right;
+      width: 45%;
+      margin-left: 24px;
+    }
+  }
+}
+
+.article__body {
+  clear: both;
+
+  p span {
+    display:block;
+    width:100%;
+    // background:#000;
+    overflow:hidden;
+
+    img{
+      float:left;
+      margin-left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// floats showcase ad to right and wrap text on tablet
+.article__body {
+  .ad--300x250 {
+    @include bp(medium) {
+      float: right;
+      margin-left: gutter(8);
+      margin-bottom: rhythm(1);
+    }
+  }
+
+  .ad--300x250.ad--300x250--float-on-desktop {
+    @include bp(medium) {
+      float: none;
+      margin-left: auto;
+    }
+
+    @include bp(large) {
+      float: right;
+      margin-left: gutter(8);
+      margin-bottom: rhythm(1);
+    }
+  }
+}
+
+// EVENT article TYPE
+.article-event {
+  &__img {
+    margin-bottom: rhythm(1);
+  }
+
+  &__meta {
+    @include cf;
+
+    > li {
+      list-style: none;
+      margin-bottom: rhythm(1);
+
+      @include bp(medium) {
+        @include gallery(4 of 8);
+      }
+    }
+
+    > li > label {
+      font-weight: get-weight(header semibold);
+      text-transform: uppercase;
+    }
+
+    p {
+      //reset all p elements
+      margin: 0;
+    }
+  }
+
+  ol {
+    padding-left: rhythm(1);
+    font-size: rhythm(0.8);
+  }
+}
+
+.free-text {
+  ul, ol {
+    margin-left: rhythm(1);
+    margin-bottom: rhythm(1);
+  }
+}
+
+// .article-container-outer {
+//   display: table;
+//   overflow: hidden;
+//   height: 40px;
+// }
+
+// .article-container-inner {
+//   display: table-cell;
+//   vertical-align: middle;
+// }
+
+// Presented By
+.article__presenter {
+  img {
+    height: rhythm(1.5);
+    margin-bottom: 0;
+  }
+
+  span {
+    display: inline-block;
+    margin: rhythm(0.25) rhythm(0.5) rhythm(1) 0;
+    text-transform: uppercase;
+    vertical-align: top;
+
+    @include tui {
+      color: $meta-color;
+    }
+  }
+}
+
+// Article meta, author, dates, publisher
+
+.article__publisher-container {
+  @include breakpoint(max-width map-get($breakpoints, small)) {
+    margin-top: rhythm(0.75);
+  }
+}
+
+.article__meta {
+  @include tui {
+    color: $meta-color;
+
+    a {
+      color: $meta-color;
+    }
+  }
+}
+
+.article__publisher {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: rhythm(1);
+
+  img {
+    height: rhythm(2);
+    width: auto;
+    margin: 0;
+    margin-right: rhythm(0.5);
+    vertical-align: middle;
+  }
+
+  p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span:last-child:after {
+    content: " | ";
+  }
+}
+
+.article__byline {
+  display: inline-block;
+  vertical-align: middle;
+
+  .author {
+    @include tui {
+      color: $primary-color;
+    }
+
+    &:after {
+      content: ",";
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+
+  @include bp(small) {
+    &:after {
+      content: " | ";
+    }
+  }
+}
+
+.article__date {
+  display: block;
+  margin: rhythm(0.5) 0;
+
+  @include bp(small) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.article__social-media-buttons {
+  @include bp(medium) {
+    float: right;
+  }
+
+  a {
+    margin-bottom: rhythm(0.5);
+  }
+}
+.underline{
+  text-decoration: underline;
+  display: inline !important;
+}

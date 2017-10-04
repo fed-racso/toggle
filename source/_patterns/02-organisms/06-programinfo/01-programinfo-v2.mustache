@@ -1,0 +1,24 @@
+{{# programinfo }}
+<!-- this is a quick hack to demo to client.  Update the original once client has confirmed and delete this -->
+<div class="programinfo-item">   
+<div class="container">
+<div style="width: 50%;float:left;"> 
+  <picture>
+    <source srcset="{{img-programinfo-big}}" media="(min-width: 980px)">
+    <source srcset="{{img-programinfo-med}}" media="(min-width: 760px)">
+      <img src="" alt="" srcset="{{img-programinfo-small}}">
+  </picture>
+</div>
+      <div class="programinfo-item__header" style="width: 47%;float:right;">
+
+        <h4 class="programinfo-item__header__date">Broadcast date: <span>{{date-programinfo}}</span></h4>
+        {{> atoms-meta-item-microsite-basic }}
+        <h4 class="programinfo-item__header__meta">Optional Meta Info: <span>{{meta-programinfo}}</span></h4>
+      </div>
+</div>
+      <div class="programinfo-item__desc" style="clear:both">
+        <p>{{{excerpt-programinfo}}}</p>
+      </div>
+
+    </div>
+    {{/ programinfo }}

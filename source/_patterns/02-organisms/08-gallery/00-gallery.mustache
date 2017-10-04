@@ -1,0 +1,108 @@
+<div class="l-fc gc {{#card}}{{card-class}}{{/card}}">
+
+  <div class="gc__main">
+    <div class="gc__main-image--index gc__hide-on-last"></div>
+    <div class="gc__main-image--fullscreen gc__hide-on-last"><a href="fullscreen.html"><i class="ti-expand"></i></a></div>
+    <div class='gc__main-slider-arrows left'>
+      <i class='ti-chevronwide-prev'></i>
+    </div>
+    <div class='gc__main-slider-arrows right'>
+      <i class='ti-chevronwide-next'></i>
+    </div>
+
+    <div class="gc__main-image" id="gc__main-slider">
+      <!-- style='background-image:url({{img-gcmi-med}})' -->
+      {{# gcmi }}
+      <div class="main-image__item">
+        <div class="main-image__item-img-container">
+          <picture>
+            <source srcset="{{img-gcmi-big}}" media="(min-width: 980px)">
+            <source srcset="{{img-gcmi-med}}" media="(min-width: 760px)">
+            <img src="" alt="" srcset="{{img-gcmi-small}}">
+          </picture>
+        </div>
+        <span class="main-image__header">{{{header-gcmi}}}</span>
+        <span class="main-image__caption">{{{caption-gcmi}}}</span>
+        <span class="main-image__credit">{{{credit-gcmi}}}</span>
+        <span class="main-image__story">{{{content-gcmi}}}</span>
+      </div>
+      {{/ gcmi }}
+
+      <!-- more galleries slide -->
+      <div class="main-image__item more-galleries">  
+        <div class="main-image__item--more">
+          <h4>View These Next</h4>
+          <div class="main-image__item--morerow main-image__item--moremobile">
+            <div class="main-image__item--moreleft main-image__item-block">
+              <a href="#"> 
+                <div class="tg-list-item">
+                  {{> molecules-image-video-block }}
+                  <div class="item__details">
+                    <h6 class="item__title"><a href="#">Gallery Title: Lorem ipsum dolor sit amet.</a></h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="main-image__item--moreright main-image__item-block">
+              <a href="#"> 
+                <div class="tg-list-item">
+                  {{> molecules-image-video-block }}
+                  <div class="item__details">
+                    <h6 class="item__title"><a href="#">Gallery Title: Lorem ipsum dolor sit amet.</a></h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="main-image__item--moreleft main-image__item-block">
+              <a href="#"> 
+                <div class="tg-list-item">
+                  {{> molecules-image-video-block }}
+                  <div class="item__details">
+                    <h6 class="item__title"><a href="#">Gallery Title: Lorem ipsum dolor sit amet.</a></h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="main-image__item--moreright main-image__item-block">
+              <a href="#"> 
+                <div class="tg-list-item">
+                  {{> molecules-image-video-block }}
+                  <div class="item__details">
+                    <h6 class="item__title"><a href="#">Gallery Title: Lorem ipsum dolor sit amet.</a></h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <!-- END more galleries slide -->
+    </div>
+
+    <div class="gc__caption gc__hide-on-last"></div>
+  </div>
+
+  <!-- thumnbails -->
+  <div class="gc__slider-nav-holder">
+    <div class="gc__slider-nav">
+      {{# gcmi }}
+      <div class="nav-image__item">
+        <div style='background-image:url({{img-gcmi-thumb}})'></div>
+      </div>
+      {{/ gcmi }}
+    </div>
+
+    <div class='gc__slider-nav-arrows left'>
+      <i class='ti-chevronwide-prev'></i>
+    </div>
+    <div class='gc__slider-nav-arrows right'>
+      <i class='ti-chevronwide-next'></i>
+    </div>
+  </div>
+
+  <div class="gc__main-active gc__hide-on-last">
+    <div class="gc__story"></div>
+    <div class="split-insert" data-split-index="0"></div>
+  </div>
+
+</div>

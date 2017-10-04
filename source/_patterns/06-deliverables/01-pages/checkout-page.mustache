@@ -1,0 +1,39 @@
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Korean Buzz", section-header__parent: "Entertainment", section-header__has-logo:false) }}
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          <div class="split-insert" data-split-index="0"> </div>
+          {{> molecules-checkout }}
+          <div class="split-insert checkout-aside" data-split-index="1"> </div>
+        </div>
+        <div class="l-gi split-grid checkout-aside">
+          {{> molecules-checkout-ad(s:0)}}
+          {{> molecules-checkout-aside(side:1)}}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{> organisms-footer }}
+</div>
+
+
+<!-- Purchase Success --> 
+
+<div class="lightbox-container" id="ok"><h2 class="title-section">Thanks for purchasing <label id="pname"></label></h2>
+  <p>The transaction was processed successfully.  Enjoy!
+  </p>
+  <p>Transaction Number <label id="bid"></label>
+  </p>
+  <p>Sale Approval <label id="psp"></label>
+  </p>
+  <div class="lightbox__actionbar--yesno">
+    <a class="btn--pink" id="watch-now" href="javascript:void(0);">Watch now</a>
+    <a class="btn--sec" id="billing-detail" href="javascript:void(0);">View billing details</a>
+  </div>
+</div>
+<script src="../../js/checkout.js"></script>

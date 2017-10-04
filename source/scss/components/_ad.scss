@@ -1,0 +1,108 @@
+.ad {
+    a {
+        text-decoration: none;
+    }
+    &__title {
+        @include type-scale(small);
+        line-height: rhythm(1);
+        margin-bottom: 0;
+        text-transform: uppercase;
+        padding-left: 0.5em;
+        @include tui {
+            color: $text-color;
+            background: $overlay-color;
+        }
+    }
+    img {
+        margin: 0;
+    }
+}
+
+.ad--companion {
+    //width: 300px;
+    //padding:0 rhythm(0.5);
+    max-width: 100%;
+    margin: rhythm(0.5) auto;
+    line-height: 0;
+    text-align: center;
+    @include bp(medium) {
+        display: none;
+    }
+    img {
+        max-width: 100%;
+        width: 300px !important;
+        @include bp(medium) {
+            width: auto;
+        }
+    }
+}
+
+.ad--leaderboard {
+    display: none;
+    @include bp(m-large) {
+        display: block;
+        //max-width: 729px;
+        min-height: 90px;
+        margin: rhythm(0.75) auto rhythm(0.75);
+        line-height: 0;
+        text-align: center;
+        transition: height 1s;
+        -webkit-transition: height 1s;
+        img {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.ad--article {
+    clear: both;
+}
+
+.ad--300x250,
+.ad--300x100,
+.ad--300x50 {
+    // max-width: 300px;
+    // line-height: 0;
+    margin: 0 auto rhythm(1);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    & > .image-container {
+        margin: auto;
+    }
+}
+
+.ad--right {
+    float: none;
+    display: block;
+    @include bp(medium) {
+        float: right;
+        display: inline;
+    }
+}
+
+.ad--brand-display-horizontal {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: none;
+    @include bp(medium) {
+        width: 600px;
+        display: none;
+    }
+    @include bp(m-large) {
+        display: block;
+    }
+}
+
+.ad--mid-page {
+    .ad,
+    .ad--leaderboard {
+        margin-top: 0;
+    }
+}
+
+#out-of-page {
+    position: absolute;
+    z-index: -1
+}

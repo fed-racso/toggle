@@ -1,0 +1,240 @@
+a.darkbg {
+  background: color(dark, darkerer);
+}
+
+body {
+  @include tgfw(light);
+  font-family: $body-font;
+}
+
+a {
+  text-decoration: none;
+  @include tdc {
+    color: $theme-color;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// .darkbg, .dark-theme {
+//   a.header-style {
+//     color: color(white);
+//   }
+// }
+
+// .lightbg, .light-theme {
+//   a.header-style {
+//     color: color(dark);
+//   }
+// }
+
+
+
+// .darkbg, .dark-theme, .lightbg, .light-theme {
+//   a.header-style {
+//     @include tdc {
+//       &:hover,
+//       &:active,
+//       &:focus {
+//         color: $theme-color;
+//         text-decoration: none;
+//       }
+//     }
+//   }
+// }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $header-font;
+  @include tgfw(normal);
+  margin-bottom: rhythm(0.5);
+  @include bp(small) {
+    margin-bottom: rhythm(1);
+  }
+}
+
+h1,
+.h1 {
+  @include tgts(hecto);
+  line-height: 1.125;
+  @include bp(medium) {
+    @include tgts(mega);
+  }
+}
+
+h2,
+.h2 {
+  @include tgts(deca);
+  line-height: 1.125;
+  @include bp(medium) {
+    @include tgts(mega);
+  }
+}
+
+h3,
+.h3 {
+  @include tgts(deci);
+  line-height: 1.125;
+  @include tgfw(normal);
+  @include bp(medium) {
+    @include tgts(kilo);
+  }
+}
+
+h4,
+.h4 {
+  @include tgts(deci);
+  line-height: 1.125;
+  @include bp(medium) {
+    @include tgts(deca);
+  }
+}
+
+.h4.small {
+  @include tgts(deci);
+  line-height: 1.125;
+}
+
+h5,
+.h5 {
+  @include tgts(deca);
+  line-height: 1;
+  margin-bottom: rhythm(0.5);
+  text-transform: capitalize;
+  @include tgfw(normal);
+  @include tdc {
+    a {
+      color: $theme-color;
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include bp(medium) {
+    @include tgts(hecto);
+    margin-bottom: rhythm(0.5);
+  }
+}
+
+h6, .h6 {
+  @include tgts(normal);
+  line-height: 1.25;
+  @include bp(medium) {
+    //height : 4.8em;
+    @include tgts(normal);
+  }
+}
+
+.meta {
+  /*@include tgts(centi);*/
+  font-size: 0.775em;
+  line-height: 1.2;
+  @include tui {
+    color: $meta-color;
+  }
+
+  /*@include bp(medium) {
+    @include tgts(normal);
+  }*/
+}
+
+.credit, .darkbg .credit {
+  @extend .meta;
+  text-transform: uppercase;
+}
+
+blockquote,
+.blockquote {
+  margin: 0;
+  font-weight: get-weight(body semibold);
+  @include tdc {
+    color: $theme-color;
+  }
+
+  @include tgts(deca);
+  line-height: 1.375;
+  @include bp(medium) {
+    @include tgts(kilo);
+  }
+}
+
+p.big {
+  @include tgts(centi);
+  line-height: 1.375;
+  @include bp(medium) {
+    @include tgts(deca);
+  }
+}
+
+p {
+  margin-bottom: rhythm(1);
+  @include tgts(normal);
+  line-height: 1.375;
+  @include bp(medium) {
+    @include tgts(normal);
+  }
+
+  // @include word-break(break-word);
+  // @include hyphens(auto);
+}
+
+// .excerpt {
+//   @include type-scale(excerpt);
+// }
+
+strong {
+  @include tgfw(bold);
+}
+
+em {
+  font-style: italic;
+}
+
+pre {
+  white-space: pre;
+}
+
+code {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h6,
+.h1, .h2, .h3, .h4, .h6 {
+  a {
+    @include tui {
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    @include tdc {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  i {
+    margin-left: 0.5em;
+    @include tgts(centi);
+    @include bp(large) {
+      @include tgts(normal);
+    }
+  }
+}
+
+.dark-theme {
+  .h1, h2, h3, h4, h5, h6 {
+    a {
+      @include tgfw(normal);
+    }
+  }
+}

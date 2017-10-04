@@ -1,0 +1,86 @@
+<div class="gcf">
+  
+  <div class="gcf__left">
+    <div class="gc__main-image--index gc__hide-on-last"></div>
+
+    {{! PLEASE USE CONTRACT ICON INSTEAD OF EXPAND, is not in font file yet }}
+    
+    
+    <div class="gc__main">
+      <div class='gc__main-slider-arrows left'>
+        <i class='ti-chevronwide-prev'></i>
+      </div>
+      <div class='gc__main-slider-arrows right'>
+        <i class='ti-chevronwide-next'></i>
+      </div>
+      <div class="gc__main-image gallery-fullscreen">
+        {{# gcmi }}
+        <div class="main-image__item">
+          <div class="main-image__item-img-container">
+            <picture>
+              <source srcset="{{img-gcmi-big}}" media="(min-width: 980px)">
+              <source srcset="{{img-gcmi-med}}" media="(min-width: 760px)">
+              <img src="" alt="" srcset="{{img-gcmi-small}}">
+            </picture>
+          </div>
+          <span class="main-image__header">{{{header-gcmi}}}</span>
+          <span class="main-image__caption">{{{caption-gcmi}}}</span>
+          <span class="main-image__credit">{{{credit-gcmi}}}</span>
+          <span class="main-image__story">{{{content-gcmi}}}</span>
+        </div>
+        {{/ gcmi }}
+        <!-- more galleries slide -->
+        <div class="main-image__item">  
+          <div class="main-image__item--more">
+            <h4>More Galleries</h4>
+            <div class="main-image__item--morerow main-image__item--moremobile">
+              <div class="main-image__item--moreleft">
+                <a href="#"> 
+                  <div class="tg-list-item">
+                    {{> molecules-image-video-block }}
+                    <div class="item__details">
+                      <h6 class="item__title"><a href="#">Gallery Title: Lorem ipsum dolor sit amet.</a></h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="main-image__item--moreright">
+                <a href="#"> 
+                  <div class="tg-list-item">
+                    {{> molecules-image-video-block }}
+                    <div class="item__details">
+                      <h6 class="item__title"><a href="#">Gallery Title: Lorem ipsum dolor sit amet.</a></h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>  
+          </div>
+        </div>
+        <!-- END more galleries slide -->
+      </div>
+    </div>
+
+    <div class="gc__caption gc__hide-on-last"></div>
+  </div>
+
+
+  <div class="gcf__right">
+    <div class="gc__main-image--close">
+      <a href="fullscreen.html"><i class="ti-cross"></i></a>
+    </div>
+    <div class="gc__hide-on-last">
+      <p class="gc__presented">
+        PRESENTED BY <img class="block" src="../../images/icon-logos/ch5.png" alt=""/>
+      </p>
+      <h4 class="gc__header"></h4>
+      <img  class="gc__block-credit" src="../../images/icon-logos/ch5.png" alt=""/><p class="gc__credit"></p>
+      {{> molecules-social-media-buttons }}
+    </div>
+    <br style="clear:both;"/>
+    {{> molecules-ad-300x250-block}}
+    <div class="gc__story gc__hide-on-last"></div>
+  </div>
+
+
+</div>

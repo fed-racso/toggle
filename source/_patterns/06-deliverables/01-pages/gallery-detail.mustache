@@ -1,0 +1,26 @@
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Asian Buzz", section-header__parent: "Entertainment", section-header__has-logo: false) }}
+  <a href="#" id="slick-test" style="display:none;">Testing button </a>
+  <a href="#" id="slick-nav" style="display:none;">Testing nav button </a>
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> organisms-content-wrapper(loadDefaultBlock: false, galleryBlock: true, card:false) }}
+          {{> organisms-content-grid(rows: 3, component-title: More from Gonna Make It, card-class:card--background-no-padding) }}
+          {{> organisms-content-grid(rows: 3, component-title: More from Entertainment, card-class:card--background-no-padding) }}
+        </div>
+        <div class="l-gi split-grid">
+          {{> molecules-microsite-link(u: u-hideTablet u-hideMobile, card:true) }}
+          {{> molecules-ad-300x250-block(split-index:0, ad-float:ad--300x250--float-on-desktop)}}
+          {{> molecules-fluid-height(fluid-height-title: Most Popular, card-class:card) }}
+          {{> molecules-ad-300x250-block }}
+        </div>
+      </div>
+    </div>
+  </section>
+    {{> organisms-footer }}
+</div>

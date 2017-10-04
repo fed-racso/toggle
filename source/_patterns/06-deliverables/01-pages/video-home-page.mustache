@@ -1,0 +1,82 @@
+<div class="page-wrap">
+  {{> molecules-ad-banner-block }}
+  {{> organisms-header }}
+  {{> organisms-primary-mega-menu }}
+  {{> molecules-section-header(section-header__title: "Videos", section-header__parent: "", section-header__has-logo:false, section-header__parent--none: true) }}
+  {{> molecules-secondary-nav }}
+  {{> organisms-channel-home-carousel }}
+  {{> molecules-ad-companion-block }}
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> molecules-highlights(type:video, highlights-title: "Recently Watched") }}
+        </div>
+        <aside class="l-gi split-grid">
+          {{> molecules-ad-300x250-block(split-index: 0) }}
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    {{> molecules-megaslider-single-collapsible(slider-title: Popular Videos, type: video)}}
+  </section>
+
+  <section>
+    {{> molecules-megaslider-single-collapsible(slider-title: Recommended, type: video)}}
+  </section>
+
+  <section>
+    <div class="wrap ad--mid-page">
+      {{> molecules-ad-banner-block }}
+    </div>
+  </section>
+
+  <section>
+    {{> molecules-megaslider-collapsible-with-tabs(slider-title: TV, type: video)}}
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="l-2up--8-4">
+        <div class="l-gi">
+          {{> organisms-content-grid(rows: 3, component-title: Content Grid Title) }} 
+        </div>
+        <div class="l-gi">
+          {{> molecules-ad-300x250-block }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    {{> molecules-megaslider-single-collapsible(slider-title: Local Entertainment Buzz, type: video)}}
+  </section>
+
+  <section>
+    {{> molecules-megaslider-single-collapsible(slider-title: Korean Buzz, type: video)}}
+  </section>
+
+  <section>
+    <div class="wrap ad--mid-page">
+      {{> molecules-ad-banner-block }}
+    </div>
+  </section>
+
+  <section>
+    {{> molecules-megaslider-single-collapsible(slider-title: Hollywood Buzz, type: video)}}
+  </section>
+
+  <section>
+    {{> molecules-megaslider-collapsible-portrait-with-tabs(slider-title: Movies, type: video)}}
+  </section>
+
+  <section>
+    {{> molecules-megaslider-single-collapsible(slider-title: Premium, type: video)}}
+  </section>  
+</div>
+{{> organisms-footer }}
+
+</div>
+
+{{> organisms-login-modal(login:true) }}

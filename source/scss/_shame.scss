@@ -1,0 +1,253 @@
+.alert {
+  background: #edae2f;
+}
+
+a:active, a:selected, a:visited {
+  border: none;
+  outline: none;
+}
+
+.small {
+  @include type-scale(small);
+}
+
+.figure {
+  margin-bottom: 24px;
+
+  figcaption {
+    text-align: right;
+    color: color(gray, dark);
+    text-transform: uppercase;
+  }
+}
+
+.meta-color {
+  @include tui {
+    color: $meta-color;
+  }
+}
+
+#feedback-callout {
+  position: fixed;
+  bottom: 0px;
+  float: left;
+  z-index: 400;
+  padding: 5px 15px 5px 15px;
+  background: map-fetch($toggle-colors, primary color);
+  border-radius: 5px 5px 0px 0px;
+  color: #FFF;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 15px;
+  // right: 0;
+
+  // uncomment this style to put the callout on the right side of page
+  .feedback {
+    //background: url("../images/icons/feedback-icon.png") no-repeat scroll right center transparent;
+    padding-right: 25px;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.more-details, .less-details {
+  margin-bottom: 0;
+}
+
+.more-details {
+  display: inline;
+
+  > a {
+    display: block;
+    margin-top: rhythm(1);
+  }
+}
+
+.less-details {
+  margin-top: rhythm(1);
+  margin-bottom: rhythm(1);
+}
+
+.related {
+  .tg-teaser-item,
+  .tg-list-item {
+    margin-bottom: 0;
+  }
+}
+
+// ==========
+// UFINITY CSS CUSTOMIZATION
+// ==========
+//
+#SilverlightContainer.out-of-page {
+  display: none;
+}
+
+.play, .video-link {
+  //background: url(../images/icons/video-play-png-data.png) no-repeat scroll center top transparent;
+  width: 96px;
+  height: 96px;
+}
+
+.video-detail-static-thumbnail {
+  width: 100%;
+}
+
+.video-thumbnail-center-icon {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  margin: auto;
+}
+
+.video-thumbnail-center-icon.loading {
+  //background: url(../images/v3-ajax-loader-big.gif) no-repeat center center;
+  cursor: default;
+
+  .dark-theme & {
+    // background: url(../images/preloader-black.gif) no-repeat center center;
+  }
+}
+
+.video__player .video__toggler {
+  z-index: 999;
+}
+
+.main-image__item, .slick-list,
+.slick-track, .gc__main-image {
+  height: auto;
+}
+
+.tg-microsite-link__details.no-image {
+  margin-left: 0;
+}
+
+.article__social-media-buttons .addthis_toolbox {
+  display: inline-block;
+  margin-right: .5em;
+  margin-bottom: 1.25rem;
+  height: 2.5rem;
+  padding: 0;
+}
+
+.article__social-media-buttons .addthis_toolbox a.at300b span, .article__social-media-buttons .addthis_toolbox a.at300m span, .gcf__right .addthis_toolbox a.at300b span.at15nc, .gcf__right .addthis_toolbox a.at300m span.at15nc, .fav-rate .addthis_toolbox a.at300b span.at15nc, .fav-rate .addthis_toolbox a.at300m span.at15nc {
+  border-radius: 50%;
+}
+
+.fav-rate .addthis_toolbox {
+  // margin-top: -33px;
+  margin-top: 0px;
+}
+
+.fav-rate .btn--round {
+  height: 25px;
+  width: 25px;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.fav-rate .display-inline-block {
+  // display: inline-block;
+  float:left;
+  &:nth-child(2){
+    display:none;
+  }
+  &:first-child{
+    margin-right: 2px;
+  }
+}
+
+.search-loading-outer, .search-loading-inner {
+  height: 300px;
+  // background: url(../images/v3-ajax-loader-big.gif) no-repeat center center;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tg-list-item--search .uppercase {
+  text-transform: uppercase;
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+}
+
+.video__controls .controls__item a.active {
+  color: #D81182;
+}
+
+.gcf__rightclose a.close-button {
+  cursor: pointer;
+}
+
+.round-image {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+#secureCCs img:nth-child(2) {
+  margin-left: 10px;
+}
+
+#secureCCs img {
+  margin-bottom: 0;
+}
+
+.featherlight {
+  z-index: 100;
+}
+
+.nav--primary__desktop a.unclickable:hover, .mega-menu--primary-nav ul > li > a.unclickable:hover {
+  cursor: default;
+}
+
+// .i-entertainment, .i-lifestyle, .i-offbeat, .i-tv, .i-mobilenav-more, .i-radio, .i-celebrity {
+//   background: url(../images/icons/mobilenav-icon-default.png) no-repeat;
+// }
+
+/* TV Schedule: Ajax Loading */
+.tv-schedule-ajax-loading {
+  height: 32px;
+  // background: url(../images/v3-ajax-loader-big.gif) no-repeat center center;
+
+  .dark-theme & {
+    // background: url(../images/preloader-black.gif) no-repeat center center;
+  }
+}
+
+/* Channel Guide remove hover colour for no microsite link title */
+.epg-page.dark-theme .no-hover:hover {
+  color: white;
+}
+
+.epg-page.light-theme .no-hover:hover {
+  color: #1e1e1e;
+}
+
+.min-height {
+  section:first-of-type {
+    min-height: 600px;
+  }
+}

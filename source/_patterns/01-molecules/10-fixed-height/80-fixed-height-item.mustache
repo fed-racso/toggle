@@ -1,0 +1,27 @@
+<li class="fixed-height__item">
+  {{#img}}
+  <a href="{{ url }}">    
+    {{> atoms-landscape-16x9}}
+    <div class="item__type">
+      <i class="type-icon-{{type}}"></i>
+    </div>    
+    <div class="item__tags">
+      {{#icon-labels}}
+      <!--<img class="label__img" src="{{label}}" alt=""/>-->
+      <div class="tag {{tag}}">{{{taghtml}}}</div>
+      {{/icon-labels}}
+    </div>
+  </a>
+  <div class="item__details">
+    <h6 class="item__title" data-dotdot="2"><a href="#">H6 Content Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </a></h6>
+    {{> atoms-meta-item-with-icon }}
+  </div>
+  {{/img}}
+
+  {{^img}}
+  <div class="item__details">
+    <h6 class="item__title" data-dotdot="2"><a href="#">H6 Content Title: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </a></h6>
+    {{> atoms-meta-item-with-icon }}
+  </div>
+  {{/img}}
+</li>

@@ -1,0 +1,58 @@
+<!-- start fixed-height component -->
+<div class="fixed-height {{#episode}} fixed-height--episode{{/episode}} card" data-split-index="{{split-index}}">
+  <h5 class="fixed-height__title"><a href="#">{{fixed-height-title}}</a><a href="#"><i class="ti-chevron-next"></i></a></h5>
+  <select class="dk-dropdown">
+    <option value="popular">Most Popular</option>
+    <option value="latest">Latest 1</option>
+    <option value="latest">Latest 2</option>
+    <option value="latest">Latest 3</option>
+    <option value="latest">Latest 4</option>
+    <option value="latest">Latest 5</option>
+    <option value="latest">Latest 6</option>
+    <option value="latest">Latest 7</option>
+    <option value="latest">Latest 8</option>
+    <option value="latest">Latest 9</option>
+</select> 
+<select class="dk-dropdown">
+    <option value="popular">Most Popular</option>
+    <option value="latest">Latest</option>
+</select> 
+<ul class="fixed-height__list">
+    <!-- for standard video page -->
+    {{#hasImage}}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-now-playing(img: true, type: video)}}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{> molecules-fixed-height-item(img: true, type: video) }}
+    {{/hasImage}}
+    
+    <!-- for channel video page.  simulate latest video is now playing-->
+    {{^hasImage}}
+    {{> molecules-fixed-height-now-playing(img: false)}}    
+    {{> molecules-fixed-height-item(img: false)  }}
+    {{> molecules-fixed-height-item(img: false)  }}    
+    {{> molecules-fixed-height-item(img: false)  }}    
+    {{> molecules-fixed-height-item(img: false)  }}  
+    {{> molecules-fixed-height-item(img: false)  }}    
+    {{> molecules-fixed-height-item(img: false)  }}    
+    {{> molecules-fixed-height-item(img: false)  }}  
+    {{> molecules-fixed-height-item(img: false)  }}    
+    {{> molecules-fixed-height-item(img: false)  }}    
+    {{> molecules-fixed-height-item(img: false)  }}  
+    {{/hasImage}}
+</ul>
+<a href="#" class="tg-load-more btn">Show More</a> 
+</div>
+<!-- /end fixed-height component -->

@@ -1,0 +1,52 @@
+{{! {{> molecules-ad-skin }} 
+
+<!-- Navigation -->
+{{! <div class ="page-wrap"> }}
+{{> organisms-header }}
+{{> organisms-primary-mega-menu }}
+{{> molecules-ad-banner-block }}
+{{> molecules-secondary-nav }}
+
+<!-- 8-4 grid -->
+<section class="wires">
+  <div class="wrap">
+    <div class="l-2up--8-4">
+      <!-- Left -->    
+      <div class="l-gi">
+        <!-- Content Area Components--> 
+        {{> atoms-wireblock(wire-text: "video player and description", height:"height-600")}}
+      </div>
+      <div class="l-gi">
+      	{{> atoms-ad-300x250}}
+      	{{> atoms-wireblock(wire-text: "one article or link to microsite", height: "height-100")}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- full width-->
+<section class="wires">
+  <div class = "wrap">
+    <div class="l-12">
+      <!-- Content Area -->    
+      <div class="l-gi">
+        <!-- Content Area Components--> 
+        <h2>More Entertainment Short Clips</h2>
+        {{> molecules-slider }}
+      </div>
+      <div class="l-gi">
+      	<h2>Others Watched</h2>
+      	{{> molecules-slider }}
+      </div>
+      <div class="l-gi">
+      	<h2>Related Articles</h2>
+      	{{> molecules-slider }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  {{> atoms-wireblock(wire-text: "Footer")}} 
+</section>
+{{! </div> }}

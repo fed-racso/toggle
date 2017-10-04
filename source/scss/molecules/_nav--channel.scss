@@ -1,0 +1,56 @@
+.nav--channel {
+  background: color(dark, black);
+  height: rhythm(4);
+  position: relative;
+  .nav__list {
+    vertical-align: middle;
+    float: left;
+    display: table;
+    height: rhythm(4);
+    margin-left: rhythm(1);
+    & > li {
+      float: none;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 1em;
+      & > a {
+        line-height: 1;
+        // position: relative;
+        color: color(white);
+        text-decoration: none;
+        &:hover {
+          +.mega-menu-holder > .mega-menu {
+            // clip: rect( auto auto auto auto);
+          }
+        }
+      }
+    }
+  }
+  span {
+    display: block;
+  }
+  // Social Media + Search
+  .nav__list--right {
+    float: right;
+    li {
+      padding: 0 0.5em;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    a {
+      height: rhythm(2.5);
+      width: rhythm(2.5);
+      border-radius: 100%;
+    }
+    span {
+      @include is-invisible;
+    }
+    .search--channel {
+      width: span(2);
+      input {
+        height: rhythm(1.5);
+      }
+    }
+  }
+}

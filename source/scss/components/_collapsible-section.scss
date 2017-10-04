@@ -1,0 +1,98 @@
+.collapsible {
+  transition: all 0.4s ease;
+
+  @include breakpoint(max-width map-get($breakpoints, medium)) {
+    @include tui {
+      border-top: 1px solid $secondary-color;
+      border-bottom: 1px solid $secondary-color;
+    }
+  }
+}
+
+.collapsible__title {
+  position: relative;
+  margin: 0 !important;
+  line-height: 1;
+  padding-right: 40px;
+
+  img {
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-right: 0.125em;
+    position: relative;
+    top: -2px;
+    width: 36px;
+    height: 36px;
+  }
+
+  a {
+    i {
+      font-size: 12px;
+      line-height: 100%;
+      top: 0;
+    }
+  }
+}
+
+.collapsible__toggle {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  line-height: 1;
+  display:none;
+
+  i {
+    @extend .ti;
+    @extend .ti-less-light;
+    font-size: 20px;
+  }
+}
+
+.collapsible__body {
+  display: block;
+}
+
+// States when collapsed
+.collapsible.is-collapsed {
+  @include bp(medium) {
+    margin-top: 0;
+  }
+
+  .collapsible__toggle i {
+    @extend .ti-more-light;
+  }
+
+  .collapsible__body {
+    display: none;
+  }
+
+  &.card, .card {
+    margin-bottom: 0;
+  }
+}
+
+// Collapsible Cards
+.collapsible--card {
+  @include tui {
+    border-top: 0px solid $secondary-color;
+    border-bottom: 0px solid $secondary-color;
+  }
+
+  &.card {
+    transition: all 0.4s 0 ease;
+  }
+}
+
+.collapsible--card.is-collapsed {
+  margin-top: rhythm(-0.5);
+
+  .card {
+    padding: rhythm(0.25) rhythm(1.5);
+  }
+
+  .collapsible__title {
+    margin: 0 !important;
+  }
+}
